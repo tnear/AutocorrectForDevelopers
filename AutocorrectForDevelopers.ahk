@@ -164,6 +164,60 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
     {
     }
     
+    ; -atie word suffix whitelist (do not convert these to -ative)
+    :b0:atie::
+    {
+    }
+    :b0:catie::
+    {
+    }
+    :b0:katie::
+    {
+    }
+    :b0:satie::
+    {
+    }
+    
+    ; -nat word suffix whitelist (do not convert these to -ant)
+    :b0:nat::
+    {
+    }
+    :b0:gnat::
+    {
+    }
+    
+    ; -ouis word suffix whitelist (do not convert these to -ious
+    :b0:ouis::
+    {
+    }
+    :b0:louis::
+    {
+    }
+    
+    ; -sino word suffix whitelist (do not convert these to -sion
+    :b0:sino::
+    {
+    }
+    :b0:casino::
+    {
+    }
+
+    ; -tino word suffix whitelist (do not convert these to -tion)
+    :b0:tino::
+    {
+    }
+    :b0:latino::
+    {
+    }
+
+    ; -tinos word suffix whitelist (do not convert these to -tions)
+    :b0:tinos::
+    {
+    }
+    :b0:latinos::
+    {
+    }
+    
     ; -tue word suffix whitelist (do not convert these to -ute)
     :b0:tue::
     {
@@ -186,22 +240,6 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
     {
     }
     
-    ; -tino word suffix whitelist (do not convert these to -tion)
-    :b0:tino::
-    {
-    }
-    :b0:latino::
-    {
-    }
-
-    ; -tinos word suffix whitelist (do not convert these to -tions)
-    :b0:tinos::
-    {
-    }
-    :b0:latinos::
-    {
-    }
-    
     ; -vie word suffix whitelist (do not convert these to -ive)
     :b0:vie::
     {
@@ -209,266 +247,254 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
     :b0:movie::
     {
     }
-    
-    ; -nat word suffix whitelist (do not convert these to -ant)
-    :b0:nat::
-    {
-    }
-    :b0:gnat::
-    {
-    }
-    
-    ; -atie word suffix whitelist (do not convert these to -ative)
-    :b0:atie::
-    {
-    }
-    :b0:catie::
-    {
-    }
-    :b0:katie::
-    {
-    }
-    :b0:satie::
-    {
-    }
-    
-    ; -ouis word suffix whitelist (do not convert these to -ious
-    :b0:ouis::
-    {
-    }
-    :b0:louis::
-    {
-    }
 
     ; whitelist suffixes (only autocorrect these when they appear as suffixes, see bottom of script)
     :b0:aer::
     {
-        ; do not convert to -ear
+        ; do not convert this string to -ear
     }
     :b0:aeg::
     {
-        ; do not convert to -age
+        ; do not convert this string to -age
     }
     :b0:aenous::
     {
-        ; do not convert to -aneous
+        ; do not convert this string to -aneous
     }
     :b0:aetd::
     {
-        ; do not convert to -ated
+        ; do not convert this string to -ated
     }
     :b0:alble::
     {
-        ; do not convert to -lable
+        ; do not convert this string to -lable
     }
     :b0:bilties::
     {
-        ; do not convert to -bilities
+        ; do not convert this string to -bilities
     }
     :b0:bilty::
     {
-        ; do not convert to -bility
+        ; do not convert this string to -bility
     }
     :b0:blity::
     {
-        ; do not convert to -bility
+        ; do not convert this string to -bility
     }
     :b0:cnh::
     {
-        ; do not convert to -nch
+        ; do not convert this string to -nch
     }
     :b0:denet::
     {
-        ; do not convert to -dent
+        ; do not convert this string to -dent
     }
     :b0:emnt::
     {
-        ; do not convert to -ment
+        ; do not convert this string to -ment
     }
     :b0:emnts::
     {
-        ; do not convert to -ments
+        ; do not convert this string to -ments
     }
     :b0:epr::
     {
-        ; do not convert to -per
+        ; do not convert this string to -per
     }
     :b0:fiical::
     {
-        ; do not convert to -ficial
+        ; do not convert this string to -ficial
+    }
+    :b0:garphy::
+    {
+        ; do not convert this string to -graphy
     }
     :b0:icla::
     {
-        ; do not convert to -ical
+        ; do not convert this string to -ical
     }
     :b0:idng::
     {
-        ; do not convert to -ding
+        ; do not convert this string to -ding
     }
     :b0:ietn::
     {
-        ; do not convert to -ient
+        ; do not convert this string to -ient
+    }
+    :b0:iison::
+    {
+        ; do not convert this string to -ision
     }
     :b0:ikc::
     {
-        ; do not convert to -ick
+        ; do not convert this string to -ick
     }
     :b0:ikcs::
     {
-        ; do not convert to -icks
+        ; do not convert this string to -icks
+    }
+    :b0:iotn::
+    {
+        ; do not convert this string to -tion
+    }
+    :b0:iotns::
+    {
+        ; do not convert this string to -tions
     }
     :b0:iton::
     {
-        ; do not convert to -tion
+        ; do not convert this string to -tion
     }
     :b0:itons::
     {
-        ; do not convert to -tions
+        ; do not convert this string to -tions
     }
     :b0:kae::
     {
-        ; do not convert to -ake
+        ; do not convert this string to -ake
     }
     :b0:kaes::
     {
-        ; do not convert to -akes
+        ; do not convert this string to -akes
     }
     :b0:liity::
     {
-        ; do not convert to -ility
+        ; do not convert this string to -ility
     }
     :b0:maion::
     {
-        ; do not convert to -mation
+        ; do not convert this string to -mation
     }
     :b0:menet::
     {
-        ; do not convert to -ment
+        ; do not convert this string to -ment
     }
     :b0:metn::
     {
-        ; do not convert to -ment
+        ; do not convert this string to -ment
     }
     :b0:metns::
     {
-        ; do not convert to -ments
+        ; do not convert this string to -ments
     }
     :b0:mzie::
     {
-        ; do not convert to -mize
+        ; do not convert this string to -mize
     }
     :b0:mzies::
     {
-        ; do not convert to -mizes
+        ; do not convert this string to -mizes
     }
     :b0:nig::
     {
-        ; do not convert to -ing
+        ; do not convert this string to -ing
     }
     :b0:ofrm::
     {
-        ; do not convert to -form
+        ; do not convert this string to -form
     }
     :b0:oeus::
     {
-        ; do not convert to -eous
+        ; do not convert this string to -eous
     }
     :b0:oinal::
     {
-        ; do not convert to -ional
+        ; do not convert this string to -ional
     }
     :b0:oitn::
     {
-        ; do not convert to -oint
+        ; do not convert this string to -oint
     }
     :b0:oitns::
     {
-        ; do not convert to -oints
+        ; do not convert this string to -oints
     }
     :b0:prot::
     {
-        ; do not convert to -port
+        ; do not convert this string to -port
     }
     :b0:prots::
     {
-        ; do not convert to -ports
+        ; do not convert this string to -ports
     }
     :b0:oudn::
     {
-        ; do not convert to -ound
+        ; do not convert this string to -ound
     }
     :b0:oyp::
     {
-        ; do not convert to -opy
+        ; do not convert this string to -opy
     }
     :b0:soin::
     {
-        ; do not convert to -sion
+        ; do not convert this string to -sion
     }
     :b0:taion::
     {
-        ; do not convert to -ation
+        ; do not convert this string to -ation
     }
     :b0:tenet::
     {
-        ; do not convert to -tent
+        ; do not convert this string to -tent
     }
     :b0:thc::
     {
-        ; do not convert to -tch
+        ; do not convert this string to -tch
     }
     :b0:thces::
     {
-        ; do not convert to -tches
+        ; do not convert this string to -tches
     }
     :b0:tiive::
     {
-        ; do not convert to -itive
+        ; do not convert this string to -itive
     }
     :b0:tiy::
     {
-        ; do not convert to -ity
+        ; do not convert this string to -ity
     }
     :b0:toin::
     {
-        ; do not convert to -tion
+        ; do not convert this string to -tion
     }
     :b0:toins::
     {
-        ; do not convert to -tions
+        ; do not convert this string to -tions
     }
     :b0:tues::
     {
-        ; do not convert to -utes
+        ; do not convert this string to -utes
     }
     :b0:tuer::
     {
-        ; do not convert to -ture
+        ; do not convert this string to -ture
     }
     :b0:tuers::
     {
-        ; do not convert to -tures
+        ; do not convert this string to -tures
     }
     :b0:utl::
     {
-        ; do not convert to -ult
+        ; do not convert this string to -ult
     }
     :b0:utls::
     {
-        ; do not convert to -ults
+        ; do not convert this string to -ults
     }
     :b0:voe::
     {
-        ; do not convert to -ove
+        ; do not convert this string to -ove
     }
     :b0:wrae::
     {
-        ; do not convert to -ware
+        ; do not convert this string to -ware
     }
 
     ; Autocorrect these values.
     ; Basic syntax -> ::oldString::newString
-    :*:abstarct::abstract            ; abstract, abstraction
+    ;
+    :*:abstarct::abstract           ; abstract, abstraction
+    :*:accomodat::accommodat        ; accommodate, accommodating
     ::agian::again
     :*:algoirthm::algorithm
     :*:algorihtm::algorithm
@@ -496,6 +522,8 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
     :*:attirbute::attribute
     :*:attirubte::attribute
     :*:attriubte::attribute
+    ::automted::automated
+    ::autoamted::automated
     :*:aveareg::average
     ::aveage::average
     ::aveages::averages
@@ -507,6 +535,7 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
     ::baselien::baseline
     ::becaues::because
     ::becasue::because
+    ::benhcmark::benchmark
     ::betwen::between
     ::boundry::boundary
     :*:brnach::branch               ; branched, branching
@@ -514,6 +543,7 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
     :*:braodcast::broadcast
     ::bulid::build
     ::ubndle::bundle
+    ::bytearay::bytearray           ; python built-in type
     ::cahce::cache
     ::cahcing::caching
     ::cnadidate::candidate
@@ -526,6 +556,7 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
     ::chagne::change
     :*:chidl::child
     :*:chekc::check                 ; checkout, checked
+    :*:cihper::cipher               ; ciphertext
     ::clas::class
     ::clss::class
     ::clasdef::classdef
@@ -533,6 +564,8 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
     ::clena::clean
     ::clickc::click
     ::cloen::clone
+    ::colide::collide
+    ::colision::collision
     ::comit::commit
     ::comited::committed
     ::commited::committed
@@ -541,17 +574,22 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
     ::compatabilities::compatibilities
     ::compatability::compatibility
     ::compatable::compatible
-    ::complier::compiler            ; 'complier' is a valid but rare word
     :*:comiple::compile
+    ::complier::compiler            ; 'complier' is a valid but rare word
+    ::comiler::compiler
     :*:comopnent::component
     ::composeite::composite
+    ::confidentality::confidentiality
     :*:conenct::connect
     ::conect::connect
     ::conected::connected
+    ::considerd::considered
     ::consisten::consistent
     ::consistenet::consistent
     :*:consoel::console
     ::cosole::console
+    ::consoe::console
+    :*:contirbute::contribute
     :*:cosnt::const
     ::constatn::constant
     :*:constratin::constraint
@@ -562,6 +600,7 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
     :*:contorl::control
     :*:contineu::continue
     ::coudl::could
+    ::coutn::count
     ::covearge::coverage
     ::coveage::coverage
     ::crahs::crash
@@ -608,6 +647,8 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
     :*:eigne::eigen                 ; eigenvalues, eigenvectors
     :*:elemtn::element
     :*:elemnt::element
+    ::ellitpic::elliptic            ; elliptic curve
+    ::eliptic::elliptic
     ::esle::else
     ::esleif::elseif
     ::emision::emission
@@ -629,24 +670,28 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
     :*:excetp::except
     ::excahnge::exchange
     ::exectable::executable
+    ::exapnd::expand
+    ::expectd::expected
     :*:expresison::expression
     :*:expresion::expression
     :*:exoprt::export
     ::expor::export
     ::facotry::factory
     ::flase::false
-    ::fibonnaci::fibonacci
-    ; ::fiel::file                  ; ambiguous between: file, field, feel
+    ::fibonnaci::fibonacci          ; fibonacci sequence, fibonacci heap
+    ; ::fiel::file                  ; ambiguous between: file, field, feel, ...
     ::finaly::finally
     ::fidn::find
     :*:flaot::float                 ; float, floating-point
+    :C:fro::for                     ; 'for' keyword
     ::foriegn::foreign
     ::forwared::forward
     ::foudn::found
     ::firend::friend
     ::forzenset::frozenset 
-    :*:fucntion::function
-    ::funtion::function
+    :*:fucntion::function           ; functions, functional
+    :*:funtion::function
+    :*:fnction::function
     ::glboal::global
     ::goign::going
     ::goot::goto
@@ -661,6 +706,11 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
     ; ::hwo::how                    ; ambiguous between 'how' and 'who'
     ::howver::however
     ::hudnred::hundred
+    ::hyperparameer::hyperparameter
+    ::hyperpareamter::hyperparameter
+    ::hyperparaemter::hyperparameter
+    ::hyperparmaeter::hyperparameter
+    ::iamge::image
     ::implemenation::implementation
     :*:imoprt::import
     ::impot::import
@@ -671,12 +721,14 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
     ::inclue::include
     ::idnex::index
     :*:inherti::inherit
+    ::inot::into                    ; sql keyword
     ::isnert::insert
     ::intance::instance
     ::isntead::instead
     ::insruction::instruction
     ::itn::int                      ; integer data type
     ::integerate::integrate
+    ::integriy::integrity
     :*:intelig::intellig
     :*:itner::inter                 ; interface, internal
     ::interperet::interpret
@@ -688,6 +740,8 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
     ::ins't::isn't
     ::itme::item
     :*:isnta::insta                 ; instance, install, instantiate
+    ::isintance::isinstance         ; common python function
+    :*:iteation::iteration
     :*:itereator::iterator
     :*:iteator::iterator
     ::invariatn::invariant
@@ -712,23 +766,33 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
     ::librarry::library
     ::liek::like
     :C:LInux::Linux
-    :*:lsit::list                  ; lists, listener
+    :*:lsit::list                   ; lists, listener
     ::listenr::listener
     ::mahcine::machine
     ::machien::machine
     ::maintian::maintain
     ::maloc::malloc
-    :*:manfactur::manufactur
+    :*:manfactur::manufactur        ; manufacturing, manufacturer
     ::mnay::many
+    ::mathamatics::mathematics
+    :*:mathmatic::mathematic
     ::menas::means
     ::memroy::memory
     ::mesage::message
-    :*:mlti::multi                  ; multithreaded
+    ::modle::model
     :*:moduel::module
+    ::mroe::more
+    ::omre::more
+    :*:mlti::multi                  ; multithreaded
+    :*:mjulti::multi
+    ::nmae::name
     ::namespce::namespace
+    ::nmaespace::namespace
     :*:nerua::neura                 ; neural, neuralnet
     ::enxt::next
-    ::nto::not
+    :C:NoneTYpe::NoneType           ; python built-in data type
+    :*:northwset::northwest
+    :C:nto::not
     ::nulll::null
     ::nulptr::nullptr
     ::nulllptr::nullptr
@@ -741,15 +805,24 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
     ::ofteh::of the
     ::ofhte::of the
     :*:opeator::operator
-    ::opeartor::operator
+    :*:opeartor::operator
+    ::optimze::optimize
     ::orignal::original
     ::otehr::other
     :*:otuput::output
-    :*:overide::override
+    ::overide::override             ; can't do ':*:' b/c of words like overidealize, overidentify
+    ::overiden::overridden
+    ::overidden::overridden
+    ::overriden::overridden
+    ::paralel::parallel
+    ::parllel::parallel
+    ::parllle::parallel
     :*:pareamter::parameter
     :*:paraemter::parameter
     :*:parameer::parameter
     :*:parmaeter::parameter
+    ::parameteres::parameters
+    :*:aprameter::parameter
     ::praent::parent
     ::parital::partial
     :*:partiton::partition
@@ -757,34 +830,49 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
     ::eprf::perf
     ::eprformance::performance
     ::perofrmance::performance
+    ::perfomance::performance
     ::permanet::permanent
+    ::permenant::permanent
+    ::permanant::permanent
     :*:persit::persist              ; persists, persistent
     ::persistant::persistent
+    :*:persepct::perspect           ; perspective
+    ::pertubation::perturbation
     :*:pidgeon::pigeon              ; pigeonhole
     ::planend::planned
     ::pleae::please
     :*:poitner::pointer
     ::polynomail::polynomial
     ::prgama::pragma
+    ::predecssor::predecessor
+    ::prefered::preferred
+    ::prevelant::prevalent
     :*:pritn::print                 ; print, printer, printf, println
+    ::privte::private
     :*:priviledge::privilege
     ::probelm::problem
+    ::programable::programmable
+    ::proove::prove
     ::proeprty::property
     ::propety::property
     ::protocl::protocol
+    :*:pesudo::pseudo               ; pseudocode
     ::pythno::python
     ::queu::queue
     :*:qustion::question
     :*:quetion::question
+    ::quicksleect::quickselect
     ::riase::raise
     ::ranodm::random
     ::rnage::range
     ::rela::real
     :*:refernce::reference
+    ::refersh::refresh
     :*:registser::register
     :*:rmeove::remove
     :*:repostiroy::repository
     :*:repositoroy::repository
+    ::reproducable::reproducible
     ::requet::request
     :*:reuqire::require
     :*:requrie::require
@@ -817,6 +905,7 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
     ::serivce::service
     ::shaep::shape
     ::shraed::shared
+    ::sahred::shared
     ::shrot::short
     ::shoud::should
     :*:signla::signal               ; signal, signaling
@@ -824,10 +913,11 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
     :C:sizet::size_t
     :C:size_T::size_t
     :C:size-t::size_t
-    :C:slef::self
+    :C:slef::self                   ; python current class instance
     ::osftware::software
     ::stakc::stack
     ::stnadard::standard
+    ::staretd::started
     ::stahs::stash                  ; git stash
     ::staic::static
     :C*:std:`;::std`:`:             ; C++ standard namespace. Use '`:' to escape ':' and '`;' to escape ';'
@@ -843,7 +933,9 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
     ::stuct::struct
     ::strcut::struct
     ::styel::style
+    ::sytling::styling
     ::subclas::subclass
+    ::sutie::suite                  ; test suite
     :*:suepr::super
     ::siwthc::switch
     ::siwtch::switch
@@ -870,6 +962,7 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
     ::htese::these
     ::htere::there
     ::htey::they
+    ::thye::they
     ::theyr'e::they're
     ::hting::thing
     ::thsi::this
@@ -922,7 +1015,7 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
     ::vetex::vertex
     ::vitual::virtual
     :*:viist::visit                 ; visits, visitor
-    ::wsa::was
+    :C:wsa::was
     ::wans't::wasn't
     ::wan't::wasn't
     ::wasnt'::wasn't
@@ -931,6 +1024,7 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
     ::hwen::when
     ::wich::which
     ::hwich::which
+    ::whihc::which
     ::whiel::while
     ::hwile::while
     ::iwth::with
@@ -943,7 +1037,8 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
     :*:wirte::write
     :*:yeidl::yield
     :*:yeild::yield
-    ::yuo::you
+    :C:yuo::you
+    :C:Yuo::You
     :*:yoru::your                   ; your, yours, yourself
 
     ; suffixes (suffix dictionary search tool: https://www.litscape.com/word_tools/ends_with.php)
@@ -969,6 +1064,8 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
     :C?:oeus::eous        ; ex: simultaneous, miscellaneous
     :C?:fiical::ficial    ; ex: artificial, official
     :C?:ofrm::form        ; ex: platform, perform
+    :C?:garphy::graphy    ; ex: cryptography, photography
+    :C?:grahpy::graphy
     :C?:icla::ical        ; ex: topological, canonical
     :C?:ikc::ick          ; ex: quick, click, pick
     :C?:ikcs::icks        
@@ -979,6 +1076,7 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
     :C?:nig::ing          
     :C?:oinal::ional      ; ex: conditional, occasional
     :C?:ouis::ious        ; ex: previous, various
+    :C?:iison::ision      ; ex: decision, collision
     :C?:tiive::itive      ; ex: positive, primitive
     :C?:tiy::ity          ; ex: security, ability, utility
     :C?:vie::ive          ; ex: generative, active
@@ -1005,17 +1103,20 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
     :C?:prot::port        ; ex: import, export, support
     :C?:prots::ports      
     :C?:raet::rate        ; ex: enumerate, accelerate
-    :C?:soin::sion        ; ex: precision, recursion
+    :C?:sino::sion        ; ex: precision, recursion, comprehension
+    :C?:soin::sion        
     :C?:srot::sort        ; ex: sort, mergesort, quicksort
     :C?:tenet::tent       ; ex: persistent, content
     :C?:thc::tch          ; ex: catch, batch, switch
     :C?:thces::tches      
-    :C?:iton::tion        ; ex: function, definition, condition, transaction
+    :C?:iton::tion        ; ex: function, exception, condition, transaction, authentication
     :C?:tino::tion        
     :C?:toin::tion        
     :C?:itons::tions      
     :C?:tinos::tions      
     :C?:toins::tions      
+    :C?:iotn::tion
+    :C?:iotns::tions
     :C?:tuer::ture        ; ex: feature, picture
     :C?:tuers::tures      
     :C?:utl::ult          ; ex: result, difficult
