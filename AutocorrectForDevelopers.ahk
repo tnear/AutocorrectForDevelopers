@@ -4,9 +4,9 @@
 SendMode Input  ; Recommended for new scripts due to its superior speed and reliability.
 SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 
-; Hostrings: https://www.autohotkey.com/docs/v2/Hotstrings.htm
-; Suffix dictionary search tool: https://www.litscape.com/word_tools/ends_with.php
-; Prefix dictionary search tool: https://www.litscape.com/word_tools/starts_with.php
+; AHK hotstrings: https://www.autohotkey.com/docs/v2/Hotstrings.htm
+;   Prefix dictionary search tool: https://www.litscape.com/word_tools/starts_with.php
+;   Suffix dictionary search tool: https://www.litscape.com/word_tools/ends_with.php
 ; Contains dictionary search tool: https://www.litscape.com/word_tools/contains_sequence.php
 ; :C: = Match case.
 ; :*: = Ending char not required. Often added to encompass substrings.
@@ -297,9 +297,17 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
     {
         ; do not convert to -ficial
     }
+    :b0:icla::
+    {
+        ; do not convert to -ical
+    }
     :b0:idng::
     {
         ; do not convert to -ding
+    }
+    :b0:ietn::
+    {
+        ; do not convert to -ient
     }
     :b0:ikc::
     {
@@ -329,6 +337,10 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
     {
         ; do not convert to -ility
     }
+    :b0:maion::
+    {
+        ; do not convert to -mation
+    }
     :b0:menet::
     {
         ; do not convert to -ment
@@ -352,6 +364,10 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
     :b0:nig::
     {
         ; do not convert to -ing
+    }
+    :b0:ofrm::
+    {
+        ; do not convert to -form
     }
     :b0:oeus::
     {
@@ -445,15 +461,22 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
     {
         ; do not convert to -ove
     }
+    :b0:wrae::
+    {
+        ; do not convert to -ware
+    }
 
-    ; Autocorrect these values. Basic syntax -> ::oldString::newString
+    ; Autocorrect these values.
+    ; Basic syntax -> ::oldString::newString
     :*:abstarct::abstract            ; abstract, abstraction
     ::agian::again
     :*:algoirthm::algorithm
     :*:algorihtm::algorithm
     ::almsot::almost
     ::alos::also
+    ::alraedy::already
     ::alwasy::always
+    ::arhitecture::architecture
     ::alot::a lot
     ::adn::and
     ::nad::and
@@ -462,6 +485,7 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
     ::anhyting::anything
     :*:arugment::argument
     ::aray::array
+    ::assmebly::assembly
     ::asert::assert
     ::assrt::assert
     ::asssert::assert
@@ -472,8 +496,12 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
     :*:attirbute::attribute
     :*:attirubte::attribute
     :*:attriubte::attribute
+    :*:aveareg::average
+    ::aveage::average
+    ::aveages::averages
     ::awiat::await
     :*:bakc::back                   ; backward, backload
+    ::backgorund::background
     :*:backwrad::backward
     ::bandwith::bandwidth
     ::baselien::baseline
@@ -482,8 +510,10 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
     ::betwen::between
     ::boundry::boundary
     :*:brnach::branch               ; branched, branching
+    ::breka::break
     :*:braodcast::broadcast
     ::bulid::build
+    ::ubndle::bundle
     ::cahce::cache
     ::cahcing::caching
     ::cnadidate::candidate
@@ -494,11 +524,13 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
     ::caues::cause
     ::casue::cause
     ::chagne::change
+    :*:chidl::child
     :*:chekc::check                 ; checkout, checked
     ::clas::class
     ::clss::class
     ::clasdef::classdef
     ::claer::clear
+    ::clena::clean
     ::clickc::click
     ::cloen::clone
     ::comit::commit
@@ -526,47 +558,70 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
     :*:constraitn::constraint
     :*:constratint::constraint
     ::constexrp::constexpr
-    :*:contian::contain              ; contains, container
+    :*:contian::contain             ; contains, container
     :*:contorl::control
     :*:contineu::continue
     ::coudl::could
+    ::covearge::coverage
+    ::coveage::coverage
     ::crahs::crash
     ::carsh::crash
-    ::creat::create
+    ::creat::create                 ; note: there exists a legacy C syscall called "creat"
     ::customie::customize
     :*:dadta::data
     :*:databse::database
     :*:databaes::database
+    ::dataest::dataset
+    ::debuger::debugger
+    ::debuging::debugging
+    ::deepcpoy::deepcopy
     :*:deafult::default             ; defaults
     :*:dleete::delete
     :*:dpeend::depend               ; dependency, dependence
     ::depenency::dependency
-    :*:desing::design
+    :*:descendant::descendent
+    ::descrbie::describe
+    ::descirbe::describe
+    ::desing::design
     :*:deveop::develop
     :*:devleop::develop
     ::develoment::development
     :*:dialgo::dialog
+    ::dictinary::dictionary
+    ::dictinoary::dictionary
     :*:din'dt::didn't
     :*:diference::difference
     ::diferent::different
     ::diretory::directory
     ::diable::disable
     ::distriuted::distributed
+    ::distriubtion::distribution
     ::doesnt'::doesn't
     ::doens't::doesn't
-    ; ::doesnt::doesn't ; interferes with "doesnt'"
+    ; ::doesnt::doesn't             ; interferes with "doesnt'"
     ::doenst::doesn't
     ::doesn ot::does not
+    ::doign::doing
     ::dont::don't
     ::doubel::double
+    ::eahc::each
+    :*:eigne::eigen                 ; eigenvalues, eigenvectors
     :*:elemtn::element
     :*:elemnt::element
-    ::enumeate::enumerate
-    ::evenet::event
+    ::esle::else
+    ::esleif::elseif
+    ::emision::emission
+    ::emited::emitted
+    ::emiting::emitting
     ::emtpy::empty
     ::empyt::empty
+    ::enbale::enable
+    ::enumeate::enumerate
     ::equivalenet::equivalent
     ::eraes::erase
+    ::evenet::event
+    ::eveyr::every
+    ::everyting::everything
     :*:eample::example
     :*:examle::example
     :*:exaple::example
@@ -580,24 +635,31 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
     ::expor::export
     ::facotry::factory
     ::flase::false
-    ::fiel::file
+    ::fibonnaci::fibonacci
+    ; ::fiel::file                  ; ambiguous between: file, field, feel
     ::finaly::finally
     ::fidn::find
     :*:flaot::float                 ; float, floating-point
     ::foriegn::foreign
+    ::forwared::forward
     ::foudn::found
     ::firend::friend
+    ::forzenset::frozenset 
     :*:fucntion::function
     ::funtion::function
     ::glboal::global
-    ::gradietn::gradient
-    ::gradiet::gradient
+    ::goign::going
     ::goot::goto
+    ::gradiet::gradient
+    ::gerat::great
+    ::gorund::ground
     :*:gorup::group                 ; group, groups
     :*:gropu::group
     ::heirarchy::hierarchy
     ::hsa::has
+    ::hvae::have
     ; ::hwo::how                    ; ambiguous between 'how' and 'who'
+    ::howver::however
     ::hudnred::hundred
     ::implemenation::implementation
     :*:imoprt::import
@@ -606,22 +668,28 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
     :*:indpeend::independ           ; independent, independently
     :*:incldue::include
     :*:incdlue::include
+    ::inclue::include
     ::idnex::index
     :*:inherti::inherit
     ::isnert::insert
     ::intance::instance
+    ::isntead::instead
+    ::insruction::instruction
     ::itn::int                      ; integer data type
     ::integerate::integrate
     :*:intelig::intellig
     :*:itner::inter                 ; interface, internal
     ::interperet::interpret
     ::interpereter::interpreter
+    ::invertable::invertible
+    ::i nrange::in range            ; python loop
     ::iosream::iostream
     ::iosteam::iostream
     ::ins't::isn't
     ::itme::item
     :*:isnta::insta                 ; instance, install, instantiate
-    ::itereator::iterator
+    :*:itereator::iterator
+    :*:iteator::iterator
     ::invariatn::invariant
     ::i'ts::it's
     ::i"d::I'd
@@ -634,15 +702,20 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
     ::konw::know
     ::lable::label
     ::labmda::lambda
+    ::lamda::lambda
     ::langauge::language
     ::legnth::length
+    ::lenght::length
     ::liaiason::liaison
     ::laison::liaison
     ::laiason::liaison
     ::librarry::library
     ::liek::like
     :C:LInux::Linux
-    ::lsit::list
+    :*:lsit::list                  ; lists, listener
+    ::listenr::listener
+    ::mahcine::machine
+    ::machien::machine
     ::maintian::maintain
     ::maloc::malloc
     :*:manfactur::manufactur
@@ -654,8 +727,11 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
     :*:moduel::module
     ::namespce::namespace
     :*:nerua::neura                 ; neural, neuralnet
+    ::enxt::next
     ::nto::not
+    ::nulll::null
     ::nulptr::nullptr
+    ::nulllptr::nullptr
     :*:ojbect::object
     ::ocurred::occurred
     ::occured::occurred
@@ -665,6 +741,7 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
     ::ofteh::of the
     ::ofhte::of the
     :*:opeator::operator
+    ::opeartor::operator
     ::orignal::original
     ::otehr::other
     :*:otuput::output
@@ -679,13 +756,17 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
     ::passwrod::password
     ::eprf::perf
     ::eprformance::performance
+    ::perofrmance::performance
+    ::permanet::permanent
     :*:persit::persist              ; persists, persistent
     ::persistant::persistent
+    :*:pidgeon::pigeon              ; pigeonhole
     ::planend::planned
     ::pleae::please
     :*:poitner::pointer
+    ::polynomail::polynomial
     ::prgama::pragma
-    :*:pritn::print                 ; print, printer, printf
+    :*:pritn::print                 ; print, printer, printf, println
     :*:priviledge::privilege
     ::probelm::problem
     ::proeprty::property
@@ -693,11 +774,14 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
     ::protocl::protocol
     ::pythno::python
     ::queu::queue
+    :*:qustion::question
+    :*:quetion::question
     ::riase::raise
     ::ranodm::random
     ::rnage::range
     ::rela::real
     :*:refernce::reference
+    :*:registser::register
     :*:rmeove::remove
     :*:repostiroy::repository
     :*:repositoroy::repository
@@ -706,12 +790,19 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
     :*:requrie::require
     :*:requrei::require
     :*:reuqire::require
+    :*:requier::require
+    ::resaerch::research
+    ::reserach::research
+    ::resarch::research
     ::resopnse::response
     ::respones::response
-    ::reuslt::result
-    ::reslut::result
+    :*:reuslt::result
+    :*:reslut::result
+    ::retrive::retrieve
     ::reutrn::return
     ::retrn::return
+    ::retrun::return
+    ::reivew::review
     :*:rigth::right                 ; rights, rightVarName
     :*:saef::safe                   ; safety, safest
     ::saem::same
@@ -729,21 +820,24 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
     ::shrot::short
     ::shoud::should
     :*:signla::signal               ; signal, signaling
-    :C:sie_t::size_t
+    :C:sie_t::size_t                ; Common C++ data type
     :C:sizet::size_t
     :C:size_T::size_t
     :C:size-t::size_t
     :C:slef::self
+    ::osftware::software
     ::stakc::stack
     ::stnadard::standard
-    ::stahs::stash
+    ::stahs::stash                  ; git stash
     ::staic::static
-    :C*:std:`;::std`:`:             ; "std:;" -> "std::". Use '`:' to escape ':' and '`;' to escape ';'
-                                    ; Use '*' to match anywhere (needed because there is no ending char after "std::")
+    :C*:std:`;::std`:`:             ; C++ standard namespace. Use '`:' to escape ':' and '`;' to escape ';'
+                                    ; Use '*' to match anywhere (needed b/c there is no ending char after "std::")
+                                    ; "std:;" -> "std::"
     :C*:sdt`:`:::std`:`:            ; "sdt::" -> "std::"
     :C*:sdt:`;::std`:`:             ; "sdt:;" -> "std::"
     :C*:stD`:`:::std`:`:            ; "stD::" -> "std::"
     ::streategy::strategy
+    ::strenghten::strengthen
     ::sring::string
     ::stirng::string
     ::stuct::struct
@@ -764,6 +858,7 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
     ::tem[late::template
     ::temlate::template
     ::tempoarry::temporary
+    ::temoprary::temporary
     ::htan::than
     ::htat::that
     ::taht::that
@@ -772,8 +867,8 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
     ::thte::the
     ::htem::them
     ::hten::then
-    ::htere::there
     ::htese::these
+    ::htere::there
     ::htey::they
     ::theyr'e::they're
     ::hting::thing
@@ -785,9 +880,15 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
     ::tiem::time
     ::tolerence::tolerance
     ::toolsrip::toolstrip
+    ::toplogical::topological
+    ::ot be::to be
+    ::ot do::to do
     ::ot the::to the
     ::tothe::to the
     ::trnasform::transform
+    ::transiitive::transitive
+    ::travling::traveling
+    ::traeling::traveling
     ::ture::true
     :*:trucate::truncate
     ::tupel::tuple
@@ -817,9 +918,11 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
     ::vecotr::vector
     ::vetcor::vector
     ::veirfy::verify
+    ::vesrion::version
     ::vetex::vertex
     ::vitual::virtual
     :*:viist::visit                 ; visits, visitor
+    ::wsa::was
     ::wans't::wasn't
     ::wan't::wasn't
     ::wasnt'::wasn't
@@ -832,7 +935,6 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
     ::hwile::while
     ::iwth::with
     ::wiht::with
-    ::wsa::was
     ::wont'::won't
     ::wo'nt::won't
     ::own't::won't
@@ -859,15 +961,21 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
     :C?:bilties::bilities ; ex: probabilities
     :C?:bilty::bility     ; ex: scalability, ability
     :C?:blity::bility     
+    :C?:ctaing::cating    ; ex: locating, replicating
+    :C?:ctaion::cation    ; ex: education, allocation
     :C?:denet::dent       ; ex: independent, descendent
     :C?:idng::ding        ; ex: offloading, finding
     :C?:aer::ear          ; ex: clear, near
     :C?:oeus::eous        ; ex: simultaneous, miscellaneous
     :C?:fiical::ficial    ; ex: artificial, official
+    :C?:ofrm::form        ; ex: platform, perform
+    :C?:icla::ical        ; ex: topological, canonical
     :C?:ikc::ick          ; ex: quick, click, pick
     :C?:ikcs::icks        
+    :C?:ietn::ient        ; ex: gradient, quotient
     :C?:liity::ility      ; ex: probability, stability
     :C?:ign::ing          ; ex: running, string, starting, testing, working, learning
+                          ; note: see whitelist at the top for exceptions
     :C?:nig::ing          
     :C?:oinal::ional      ; ex: conditional, occasional
     :C?:ouis::ious        ; ex: previous, various
@@ -878,13 +986,14 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
     :C?:laod::load        ; ex: overload, download
     :C?:amte::mate        ; ex: approximate, estimate
     :C?:amtes::mates      
+    :C?:maion::mation     ; ex: information, summation
     :C?:menet::ment       ; ex: comment, document, increment, replacement
     :C?:emnt::ment        ; ex: element, argument, environment
     :C?:emtn::ment        
     :C?:metn::ment        
     :C?:emnts::ments      
     :C?:emtns::ments      
-    :C?:metns::ments      ; ex: elements, arguments, environments
+    :C?:metns::ments      
     :C?:mzie::mize        ; ex: customize, maximize
     :C?:mzies::mizes      
     :C?:chn::nch          ; ex: branch, launch
@@ -915,9 +1024,6 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
     :C?:tues::utes        
     :C?:owrk::work        ; ex: network, homework
     :C?:voe::ove          ; ex: remove, move
-
-    ; word middles
-    ; substring dictionary: https://www.litscape.com/word_tools/contains_sequence.php
-    :?*:ctai::cati        ; ex: educational, allocation, locating
+    :C?:wrae::ware        ; ex: software, hardware
 
 #HotIf
