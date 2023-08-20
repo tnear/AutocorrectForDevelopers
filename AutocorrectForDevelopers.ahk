@@ -322,10 +322,6 @@
     {
         ; do not convert this string to -per
     }
-    :b0:fiical::
-    {
-        ; do not convert this string to -ficial
-    }
     :b0:garphy::
     {
         ; do not convert this string to -graphy
@@ -418,9 +414,17 @@
     {
         ; do not convert this string to -ments
     }
+    :b0:mnets::
+    {
+        ; do not convert this string to -ments
+    }
     :b0:mzie::
     {
         ; do not convert this string to -mize
+    }
+    :b0:mzied::
+    {
+        ; do not convert this string to -mized
     }
     :b0:mzies::
     {
@@ -470,6 +474,10 @@
     {
         ; do not convert this string to -sion
     }
+    :b0:soins::
+    {
+        ; do not convert this string to -sions
+    }
     :b0:taion::
     {
         ; do not convert this string to -ation
@@ -501,6 +509,10 @@
     :b0:tiy::
     {
         ; do not convert this string to -ity
+    }
+    :b0:tnation::
+    {
+        ; do not convert this string to -ntation
     }
     :b0:toin::
     {
@@ -542,9 +554,9 @@
     ; Autocorrect these values.
     ; Basic syntax -> ::oldString::newString
     ;
+    ::abotu::about
     :*:abstarct::abstract           ; abstract, abstraction
     :*:accomodat::accommodat        ; accommodate, accommodating
-    ::acknowledgement::acknowledgment
     ::activaet::activate
     ::adjacnecy::adjacency
     :*:adminstrator::administrator
@@ -558,6 +570,7 @@
     ::alwasy::always
     ::adn::and
     ::nad::and
+    ::andthe::and the
     ::anotehr::another
     :*:ansewr::answer
     ::anhyting::anything
@@ -573,6 +586,7 @@
     ::asssert::assert
     :*:assesment::assessment
     ::asign::assign
+    ::asigned::assigned
     ::asycn::async
     ::atmoic::atomic
     :*:atribute::attribute
@@ -609,6 +623,7 @@
     ::bytearay::bytearray           ; python built-in type
     ::cahce::cache
     ::cahcing::caching
+    ::calcualte::calculate
     :*:calender::calendar
     ::cna::can
     ::cnadidate::candidate
@@ -648,6 +663,7 @@
     ::comiler::compiler
     :*:comopnent::component
     ::composeite::composite
+    ::concetp::concept              ; C++20 keyword
     ::confidentality::confidentiality
     :*:conenct::connect
     ::conect::connect
@@ -666,13 +682,17 @@
     :*:constratin::constraint
     :*:constraitn::constraint
     :*:constratint::constraint
+    :*:constriant::constraint
+    ::constuctor::constructor
     :*:contian::contain             ; contains, container
+    ::contaienr::container
     :*:contineu::continue
     :*:ocntinue::continue
     :*:contirbut::contribut         ; contribute, contrubitor
     :*:contirbute::contribute
     :*:contorl::control
     ::copyrgiht::copyright
+    :*:corect::correct              ; corrected, correctness
     ::coudl::could
     ::coutn::count
     ::covearge::coverage
@@ -682,6 +702,7 @@
     ::creat::create                 ; note: there exists a legacy C syscall called "creat"
     ::criteira::criteria
     ::curent::current
+    ::currenet::current
     ::customie::customize
     :*:dahsboard::dashboard
     :*:dadta::data
@@ -696,6 +717,7 @@
     :*:dleete::delete
     :*:dpeend::depend               ; dependency, dependence
     ::depenency::dependency
+    :*:depht::depth                 ; depth, depthFirstSearch
     :*:descendant::descendent
     ::descrbie::describe
     ::descirbe::describe
@@ -707,9 +729,12 @@
     ::dictinary::dictionary
     ::dictinoary::dictionary
     ::din'dt::didn't
+    ::dind't::didn't
+    ::didnt'::didn't
     :*:diference::difference
     ::diferent::different
     :*:dififcult::difficult
+    ::directd::directed
     ::diretory::directory
     ::diable::disable
     :*:distni::distin               ; distinct, distinguish
@@ -727,6 +752,7 @@
     :*:eigne::eigen                 ; eigenvalues, eigenvectors
     :*:elemtn::element
     :*:elemnt::element
+    :*:elmeent::element
     ::elipse::ellipse
     ::ellitpic::elliptic            ; elliptic curve
     ::eliptic::elliptic
@@ -746,6 +772,7 @@
     ::equivalenet::equivalent
     ::equivlent::equivalent
     ::eraes::erase
+    :*:evlauat::evaluat             ; evaluate, evaluation
     ::evenet::event
     ::eveyr::every
     ::evvery::every
@@ -774,6 +801,7 @@
     ::finaly::finally
     ::fidn::find
     ::fisrt::first
+    ::firsrt::first
     :*:flaot::float                 ; float, floating-point
     ::folowing::following
     :C:fro::for                     ; 'for' keyword
@@ -793,7 +821,8 @@
     ::goign::going
     ::goot::goto
     ::gradiet::gradient
-    ::grpah::graph
+    :*:grpah::graph                  ; graphs, graphing
+    :*:grahp::graph
     ::gerat::great
     ::gorund::ground
     :*:gorup::group                 ; group, groups
@@ -814,8 +843,11 @@
     :*:imoprt::import
     ::impot::import
     ::imporant::important
+    ::imposible::impossible
+    ::imposisble::impossible
     :*:incldue::include
     :*:incdlue::include
+    :*:inofrmati::informati         ; information, informative
     ::inclue::include
     ::incrase::increase
     ::increaes::increase
@@ -824,6 +856,8 @@
     ::idnex::index
     :*:inherti::inherit
     :*:inhreit::inherit
+    :*:intiial::initial             ; initialize, initialization
+    ::inupt::input
     ::isnert::insert
     :*:isnta::insta                 ; instance, install, instantiate
     ::intance::instance
@@ -841,15 +875,19 @@
     ::interpereter::interpreter
     ::interupt::interrupt
     :C:inot::into                    ; sql keyword
+    ::inthe::in the
     ::invariatn::invariant
+    ::ivnariant::invariant
     ::invertable::invertible
     ::i nrange::in range            ; python loop
     ::iosream::iostream
     ::iosteam::iostream
     ::isintance::isinstance         ; common python function
     ::ins't::isn't
+    ::isthe::is the
     ::itme::item
     :*:iteation::iteration
+    :*:itereation::iteration
     :*:itereator::iterator
     :*:iteator::iterator
     ::i'ts::it's
@@ -860,6 +898,7 @@
     ::javascritp::javascript
     ::jaascript::javascript
     ::javacript::javascript
+    ::jorunal::journal
     ::jsut::just
     ::knwo::know
     ::konw::know
@@ -873,6 +912,7 @@
     ::lnagauge::language
     ::legnth::length
     ::lenght::length
+    ::lnegth::length
     ::liaiason::liaison
     ::laison::liaison
     ::laiason::liaison
@@ -884,6 +924,8 @@
     ::mahcine::machine
     ::machien::machine
     ::maintian::maintain
+    :C*:amke_::make_                ; C++: make_shared, make_unique, make_pair, ...
+    :C*:mkae_::make_
     ::maloc::malloc
     :*:manfactur::manufactur        ; manufacturing, manufacturer
     ::mnay::many
@@ -922,6 +964,7 @@
     ::ofteh::of the
     ::ofhte::of the
     ::fo the::of the
+    ::onthe::on the
     ::opeation::operation
     :*:opeator::operator
     :*:opeartor::operator
@@ -933,6 +976,9 @@
     ::overidden::overridden
     ::overriden::overridden
     ::overide::override             ; cannot do ':*:' b/c of words like overidealize, overidentify
+    ::onwer::owner
+    ::onwership::ownership
+    :*:packte::packet               ; packets, packetize
     ::paralel::parallel
     ::parllel::parallel
     ::parllle::parallel
@@ -941,13 +987,18 @@
     :*:parameer::parameter
     :*:parmaeter::parameter
     :*:aprameter::parameter
+    :*:paramter::parameter
     ::parameteres::parameters
     ::praent::parent
+    ::parenet::parent
     ::parital::partial
     :*:partiton::partition
     ::passwrod::password
+    ::pasword::password
+    ::passowrd::password
     ::paht::path
     ::pahtlib::pathlib
+    ::apttern::pattern
     ::eprf::perf
     ::eprformance::performance
     ::perofrmance::performance
@@ -965,8 +1016,13 @@
     ::pleae::please
     :*:poitner::pointer
     ::polynomail::polynomial
+    ::posible::possible
+    ::posisble::possible
+    :*:pwoer::power                 ; powerpoint, powershell
     ::prgama::pragma                ; #pragma
     ::predecssor::predecessor
+    ::rpedicate::predicate          ; function returing true/false
+    ::preidcate::predicate
     ::prefered::preferred
     ::prevelant::prevalent
     :*:pritn::print                 ; print, printf, println
@@ -987,6 +1043,7 @@
     ::pyton::python
     ::pythohn::python
     :*:queyr::query                 ; querying
+    ::quanitty::quantity
     :*:qustion::question
     :*:quetion::question
     ::queu::queue
@@ -1045,9 +1102,11 @@
     :*:sritp::script
     :*:serach::search               ; search, searching
     ::escond::second
+    ::seocnd::second
     ::sleect::select
-    :C:slef::self                   ; python current class instance
+    ::slef::self                    ; python current class instance
     :*:seperat::separat             ; separate, separation
+    ::seuqence::sequence
     ::serivce::service
     ::shaep::shape
     ::shraed::shared
@@ -1072,15 +1131,15 @@
     ::stahs::stash                  ; git stash
     ::staic::static
     :C*:std:`;::std`:`:             ; C++ standard namespace. Use '`' to escape ':' and ';'
-                                    ; Use '*' to match anywhere. needed b/c there is no ending char after "std::".
+                                    ; Use '*' to match anywhere. needed b/c there is no ending char after "std::"
                                     ; "std:;" -> "std::"
     :C*:sdt`:`:::std`:`:            ; "sdt::" -> "std::"
     :C*:sdt:`;::std`:`:             ; "sdt:;" -> "std::"
     :C*:stD`:`:::std`:`:            ; "stD::" -> "std::"
     ::streategy::strategy
     ::strenghten::strengthen
-    ::sring::string
-    ::stirng::string
+    :*:sring::string
+    :*:stirng::string
     ::stuct::struct
     ::strcut::struct
     ::struture::structure
@@ -1117,6 +1176,7 @@
     ::teh::the
     ::thte::the
     ::tjhe::the
+    ::tthe::the
     ::htem::them
     ::hten::then
     ::htere::there
@@ -1134,6 +1194,7 @@
     ::throuhg::through
     ::tiem::time
     ::todya::today
+    ::tdoay::today
     ::tolerence::tolerance
     ::toolsrip::toolstrip
     ::toplogical::topological
@@ -1158,14 +1219,17 @@
     :*:udner::under                 ; underneath, understand
     ::uniqeu::unique
     ::unqiue::unique
+    ::unittets::unittest            ; python testing framework
     ::unkonwn::unknown
     :*:unorderd::unordered
+    :*:unordrerd::unordered
     ::unsaef::unsafe
     ::unsgined::unsigned
     ::unitl::until
     ::utnil::until
     :*:udpate::update
     :*:upadte::update
+    ::vlaid::valid
     :*:vlaue::value
     :*:avlue::value
     :*:vluae::value
@@ -1182,11 +1246,13 @@
     ::vitual::virtual
     ::virutal::virtual
     :*:viist::visit                 ; visits, visitor
+    ::viusal::visual
     ::watn::want
     :C:wsa::was
     ::wans't::wasn't
     ::wan't::wasn't
     ::wasnt'::wasn't
+    :*:wieght::weight               ; weights, weighted
     ::whta::what
     ::hwat::what
     ::hwen::when
@@ -1197,11 +1263,12 @@
     ::hwile::while
     ::iwth::with
     ::wiht::with
+    ::wtih::with
+    ::withotu::without
     ::wont'::won't
     ::wo'nt::won't
     ::own't::won't
     :*:owrkflow::workflow
-    ::worksapce::workspace
     ::woudl::would
     ::wouldnt'::wouldn't
     :*:wirte::write
@@ -1230,7 +1297,7 @@
     :C?:bilty::bility     ; ex: scalability, ability, mutability
     :C?:blity::bility
     :C?:baord::board      ; ex: keyboard, clipboard, dashboard
-    :C?:borad::board      
+    :C?:borad::board
     :C?:ctaing::cating    ; ex: locating, replicating, preallocating
     :C?:ctaion::cation    ; ex: education, replication, allocation
     :C?:denet::dent       ; ex: independent, descendent, dependent
@@ -1272,10 +1339,13 @@
     :C?:metns::ments
     :C?:menets::ments
     :C?:meents::ments
-    :C?:mzie::mize        ; ex: customize, maximize, optimize
+    :C?:mnets::ments
+    :C?:mzie::mize        ; ex: customize, maximize, optimize, randomize
+    :C?:mzied::mized
     :C?:mzies::mizes
     :C?:ntae::nate        ; ex: concatenate, eliminate, alternate
     :C?:chn::nch          ; ex: branch, launch, bunch
+    :C?:tnation::ntation  ; ex: representation, orientation, segmentation
     :C?:oitn::oint        ; ex: powerpoint, breakpoint, disjoint
     :C?:oitns::oints
     :C?:oyp::opy          ; ex: copy, entropy, robocopy
@@ -1284,9 +1354,11 @@
     :C?:prot::port        ; ex: import, export, support
     :C?:prots::ports
     :C?:raet::rate        ; ex: enumerate, migrate, integrate
-    :C?:sino::sion        ; ex: precision, recursion, comprehension, version
+    :C?:sino::sion        ; ex: expression, recursion, comprehension, version, permission
     :C?:soin::sion
+    :C?:soins::sions
     :C?:srot::sort        ; ex: sort, mergesort, quicksort
+    :C?:sapce::space      ; ex: workspace, backspace, namespace
     :C?:tenet::tent       ; ex: persistent, content, existent
     :C?:thc::tch          ; ex: catch, batch, switch
     :C?:thces::tches
