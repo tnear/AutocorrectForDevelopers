@@ -26,9 +26,7 @@ class Rule:
     # Removes leading/trailing whitespace, comments, directives, and more.
     @staticmethod
     def cleanFile(file):
-        if not pathlib.Path(file).exists():
-            # support running from root dir or test dir
-            file = '../' +  file
+        file = Rule.getRelativeFileName(file)
 
         # read file (removing trailing whitespace)
         with open(file) as f:
@@ -57,6 +55,14 @@ class Rule:
 
         assert len(lines) > 0
         return lines
+
+    @staticmethod
+    def getRelativeFileName(file):
+        if not pathlib.Path(file).exists():
+            # support running from root dir or test dir
+            file = '../' +  file    
+
+        return file
 
     # creates Rule instance from one line of text
     @staticmethod
@@ -125,8 +131,14 @@ class Rule:
     @staticmethod
     def getReplacementText(rules: list, inputText: str, hasEndChar: bool):
         for rule in rules:
-            # exact matches
-            if rule.oldText == inputText:
+            if rule.caseSensitive:
+                lhs = rule.oldText
+                rhs = inputText
+            else:
+                lhs = rule.oldText.lower()
+                rhs = inputText.lower()
+
+            if lhs == rhs:
                 if rule.backspace:
                     # found whitelist match, return text unchanged
                     return inputText, rule
@@ -136,7 +148,7 @@ class Rule:
                     return rule.newText, rule
 
             # suffix matches
-            if rule.suffixMatch and inputText.endswith(rule.oldText):
+            if rule.suffixMatch and inputText.endswith(rule.oldText) and hasEndChar:
                 return rule.newText, rule
 
         # no match, return input text

@@ -1,27 +1,33 @@
 import unittest
-import Rule
+from Rule import Rule
 
+# ex:: ":*:valeu::value"
 class TestMatchPrefix(unittest.TestCase):
     @classmethod
     def setUpClass(self):
         file = 'AutocorrectForDevelopers.ahk'
-        self.RULES = Rule.Rule.fileToRuleList(file)
+        self.rules = Rule.fileToRuleList(file)
+
+        prefixRules = [rule for rule in self.rules if rule.prefixMatch]
+        self.prefixRuleList = [rule.oldText for rule in prefixRules]
+
+    def test_ruleLength(self):
+        self.assertTrue(len(self.rules) > 900)
+        self.assertTrue(len(self.prefixRuleList) > 180)
 
     def test_replace(self):
+        # prefix rules (":*:") match regardless of end char
         hasEndChar = True
-        for inputText in MATCH_PREFIX_LIST:
-            newText, rule = Rule.Rule.getReplacementText(self.RULES, inputText, hasEndChar)
+        for inputText in self.prefixRuleList:
+            newText, rule = Rule.getReplacementText(self.rules, inputText, hasEndChar)
             self.assertEqual(newText, rule.newText)
+            self.assertTrue(rule.prefixMatch)
+            self.assertFalse(rule.suffixMatch)
 
         hasEndChar = False
-        for inputText in MATCH_PREFIX_LIST:
-            newText, rule = Rule.Rule.getReplacementText(self.RULES, inputText, hasEndChar)
+        for inputText in self.prefixRuleList:
+            newText, rule = Rule.getReplacementText(self.rules, inputText, hasEndChar)
             self.assertEqual(newText, rule.newText)
-
-# ex:: ":*:abc::def"
-MATCH_PREFIX_LIST = [
-    'abstarct', 'accomodat'
-]
 
 if __name__ == '__main__':
     unittest.main()

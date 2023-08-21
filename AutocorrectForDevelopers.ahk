@@ -581,9 +581,9 @@
     ::aray::array
     ::artifiical::artificial
     ::assmebly::assembly
-    ::asert::assert
-    ::assrt::assert
-    ::asssert::assert
+    :*:asert::assert
+    :*:assrt::assert
+    :*:asssert::assert
     :*:assesment::assessment
     ::asign::assign
     ::asigned::assigned
