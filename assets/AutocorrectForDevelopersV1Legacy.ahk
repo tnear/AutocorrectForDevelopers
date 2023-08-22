@@ -1,4 +1,4 @@
-#Requires AutoHotkey v2.0
+#Requires AutoHotkey v1
 
 ; Common AHK key codes:
 ; ^ = Control
@@ -29,7 +29,7 @@
 
 ; Exclude AHK script from MS Word because it already has an autocorrect (though it's not heavy on programming words)
 ; Note: this conditional should be changed if you would like to exclude other applications
-#HotIf !WinActive("ahk_exe WINWORD.exe") && !WinActive("ahk_exe soffice.exe")
+#If !WinActive("ahk_exe WINWORD.exe") && !WinActive("ahk_exe soffice.exe")
 
     ; Start by listing the whitelist (permit these words by setting backspace to zero, b0)
     ;     Note: the whitelist section must be above suffix section
@@ -577,7 +577,6 @@
     ::alwasy::always
     ::adn::and
     ::nad::and
-    :C:ANd::And
     ::andthe::and the
     ::anotehr::another
     :*:ansewr::answer
@@ -594,7 +593,6 @@
     :*:asssert::assert
     :*:assesment::assessment
     ::asign::assign
-    :*:asignment::assignment
     ::asigned::assigned
     ::asycn::async
     ::atmoic::atomic
@@ -613,7 +611,6 @@
     :*:bakc::back                   ; backward, backload
     ::backgorund::background
     :*:backwrad::backward
-    :*:blanace::balance
     ::bandwith::bandwidth
     ::baselien::baseline
     ::baseilne::baseline
@@ -644,12 +641,9 @@
     ::catpure::capture
     :*:catagor::categor             ; categories, categorical
     ::cateogyr::category
-    ::cuation::caution
     ::caues::cause
     ::casue::cause
     ::chagne::change
-    ::chagnes::changes
-    ::chagned::changed
     :*:chekc::check                 ; checkout, checked
     :*:chidl::child
     :*:cihper::cipher               ; ciphertext
@@ -687,7 +681,7 @@
     ::considerd::considered
     ::consisten::consistent
     ::consistenet::consistent
-    ::consoel::console
+    :*:consoel::console
     ::cosole::console
     ::consoe::console
     :*:cosnt::const
@@ -695,15 +689,16 @@
     ::constexrp::constexpr
     :*:constratin::constraint
     :*:constraitn::constraint
+    :*:constratint::constraint
     :*:constriant::constraint
     ::constuctor::constructor
     :*:contian::contain             ; contains, container
     ::contaienr::container
-    :*:contineu::continue           ; continued, continues
+    :*:contineu::continue
     :*:ocntinue::continue
     :*:contirbut::contribut         ; contribute, contrubitor
+    :*:contirbute::contribute
     :*:contorl::control
-    ::convertes::converts
     ::copyrgiht::copyright
     :*:corect::correct              ; corrected, correctness
     ::coudl::could
@@ -715,8 +710,7 @@
     ::creat::create                 ; note: there exists a legacy C syscall called "creat"
     ::criteira::criteria
     ::curent::current
-    :*:currenet::current            ; currently
-    :*:currrent::current
+    ::currenet::current
     ::customie::customize
     :*:dahsboard::dashboard
     :*:dadta::data
@@ -758,7 +752,6 @@
     :*:distni::distin               ; distinct, distinguish
     ::distriuted::distributed
     ::distriubtion::distribution
-    ::distirbution::distribution
     ::doesnt'::doesn't
     ::doens't::doesn't
     ; ::doesnt::doesn't             ; interferes with "doesnt'"
@@ -767,7 +760,6 @@
     ::doign::doing
     ::dont::don't
     ::doubel::double
-    ::downsream::downstream
     ::eahc::each
     :*:eigne::eigen                 ; eigenvalues, eigenvectors
     :*:elemtn::element
@@ -796,7 +788,6 @@
     ::evenet::event
     ::eveyr::every
     ::evvery::every
-    ::eveyrone::everyone
     ::everyting::everything
     :*:eample::example
     :*:examle::example
@@ -826,7 +817,6 @@
     :*:flaot::float                 ; float, floating-point
     ::folowing::following
     :C:fro::for                     ; 'for' keyword
-    :C:ofr::for
     ::foregorund::foreground
     ::foriegn::foreign
     ::forwared::forward
@@ -843,7 +833,7 @@
     ::goign::going
     ::goot::goto
     ::gradiet::gradient
-    :*:grpah::graph                 ; graphs, graphing
+    :*:grpah::graph                  ; graphs, graphing
     :*:grahp::graph
     ::gerat::great
     ::gorund::ground
@@ -917,12 +907,9 @@
     ::i"ll::i'll
     ::i"m::i'm
     ::i"ve::i've
-    :C:javascritp::javascript
-    :C:JavaScritp::JavaScript       ; with 2 capital letters, this word does not fit AHK's traditional model
-    :C:jaascript::javascript
-    :C:JaaScript::JavaScript
-    :C:javacript::javascript
-    :C:Javacript::JavaScript
+    ::javascritp::javascript
+    ::jaascript::javascript
+    ::javacript::javascript
     ::jorunal::journal
     ::jsut::just
     ::knwo::know
@@ -946,10 +933,8 @@
     :C:LInux::Linux
     :*:lsit::list                   ; lists, listener
     ::listenr::listener
-    ::looop::loop
     ::mahcine::machine
     ::machien::machine
-    ::machins::machines
     ::maintian::maintain
     :C*:amke_::make_                ; C++: make_shared, make_unique, make_pair, ...
     :C*:mkae_::make_
@@ -964,7 +949,6 @@
     ::mesage::message
     ::mispell::misspell
     ::modle::model
-    ::mdoel::model
     :*:moduel::module
     ::mroe::more
     ::omre::more
@@ -978,7 +962,6 @@
     ::enxt::next
     :*:northwset::northwest
     :C:nto::not
-    ::nohting::nothing
     ::nulll::null
     ::nulptr::nullptr
     ::nulllptr::nullptr
@@ -994,8 +977,7 @@
     ::ofhte::of the
     ::fo the::of the
     ::onthe::on the
-    :*:opeation::operation
-    :*:operaetion::operation
+    ::opeation::operation
     :*:opeator::operator
     :*:opeartor::operator
     ::optimze::optimize
@@ -1074,7 +1056,6 @@
     ::pythno::python
     ::pyton::python
     ::pythohn::python
-    :C:PYthon::Python
     :*:queyr::query                 ; querying
     ::quanitty::quantity
     :*:qustion::question
@@ -1099,14 +1080,11 @@
     ::reuglar::regular
     ::rleative::relative
     :*:rmeove::remove
-    ::reepat::repeat
-    ::reepated::repeated
     ::repalce::replace
     ::repostiroy::repository
     ::repositoroy::repository
     ::reposistory::repository
     ::reopsitory::repository
-    ::repositroy::repository
     ::reproducable::reproducible
     ::requst::request
     :*:reuqire::require
@@ -1139,7 +1117,6 @@
     :*:scritp::script               ; scripted, scripting
     :*:sript::script
     :*:sritp::script
-    :*:scirpt::script
     :*:serach::search               ; search, searching
     ::escond::second
     ::seocnd::second
@@ -1156,7 +1133,6 @@
     ::shoud::should
     ::shoudl::should
     :*:signla::signal               ; signal, signaling
-    ::signle::single
     :C:sie_t::size_t                ; common C++ data type
     :C:sizet::size_t
     :C:size_T::size_t
@@ -1174,9 +1150,9 @@
     :C*:std:`;::std`:`:             ; C++ standard namespace. Use '`' to escape ':' and ';'
                                     ; Use '*' to match anywhere. needed b/c there is no ending char after "std::"
                                     ; "std:;" -> "std::"
-    :C*:sdt`:`:::std`:`:            ; "sdt::" -> "std::"
+    :C*:sdt`::::std`::            ; "sdt::" -> "std::"
     :C*:sdt:`;::std`:`:             ; "sdt:;" -> "std::"
-    :C*:stD`:`:::std`:`:            ; "stD::" -> "std::"
+    :C*:stD`::::std`::            ; "stD::" -> "std::"
     ::streategy::strategy
     ::strenghten::strengthen
     :*:sring::string
@@ -1218,7 +1194,6 @@
     ::thte::the
     ::tjhe::the
     ::tthe::the
-    :C:THe::The
     ::htem::them
     ::hten::then
     ::htere::there
@@ -1229,18 +1204,15 @@
     ::theyr'e::they're
     ::hting::thing
     ::thign::thing
-    ::thikning::thinking
     ::thsi::this
     ::htis::this
-    :*:thoguht::thought
+    ::thoguht::thought
     ::thershold::threshold
     ::throuhg::through
     ::tiem::time
-    ::tiems::times
     ::todya::today
     ::tdoay::today
     ::tolerence::tolerance
-    ::tolernace::tolerance
     ::toolsrip::toolstrip
     ::toplogical::topological
     ::ot be::to be
@@ -1274,7 +1246,6 @@
     ::utnil::until
     :*:udpate::update
     :*:upadte::update
-    ::upsream::upstream
     ::vlaid::valid
     :*:vlaue::value
     :*:avlue::value
@@ -1348,7 +1319,6 @@
     :C?:borad::board
     :C?:ctaing::cating    ; ex: locating, replicating, preallocating
     :C?:ctaion::cation    ; ex: education, replication, allocation
-    :C?:caction::cation
     :C?:denet::dent       ; ex: independent, descendent, dependent
     :C?:dnet::dent
     :C?:idng::ding        ; ex: offloading, finding, padding
@@ -1430,4 +1400,4 @@
     :C?:voe::ove          ; ex: remove, move, above
     :C?:wrae::ware        ; ex: software, hardware, shareware
 
-#HotIf
+#If

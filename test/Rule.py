@@ -1,4 +1,5 @@
 import pathlib
+import re
 
 class Rule:
     staticIndex = 0
@@ -60,7 +61,7 @@ class Rule:
     def getRelativeFileName(file):
         if not pathlib.Path(file).exists():
             # support running from root dir or test dir
-            file = '../' +  file    
+            file = '../' +  file
 
         return file
 
@@ -99,7 +100,9 @@ class Rule:
         # ex: convert '::abc::def' to 'abc::def'
         noOpts = line[len(optsText):]
 
-        splitter = noOpts.find('::')
+        # find first unescaped '::'
+        out = re.search(r'(?<!`)::', noOpts)
+        splitter = out.regs[0][0]
         assert splitter > 0
 
         oldText = noOpts[0:splitter]
@@ -138,18 +141,28 @@ class Rule:
                 lhs = rule.oldText.lower()
                 rhs = inputText.lower()
 
-            if lhs == rhs:
+            if rule.prefixMatch:
+                # prefix rules, :*:, only need to start with text
+                # (ending char does not matter)
+                # ex: :*:grahp should match "graphing"
+                if inputText.startswith(rule.oldText):
+                    newText = inputText.replace(rule.oldText, rule.newText)
+                    return newText, rule
+
+            elif lhs == rhs:
+                # exact matches
                 if rule.backspace:
                     # found whitelist match, return text unchanged
                     return inputText, rule
 
-                if hasEndChar or rule.prefixMatch:
+                if hasEndChar:
                     # found match
                     return rule.newText, rule
 
-            # suffix matches
-            if rule.suffixMatch and inputText.endswith(rule.oldText) and hasEndChar:
-                return rule.newText, rule
+            elif rule.suffixMatch:
+                # suffix matches
+                if hasEndChar and inputText.endswith(rule.oldText):
+                    return rule.newText, rule
 
-        # no match, return input text
+        # no match found, return input text
         return inputText, None

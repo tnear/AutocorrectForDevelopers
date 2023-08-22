@@ -50,6 +50,9 @@ class TestRule(unittest.TestCase):
         newText = Rule.getNewText(':C*:std:`;::std`:`:')
         assert newText == 'std::'
 
+        newText = Rule.getNewText(':C*:sdt`:`:::std`:`:')
+        assert newText == 'std::'
+
     def test_lineToRule(self):
         rule = Rule.lineToRule('::abc::def')
         self.assertFalse(rule.backspace)
@@ -108,6 +111,14 @@ class TestRule(unittest.TestCase):
         # the chars '<' and '>' and non-default ending characters and should be tested
         self.assertIn('<', lines[0])
         self.assertIn('>', lines[0])
+
+    def test_allRulesMustChangeText(self):
+        # prevents a rule where oldText -> oldText (no change but causes flicker)
+        file = 'AutocorrectForDevelopers.ahk'
+        rules = Rule.fileToRuleList(file)
+
+        for rule in rules:
+            assert rule.oldText != rule.newText
 
 if __name__ == '__main__':
     unittest.main()
