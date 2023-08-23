@@ -130,6 +130,32 @@ class Rule:
         # remove all '`' characters from text
         return text.replace(Rule.escapeChar, '')
 
+    # ex: inputText = 'Wriet-Output'
+    # oldText = 'wriet'
+    # newText = 'write'
+    # This first changes 'Wriet-Output' to 'write-Output' then restores case to 'Write-Output'
+    @staticmethod
+    def _replacePreserveCase(inputText, oldText, newText):
+        assert len(inputText) >= len(oldText)
+        mismatchIdx = []
+
+        # get idx of capitalization mismatch
+        for idx in range(len(oldText)):
+            if inputText[idx].lower() == oldText[idx].lower() and inputText[idx] != oldText[idx]:
+                # found a capitalization mismatch
+                mismatchIdx.append( (inputText[idx], idx) )
+
+        # make lowercase the part of inputText which matches the length of the rule
+        lowercaseText = inputText[0 : len(oldText)].lower() + inputText[len(oldText) : ]
+        # naively replace old -> new, ex: 'Wriet-Output' -> 'write-Output'
+        replacedText = lowercaseText.replace(oldText, newText)
+
+        # lastly, restore the capitalization, ex: 'write-Output' -> 'Write-Output'
+        for elem in mismatchIdx:
+            replacedText = replacedText[0:elem[1]] + elem[0] + replacedText[elem[1] + 1 : ]
+
+        return replacedText
+
     # iterates through rules trying to find a match
     @staticmethod
     def getReplacementText(rules: list, inputText: str, hasEndChar: bool):
@@ -145,9 +171,9 @@ class Rule:
                 # prefix rules, :*:, only need to start with text
                 # (ending char does not matter)
                 # ex: :*:grahp should match "graphing"
-                if inputText.startswith(rule.oldText):
-                    newText = inputText.replace(rule.oldText, rule.newText)
-                    return newText, rule
+                if rhs.startswith(rule.oldText):
+                    replacedText = Rule._replacePreserveCase(inputText, rule.oldText, rule.newText)
+                    return replacedText, rule
 
             elif lhs == rhs:
                 # exact matches

@@ -20,7 +20,8 @@ class TestMatchNone(unittest.TestCase):
 # words which should not be changed by AHK (but are NOT whitelisted)
 MATCH_NONE_LIST = [
     'valid', 'firmwaer', 'FRO', 'ITN', 'INOT', 'LINUX', 'NTO', 'SIE_T', 'SIZET', 'SIZE_T', 'SIZE-T',
-    'TYPENAEM', 'TYEPOF', 'WSA', 'YUO', 'JAVAScritp', 'std::', 'MKAE_', 'AMKE_', 'PyThOn'
+    'TYPENAEM', 'TYEPOF', 'WSA', 'YUO', 'JAVAScritp', 'std::', 'MKAE_', 'AMKE_', 'PyThOn', 'overidealize',
+    'overidentify', 'ADN', 'NAD', 'HTE', 'TEH', 'CNA', 'HSA', 'hwo'
 ]
 
 if __name__ == '__main__':

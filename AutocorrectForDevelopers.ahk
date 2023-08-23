@@ -1,11 +1,15 @@
-#Requires AutoHotkey v2.0
+#Requires AutoHotkey v2 ; note: v1 is also supported, see https://github.com/tnear/AutocorrectForDevelopers
+#SingleInstance Force
 
-; Common AHK key codes:
-; ^ = Control
-; + = shift
-; ! = alt
-; # = Windows key
+; INTRODUCTION
+; AutocorrectForDevelopers is an AutoHotkey script which automatically fixes typos
+; using rules tailored for software developer environments. The rules in this script
+; contain many corrections for common developer words involving keywords, classes,
+; methods, programming languages, and programming disciplines.
+; Latest version is located here: https://github.com/tnear/AutocorrectForDevelopers
 
+
+; DOCUMENTATION
 ; AHK hotstrings: https://www.autohotkey.com/docs/v2/Hotstrings.htm
 ;   Prefix dictionary search: https://www.litscape.com/word_tools/starts_with.php
 ;   Suffix dictionary search: https://www.litscape.com/word_tools/ends_with.php
@@ -18,19 +22,23 @@
 ; :?: = matches inside other words used for suffixes, ex, :?:tign::ting => testign -> testing.
 ;       The '?' option still needs ending char.
 
+; END CHARS
 ; Add '<' and '>' to supported ending characters (useful for C++ templates).
 ;    Note: all EndChars characters below except '<' and '>' are default AHK end chars:
 #Hotstring EndChars -()[]{}:;'"/\,.?!`n `t<>
 
+; AHK VERSION 2 vs. VERSION 1
 ; Relevant AutocorrectForDevelopers v1 <=> v2 differences:
 ; Directives: #HotIf (v2) is #If (v1)
 ; For literal colons, each colon needs to be escaped in v2: `:`:
 ;     For v1, you only need to escape double colon: `::
 
-; Exclude AHK script from MS Word because it already has an autocorrect (though it's not heavy on programming words)
-; Note: this conditional should be changed if you would like to exclude other applications
+; SCRIPT
+; Exclude AHK script from MS Word because it already has an autocorrect (though it's not heavy on programming words).
+; Note: this conditional should be changed if you would like to include or exclude other applications.
 #HotIf !WinActive("ahk_exe WINWORD.exe") && !WinActive("ahk_exe soffice.exe")
 
+    ; WHITELIST
     ; Start by listing the whitelist (permit these words by setting backspace to zero, b0)
     ;     Note: the whitelist section must be above suffix section
 
@@ -353,6 +361,10 @@
     {
         ; do not convert this string to -ision
     }
+    :b0:iivty::
+    {
+        ; do not convert this string to -ivity
+    }
     :b0:ikc::
     {
         ; do not convert this string to -ick
@@ -558,7 +570,8 @@
         ; do not convert this string to -ware
     }
 
-    ; Primary autocorrect list. Autocorrect these strings.
+    ; AUTOCORRECT LIST
+    ; Autocorrect these strings.
     ; Basic syntax -> ::oldString::newString
     ;
     ::abotu::about
@@ -571,12 +584,16 @@
     :*:algoirthm::algorithm
     :*:algorihtm::algorithm
     ::almsot::almost
+    :*:alhpa::alpha                 ; alphabet, alphanumeric
+    :*:allpha::alpha
     ::alos::also
     ::alraedy::already
     ::alrady::already
+    ::alhtough::although
     ::alwasy::always
-    ::adn::and
-    ::nad::and
+    :C:adn::and
+    :C:Adn::And
+    :C:nad::and
     :C:ANd::And
     ::andthe::and the
     ::anotehr::another
@@ -636,7 +653,8 @@
     ::cahcing::caching
     ::calcualte::calculate
     :*:calender::calendar
-    ::cna::can
+    :C:cna::can
+    :C:Cna::Can
     ::cnadidate::candidate
     ::cant::can't
     ::cant'::can't
@@ -650,8 +668,11 @@
     ::chagne::change
     ::chagnes::changes
     ::chagned::changed
+    ::chracter::character
     :*:chekc::check                 ; checkout, checked
     :*:chidl::child
+    ::chilren::children
+    ::chocie::choice
     :*:cihper::cipher               ; ciphertext
     ::clas::class
     ::clss::class
@@ -736,12 +757,13 @@
     ::descrbie::describe
     ::descirbe::describe
     ::desing::design
-    ::deveop::develop               ; todo: consider 'devops'
     :*:devleop::develop
     :*:devloep::develop
     :*:dvelop::develop
     :*:develoep::develop
     ::developr::developer
+    ::developrs::developers
+    ::developeres::developers
     ::develoment::development
     :*:dialgo::dialog
     ::dictinary::dictionary
@@ -784,6 +806,7 @@
     ::emiting::emitting
     ::emtpy::empty
     ::empyt::empty
+    ::emulatro::emulator
     ::enbale::enable
     ::enumeate::enumerate
     ::enviroment::environment
@@ -815,6 +838,7 @@
     ::externla::external
     ::facotry::factory
     :*:failrue::failure
+    ::fallthrouhg::fallthrough
     ::flase::false
     :*:feasab::feasib               ; feasible, feasibility
     ::fibonnaci::fibonacci          ; fibonacci sequence, fibonacci heap
@@ -849,7 +873,8 @@
     ::gorund::ground
     :*:gorup::group                 ; group, groups
     :*:gropu::group
-    ::hsa::has
+    :C:hsa::has
+    :C:Hsa::Has
     ::hvae::have
     ::ahve::have
     ::heirarchy::hierarchy
@@ -869,6 +894,7 @@
     ::imposisble::impossible
     :*:incldue::include
     :*:incdlue::include
+    :*:indistniguish::indistinguish ; indistinguishable, indistinguishability
     :*:inofrmati::informati         ; information, informative
     ::inclue::include
     ::incrase::increase
@@ -876,6 +902,7 @@
     :*:indpeend::independ           ; independent, independently
     :*:independant::independent
     ::idnex::index
+    ::ineequality::inequality
     :*:inherti::inherit
     :*:inhreit::inherit
     :*:intiial::initial             ; initialize, initialization
@@ -885,6 +912,7 @@
     ::intance::instance
     ::isntead::instead
     ::isnteadof::insteadof          ; PHP
+    :*:isntr::instr                 ; instruction, instrument
     ::insruction::instruction
     :C:itn::int                     ; integer data type
     ::itneger::integer
@@ -947,6 +975,7 @@
     :*:lsit::list                   ; lists, listener
     ::listenr::listener
     ::looop::loop
+    :*:lwoer::lower                 ; lower, lowercase
     ::mahcine::machine
     ::machien::machine
     ::machins::machines
@@ -976,6 +1005,7 @@
     ::naer::near
     :*:nerua::neura                 ; neural, neuralnet
     ::enxt::next
+    ::normlaize::normalize
     :*:northwset::northwest
     :C:nto::not
     ::nohting::nothing
@@ -993,11 +1023,14 @@
     ::ofteh::of the
     ::ofhte::of the
     ::fo the::of the
+    ::oft he::of the
     ::onthe::on the
     :*:opeation::operation
     :*:operaetion::operation
     :*:opeator::operator
     :*:opeartor::operator
+    ::optgorup::optgroup            ; html tag
+    ::optgropu::optgroup
     ::optimze::optimize
     ::orignal::original
     ::otehr::other
@@ -1029,6 +1062,7 @@
     ::paht::path
     ::pahtlib::pathlib
     ::apttern::pattern
+    ::perceptorn::perceptron
     ::eprf::perf
     ::eprformance::performance
     ::perofrmance::performance
@@ -1071,6 +1105,7 @@
     ::protocl::protocol
     ::proove::prove
     :*:pesudo::pseudo               ; pseudocode
+    :C:push+back::push_back         ; common C++ container function
     ::pythno::python
     ::pyton::python
     ::pythohn::python
@@ -1102,11 +1137,13 @@
     ::reepat::repeat
     ::reepated::repeated
     ::repalce::replace
-    ::repostiroy::repository
-    ::repositoroy::repository
-    ::reposistory::repository
-    ::reopsitory::repository
-    ::repositroy::repository
+    :C:repeelm::repelem             ; MATLAB function
+    :C:repamt::repmat               ; MATLAB function
+    :*:repostiro::repositor         ; repository, repositories
+    :*:repositoro::repositor
+    :*:reposistor::repositor
+    :*:reopsitor::repositor
+    :*:repositro::repositor
     ::reproducable::reproducible
     ::requst::request
     :*:reuqire::require
@@ -1136,6 +1173,7 @@
     ::svae::save
     ::scaleable::scalable
     :*:scheudl::schedul             ; schedule, scheduling
+    ::scientiifc::scientific
     :*:scritp::script               ; scripted, scripting
     :*:sript::script
     :*:sritp::script
@@ -1164,6 +1202,7 @@
     ::socktes::sockets
     ::osftware::software
     ::smoe::some
+    ::somehing::something
     ::soudn::sound
     :*:sproadic::sporadic           ; sporadically
     ::stakc::stack
@@ -1186,8 +1225,14 @@
     ::struture::structure
     ::styel::style
     ::sytling::styling
+    ::subcateogyr::subcategory
+    ::subcatagory::subcategory
     ::subclas::subclass
+    ::subscritp::subscript          ; Swift keyword
+    ::subscirpt::subscript
     :*:subseuqent::subsequent
+    ::subsring::substring
+    ::substirng::substring
     ::subract::subtract
     :*:sucess::success              ; successful
     ::succes::success
@@ -1201,6 +1246,8 @@
     :*:sytsem::system
     ::tabel::table
     ::taks::task
+    :*:tehcn::techn                 ; technology, technical, technique
+    :*:techinque::technique
     ::tempalte::template
     ::temmplate::template
     ::templae::template
@@ -1209,12 +1256,14 @@
     ::tempoarry::temporary
     ::temoprary::temporary
     ::tendancy::tendency
+    ::temrinal::terminal
     ::htan::than
     ::tahn::than
     ::htat::that
     ::taht::that
-    ::hte::the
-    ::teh::the
+    :C:hte::the
+    :C:teh::the
+    :C:Teh::The
     ::thte::the
     ::tjhe::the
     ::tthe::the
@@ -1222,6 +1271,7 @@
     ::htem::them
     ::hten::then
     ::htere::there
+    ::tehre::there
     ::htese::these
     ::thees::these
     ::htey::they
@@ -1256,6 +1306,7 @@
     :*:trucate::truncate
     ::tupel::tuple
     ::tyep::type
+    ::tyepalias::typealias               ; Swift keyword
     ::tyepdef::typedef
     :C:typenaem::typename
     :C:tyepof::typeof
@@ -1289,6 +1340,7 @@
     ::veirfy::verify
     ::vesrion::version
     ::vetex::vertex
+    ::veyr::very
     ::vitual::virtual
     ::virutal::virtual
     :*:viist::visit                 ; visits, visitor
@@ -1318,6 +1370,7 @@
     ::woudl::would
     ::wouldnt'::wouldn't
     :*:wirte::write
+    :*:wriet::write                 ; writer, Write-Output
     ::yaer::year
     :*:yeidl::yield
     :*:yeild::yield
@@ -1326,7 +1379,8 @@
     :*:yoru::your                   ; your, yours, yourself
     ::youself::yourself
 
-    ; suffix list. Autocorrect words which have these endings.
+    ; SUFFIX LIST
+    ; Autocorrect words which have these endings.
     ; suffix dictionary search tool: https://www.litscape.com/word_tools/ends_with.php)
 
     :C?:albe::able        ; ex: available, mutable, runnable
@@ -1373,6 +1427,7 @@
     :C?:tiy::ity          ; ex: security, ability, utility
     :C?:vie::ive          ; ex: generative, active, relative
     :C?:ivley::ively      ; ex: relatively, actively, intrusively
+    :C?:iivty::ivity      ; ex: connectivity, sensitivity, productivity
     :C?:alble::lable      ; ex: available, callable, scalable
     :C?:laod::load        ; ex: overload, download, workload
     :C?:amte::mate        ; ex: approximate, estimate, animate

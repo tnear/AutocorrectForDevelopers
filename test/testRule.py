@@ -50,6 +50,7 @@ class TestRule(unittest.TestCase):
         newText = Rule.getNewText(':C*:std:`;::std`:`:')
         assert newText == 'std::'
 
+        # should delimit on first unescaped '::'
         newText = Rule.getNewText(':C*:sdt`:`:::std`:`:')
         assert newText == 'std::'
 
@@ -89,20 +90,20 @@ class TestRule(unittest.TestCase):
 
     # non-printable characters are not text editor-friendly
     def test_printableCharacters(self):
-        file = 'AutocorrectForDevelopers.ahk'
-        file = Rule.getRelativeFileName(file)
+        fileName = 'AutocorrectForDevelopers.ahk'
+        fileName = Rule.getRelativeFileName(fileName)
 
-        with open(file) as f:
+        with open(fileName) as f:
             lines = [line.strip('\n ') for line in f]
 
         for line in lines:
             self.assertTrue(all(char in string.printable for char in line)), 'Only printable character supported'
 
     def test_endingChars(self):
-        file = 'AutocorrectForDevelopers.ahk'
-        file = Rule.getRelativeFileName(file)
+        fileName = 'AutocorrectForDevelopers.ahk'
+        fileName = Rule.getRelativeFileName(fileName)
 
-        with open(file) as f:
+        with open(fileName) as f:
             lines = [line.strip('\n ') for line in f]
 
         lines = [line for line in lines if line.startswith('#Hotstring EndChars')]
@@ -114,11 +115,42 @@ class TestRule(unittest.TestCase):
 
     def test_allRulesMustChangeText(self):
         # prevents a rule where oldText -> oldText (no change but causes flicker)
-        file = 'AutocorrectForDevelopers.ahk'
-        rules = Rule.fileToRuleList(file)
+        rules = Rule.fileToRuleList('AutocorrectForDevelopers.ahk')
 
         for rule in rules:
             assert rule.oldText != rule.newText
+
+    def test_noMultiLineComments(self):
+        file = Rule.getRelativeFileName('AutocorrectForDevelopers.ahk')
+        with open(file) as f:
+            lines = [line.strip('\n ') for line in f]
+
+        # for now, only single line comments (';') are supported
+        for line in lines:
+            self.assertNotIn('/*', line)
+            self.assertNotIn('*/', line)
+
+    def test_replacePreserveCase(self):
+        oldText = 'wriet'
+        newText =  'write'
+
+        inputText = 'Wriet-Output'
+        replacedText = Rule._replacePreserveCase(inputText, oldText, newText)
+        assert replacedText == 'Write-Output'
+
+        inputText = 'WrIet-Output'
+        replacedText = Rule._replacePreserveCase(inputText, oldText, newText)
+        assert replacedText == 'WrIte-Output'
+
+    def test_uniqueRules(self):
+        # no rule lhs should appear more than once
+        rules = Rule.fileToRuleList('AutocorrectForDevelopers.ahk')
+
+        # get all rules except whitelisted and suffixes because those can also appear in the main section
+        oldTextList = [rule.oldText for rule in rules if not rule.backspace and not rule.suffixMatch]
+
+        # verify no duplicates by using a set
+        assert len(oldTextList) == len(set(oldTextList))
 
 if __name__ == '__main__':
     unittest.main()

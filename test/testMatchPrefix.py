@@ -36,6 +36,7 @@ class TestMatchPrefix(unittest.TestCase):
             self.assertNotEqual(newText, inputText,
                 'These tests are meant to match beyond what is specified in the rule')
             self.assertTrue(rule.prefixMatch)
+            self.assertFalse(rule.suffixMatch)
 
 EXPLICIT_TESTS = {
     'abstarction': 'abstraction', 'accomodating': 'accommodating', 'adminstrators': 'administrators',
@@ -84,7 +85,11 @@ EXPLICIT_TESTS = {
     'trucated': 'truncated', 'udnerstand': 'understand', 'unorderdMap': 'unorderedMap', 'unordrerdMap': 'unorderedMap',
     'udpated': 'updated', 'upadted': 'updated', 'vlaues': 'values', 'avlues': 'values', 'vluaes': 'values', 'valeus': 'values',
     'vareiables': 'variables', 'varibales': 'variables', 'viistor': 'visitor', 'wieghted': 'weighted', 'owrkflows': 'workflows',
-    'wirter': 'writer', 'yeidled': 'yielded', 'yeilds': 'yields', 'yoruself': 'yourself'
+    'wirter': 'writer', 'yeidled': 'yielded', 'yeilds': 'yields', 'yoruself': 'yourself', 'techinque': 'technique',
+    'tehcnology': 'technology', 'indistniguishable': 'indistinguishable', 'repostiroy': 'repository', 'yorus': 'yours',
+    'repositoroies': 'repositories', 'reposistory': 'repository', 'reopsitories': 'repositories', 'repositroy': 'repository',
+    'Wriet-Output': 'Write-Output', 'wrietr': 'writer', 'lwoercase': 'lowercase', 'alhpanumeric': 'alphanumeric',
+    'allphabet': 'alphabet', 'isntructions': 'instructions'
 }
 
 if __name__ == '__main__':
