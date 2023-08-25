@@ -5,8 +5,7 @@ from Rule import Rule
 class TestMatchExact(unittest.TestCase):
     @classmethod
     def setUpClass(self):
-        file = 'AutocorrectForDevelopers.ahk'
-        self.rules = Rule.fileToRuleList(file)
+        self.rules = Rule.fileToRuleList('AutocorrectForDevelopers.ahk')
 
         exactMatchRules = [rule for rule in self.rules
                            if not rule.prefixMatch and not rule.suffixMatch and not rule.backspace and

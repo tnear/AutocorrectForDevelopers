@@ -5,8 +5,7 @@ import string
 class TestRule(unittest.TestCase):
 
     def test_file(self):
-        file = 'AutocorrectForDevelopers.ahk'
-        lines = Rule.cleanFile(file)
+        lines = Rule.cleanFile('AutocorrectForDevelopers.ahk')
         self.assertTrue(all([line.startswith(':') for line in lines]))
 
     def test_getOptionsText(self):
@@ -90,8 +89,7 @@ class TestRule(unittest.TestCase):
 
     # non-printable characters are not text editor-friendly
     def test_printableCharacters(self):
-        fileName = 'AutocorrectForDevelopers.ahk'
-        fileName = Rule.getRelativeFileName(fileName)
+        fileName = Rule.getRelativeFileName('AutocorrectForDevelopers.ahk')
 
         with open(fileName) as f:
             lines = [line.strip('\n ') for line in f]
@@ -100,8 +98,7 @@ class TestRule(unittest.TestCase):
             self.assertTrue(all(char in string.printable for char in line)), 'Only printable character supported'
 
     def test_endingChars(self):
-        fileName = 'AutocorrectForDevelopers.ahk'
-        fileName = Rule.getRelativeFileName(fileName)
+        fileName = Rule.getRelativeFileName('AutocorrectForDevelopers.ahk')
 
         with open(fileName) as f:
             lines = [line.strip('\n ') for line in f]

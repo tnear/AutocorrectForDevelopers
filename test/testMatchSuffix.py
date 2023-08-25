@@ -5,15 +5,14 @@ from Rule import Rule
 class TestMatchPrefix(unittest.TestCase):
     @classmethod
     def setUpClass(self):
-        file = 'AutocorrectForDevelopers.ahk'
-        self.rules = Rule.fileToRuleList(file)
+        self.rules = Rule.fileToRuleList('AutocorrectForDevelopers.ahk')
 
         suffixRules = [rule for rule in self.rules if rule.suffixMatch]
         self.suffixRuleList = [rule.oldText for rule in suffixRules]
 
     def test_ruleLength(self):
-        self.assertTrue(len(self.rules) > 900)
-        self.assertTrue(len(self.suffixRuleList) > 90)
+        self.assertGreater(len(self.rules), 1000)
+        self.assertGreater(len(self.suffixRuleList), 100)
 
     def test_replace(self):
         hasEndChar = True

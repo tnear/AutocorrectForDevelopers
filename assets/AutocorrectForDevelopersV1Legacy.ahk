@@ -1,4 +1,5 @@
-#Requires AutoHotkey v1
+#Requires AutoHotkey v1 ; v1 is supported but it is recommended that everyone upgrade to v2,
+; see https://github.com/tnear/AutocorrectForDevelopers
 #SingleInstance Force
 
 ; INTRODUCTION

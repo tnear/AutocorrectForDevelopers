@@ -238,6 +238,14 @@
     {
     }
 
+    ; -sinos word suffix whitelist (do not convert these to -sions
+    :b0:sinos::
+    {
+    }
+    :b0:casinos::
+    {
+    }
+
     ; -tino word suffix whitelist (do not convert these to -tion)
     :b0:tino::
     {
@@ -409,6 +417,10 @@
     {
         ; do not convert this string to -ility
     }
+    :b0:ltiy::
+    {
+        ; do not convert this string to -lity
+    }
     :b0:maion::
     {
         ; do not convert this string to -mation
@@ -449,9 +461,17 @@
     {
         ; do not convert this string to -mizes
     }
+    :b0:naet::
+    {
+        ; do not convert this string to -nate
+    }
     :b0:nig::
     {
         ; do not convert this string to -ing
+    }
+    :b0:ntiy::
+    {
+        ; do not convert this string to -nity
     }
     :b0:oeus::
     {
@@ -481,6 +501,10 @@
     {
         ; do not convert this string to -ports
     }
+    :b0:rtiy::
+    {
+        ; do not convert this string to -rity
+    }
     :b0:oudn::
     {
         ; do not convert this string to -ound
@@ -496,6 +520,10 @@
     :b0:soins::
     {
         ; do not convert this string to -sions
+    }
+    :b0:stiy::
+    {
+        ; do not convert this string to -sity
     }
     :b0:taion::
     {
@@ -525,10 +553,6 @@
     {
         ; do not convert this string to -tions
     }
-    :b0:tiy::
-    {
-        ; do not convert this string to -ity
-    }
     :b0:tnation::
     {
         ; do not convert this string to -ntation
@@ -540,6 +564,10 @@
     :b0:toins::
     {
         ; do not convert this string to -tions
+    }
+    :b0:ttiy::
+    {
+        ; do not convert this string to -tity
     }
     :b0:tuer::
     {
@@ -565,6 +593,10 @@
     {
         ; do not convert this string to -ove
     }
+    :b0:vtiy::
+    {
+        ; do not convert this string to -vity
+    }
     :b0:wrae::
     {
         ; do not convert this string to -ware
@@ -581,16 +613,19 @@
     ::adjacnecy::adjacency
     :*:adminstrator::administrator
     ::agian::again
+    ::aehad::ahead
     :*:algoirthm::algorithm
     :*:algorihtm::algorithm
+    ::algoirhtm::algorithm
+    ::allcoate::allocate
     ::almsot::almost
     :*:alhpa::alpha                 ; alphabet, alphanumeric
-    :*:allpha::alpha
     ::alos::also
     ::alraedy::already
     ::alrady::already
     ::alhtough::although
     ::alwasy::always
+    ::analagous::analogous
     :C:adn::and
     :C:Adn::And
     :C:nad::and
@@ -601,6 +636,7 @@
     ::anhyting::anything
     :*:appearence::appearance
     ::arhitecture::architecture
+    ::archtiecture::architecture
     :*:arugment::argument
     ::arguement::argument
     ::aray::array
@@ -639,6 +675,7 @@
     ::becuase::because
     ::benhcmark::benchmark
     ::betwen::between
+    ::boht::both
     ::boundry::boundary
     :*:brnach::branch               ; branched, branching
     ::breka::break
@@ -681,9 +718,11 @@
     ::claer::clear
     ::clickc::click
     ::cloen::clone
+    ::clutser::cluster
     ::colide::collide
     ::colision::collision
     :*:comand::command
+    ::commnad::command
     ::comit::commit
     ::comitment::commitment
     ::comited::committed
@@ -696,8 +735,11 @@
     :*:comiple::compile
     ::complier::compiler            ; 'complier' is a valid but rare word
     ::comiler::compiler
+    ::compelx::complex
     :*:comopnent::component
+    ::compsoe::compose
     ::composeite::composite
+    ::concatneate::concatenate
     ::concetp::concept              ; C++20 keyword
     ::confidentality::confidentiality
     :*:conenct::connect
@@ -744,14 +786,15 @@
     :*:databse::database
     :*:databaes::database
     ::dataest::dataset
+    ::deallcoate::deallocate
     ::debuger::debugger
     ::debuging::debugging
     ::decrase::decrease
     ::deepcpoy::deepcopy
     :*:deafult::default             ; defaults
     :*:dleete::delete
-    :*:dpeend::depend               ; dependency, dependence
-    ::depenency::dependency
+    :*:dpeend::depend               ; dependency, dependence, dependencies
+    :*:depenenc::dependenc
     :*:depht::depth                 ; depth, depthFirstSearch
     :*:descendant::descendent
     ::descrbie::describe
@@ -774,16 +817,17 @@
     :*:diference::difference
     ::diferent::different
     :*:dififcult::difficult
+    ::dimensinoality::dimensionality
     ::directd::directed
     ::diretory::directory
     ::diable::disable
+    ::dispaly::display
     :*:distni::distin               ; distinct, distinguish
     ::distriuted::distributed
     ::distriubtion::distribution
     ::distirbution::distribution
     ::doesnt'::doesn't
     ::doens't::doesn't
-    ; ::doesnt::doesn't             ; interferes with "doesnt'"
     ::doenst::doesn't
     ::doesn ot::does not
     ::doign::doing
@@ -851,6 +895,8 @@
     ::folowing::following
     :C:fro::for                     ; 'for' keyword
     :C:ofr::for
+    :C:foreeach::foreach            ; Perl keyword
+    ::fo rthe::for the
     ::foregorund::foreground
     ::foriegn::foreign
     ::forwared::forward
@@ -877,6 +923,8 @@
     :C:Hsa::Has
     ::hvae::have
     ::ahve::have
+    ::haev::have
+    ::hieght::height
     ::heirarchy::hierarchy
     ; ::hwo::how                    ; ambiguous between 'how' and 'who'
     ::howver::however
@@ -895,6 +943,7 @@
     :*:incldue::include
     :*:incdlue::include
     :*:indistniguish::indistinguish ; indistinguishable, indistinguishability
+    ::inifnity::infinity
     :*:inofrmati::informati         ; information, informative
     ::inclue::include
     ::incrase::increase
@@ -999,7 +1048,9 @@
     ::omre::more
     :*:mlti::multi                  ; multithreaded
     :*:mjulti::multi
+    ::mulitply::multiply
     ::nmae::name
+    ::namelsit::namelist            ; FORTRAN
     ::namespce::namespace
     ::nmaespace::namespace
     ::naer::near
@@ -1032,8 +1083,10 @@
     ::optgorup::optgroup            ; html tag
     ::optgropu::optgroup
     ::optimze::optimize
+    ::optioal::optional
     ::orignal::original
     ::otehr::other
+    ::outocme::outcome
     :*:otuput::output
     ::overiden::overridden
     ::overidden::overridden
@@ -1041,10 +1094,14 @@
     ::overide::override             ; cannot do ':*:' b/c of words like overidealize, overidentify
     ::onwer::owner
     ::onwership::ownership
+    ::pacakge::package
+    ::packge::package
+    ::pakcage::package
     :*:packte::packet               ; packets, packetize
     ::paralel::parallel
     ::parllel::parallel
     ::parllle::parallel
+    ::aprallel::parallel
     :*:pareamter::parameter
     :*:paraemter::parameter
     :*:parameer::parameter
@@ -1137,8 +1194,8 @@
     ::reepat::repeat
     ::reepated::repeated
     ::repalce::replace
-    :C:repeelm::repelem             ; MATLAB function
-    :C:repamt::repmat               ; MATLAB function
+    :C:repeelm::repelem             ; common MATLAB function
+    :C:repamt::repmat               ; common MATLAB function
     :*:repostiro::repositor         ; repository, repositories
     :*:repositoro::repositor
     :*:reposistor::repositor
@@ -1154,6 +1211,8 @@
     ::resaerch::research
     ::reserach::research
     ::resarch::research
+    ::rserve::reserve
+    :*:resoruce::resource
     ::resopnse::response
     ::respones::response
     :*:reuslt::result
@@ -1162,9 +1221,11 @@
     ::reutrn::return
     ::retrn::return
     ::retrun::return
+    ::reurn::return
     ::returnd::returned
     ::reivew::review
     ::reveiw::review
+    ::rewriet::rewrite              ; COBOL statement
     :*:rigth::right                 ; rights, rightInVarName
     ::runing::running
     :*:saef::safe                   ; safety, safest
@@ -1204,7 +1265,9 @@
     ::smoe::some
     ::somehing::something
     ::soudn::sound
+    ::soruce::source
     :*:sproadic::sporadic           ; sporadically
+    ::spritnf::sprintf              ; common string formatting function
     ::stakc::stack
     ::stnadard::standard
     ::staretd::started
@@ -1216,6 +1279,7 @@
     :C*:sdt`:`:::std`:`:            ; "sdt::" -> "std::"
     :C*:sdt:`;::std`:`:             ; "sdt:;" -> "std::"
     :C*:stD`:`:::std`:`:            ; "stD::" -> "std::"
+    :C*:std`;`:::std`:`:            ; "std;:" -> "std::"
     ::streategy::strategy
     ::strenghten::strengthen
     :*:sring::string
@@ -1294,6 +1358,7 @@
     ::toolsrip::toolstrip
     ::toplogical::topological
     ::ot be::to be
+    ::t obe::to be
     ::ot do::to do
     ::ot the::to the
     ::tothe::to the
@@ -1321,6 +1386,7 @@
     :*:unordrerd::unordered
     ::unsaef::unsafe
     ::unsgined::unsigned
+    ::unsigend::unsigned
     ::unitl::until
     ::utnil::until
     :*:udpate::update
@@ -1341,27 +1407,38 @@
     ::vesrion::version
     ::vetex::vertex
     ::veyr::very
+    ::vrey::very
     ::vitual::virtual
     ::virutal::virtual
     :*:viist::visit                 ; visits, visitor
     ::viusal::visual
     ::watn::want
     :C:wsa::was
+    ::wa snot::was not
     ::wans't::wasn't
     ::wan't::wasn't
     ::wasnt'::wasn't
     :*:wieght::weight               ; weights, weighted
+    ::wern't::weren't
     ::whta::what
     ::hwat::what
+    ::waht::what
     ::hwen::when
+    ::wehn::when
+    ::whent he::when the
+    ::hwere::where
+    ::wher ethe::where the
+    ::wher eyou::where you
     ::wich::which
     ::hwich::which
     ::whihc::which
+    ::whicht he::which the
     ::whiel::while
     ::hwile::while
     ::iwth::with
     ::wiht::with
     ::wtih::with
+    ::witht he::with the
     ::withotu::without
     ::wont'::won't
     ::wo'nt::won't
@@ -1403,6 +1480,7 @@
     :C?:ctaing::cating    ; ex: locating, replicating, preallocating
     :C?:ctaion::cation    ; ex: education, replication, allocation
     :C?:caction::cation
+    :C?:ctiy::city        ; ex: capacity, opacity, scarcity
     :C?:denet::dent       ; ex: independent, descendent, dependent
     :C?:dnet::dent
     :C?:idng::ding        ; ex: offloading, finding, padding
@@ -1415,7 +1493,7 @@
     :C?:ikcs::icks
     :C?:ietn::ient        ; ex: gradient, quotient, client
     :C?:igth::ight        ; ex: copyright, height, eight
-    :C?:liity::ility      ; ex: probability, stability, feasibility
+    :C?:liity::ility      ; ex: probability, stability, feasibility, capability, utility
     :C?:ign::ing          ; ex: running, string, starting, testing, working, learning
                           ; Note: see whitelist at the top for valid -ign words
     :C?:nig::ing
@@ -1424,11 +1502,11 @@
     :C?:ouis::ious        ; ex: previous, various, dubious
     :C?:iison::ision      ; ex: decision, collision, revision
     :C?:tiive::itive      ; ex: positive, primitive, repetitive
-    :C?:tiy::ity          ; ex: security, ability, utility
     :C?:vie::ive          ; ex: generative, active, relative
     :C?:ivley::ively      ; ex: relatively, actively, intrusively
     :C?:iivty::ivity      ; ex: connectivity, sensitivity, productivity
     :C?:alble::lable      ; ex: available, callable, scalable
+    :C?:ltiy::lity        ; ex: probability, stability, feasibility, capability, utility
     :C?:laod::load        ; ex: overload, download, workload
     :C?:amte::mate        ; ex: approximate, estimate, animate
     :C?:amtes::mates
@@ -1448,8 +1526,10 @@
     :C?:mzied::mized
     :C?:mzies::mizes
     :C?:ntae::nate        ; ex: concatenate, eliminate, alternate
+    :C?:naet::nate
     :C?:chn::nch          ; ex: branch, launch, bunch
     :C?:tnation::ntation  ; ex: representation, orientation, segmentation
+    :C?:ntiy::nity        ; ex: infinity, opportunity, sanity
     :C?:oitn::oint        ; ex: powerpoint, breakpoint, disjoint
     :C?:oitns::oints
     :C?:oyp::opy          ; ex: copy, entropy, robocopy
@@ -1458,9 +1538,12 @@
     :C?:prot::port        ; ex: import, export, support
     :C?:prots::ports
     :C?:raet::rate        ; ex: enumerate, migrate, integrate
-    :C?:sino::sion        ; ex: expression, recursion, comprehension, version, permission
+    :C?:rtiy::rity        ; ex: security, linearity, parity
+    :C?:sino::sion        ; ex: expression, recursion, comprehension, version, permission, dimension
     :C?:soin::sion
     :C?:soins::sions
+    :C?:sinos::sions
+    :C?:stiy::sity        ; ex: sparsity, necessity, diversity
     :C?:srot::sort        ; ex: sort, mergesort, quicksort
     :C?:sapce::space      ; ex: workspace, backspace, namespace
     :C?:tenet::tent       ; ex: persistent, content, existent
@@ -1475,14 +1558,15 @@
     :C?:toins::tions
     :C?:iotns::tions
     :C?:tiosn::tions
+    :C?:ttiy::tity        ; ex: entity, identity, quantity
     :C?:tuer::ture        ; ex: feature, picture, future
     :C?:tuers::tures
     :C?:utl::ult          ; ex: result, difficult, default
     :C?:utls::ults
     :C?:tue::ute          ; ex: compute, absolute, permute
     :C?:tues::utes
+    :C?:vtiy::vity        ; ex: connectivity, sensitivity, productivity
     :C?:owrk::work        ; ex: network, framework, rework
     :C?:voe::ove          ; ex: remove, move, above
     :C?:wrae::ware        ; ex: software, hardware, shareware
-
 #HotIf

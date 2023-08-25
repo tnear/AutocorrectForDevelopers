@@ -4,8 +4,7 @@ from Rule import Rule
 class TestMatchCaseSensitive(unittest.TestCase):
     @classmethod
     def setUpClass(self):
-        file = 'AutocorrectForDevelopers.ahk'
-        self.rules = Rule.fileToRuleList(file)
+        self.rules = Rule.fileToRuleList('AutocorrectForDevelopers.ahk')
 
         caseSensitiveRules = [rule for rule in self.rules if rule.caseSensitive and not rule.suffixMatch]
         caseSensitiveNoPrefix = [rule for rule in caseSensitiveRules if not rule.prefixMatch]
@@ -14,9 +13,9 @@ class TestMatchCaseSensitive(unittest.TestCase):
         self.caseSensitivePrefixList = [rule.oldText for rule in caseSensitivePrefix]
 
     def test_ruleLength(self):
-        self.assertTrue(len(self.rules) > 900)
-        self.assertTrue(len(self.caseSensitiveNoPrefixList) > 13)
-        self.assertTrue(len(self.caseSensitivePrefixList) > 5)
+        self.assertGreater(len(self.rules), 1000)
+        self.assertGreater(len(self.caseSensitiveNoPrefixList), 30)
+        self.assertGreater(len(self.caseSensitivePrefixList), 6)
 
     # ex: ":C:itn::int"
     def test_noPrefixMatch(self):

@@ -4,12 +4,11 @@ from Rule import Rule
 class TestMatchNone(unittest.TestCase):
     @classmethod
     def setUpClass(self):
-        file = 'AutocorrectForDevelopers.ahk'
-        self.rules = Rule.fileToRuleList(file)
+        self.rules = Rule.fileToRuleList('AutocorrectForDevelopers.ahk')
 
     def test_ruleLength(self):
-        self.assertTrue(len(self.rules) > 900)
-        self.assertTrue(len(MATCH_NONE_LIST) > 14)
+        self.assertGreater(len(self.rules), 1000)
+        self.assertGreater(len(MATCH_NONE_LIST), 30)
 
     def test_replace(self):
         for inputText in MATCH_NONE_LIST:
@@ -21,7 +20,8 @@ class TestMatchNone(unittest.TestCase):
 MATCH_NONE_LIST = [
     'valid', 'firmwaer', 'FRO', 'ITN', 'INOT', 'LINUX', 'NTO', 'SIE_T', 'SIZET', 'SIZE_T', 'SIZE-T',
     'TYPENAEM', 'TYEPOF', 'WSA', 'YUO', 'JAVAScritp', 'std::', 'MKAE_', 'AMKE_', 'PyThOn', 'overidealize',
-    'overidentify', 'ADN', 'NAD', 'HTE', 'TEH', 'CNA', 'HSA', 'hwo'
+    'overidentify', 'ADN', 'NAD', 'HTE', 'TEH', 'CNA', 'HSA', 'hwo', 'quantitiy', # incorrectly converted to 'quantiity'
+    'doesnt' # interferes with "doesnt'"
 ]
 
 if __name__ == '__main__':

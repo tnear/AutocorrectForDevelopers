@@ -23,7 +23,7 @@ Absolutely! (although v2 is preferred). AHK v1 is in the process of being deprec
 
 The official *AutoCorrect.ahk* contains heaps of rules which are either uncommon in developer workflows or introduce accented characters which are correct but developer unfriendly. The official script also hasn't seen much active development in the last 15 years and therefore supports AHK v1-only.
 
-*AutocorrectForDevelopers.ahk*, however, focuses heavily on software engineering terminology and programming languages. The result is that this script will automatically fix a higher percentage of your typos if you are a software developer. The Venn diagram below shows example strings that each script autocorrects:
+*AutocorrectForDevelopers.ahk*, however, focuses heavily on software engineering terminology and programming languages. The result is that this script will automatically fix a higher percentage of your typos if you are a software developer. The Venn diagram below shows example strings that each script autocorrects to:
 
 ![Venn diagram](assets/VennDiagram.png)
 
@@ -31,10 +31,10 @@ The official *AutoCorrect.ahk* contains heaps of rules which are either uncommon
 
 *AutoCorrect.ahk* is shown on the left in yellow. It contains more rules overall, but many of those rules are for rare words which software developers are unlikely ever to need.
 
-*AutocorrectForDevelopers.ahk* tries to fill the autocorrect gap for developers by including many software development typos which the esteemed *AutoCorrect.ahk* is missing.
+*AutocorrectForDevelopers.ahk* aims to fill the autocorrect gap for developers by including many software development typos which the esteemed *AutoCorrect.ahk* is missing.
 
 ## Common developer typos added for...
-- Languages: C, C++, C#, CSS, Go, Java, JavaScript, Julia, MATLAB, PHP, Python, R, Ruby, Rust, SQL, Swift
+- Languages: C, C++, C#, CSS, FORTRAN, Go, Java, JavaScript, Julia, MATLAB, Perl, PHP, Python, R, Ruby, Rust, SQL, Swift
 - Programs: GDB, Git, PowerShell, UNIX CLI
 - Topics: algorithms, artificial intelligence, cryptography, databases, machine learning, networking, operating systems
 - (more to come!)

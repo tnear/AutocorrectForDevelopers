@@ -5,8 +5,7 @@ from Rule import Rule
 class TestMatchPrefix(unittest.TestCase):
     @classmethod
     def setUpClass(self):
-        file = 'AutocorrectForDevelopers.ahk'
-        self.rules = Rule.fileToRuleList(file)
+        self.rules = Rule.fileToRuleList('AutocorrectForDevelopers.ahk')
 
         prefixRules = [rule for rule in self.rules if rule.prefixMatch]
         self.prefixRuleList = [rule.oldText for rule in prefixRules]
@@ -89,7 +88,7 @@ EXPLICIT_TESTS = {
     'tehcnology': 'technology', 'indistniguishable': 'indistinguishable', 'repostiroy': 'repository', 'yorus': 'yours',
     'repositoroies': 'repositories', 'reposistory': 'repository', 'reopsitories': 'repositories', 'repositroy': 'repository',
     'Wriet-Output': 'Write-Output', 'wrietr': 'writer', 'lwoercase': 'lowercase', 'alhpanumeric': 'alphanumeric',
-    'allphabet': 'alphabet', 'isntructions': 'instructions'
+    'isntructions': 'instructions', 'depenencies': 'dependencies', 'resoruces': 'resources'
 }
 
 if __name__ == '__main__':
