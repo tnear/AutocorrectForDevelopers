@@ -13,10 +13,10 @@ class TestMatchWhitelist(unittest.TestCase):
         self.whitelistList = [text.oldText for text in whitelistRules]
 
     def test_ruleLength(self):
-        # assert that 140+ tests are being run
-        assert(len(self.rules) > 950)
-        assert(len(self.whitelistList) > 140)
-        assert(len(self.rules) > len(self.whitelistList))
+        # assert that many tests are being run
+        self.assertGreater(len(self.rules), 1100)
+        self.assertGreater(len(self.whitelistList), 150)
+        self.assertGreater(len(self.rules), len(self.whitelistList))
 
     def test_replace(self):
         # whitelists rules are never autocorrected

@@ -13,8 +13,8 @@ class TestMatchExact(unittest.TestCase):
         self.exactMatchList = [rule.oldText for rule in exactMatchRules]
 
     def test_ruleLength(self):
-        self.assertTrue(len(self.rules) > 900)
-        self.assertTrue(len(self.exactMatchList) > 520)
+        self.assertGreater(len(self.rules), 1100)
+        self.assertGreater(len(self.exactMatchList), 600)
 
     def test_replace(self):
         hasEndChar = True

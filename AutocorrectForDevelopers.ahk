@@ -616,7 +616,8 @@
     ::aehad::ahead
     :*:algoirthm::algorithm
     :*:algorihtm::algorithm
-    ::algoirhtm::algorithm
+    :*:algoirhtm::algorithm
+    :*:algroithm::algorithm
     ::allcoate::allocate
     ::almsot::almost
     :*:alhpa::alpha                 ; alphabet, alphanumeric
@@ -640,6 +641,8 @@
     :*:arugment::argument
     ::arguement::argument
     ::aray::array
+    ::arary::array
+    ::arrray::array
     ::artifiical::artificial
     ::assmebly::assembly
     :*:asert::assert
@@ -673,6 +676,7 @@
     ::becaues::because
     ::becasue::because
     ::becuase::because
+    ::begni::begin
     ::benhcmark::benchmark
     ::betwen::between
     ::boht::both
@@ -697,6 +701,7 @@
     ::cant'::can't
     ::captrue::capture
     ::catpure::capture
+    :C:caes::case                   ; switch-case
     :*:catagor::categor             ; categories, categorical
     ::cateogyr::category
     ::cuation::caution
@@ -717,20 +722,22 @@
     ::clena::clean
     ::claer::clear
     ::clickc::click
+    ::clinet::client
     ::cloen::clone
     ::clutser::cluster
+    :C:COde::Code                   ; VS Code
     ::colide::collide
     ::colision::collision
     :*:comand::command
     ::commnad::command
+    ::commadn::command
     ::comit::commit
     ::comitment::commitment
     ::comited::committed
     ::commited::committed
     ::comapre::compare
     ::comparision::comparison
-    ::compatabilities::compatibilities
-    ::compatability::compatibility
+    :*:compatabilit::compatibilit   ; compatibilities, compatibility
     ::compatable::compatible
     :*:comiple::compile
     ::complier::compiler            ; 'complier' is a valid but rare word
@@ -739,6 +746,8 @@
     :*:comopnent::component
     ::compsoe::compose
     ::composeite::composite
+    ::comptuer::computer            ; whitelist for -tuer -> -ture
+    ::ocmputer::computer
     ::concatneate::concatenate
     ::concetp::concept              ; C++20 keyword
     ::confidentality::confidentiality
@@ -760,6 +769,7 @@
     :*:constraitn::constraint
     :*:constriant::constraint
     ::constuctor::constructor
+    ::consuemr::consumer
     :*:contian::contain             ; contains, container
     ::contaienr::container
     :*:contineu::continue           ; continued, continues
@@ -777,6 +787,7 @@
     ::carsh::crash
     ::creat::create                 ; note: there exists a legacy C syscall called "creat"
     ::criteira::criteria
+    :*:crytpo::crypto               ; cryptography, cryptographic
     ::curent::current
     :*:currenet::current            ; currently
     :*:currrent::current
@@ -791,7 +802,7 @@
     ::debuging::debugging
     ::decrase::decrease
     ::deepcpoy::deepcopy
-    :*:deafult::default             ; defaults
+    :*:deafult::default             ; default, defaults
     :*:dleete::delete
     :*:dpeend::depend               ; dependency, dependence, dependencies
     :*:depenenc::dependenc
@@ -800,6 +811,7 @@
     ::descrbie::describe
     ::descirbe::describe
     ::desing::design
+    ::determinsitic::deterministic
     :*:devleop::develop
     :*:devloep::develop
     :*:dvelop::develop
@@ -816,10 +828,12 @@
     ::didnt'::didn't
     :*:diference::difference
     ::diferent::different
+    ::differnet::different
     :*:dififcult::difficult
-    ::dimensinoality::dimensionality
+    :*:dimensinoal::dimensional     ; dimensional, dimensionality
     ::directd::directed
     ::diretory::directory
+    ::directoroy::directory
     ::diable::disable
     ::dispaly::display
     :*:distni::distin               ; distinct, distinguish
@@ -829,13 +843,14 @@
     ::doesnt'::doesn't
     ::doens't::doesn't
     ::doenst::doesn't
+    ::doen'st::doesn't
     ::doesn ot::does not
-    ::doign::doing
     ::dont::don't
     ::doubel::double
     ::downsream::downstream
     ::eahc::each
     :*:eigne::eigen                 ; eigenvalues, eigenvectors
+    ::electornic::electronic
     :*:elemtn::element
     :*:elemnt::element
     :*:elmeent::element
@@ -852,6 +867,8 @@
     ::empyt::empty
     ::emulatro::emulator
     ::enbale::enable
+    :C:ENd::End                     ; common Visual Basic keyword
+    ::enoguh::enough
     ::enumeate::enumerate
     ::enviroment::environment
     ::envrionment::environment
@@ -865,6 +882,7 @@
     ::evvery::every
     ::eveyrone::everyone
     ::everyting::everything
+    ::examien::examine
     :*:eample::example
     :*:examle::example
     :*:exaple::example
@@ -875,6 +893,7 @@
     ::existance::existence
     ::exapnd::expand
     ::expectd::expected
+    ::explroer::explorer
     :*:exoprt::export
     ::expor::export
     :*:expresison::expression
@@ -891,6 +910,7 @@
     ::fidn::find
     ::fisrt::first
     ::firsrt::first
+    ::flahs::flash
     :*:flaot::float                 ; float, floating-point
     ::folowing::following
     :C:fro::for                     ; 'for' keyword
@@ -903,6 +923,7 @@
     ::foudn::found
     ::foudnation::foundation
     ::founation::foundation
+    ::frmaework::framework
     ::firend::friend
     ::forzenset::frozenset
     :*:fucntion::function           ; functions, functional
@@ -934,6 +955,7 @@
     ::hyperparaemter::hyperparameter
     ::hyperparmaeter::hyperparameter
     ::iamge::image
+    ::implmenet::implement          ; there is a separate -menet suffix rule which should not run
     ::implemenation::implementation
     :*:imoprt::import
     ::impot::import
@@ -943,6 +965,7 @@
     :*:incldue::include
     :*:incdlue::include
     :*:indistniguish::indistinguish ; indistinguishable, indistinguishability
+    :*:infeasab::infeasib           ; infeasible, infeasibility
     ::inifnity::infinity
     :*:inofrmati::informati         ; information, informative
     ::inclue::include
@@ -950,13 +973,13 @@
     ::increaes::increase
     :*:indpeend::independ           ; independent, independently
     :*:independant::independent
-    ::idnex::index
+    :*:idnex::index                 ; indexed, indexing
     ::ineequality::inequality
     :*:inherti::inherit
     :*:inhreit::inherit
     :*:intiial::initial             ; initialize, initialization
     ::inupt::input
-    ::isnert::insert
+    :*:isnert::insert               ; inserts, insertion
     :*:isnta::insta                 ; instance, install, instantiate
     ::intance::instance
     ::isntead::instead
@@ -973,7 +996,7 @@
     ::interperet::interpret
     ::interpereter::interpreter
     ::interupt::interrupt
-    :C:inot::into                    ; sql keyword
+    :C:inot::into                   ; sql keyword
     ::inthe::in the
     ::invariatn::invariant
     ::ivnariant::invariant
@@ -994,12 +1017,14 @@
     ::i"ll::i'll
     ::i"m::i'm
     ::i"ve::i've
-    :C:javascritp::javascript
-    :C:JavaScritp::JavaScript       ; with 2 capital letters, this word does not fit AHK's traditional model
+    :C:javascritp::javascript       ; with 2 capital letters, this word does not fit AHK's traditional model
+    :C:JavaScritp::JavaScript       ; therefore, it needs twice the rules
     :C:jaascript::javascript
     :C:JaaScript::JavaScript
     :C:javacript::javascript
     :C:Javacript::JavaScript
+    :C:javasript::javascript
+    :C:JavaSript::JavaScript
     ::jorunal::journal
     ::jsut::just
     ::knwo::know
@@ -1021,13 +1046,17 @@
     ::librarry::library
     ::liek::like
     :C:LInux::Linux
+    ::lniux::linux
     :*:lsit::list                   ; lists, listener
     ::listenr::listener
+    ::logairthm::logarithm
+    ::lgoical::logical
     ::looop::loop
     :*:lwoer::lower                 ; lower, lowercase
     ::mahcine::machine
     ::machien::machine
     ::machins::machines
+    ::macintohs::macintosh
     ::maintian::maintain
     :C*:amke_::make_                ; C++: make_shared, make_unique, make_pair, ...
     :C*:mkae_::make_
@@ -1037,9 +1066,11 @@
     :*:mathamatic::mathematic       ; mathematical
     :*:mathmatic::mathematic
     ::maltab::matlab
+    ::amtrix::matrix
     ::menas::means
     ::memroy::memory
     ::mesage::message
+    ::microsfot::microsoft
     ::mispell::misspell
     ::modle::model
     ::mdoel::model
@@ -1048,7 +1079,7 @@
     ::omre::more
     :*:mlti::multi                  ; multithreaded
     :*:mjulti::multi
-    ::mulitply::multiply
+    :*:mulitp::multip               ; multiply, multiple, multiplex, multiprocess
     ::nmae::name
     ::namelsit::namelist            ; FORTRAN
     ::namespce::namespace
@@ -1059,7 +1090,6 @@
     ::normlaize::normalize
     :*:northwset::northwest
     :C:nto::not
-    ::nohting::nothing
     ::nulll::null
     ::nulptr::nullptr
     ::nulllptr::nullptr
@@ -1085,9 +1115,11 @@
     ::optimze::optimize
     ::optioal::optional
     ::orignal::original
-    ::otehr::other
+    :*:otehr::other                 ; other, otherwise
+    ::otheriwse::otherwise
     ::outocme::outcome
     :*:otuput::output
+    :*:ouptut::output
     ::overiden::overridden
     ::overidden::overridden
     ::overriden::overridden
@@ -1129,7 +1161,7 @@
     ::permanant::permanent
     :*:persit::persist              ; persists, persistent
     ::persistant::persistent
-    :*:persepct::perspect           ; perspective
+    :*:persepct::perspect           ; perspective/s
     ::pertubation::perturbation
     :*:pidgeon::pigeon              ; pigeonhole
     ::planend::planned
@@ -1137,6 +1169,7 @@
     ::pleae::please
     :*:poitner::pointer
     ::polynomail::polynomial
+    :C:pop+back::pop_back           ; common C++ container function
     ::posible::possible
     ::posisble::possible
     :*:pwoer::power                 ; powerpoint, powershell
@@ -1153,9 +1186,11 @@
     :*:probelm::problem             ; problems, problematic
     :*:problme::problem
     :*:prblem::problem
+    :*:proceudr::procedur           ; procedure, procedural
     :*:prgoram::program             ; programming
     ::programable::programmable
     ::programatic::programmatic
+    :*:proejct::project
     ::proeprty::property
     ::propety::property
     :*:prtoocol::protocol
@@ -1175,11 +1210,12 @@
     :*:qiuck::quick                 ; quickly, quicksort
     ::quicksleect::quickselect
     ::riase::raise
-    ::ranodm::random
+    :*:ranodm::random               ; randomize, randomization
     ::rnage::range
     ::rela::real
     ::rebulid::rebuild
     ::rebiuld::rebuild
+    :*:recogniez::recognize
     ::recrod::record
     ::recurrance::recurrence
     ::refator::refactor
@@ -1190,6 +1226,7 @@
     ::regresion::regression
     ::reuglar::regular
     ::rleative::relative
+    ::releaes::release
     :*:rmeove::remove
     ::reepat::repeat
     ::reepated::repeated
@@ -1227,6 +1264,8 @@
     ::reveiw::review
     ::rewriet::rewrite              ; COBOL statement
     :*:rigth::right                 ; rights, rightInVarName
+    :*:rihgt::right
+    ::rotuer::router                ; whitelist for -tuer
     ::runing::running
     :*:saef::safe                   ; safety, safest
     ::saem::same
@@ -1242,6 +1281,7 @@
     :*:serach::search               ; search, searching
     ::escond::second
     ::seocnd::second
+    ::secuirty::security
     ::sleect::select
     ::slef::self                    ; python current class instance
     :*:seperat::separat             ; separate, separation
@@ -1280,6 +1320,7 @@
     :C*:sdt:`;::std`:`:             ; "sdt:;" -> "std::"
     :C*:stD`:`:::std`:`:            ; "stD::" -> "std::"
     :C*:std`;`:::std`:`:            ; "std;:" -> "std::"
+    ::stoarge::storage
     ::streategy::strategy
     ::strenghten::strengthen
     :*:sring::string
@@ -1287,6 +1328,7 @@
     ::stuct::struct
     ::strcut::struct
     ::struture::structure
+    ::structrued::structured
     ::styel::style
     ::sytling::styling
     ::subcateogyr::subcategory
@@ -1300,6 +1342,8 @@
     ::subract::subtract
     :*:sucess::success              ; successful
     ::succes::success
+    ::successfuly::successfully
+    ::succesfully::successfully
     ::sutie::suite                  ; test suite
     :*:suepr::super
     ::siwthc::switch
@@ -1334,6 +1378,7 @@
     :C:THe::The
     ::htem::them
     ::hten::then
+    ::theorme::theorem
     ::htere::there
     ::tehre::there
     ::htese::these
@@ -1341,7 +1386,6 @@
     ::htey::they
     ::thye::they
     ::theyr'e::they're
-    ::hting::thing
     ::thign::thing
     ::thikning::thinking
     ::thsi::this
@@ -1362,7 +1406,7 @@
     ::ot do::to do
     ::ot the::to the
     ::tothe::to the
-    :*:trnasform::transform
+    :*:trnas::trans                 ; transmit, transaction, transfer, transport
     ::transfomer::transformer
     :*:transiitive::transitive
     ::travling::traveling
@@ -1371,13 +1415,14 @@
     :*:trucate::truncate
     ::tupel::tuple
     ::tyep::type
-    ::tyepalias::typealias               ; Swift keyword
+    ::tyepalias::typealias          ; Swift keyword
     ::tyepdef::typedef
     :C:typenaem::typename
     :C:tyepof::typeof
     ::undfeined::undefined
     ::undefiend::undefined
     :*:udner::under                 ; underneath, understand
+    :C:UniformOtuput::UniformOutput ; common MATLAB name/value pair
     ::uniqeu::unique
     ::unqiue::unique
     ::unittets::unittest            ; python testing framework
@@ -1404,6 +1449,8 @@
     ::vecotr::vector
     ::vetcor::vector
     ::veirfy::verify
+    ::vierfy::verify
+    ::verifiy::verify
     ::vesrion::version
     ::vetex::vertex
     ::veyr::very
@@ -1412,6 +1459,7 @@
     ::virutal::virtual
     :*:viist::visit                 ; visits, visitor
     ::viusal::visual
+    :C:VIsual::Visual               ; Visual Studio
     ::watn::want
     :C:wsa::was
     ::wa snot::was not
@@ -1435,6 +1483,7 @@
     ::whicht he::which the
     ::whiel::while
     ::hwile::while
+    ::whlie::while
     ::iwth::with
     ::wiht::with
     ::wtih::with
@@ -1446,8 +1495,8 @@
     :*:owrkflow::workflow
     ::woudl::would
     ::wouldnt'::wouldn't
-    :*:wirte::write
-    :*:wriet::write                 ; writer, Write-Output
+    :*:wirte::write                 ; writer, Write-Output
+    :*:wriet::write
     ::yaer::year
     :*:yeidl::yield
     :*:yeild::yield
@@ -1488,6 +1537,7 @@
     :C?:ofrm::form        ; ex: platform, perform, transform
     :C?:garphy::graphy    ; ex: cryptography, photography
     :C?:grahpy::graphy
+    :C?:hting::thing      ; ex: thing, something, anything
     :C?:icla::ical        ; ex: topological, canonical, symmetrical
     :C?:ikc::ick          ; ex: quick, click, pick
     :C?:ikcs::icks

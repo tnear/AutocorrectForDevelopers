@@ -10,48 +10,48 @@ class TestRule(unittest.TestCase):
 
     def test_getOptionsText(self):
         opts = Rule.getOptionsText('::abc::def')
-        assert opts == '::'
+        self.assertEqual(opts, '::')
 
         opts = Rule.getOptionsText(':C:abc::def')
-        assert opts == ':C:'
+        self.assertEqual(opts, ':C:')
 
         opts = Rule.getOptionsText(':C?:abc::def')
-        assert opts == ':C?:'
+        self.assertEqual(opts, ':C?:')
 
         opts = Rule.getOptionsText(':*C:abc::def')
-        assert opts == ':*C:'
+        self.assertEqual(opts, ':*C:')
 
     def test_getOldText(self):
         oldText = Rule.getOldText('::abc::def')
-        assert oldText == 'abc'
+        self.assertEqual(oldText, 'abc')
 
         oldText = Rule.getOldText(':b0:ABC::')
-        assert oldText == 'ABC'
+        self.assertEqual(oldText, 'ABC')
 
         oldText = Rule.getOldText(':C*:yz::123')
-        assert oldText == 'yz'
+        self.assertEqual(oldText, 'yz')
 
         # should remove escape char, `
         oldText = Rule.getOldText(':C*:std:`;::std`:`:')
-        assert oldText == 'std:;'
+        self.assertEqual(oldText, 'std:;')
 
     def test_getNewText(self):
         newText = Rule.getNewText('::abc::def')
-        assert newText == 'def'
+        self.assertEqual(newText, 'def')
 
         newText = Rule.getNewText(':b0:ABC::')
-        assert newText == ''
+        self.assertEqual(newText, '')
 
         newText = Rule.getNewText(':C*:yz::123')
-        assert newText == '123'
+        self.assertEqual(newText, '123')
 
         # should remove escape char, `
         newText = Rule.getNewText(':C*:std:`;::std`:`:')
-        assert newText == 'std::'
+        self.assertEqual(newText, 'std::')
 
         # should delimit on first unescaped '::'
         newText = Rule.getNewText(':C*:sdt`:`:::std`:`:')
-        assert newText == 'std::'
+        self.assertEqual(newText, 'std::')
 
     def test_lineToRule(self):
         rule = Rule.lineToRule('::abc::def')
@@ -95,7 +95,7 @@ class TestRule(unittest.TestCase):
             lines = [line.strip('\n ') for line in f]
 
         for line in lines:
-            self.assertTrue(all(char in string.printable for char in line)), 'Only printable character supported'
+            self.assertTrue(all(char in string.printable for char in line)), 'Only printable characters supported'
 
     def test_endingChars(self):
         fileName = Rule.getRelativeFileName('AutocorrectForDevelopers.ahk')
@@ -111,11 +111,12 @@ class TestRule(unittest.TestCase):
         self.assertIn('>', lines[0])
 
     def test_allRulesMustChangeText(self):
-        # prevents a rule where oldText -> oldText (no change but causes flicker)
+        # prevents a rule where oldText equals newText (causes unnecessary flicker)
         rules = Rule.fileToRuleList('AutocorrectForDevelopers.ahk')
 
         for rule in rules:
-            assert rule.oldText != rule.newText
+            self.assertNotEqual(rule.oldText, rule.newText)
+            self.assertNotEqual(rule.oldText, '')
 
     def test_noMultiLineComments(self):
         file = Rule.getRelativeFileName('AutocorrectForDevelopers.ahk')
@@ -133,11 +134,11 @@ class TestRule(unittest.TestCase):
 
         inputText = 'Wriet-Output'
         replacedText = Rule._replacePreserveCase(inputText, oldText, newText)
-        assert replacedText == 'Write-Output'
+        self.assertEqual(replacedText, 'Write-Output')
 
         inputText = 'WrIet-Output'
         replacedText = Rule._replacePreserveCase(inputText, oldText, newText)
-        assert replacedText == 'WrIte-Output'
+        self.assertEqual(replacedText, 'WrIte-Output')
 
     def test_uniqueRules(self):
         # no rule lhs should appear more than once
@@ -147,7 +148,7 @@ class TestRule(unittest.TestCase):
         oldTextList = [rule.oldText for rule in rules if not rule.backspace and not rule.suffixMatch]
 
         # verify no duplicates by using a set
-        assert len(oldTextList) == len(set(oldTextList))
+        self.assertEqual(len(oldTextList), len(set(oldTextList)))
 
 if __name__ == '__main__':
     unittest.main()

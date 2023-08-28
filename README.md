@@ -34,7 +34,7 @@ The official *AutoCorrect.ahk* contains heaps of rules which are either uncommon
 *AutocorrectForDevelopers.ahk* aims to fill the autocorrect gap for developers by including many software development typos which the esteemed *AutoCorrect.ahk* is missing.
 
 ## Common developer typos added for...
-- Languages: C, C++, C#, CSS, FORTRAN, Go, Java, JavaScript, Julia, MATLAB, Perl, PHP, Python, R, Ruby, Rust, SQL, Swift
+- Languages: C, C++, C#, COBOL, CSS, FORTRAN, Go, Java, JavaScript, Julia, MATLAB, Perl, PHP, Python, R, Ruby, Rust, SQL, Swift, Visual Basic
 - Programs: GDB, Git, PowerShell, UNIX CLI
 - Topics: algorithms, artificial intelligence, cryptography, databases, machine learning, networking, operating systems
 - (more to come!)

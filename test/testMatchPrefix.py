@@ -11,8 +11,8 @@ class TestMatchPrefix(unittest.TestCase):
         self.prefixRuleList = [rule.oldText for rule in prefixRules]
 
     def test_ruleLength(self):
-        self.assertTrue(len(self.rules) > 900)
-        self.assertTrue(len(self.prefixRuleList) > 180)
+        self.assertGreater(len(self.rules), 1100)
+        self.assertGreater(len(self.prefixRuleList), 220)
 
     def test_replace(self):
         # prefix rules (":*:") match regardless of end char
@@ -88,7 +88,11 @@ EXPLICIT_TESTS = {
     'tehcnology': 'technology', 'indistniguishable': 'indistinguishable', 'repostiroy': 'repository', 'yorus': 'yours',
     'repositoroies': 'repositories', 'reposistory': 'repository', 'reopsitories': 'repositories', 'repositroy': 'repository',
     'Wriet-Output': 'Write-Output', 'wrietr': 'writer', 'lwoercase': 'lowercase', 'alhpanumeric': 'alphanumeric',
-    'isntructions': 'instructions', 'depenencies': 'dependencies', 'resoruces': 'resources'
+    'isntructions': 'instructions', 'depenencies': 'dependencies', 'resoruces': 'resources', 'proceudral': 'procedural',
+    'isnertion': 'insertion', 'proejcts': 'projects', 'ranodmize': 'randomize', 'dimensinoality': 'dimensionality',
+    'otehrwise': 'otherwise', 'crytpography': 'cryptography', 'mulitply': 'multiply', 'infeasability': 'infeasibility',
+    'ouptuts': 'outputs', 'compatabilities': 'compatibilities', 'trnasaction': 'transaction', 'algroithms': 'algorithms',
+    'idnexing': 'indexing', 'recogniezd': 'recognized', 'rihgts': 'rights',
 }
 
 if __name__ == '__main__':
