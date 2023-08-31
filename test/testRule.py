@@ -106,9 +106,8 @@ class TestRule(unittest.TestCase):
         lines = [line for line in lines if line.startswith('#Hotstring EndChars')]
         self.assertEqual(len(lines), 1)
 
-        # the chars '<' and '>' and non-default ending characters and should be tested
-        self.assertIn('<', lines[0])
-        self.assertIn('>', lines[0])
+        # the chars '<' and '>' are non-default ending characters
+        self.assertTrue(lines[0].endswith('-()[]{}:;\'"/\\,.?!`n `t<>'))
 
     def test_allRulesMustChangeText(self):
         # prevents a rule where oldText equals newText (causes unnecessary flicker)

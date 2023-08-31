@@ -2,7 +2,6 @@ import pathlib
 import re
 
 class Rule:
-    staticIndex = 0
     escapeChar = '`'
 
     def __init__(self, line, backspace, caseSensitive, suffixMatch, prefixMatch):
