@@ -21,8 +21,8 @@ MATCH_NONE_LIST = [
     'valid', 'firmwaer', 'FRO', 'ITN', 'INOT', 'LINUX', 'NTO', 'SIE_T', 'SIZET', 'SIZE_T', 'SIZE-T',
     'TYPENAEM', 'TYEPOF', 'WSA', 'YUO', 'JAVAScritp', 'std::', 'MKAE_', 'AMKE_', 'PyThOn', 'overidealize',
     'overidentify', 'ADN', 'NAD', 'HTE', 'TEH', 'CNA', 'HSA', 'hwo', 'quantitiy', # incorrectly converted to 'quantiity'
-    'OFR', 'Push+Back', 'STD:;', 'SDT::', 'SDT:;', 'STD;:', 'code', 'doesnt' # interferes with "doesnt'",
-    'end', 'Pop+Back', 'CAES', 'MAEK_',
+    'OFR', 'Push+Back', 'STD:;', 'SDT::', 'SDT:;', 'STD;:', 'code', 'doesnt', # interferes with "doesnt'"
+    'end', 'Pop+Back', 'CAES', 'MAEK_', 'Grammer', 'APGE',
 ]
 
 if __name__ == '__main__':

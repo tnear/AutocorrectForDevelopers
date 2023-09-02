@@ -36,5 +36,5 @@ The official *AutoCorrect.ahk* contains heaps of rules which are either uncommon
 ## Common developer typos added for...
 - Languages: C, C++, C#, COBOL, CSS, FORTRAN, Go, Java, JavaScript, Julia, MATLAB, Perl, PHP, Python, R, Ruby, Rust, SQL, Swift, Visual Basic
 - Programs: GDB, Git, PowerShell, UNIX CLI
-- Topics: algorithms, artificial intelligence, cryptography, databases, machine learning, networking, operating systems
+- Subjects: algorithms, artificial intelligence, compilers, cryptography, databases, machine learning, networking, operating systems, security
 - (more to come!)

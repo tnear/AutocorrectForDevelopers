@@ -88,7 +88,8 @@ EXPLICIT_TESTS = {
     'trnasaction': 'transaction', 'algroithms': 'algorithms',
     'idnexing': 'indexing', 'rihgts': 'rights', 'docments': 'documents',
     'odcuments': 'documents', 'doucments': 'documents', 'psuedocode': 'pseudocode',
-    'rleational': 'relational', 'shrotcut': 'shortcut'
+    'rleational': 'relational', 'shrotcut': 'shortcut', 'differnetial': 'differential', 'enahncement': 'enhancement',
+    'derefernced': 'dereferenced',
 }
 
 if __name__ == '__main__':

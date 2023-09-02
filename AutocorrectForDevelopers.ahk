@@ -366,6 +366,10 @@
     {
         ; do not convert this string to -ient
     }
+    :b0:iezd::
+    {
+        ; do not convert this string to -ized
+    }
     :b0:igth::
     {
         ; do not convert this string to -ight
@@ -501,6 +505,10 @@
     :b0:oitns::
     {
         ; do not convert this string to -oints
+    }
+    :b0:oius::
+    {
+        ; do not convert this string to -ious
     }
     :b0:prot::
     {
@@ -654,6 +662,7 @@
     ::arguement::argument
     ::arugments::arguments
     ::arguements::arguments
+    ::arithemtic::arithmetic
     ::aray::array
     ::arary::array
     ::arrray::array
@@ -668,6 +677,7 @@
     ::asignment::assignment
     ::asignments::assignments
     ::asigned::assigned
+    ::assoicative::associative
     ::asycn::async
     ::atmoic::atomic
     ::atribute::attribute
@@ -700,6 +710,7 @@
     ::begni::begin
     ::benhcmark::benchmark
     ::betwen::between
+    ::lbock::block
     ::boht::both
     ::boundries::boundaries
     ::boundry::boundary
@@ -712,7 +723,7 @@
     ::biuld::build
     ::biult::built
     ::ubndle::bundle
-    ::bytearay::bytearray           ; python built-in type
+    ::bytearay::bytearray           ; Python built-in type
     ::cahce::cache
     ::cahcing::caching
     ::calcualte::calculate
@@ -722,6 +733,7 @@
     :C:cna::can
     :C:Cna::Can
     ::cnadidate::candidate
+    ::cannonical::canonical
     ::cant::can't
     ::cant'::can't
     ::captrue::capture
@@ -743,9 +755,12 @@
     ::chocie::choice
     ::cihper::cipher
     ::cihpertext::ciphertext
+    ::circuti::circuit
     ::clas::class
     ::clss::class
     ::clasdef::classdef
+    ::clasifier::classifier
+    ::classifer::classifier
     ::clena::clean
     ::claer::clear
     ::clickc::click
@@ -771,8 +786,10 @@
     ::compatability::compatibility
     ::compatabilities::compatibilities
     ::compatable::compatible
+    ::comiplation::compilation
     :*:comiple::compile             ; compile/r/d/s
     ::complier::compiler            ; 'complier' is a valid but rare word
+    ::compileres::compilers
     ::comiler::compiler
     ::compelx::complex
     ::comopnent::component
@@ -791,6 +808,7 @@
     ::considerd::considered
     ::consisten::consistent
     ::consistenet::consistent
+    ::consistenyc::consistency
     ::consoel::console
     ::cosole::console
     ::consoe::console
@@ -835,6 +853,7 @@
     :*:databse::database
     :*:databaes::database
     ::dataest::dataset
+    ::daedlock::deadlock
     ::deallcoate::deallocate
     ::debuger::debugger
     ::debuging::debugging
@@ -847,6 +866,7 @@
     :*:depenenc::dependenc
     :*:depht::depth                 ; depth, depthFirstSearch
     :*:detph::depth
+    :*:derefernce::dereference      ; dereference/s/d
     :*:descendant::descendent
     ::descrbie::describe
     ::descirbe::describe
@@ -871,7 +891,7 @@
     ::diference::difference
     ::diferences::differences
     ::diferent::different
-    ::differnet::different
+    :*:differnet::different         ; different/ial/iable/iate
     :*:dififcult::difficult         ; difficulty, difficulties
     ::dimensinoal::dimensional
     ::dimensinoality::dimensionality
@@ -917,7 +937,10 @@
     ::empyt::empty
     ::emulatro::emulator
     ::enbale::enable
+    ::encapuslation::encapsulation
     :C:ENd::End                     ; common Visual Basic keyword
+    :*:enahnce::enhance             ; enhance/d/s/ment/ments
+    ::enhancment::enhancement
     ::enoguh::enough
     ::enumeate::enumerate
     ::enviroment::environment
@@ -975,6 +998,7 @@
     ::flaot::float
     ::flaoting::floating            ; floating-point
     ::fodler::folder
+    ::fodling::folding
     ::folowing::following
     :C:fro::for                     ; 'for' keyword
     :C:ofr::for
@@ -993,10 +1017,12 @@
     :*:funtion::function
     :*:fnction::function
     ::guage::gauge
+    ::generatro::generator
     ::glboal::global
     ::goign::going
     ::goot::goto
     ::gradiet::gradient
+    :C:grammer::grammar             ; exclude 'Grammer' surname
     :*:grpah::graph                 ; graphs, graphing, graphics
     :*:grahp::graph
     ::gerat::great
@@ -1061,17 +1087,18 @@
     ::internla::internal
     ::interperet::interpret
     ::interpereter::interpreter
+    ::interpeter::interpreter
     ::interupt::interrupt
     :C:inot::into                   ; sql keyword
     ::inthe::in the
     ::invariatn::invariant
     ::ivnariant::invariant
     ::invertable::invertible
-    ::i nrange::in range            ; python loop
+    ::i nrange::in range            ; Python loop
     ::iosream::iostream             ; standard C++ I/O header
     ::iosteam::iostream
     ::isotream::iostream
-    ::isintance::isinstance         ; common python function
+    ::isintance::isinstance         ; common Python function
     ::ins't::isn't
     ::isthe::is the
     ::itme::item
@@ -1098,6 +1125,7 @@
     :C:JavaSript::JavaScript
     ::jorunal::journal
     ::jsut::just
+    ::keywrod::keyword
     ::knwo::know
     ::konw::know
     ::lable::label
@@ -1116,6 +1144,7 @@
     ::laison::liaison
     ::laiason::liaison
     ::librarry::library
+    ::lifetiem::lifetime
     ::liek::like
     :C:LInux::Linux
     ::lniux::linux
@@ -1148,6 +1177,7 @@
     ::menas::means
     ::memroy::memory
     ::mesage::message
+    ::messageing::messaging
     ::microsfot::microsoft
     ::mispell::misspell
     ::modle::model
@@ -1198,10 +1228,12 @@
     ::optgorup::optgroup            ; html tag
     ::optgropu::optgroup
     ::optimze::optimize
+    ::optimiation::optimization
     ::optioal::optional
     ::orignal::original
     ::oriign::origin
     :*:otehr::other                 ; other/s, otherwise
+    :*:ohter::other
     ::otheriwse::otherwise
     ::outocme::outcome
     ::otuput::output
@@ -1211,7 +1243,7 @@
     ::overiden::overridden
     ::overidden::overridden
     ::overriden::overridden
-    ::overide::override             ; cannot do ':*:' b/c of words like overidealize, overidentify
+    ::overide::override             ; cannot do ':*:' b/c of words like overidealize and overidentify
     ::onwer::owner
     ::onwership::ownership
     ::pacakge::package
@@ -1219,6 +1251,7 @@
     ::pakcage::package
     ::packte::packet
     ::packtes::packets
+    :C:apge::page
     ::paralel::parallel
     ::parllel::parallel
     ::parllle::parallel
@@ -1260,6 +1293,7 @@
     ::pluign::plugin
     ::poitner::pointer
     ::poitners::pointers
+    ::polymorhpic::polymorphic
     ::polynomail::polynomial
     :C:pop+back::pop_back           ; common C++ container function
     ::posible::possible
@@ -1270,6 +1304,7 @@
     ::rpedicate::predicate          ; a function returing true/false
     ::preidcate::predicate
     ::prefered::preferred
+    ::prefecth::prefetch
     ::rpefix::prefix
     ::prevelant::prevalent
     :*:pritn::print                 ; print, printf, println
@@ -1300,6 +1335,7 @@
     ::pyton::python
     ::pythohn::python
     :C:PYthon::Python
+    ::pyhton::python
     ::queyr::query
     ::queyring::querying
     ::quanitty::quantity
@@ -1312,6 +1348,7 @@
     :*:ranodm::random               ; randomize, randomization
     ::rnage::range
     ::rela::real
+    ::relaly::really
     ::rebulid::rebuild
     ::rebiuld::rebuild
     :*:recognies::recognise         ; recognise/s/ed/er
@@ -1332,8 +1369,8 @@
     :*:rmeove::remove               ; remove/s/d/r
     ::reepat::repeat
     ::reepated::repeated
-    ::repalce::replace
     :C:repeelm::repelem             ; common MATLAB function
+    ::repalce::replace
     :C:repamt::repmat               ; common MATLAB function
     ::repostiroies::repositories
     ::repositoroies::repositories
@@ -1345,6 +1382,8 @@
     ::reposistory::repository
     ::reopsitory::repository
     ::repositroy::repository
+    ::represnet::represent
+    ::represnetation::representation
     ::reproducable::reproducible
     ::requst::request
     :*:reuqire::require             ; require/s/d/ment
@@ -1363,6 +1402,7 @@
     ::respones::response
     :*:reuslt::result               ; result/s/ed/ing
     :*:reslut::result
+    ::rsult::result
     ::retrive::retrieve
     ::reutrn::return
     ::retrn::return
@@ -1394,7 +1434,8 @@
     ::seocnd::second
     ::secuirty::security
     ::sleect::select
-    ::slef::self                    ; python current class instance
+    ::slef::self                    ; Python current class instance
+    ::senstivity::sensitivity
     :*:seperat::separat             ; separate, separation, separator
     ::seuqence::sequence
     ::serivce::service
@@ -1405,6 +1446,8 @@
     ::shoud::should
     ::shoudl::should
     :*:signla::signal               ; signal/s/ed/er/ing
+    ::simultaenous::simultaneous
+    ::simulatenous::simultaneous
     ::signle::single
     :C:sie_t::size_t                ; common C++ data type
     :C:sizet::size_t
@@ -1438,6 +1481,7 @@
     ::stirng::string
     ::srings::strings
     ::stirngs::strings
+    ::strigns::strings
     ::stuct::struct
     ::strcut::struct
     ::struture::structure
@@ -1447,6 +1491,8 @@
     ::subcateogyr::subcategory
     ::subcatagory::subcategory
     ::subclas::subclass
+    ::subexpresison::subexpression
+    ::subexpresion::subexpression
     ::subscritp::subscript          ; Swift keyword
     ::subscirpt::subscript
     ::subseuqent::subsequent
@@ -1477,6 +1523,7 @@
     ::templae::template
     ::tem[late::template
     ::temlate::template
+    ::tempoarl::temporal
     ::tempoarry::temporary
     ::temoprary::temporary
     ::tendancy::tendency
@@ -1514,6 +1561,7 @@
     ::tiems::times
     ::todya::today
     ::tdoay::today
+    ::tood`:::todo`:                ; 'tood:' -> 'todo:'
     ::tolerence::tolerance
     ::tolernace::tolerance
     ::toolsrip::toolstrip
@@ -1523,7 +1571,7 @@
     ::ot do::to do
     ::ot the::to the
     ::tothe::to the
-    :*:trnas::trans                 ; transmit, transaction, transfer, transport
+    :*:trnas::trans                 ; transmit, transaction, transfer, transport, translation
     ::transfomer::transformer
     ::transiitive::transitive
     ::transiitively::transitively
@@ -1543,7 +1591,7 @@
     :C:UniformOtuput::UniformOutput ; common MATLAB name/value pair
     ::uniqeu::unique
     ::unqiue::unique
-    ::unittets::unittest            ; python testing framework
+    ::unittets::unittest            ; Python testing framework
     ::unkonwn::unknown
     :*:unorderd::unordered          ; unordered_map, unordered_set ('_' is not an AHK end char)
     :*:unordrerd::unordered
@@ -1672,13 +1720,15 @@
     :C?:nig::ing
     :C?:oinal::ional      ; ex: conditional, optional, functional
     :C?:ioanl::ional
-    :C?:ouis::ious        ; ex: previous, various, dubious
+    :C?:ouis::ious        ; ex: previous, various, dubious, suspicious
+    :C?:oius::ious
     :C?:iison::ision      ; ex: decision, collision, revision
     :C?:tiive::itive      ; ex: positive, primitive, repetitive
     :C?:vie::ive          ; ex: generative, active, relative
     :C?:ivley::ively      ; ex: relatively, actively, intrusively
     :C?:iivty::ivity      ; ex: connectivity, sensitivity, productivity, activity
     :C?:iviyt::ivity
+    :C?:iezd::ized        ; ex: equalized, synchronized, amortized
     :C?:alble::lable      ; ex: available, callable, scalable
     :C?:ltiy::lity        ; ex: probability, stability, feasibility, capability, utility
     :C?:laod::load        ; ex: overload, download, workload
@@ -1713,7 +1763,7 @@
     :C?:prots::ports
     :C?:raet::rate        ; ex: enumerate, migrate, integrate
     :C?:rtiy::rity        ; ex: security, linearity, parity
-    :C?:sihp::ship        ; ex: relationship, ownership, spaceship
+    :C?:sihp::ship        ; ex: relationship, ownership, spaceship (operator)
     :C?:sihps::ships
     :C?:sino::sion        ; ex: expression, recursion, comprehension, version, permission, dimension
     :C?:soin::sion
