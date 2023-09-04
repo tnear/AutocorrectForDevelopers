@@ -656,6 +656,8 @@
     ::anhyting::anything
     ::appearence::appearance
     ::appearences::appearances
+    ::appication::application
+    ::appilcation::application
     ::arhitecture::architecture
     ::archtiecture::architecture
     ::arugment::argument
@@ -680,6 +682,7 @@
     ::assoicative::associative
     ::asycn::async
     ::atmoic::atomic
+    ::attakc::attack
     ::atribute::attribute
     ::attirbute::attribute
     ::attirubte::attribute
@@ -688,6 +691,8 @@
     ::attirbutes::attributes
     ::attirubtes::attributes
     ::attriubtes::attributes
+    ::auido::audio
+    :*:authetnic::authentic         ; authentic/ate/ity/ator/ating
     ::automted::automated
     ::autoamted::automated
     ::avialable::available
@@ -708,6 +713,7 @@
     ::becasue::because
     ::becuase::because
     ::begni::begin
+    ::behaivor::behavior
     ::benhcmark::benchmark
     ::betwen::between
     ::lbock::block
@@ -734,10 +740,11 @@
     :C:Cna::Can
     ::cnadidate::candidate
     ::cannonical::canonical
-    ::cant::can't
+    ; ::cant::can't ; interferes with "cant'" rule below
     ::cant'::can't
     ::captrue::capture
     ::catpure::capture
+    ::cpature::capture
     :C:caes::case                   ; switch-case
     :*:catagor::categor             ; category, categories, categorical
     ::cateogyr::category
@@ -765,6 +772,9 @@
     ::claer::clear
     ::clickc::click
     ::clinet::client
+    ::cleint::client
+    ::clinets::clients
+    ::cleints::clients
     ::clcok::clock
     ::cloen::clone
     ::clutser::cluster
@@ -796,6 +806,7 @@
     ::comopnents::components
     ::compsoe::compose
     ::composeite::composite
+    :*:compormis::compromis         ; compromis/e/ed/es/ing
     ::comptuer::computer            ; whitelist for -tuer -> -ture
     ::ocmputer::computer
     ::concatneate::concatenate
@@ -871,6 +882,7 @@
     ::descrbie::describe
     ::descirbe::describe
     ::desing::design
+    ::deisgn::design
     ::determinsitic::deterministic
     :*:devleop::develop             ; developer, development, developed
     :*:devloep::develop
@@ -979,6 +991,10 @@
     ::expresion::expression
     ::expresisons::expressions
     ::expresions::expressions
+    ::extedn::extend
+    ::exetnd::extend
+    ::extedns::extends
+    ::exetnds::extends
     ::extnesion::extension
     ::externla::external
     ::facotry::factory
@@ -989,7 +1005,10 @@
     ::flase::false
     :*:feasab::feasib               ; feasible, feasibility
     ::fibonnaci::fibonacci          ; fibonacci sequence, fibonacci heap
+    ::fiedl::field
     ; ::fiel::file                  ; ambiguous between: file, field, feel, ...
+    ::fiel system::file system
+    ::fielsystem::filesystem
     ::finaly::finally
     ::fidn::find
     ::fisrt::first
@@ -1006,23 +1025,24 @@
     ::fo rthe::for the
     ::foregorund::foreground
     ::foriegn::foreign
+    :C:forSOme::forSome             ; Scala keyword
     ::forwared::forward
-    ::foudn::found
-    ::foudnation::foundation
+    :*:foudn::found                 ; found/ed/ation/ational
     ::founation::foundation
     ::frmaework::framework
     ::firend::friend
     ::forzenset::frozenset
-    :*:fucntion::function           ; functions, functional, functionality
+    :*:fucntion::function           ; function/s/al/ality/alities
     :*:funtion::function
     :*:fnction::function
     ::guage::gauge
     ::generatro::generator
     ::glboal::global
     ::goign::going
+    ::oging::going
     ::goot::goto
     ::gradiet::gradient
-    :C:grammer::grammar             ; exclude 'Grammer' surname
+    :C:grammer::grammar             ; case sensitive to exclude 'Grammer' surname
     :*:grpah::graph                 ; graphs, graphing, graphics
     :*:grahp::graph
     ::gerat::great
@@ -1037,6 +1057,7 @@
     ::hieght::height
     ::heirarchy::hierarchy
     ; ::hwo::how                    ; ambiguous between 'how' and 'who'
+    ::howto::how to
     ::howver::however
     ::hudnred::hundred
     ::hyperparameer::hyperparameter
@@ -1073,7 +1094,11 @@
     :*:isnert::insert               ; inserts, insertion
     :*:isnta::insta                 ; instance, install, instantiate
     ::intance::instance
+    ::instnace::instance
+    ::intances::instances
+    ::instnaces::instances
     ::isntead::instead
+    ::intsead::instead
     ::isnteadof::insteadof          ; PHP
     :*:isntr::instr                 ; instruction/s, instrument/s
     ::insruction::instruction
@@ -1153,6 +1178,7 @@
     ::logairthm::logarithm
     ::lgoical::logical
     ::loign::login
+    ::lookaisde::lookaside          ; translation lookaside buffer (TLB)
     ::looop::loop
     ::lwoer::lower
     ::lwoercase::lowercase
@@ -1168,6 +1194,7 @@
     :*:manfactur::manufactur        ; manufactur/ed/er/ing
     ::mnay::many
     ::marign::margin
+    ::mathcing::matching
     ::mathamatics::mathematics
     ::mathmatics::mathematics
     ::mathamatical::mathematical
@@ -1178,6 +1205,8 @@
     ::memroy::memory
     ::mesage::message
     ::messageing::messaging
+    ::emtadata::metadata
+    ::metadadta::metadata
     ::microsfot::microsoft
     ::mispell::misspell
     ::modle::model
@@ -1210,6 +1239,9 @@
     ::ocurrence::occurrence
     ::occurence::occurrence
     ::occurrance::occurrence
+    ::ocurrences::occurrences
+    ::occurences::occurrences
+    ::occurrances::occurrences
     ::offiical::official
     ::ofthe::of the
     ::ofteh::of the
@@ -1240,6 +1272,7 @@
     ::ouptut::output
     ::otuputs::outputs
     ::ouptuts::outputs
+    ::overlfow::overflow
     ::overiden::overridden
     ::overidden::overridden
     ::overriden::overridden
@@ -1262,6 +1295,7 @@
     :*:parmaeter::parameter
     :*:aprameter::parameter
     :*:paramter::parameter
+    :*:paramteer::parameter
     ::parameteres::parameters
     ::praent::parent
     ::parenet::parent
@@ -1273,6 +1307,7 @@
     ::paht::path
     ::pahtlib::pathlib
     ::apttern::pattern
+    ::patern::pattern
     ::perceptorn::perceptron
     ::eprf::perf
     ::eprformance::performance
@@ -1300,6 +1335,7 @@
     ::posisble::possible
     :*:pwoer::power                 ; power/ed, powerpoint, powershell
     ::prgama::pragma                ; #pragma
+    ::prealocate::preallocate
     ::predecssor::predecessor
     ::rpedicate::predicate          ; a function returing true/false
     ::preidcate::predicate
@@ -1439,16 +1475,20 @@
     :*:seperat::separat             ; separate, separation, separator
     ::seuqence::sequence
     ::serivce::service
+    ::setapram::setparam            ; Kotlin soft keyword
     ::shaep::shape
     ::shraed::shared
     ::sahred::shared
     :*:shrot::short                 ; short, shortest, shortcut
+    ::shortctu::shortcut
+    ::shortctus::shortcuts
     ::shoud::should
     ::shoudl::should
     :*:signla::signal               ; signal/s/ed/er/ing
     ::simultaenous::simultaneous
     ::simulatenous::simultaneous
     ::signle::single
+    ::siez::size
     :C:sie_t::size_t                ; common C++ data type
     :C:sizet::size_t
     :C:size_T::size_t
@@ -1485,6 +1525,7 @@
     ::stuct::struct
     ::strcut::struct
     ::struture::structure
+    ::strucutre::structure
     ::structrued::structured
     ::styel::style
     ::sytling::styling
@@ -1513,6 +1554,7 @@
     :*:synchor::synchro             ; synchronous/ly, synchronized
     ::sytnax::syntax
     :*:sytsem::system               ; system/s/ic/atic
+    :*:ssytem::system
     ::tabel::table
     ::taks::task
     :*:tehcn::techn                 ; technology, technical, technique
@@ -1603,6 +1645,8 @@
     :*:udpate::update               ; update/s/d/r
     :*:upadte::update
     ::upsream::upstream
+    ::uesr::user
+    ::uesrs::users
     ::vlaid::valid
     :*:vlaue::value                 ; value/s/d
     :*:avlue::value
@@ -1623,6 +1667,7 @@
     ::vetex::vertex
     ::veyr::very
     ::vrey::very
+    ::vidoe::video
     ::vitual::virtual
     ::virutal::virtual
     :*:viist::visit                 ; visit/s, visitor/s
@@ -1654,15 +1699,20 @@
     ::whiel::while
     ::hwile::while
     ::whlie::while
+    ::whoel::whole
     ::iwth::with
     ::wiht::with
     ::wtih::with
     ::witht he::with the
     ::withotu::without
+    ::iwthout::without
+    ::wihtout::without
+    ::wtihout::without
     ::wont'::won't
     ::wo'nt::won't
     ::own't::won't
     :*:owrk::work                   ; workaround, worker, workflow
+    ::worht::worth
     ::woudl::would
     ::wouldnt'::wouldn't
     :*:wirte::write                 ; writer, writable, Write-Output
@@ -1674,6 +1724,7 @@
     :C:Yuo::You
     :*:yoru::your                   ; your, yours, yourself
     ::youself::yourself
+    :C:zeor::zero
 
     ; SUFFIX LIST
     ; Autocorrect words which have these endings.

@@ -89,7 +89,8 @@ EXPLICIT_TESTS = {
     'idnexing': 'indexing', 'rihgts': 'rights', 'docments': 'documents',
     'odcuments': 'documents', 'doucments': 'documents', 'psuedocode': 'pseudocode',
     'rleational': 'relational', 'shrotcut': 'shortcut', 'differnetial': 'differential', 'enahncement': 'enhancement',
-    'derefernced': 'dereferenced',
+    'derefernced': 'dereferenced', 'foudnational': 'foundational', 'paramteers': 'parameters', 'authetnicity': 'authenticity',
+    'ssytematic': 'systematic', 'compormised': 'compromised',
 }
 
 if __name__ == '__main__':
