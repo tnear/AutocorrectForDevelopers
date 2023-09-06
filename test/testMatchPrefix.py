@@ -84,13 +84,15 @@ EXPLICIT_TESTS = {
     'Wriet-Output': 'Write-Output', 'wrietr': 'writer', 'alhpanumeric': 'alphanumeric',
     'isntructions': 'instructions', 'depenencies': 'dependencies', 'proceudral': 'procedural',
     'isnertion': 'insertion', 'proejcts': 'projects', 'ranodmize': 'randomize',
-    'otehrwise': 'otherwise', 'crytpography': 'cryptography', 'mulitply': 'multiply', 'infeasability': 'infeasibility',
+    'crytpography': 'cryptography', 'mulitply': 'multiply', 'infeasability': 'infeasibility',
     'trnasaction': 'transaction', 'algroithms': 'algorithms',
     'idnexing': 'indexing', 'rihgts': 'rights', 'docments': 'documents',
     'odcuments': 'documents', 'doucments': 'documents', 'psuedocode': 'pseudocode',
     'rleational': 'relational', 'shrotcut': 'shortcut', 'differnetial': 'differential', 'enahncement': 'enhancement',
     'derefernced': 'dereferenced', 'foudnational': 'foundational', 'paramteers': 'parameters', 'authetnicity': 'authenticity',
-    'ssytematic': 'systematic', 'compormised': 'compromised',
+    'ssytematic': 'systematic', 'compormised': 'compromised', 'pasrer': 'parser', 'framgentation': 'fragmentation',
+    'comapred': 'compared', 'disconencted': 'disconnected', 'allwoable': 'allowable', 'disconection': 'disconnection',
+    'ohterwise': 'otherwise',
 }
 
 if __name__ == '__main__':

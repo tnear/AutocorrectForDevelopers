@@ -36,7 +36,7 @@
 ; SCRIPT
 ; Exclude AHK script from MS Word because it already has an autocorrect (though it's not heavy on programming words).
 ; Note: this conditional should be changed if you would like to include or exclude other applications.
-#HotIf !WinActive('ahk_exe WINWORD.exe') && !WinActive('ahk_exe soffice.exe')
+#HotIf !WinActive('ahk_exe WINWORD.exe')
 
     ; WHITELIST
     ; Start by listing the whitelist (permit these words by setting backspace to zero, b0)
@@ -318,9 +318,17 @@
     {
         ; do not convert this string to -bilities
     }
+    :b0:bilites::
+    {
+        ; do not convert this string to -bilities
+    }
     :b0:bilty::
     {
         ; do not convert this string to -bility
+    }
+    :b0:blities::
+    {
+        ; do not convert this string to -bilities
     }
     :b0:blity::
     {
@@ -353,6 +361,10 @@
     :b0:garphy::
     {
         ; do not convert this string to -graphy
+    }
+    :b0:iation::
+    {
+        ; do not convert this string to -ization
     }
     :b0:icla::
     {
@@ -550,6 +562,10 @@
     {
         ; do not convert this string to -ation
     }
+    :b0:tehr::
+    {
+        ; do not convert this string to -ther
+    }
     :b0:tenet::
     {
         ; do not convert this string to -tent
@@ -569,6 +585,10 @@
     :b0:tiosn::
     {
         ; do not convert this string to -tions
+    }
+    :b0:tiyt::
+    {
+        ; do not convert this string to -tity
     }
     :b0:tnation::
     {
@@ -638,6 +658,7 @@
     :*:algoirhtm::algorithm
     :*:algroithm::algorithm
     ::allcoate::allocate
+    :*:allwo::allow                 ; allow/s/ed/ing/able
     ::almsot::almost
     :*:alhpa::alpha                 ; alphabet, alphabetize, alphanumeric
     ::alos::also
@@ -651,7 +672,6 @@
     :C:nad::and
     :C:ANd::And
     ::andthe::and the
-    ::anotehr::another
     :*:ansewr::answer               ; answer/s, answered
     ::anhyting::anything
     ::appearence::appearance
@@ -693,6 +713,7 @@
     ::attriubtes::attributes
     ::auido::audio
     :*:authetnic::authentic         ; authentic/ate/ity/ator/ating
+    :C:auot::auto                   ; C++ keyword
     ::automted::automated
     ::autoamted::automated
     ::avialable::available
@@ -714,6 +735,7 @@
     ::becuase::because
     ::begni::begin
     ::behaivor::behavior
+    ::behvaior::behavior
     ::benhcmark::benchmark
     ::betwen::between
     ::lbock::block
@@ -791,7 +813,7 @@
     ::comitment::commitment
     ::comited::committed
     ::commited::committed
-    ::comapre::compare
+    :*:comapre::compare             ; compare/s/d
     ::comparision::comparison
     ::compatability::compatibility
     ::compatabilities::compatibilities
@@ -843,7 +865,7 @@
     ::convertes::converts
     ::cookei::cookie
     ::copyrgiht::copyright
-    :*:corect::correct              ; corrected, correctness
+    :*:corect::correct              ; corrected, correctness, correctly
     ::coudl::could
     ::coutn::count
     ::covearge::coverage
@@ -873,6 +895,7 @@
     :*:deafult::default             ; default/s/ed
     ::defien::define
     :*:dleete::delete
+    ::dleivery::delivery
     :*:dpeend::depend               ; dependency, dependence, dependencies
     :*:depenenc::dependenc
     :*:depht::depth                 ; depth, depthFirstSearch
@@ -911,6 +934,8 @@
     ::diretory::directory
     ::directoroy::directory
     ::diable::disable
+    :*:disconenct::disconnect       ; disconnect/ed/ion/ing/ions/or
+    :*:disconect::disconnect
     ::dispaly::display
     :*:distni::distin               ; distinct, distinguish
     ::distriuted::distributed
@@ -926,6 +951,7 @@
     ::doesn ot::does not
     ::dont::don't
     ::doubel::double
+    ::donwload::download
     ::downsream::downstream
     ::eahc::each
     ::eidtor::editor
@@ -951,6 +977,7 @@
     ::enbale::enable
     ::encapuslation::encapsulation
     :C:ENd::End                     ; common Visual Basic keyword
+    ::enginer::engineer
     :*:enahnce::enhance             ; enhance/d/s/ment/ments
     ::enhancment::enhancement
     ::enoguh::enough
@@ -958,13 +985,13 @@
     ::enviroment::environment
     ::envrionment::environment
     ::enviornment::environment
+    ::envirnoment::environment
     ::equivalenet::equivalent
     ::equivlent::equivalent
     ::eraes::erase
     :*:evlauat::evaluat             ; evaluate, evaluation
     ::evenet::event
     ::evenets::events
-    ::eveyr::every
     ::evvery::every
     ::eveyrone::everyone
     ::everyting::everything
@@ -1029,6 +1056,7 @@
     ::forwared::forward
     :*:foudn::found                 ; found/ed/ation/ational
     ::founation::foundation
+    :*:framgent::fragment            ; fragment/s/ed/ing/ation
     ::frmaework::framework
     ::firend::friend
     ::forzenset::frozenset
@@ -1091,6 +1119,7 @@
     :*:inhreit::inherit
     :*:intiial::initial             ; initialize/d, initialization
     ::inupt::input
+    ::inptu::input
     :*:isnert::insert               ; inserts, insertion
     :*:isnta::insta                 ; instance, install, instantiate
     ::intance::instance
@@ -1125,6 +1154,8 @@
     ::isotream::iostream
     ::isintance::isinstance         ; common Python function
     ::ins't::isn't
+    ::isseu:::issue
+    ::isseus::issues
     ::isthe::is the
     ::itme::item
     ::iteation::iteration
@@ -1153,6 +1184,9 @@
     ::keywrod::keyword
     ::knwo::know
     ::konw::know
+    ::knowlege::knowledge
+    ::knwoledge::knowledge
+    ::konwledge::knowledge
     ::lable::label
     ::labmda::lambda
     ::lamda::lambda
@@ -1200,6 +1234,7 @@
     ::mathamatical::mathematical
     ::mathmatical::mathematical
     ::maltab::matlab
+    ::mtalab::matlab
     ::amtrix::matrix
     ::menas::means
     ::memroy::memory
@@ -1207,6 +1242,7 @@
     ::messageing::messaging
     ::emtadata::metadata
     ::metadadta::metadata
+    ::metadat::metadata
     ::microsfot::microsoft
     ::mispell::misspell
     ::modle::model
@@ -1227,6 +1263,7 @@
     ::naer::near
     ::nerual::neural
     ::enxt::next
+    :C:onde::node
     ::normlaize::normalize
     :*:northwset::northwest
     :C:nto::not
@@ -1260,12 +1297,13 @@
     ::optgorup::optgroup            ; html tag
     ::optgropu::optgroup
     ::optimze::optimize
-    ::optimiation::optimization
     ::optioal::optional
+    ::odrer::order
     ::orignal::original
     ::oriign::origin
-    :*:otehr::other                 ; other/s, otherwise
-    :*:ohter::other
+    :*:ohter::other                 ; other/s/wise
+    ::otehrs::others
+    ::otehrwise::otherwise
     ::otheriwse::otherwise
     ::outocme::outcome
     ::otuput::output
@@ -1285,6 +1323,7 @@
     ::packte::packet
     ::packtes::packets
     :C:apge::page
+    ::pallette::palette             ; ex: VSCode Command Palette
     ::paralel::parallel
     ::parllel::parallel
     ::parllle::parallel
@@ -1299,6 +1338,7 @@
     ::parameteres::parameters
     ::praent::parent
     ::parenet::parent
+    :*:pasre::parse                 ; parse/d/s/r
     ::parital::partial
     :*:partiton::partition          ; partition/s/ed/ing
     ::passwrod::password
@@ -1359,6 +1399,8 @@
     :*:proejct::project             ; project/s/ed/ing/ion
     ::proeprty::property
     ::propety::property
+    ::proeprties::properties
+    ::propeties::properties
     ::prtoocol::protocol
     ::protocl::protocol
     ::prtoocols::protocols
@@ -1372,16 +1414,17 @@
     ::pythohn::python
     :C:PYthon::Python
     ::pyhton::python
+    ::qualyit::quality
+    ::quanitty::quantity
     ::queyr::query
     ::queyring::querying
-    ::quanitty::quantity
     :*:qustion::question
     :*:quetion::question
     ::queu::queue
     :*:qiuck::quick                 ; quickly, quicksort
     ::quicksleect::quickselect
     ::riase::raise
-    :*:ranodm::random               ; randomize, randomization
+    :*:ranodm::random               ; random/ly/ize/ization
     ::rnage::range
     ::rela::real
     ::relaly::really
@@ -1405,6 +1448,9 @@
     :*:rmeove::remove               ; remove/s/d/r
     ::reepat::repeat
     ::reepated::repeated
+    ::repetaed::repeated
+    ::reepatedly::repeatedly
+    ::repetaedly::repeatedly
     :C:repeelm::repelem             ; common MATLAB function
     ::repalce::replace
     :C:repamt::repmat               ; common MATLAB function
@@ -1422,6 +1468,9 @@
     ::represnetation::representation
     ::reproducable::reproducible
     ::requst::request
+    ::reqeust::request
+    ::requsts::requests
+    ::reqeusts::requests
     :*:reuqire::require             ; require/s/d/ment
     :*:requrie::require
     :*:requrei::require
@@ -1444,6 +1493,7 @@
     ::retrn::return
     ::retrun::return
     ::reurn::return
+    ::retunr::return
     ::returnd::returned
     ::reivew::review
     ::reveiw::review
@@ -1493,6 +1543,7 @@
     :C:sizet::size_t
     :C:size_T::size_t
     :C:size-t::size_t
+    ::sockte::socket
     ::socktes::sockets
     ::osftware::software
     ::smoe::some
@@ -1619,6 +1670,7 @@
     ::transiitively::transitively
     ::travling::traveling
     ::traeling::traveling
+    ::traersal::traversal
     ::ture::true
     :*:trucate::truncate            ; truncate/s/d
     ::tupel::tuple
@@ -1633,6 +1685,8 @@
     :C:UniformOtuput::UniformOutput ; common MATLAB name/value pair
     ::uniqeu::unique
     ::unqiue::unique
+    ::uniqeuly::uniquely
+    ::unqiuely::uniquely
     ::unittets::unittest            ; Python testing framework
     ::unkonwn::unknown
     :*:unorderd::unordered          ; unordered_map, unordered_set ('_' is not an AHK end char)
@@ -1665,7 +1719,6 @@
     ::verifiy::verify
     ::vesrion::version
     ::vetex::vertex
-    ::veyr::very
     ::vrey::very
     ::vidoe::video
     ::vitual::virtual
@@ -1744,6 +1797,7 @@
     :C?:bakc::back        ; ex: callback, playback, fallback
     :C?:bilties::bilities ; ex: abilities, probabilities, availabilities, possibilities
     :C?:blities::bilities
+    :C?:bilites::bilities
     :C?:bilty::bility     ; ex: scalability, ability, mutability
     :C?:blity::bility
     :C?:baord::board      ; ex: keyboard, clipboard, dashboard
@@ -1759,7 +1813,6 @@
     :C?:ofrm::form        ; ex: platform, perform, transform
     :C?:garphy::graphy    ; ex: cryptography, photography
     :C?:grahpy::graphy
-    :C?:hting::thing      ; ex: thing, something, anything
     :C?:icla::ical        ; ex: topological, canonical, symmetrical
     :C?:ikc::ick          ; ex: quick, click, pick
     :C?:ikcs::icks
@@ -1779,6 +1832,7 @@
     :C?:ivley::ively      ; ex: relatively, actively, intrusively
     :C?:iivty::ivity      ; ex: connectivity, sensitivity, productivity, activity
     :C?:iviyt::ivity
+    :C?:iation::ization   ; ex: internationalization, memoization, optimization, synchronization
     :C?:iezd::ized        ; ex: equalized, synchronized, amortized
     :C?:alble::lable      ; ex: available, callable, scalable
     :C?:ltiy::lity        ; ex: probability, stability, feasibility, capability, utility
@@ -1803,8 +1857,8 @@
     :C?:ntae::nate        ; ex: concatenate, eliminate, alternate
     :C?:naet::nate
     :C?:chn::nch          ; ex: branch, launch, bunch
-    :C?:tnation::ntation  ; ex: representation, orientation, segmentation
     :C?:ntiy::nity        ; ex: infinity, opportunity, sanity
+    :C?:tnation::ntation  ; ex: representation, orientation, segmentation
     :C?:oitn::oint        ; ex: powerpoint, breakpoint, disjoint
     :C?:oitns::oints
     :C?:oyp::opy          ; ex: copy, entropy, robocopy
@@ -1823,9 +1877,11 @@
     :C?:stiy::sity        ; ex: sparsity, necessity, diversity
     :C?:srot::sort        ; ex: sort, mergesort, quicksort
     :C?:sapce::space      ; ex: workspace, backspace, namespace
-    :C?:tenet::tent       ; ex: persistent, content, existent
     :C?:thc::tch          ; ex: catch, batch, switch
     :C?:thces::tches
+    :C?:tenet::tent       ; ex: persistent, content, existent
+    :C?:tehr::ther        ; ex: another, either, other, together
+    :C?:hting::thing      ; ex: thing, something, anything
     :C?:iton::tion        ; ex: function, exception, condition, transaction, authentication
     :C?:tino::tion
     :C?:toin::tion
@@ -1836,12 +1892,14 @@
     :C?:iotns::tions
     :C?:tiosn::tions
     :C?:ttiy::tity        ; ex: entity, identity, quantity
+    :C?:tiyt::tity
     :C?:tuer::ture        ; ex: feature, picture, future
     :C?:tuers::tures
     :C?:utl::ult          ; ex: result, difficult, default
     :C?:utls::ults
     :C?:tue::ute          ; ex: compute, absolute, permute
     :C?:tues::utes
+    :C?:veyr::very        ; ex: every, delivery, discovery, recovery
     :C?:vtiy::vity        ; ex: connectivity, sensitivity, productivity
     :C?:owrk::work        ; ex: network, framework, rework
     :C?:voe::ove          ; ex: remove, move, above
