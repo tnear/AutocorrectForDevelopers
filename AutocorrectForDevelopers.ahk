@@ -362,10 +362,6 @@
     {
         ; do not convert this string to -graphy
     }
-    :b0:iation::
-    {
-        ; do not convert this string to -ization
-    }
     :b0:icla::
     {
         ; do not convert this string to -ical
@@ -541,6 +537,10 @@
     :b0:oyp::
     {
         ; do not convert this string to -opy
+    }
+    :b0:sehd::
+    {
+        ; do not convert this string to -shed
     }
     :b0:soin::
     {
@@ -770,6 +770,7 @@
     :C:caes::case                   ; switch-case
     :*:catagor::categor             ; category, categories, categorical
     ::cateogyr::category
+    ::cateogry::category
     ::cuation::caution
     ::caues::cause
     ::casue::cause
@@ -799,6 +800,7 @@
     ::cleints::clients
     ::clcok::clock
     ::cloen::clone
+    ::clodu::cloud
     ::clutser::cluster
     :C:COde::Code                   ; VS Code
     ::colide::collide
@@ -893,7 +895,7 @@
     ::decrase::decrease
     ::deepcpoy::deepcopy
     :*:deafult::default             ; default/s/ed
-    ::defien::define
+    :*:defien::define               ; define/s/d
     :*:dleete::delete
     ::dleivery::delivery
     :*:dpeend::depend               ; dependency, dependence, dependencies
@@ -1011,6 +1013,7 @@
     ::existance::existence
     ::exapnd::expand
     ::expectd::expected
+    ::expoenentiation::exponentiation
     ::explroer::explorer
     :*:exoprt::export               ; export/ed/er/s
     ::expor::export
@@ -1195,6 +1198,13 @@
     ::lnaguage::language
     ::lagnuage::language
     ::lnagauge::language
+    ::langauges::languages
+    ::langagues::languages
+    ::lnaguages::languages
+    ::lagnuages::languages
+    ::lnagauges::languages
+    ::leran::learn
+    ::leraning::learning
     ::legnth::length
     ::lenght::length
     ::lnegth::length
@@ -1237,6 +1247,7 @@
     ::mtalab::matlab
     ::amtrix::matrix
     ::menas::means
+    ::memoiation::memoization
     ::memroy::memory
     ::mesage::message
     ::messageing::messaging
@@ -1251,6 +1262,7 @@
     ::moduels::modules
     ::mroe::more
     ::omre::more
+    ::muhc::much
     :*:mlti::multi                  ; multithreaded, multiplex, multiprocess, multitasking, multiply
     :*:mjulti::multi
     :*:mulitp::multip
@@ -1296,6 +1308,7 @@
     ::oeprators::operators
     ::optgorup::optgroup            ; html tag
     ::optgropu::optgroup
+    ::optimiation::optimization
     ::optimze::optimize
     ::optioal::optional
     ::odrer::order
@@ -1521,6 +1534,8 @@
     ::secuirty::security
     ::sleect::select
     ::slef::self                    ; Python current class instance
+    ::sedner::sender
+    :C:SendINput::SendInput         ; common AutoHotkey function
     ::senstivity::sensitivity
     :*:seperat::separat             ; separate, separation, separator
     ::seuqence::sequence
@@ -1598,11 +1613,14 @@
     ::succesfully::successfully
     ::sutie::suite                  ; test suite
     :*:suepr::super
+    ::superscritp::superscript
+    ::superscirpt::superscript
     ::siwthc::switch
     ::siwtch::switch
     ::swich::switch
     ::swtich::switch
     :*:synchor::synchro             ; synchronous/ly, synchronized
+    ::synchroniation::synchronization
     ::sytnax::syntax
     :*:sytsem::system               ; system/s/ic/atic
     :*:ssytem::system
@@ -1724,8 +1742,10 @@
     ::vitual::virtual
     ::virutal::virtual
     :*:viist::visit                 ; visit/s, visitor/s
-    ::viusal::visual
+    :*:viusal::visual               ; visual/s/ly/ise/ize/ized/ization
+    :*:visula::visual
     :C:VIsual::Visual               ; Visual Studio
+    ::visualiation::visualization
     ::watn::want
     :C:wsa::was
     ::wa snot::was not
@@ -1832,7 +1852,6 @@
     :C?:ivley::ively      ; ex: relatively, actively, intrusively
     :C?:iivty::ivity      ; ex: connectivity, sensitivity, productivity, activity
     :C?:iviyt::ivity
-    :C?:iation::ization   ; ex: internationalization, memoization, optimization, synchronization
     :C?:iezd::ized        ; ex: equalized, synchronized, amortized
     :C?:alble::lable      ; ex: available, callable, scalable
     :C?:ltiy::lity        ; ex: probability, stability, feasibility, capability, utility
@@ -1868,6 +1887,7 @@
     :C?:prots::ports
     :C?:raet::rate        ; ex: enumerate, migrate, integrate
     :C?:rtiy::rity        ; ex: security, linearity, parity
+    :C?:sehd::shed        ; ex: distinguished, flushed, pushed, published
     :C?:sihp::ship        ; ex: relationship, ownership, spaceship (operator)
     :C?:sihps::ships
     :C?:sino::sion        ; ex: expression, recursion, comprehension, version, permission, dimension

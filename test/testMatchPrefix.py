@@ -92,7 +92,7 @@ EXPLICIT_TESTS = {
     'derefernced': 'dereferenced', 'foudnational': 'foundational', 'paramteers': 'parameters', 'authetnicity': 'authenticity',
     'ssytematic': 'systematic', 'compormised': 'compromised', 'pasrer': 'parser', 'framgentation': 'fragmentation',
     'comapred': 'compared', 'disconencted': 'disconnected', 'allwoable': 'allowable', 'disconection': 'disconnection',
-    'ohterwise': 'otherwise',
+    'ohterwise': 'otherwise', 'defiend': 'defined', 'viusalization': 'visualization', 'visulaization': 'visualization',
 }
 
 if __name__ == '__main__':

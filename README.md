@@ -6,7 +6,7 @@ Corrections happen automatically as you type:
 
 ![Load balancer](assets/cpp.gif)
 
-The default behavior for *AutocorrectForDevelopers.ahk* is to run on all applications (except Microsoft Word), although the script can be customized to enable or disable any application of your choice (see the `#HotIf/#If` statement in the script).
+The default behavior for *AutocorrectForDevelopers.ahk* is to run on all applications (except Microsoft Word), although the script can be customized to enable or disable any application of your choice (see the `#HotIf/#If` statement early in the script).
 
 ## Installation
 Download & install [AutoHotkey](https://www.autohotkey.com/) v2, then download & run [*AutocorrectForDevelopers.ahk*](AutocorrectForDevelopers.ahk).
@@ -16,25 +16,23 @@ All rules are continuously regression tested (see tests [here](https://github.co
 
 ## FAQ
 ### Does this script support AutoHotkey v1?
-Absolutely! (although v2 is preferred). AHK v1 is in the process of being deprecated by the AHK development team. There is a legacy v1 version of the *AutocorrectForDevelopers* script [here](assets/AutocorrectForDevelopersV1Legacy.ahk) which supports AHK v1. A word of caution: this legacy script is not exhaustively tested like the main script nor is it guaranteed to contain the latest rules.
+Absolutely! (although v2 is preferred). AHK v1 is in the process of being deprecated by the AHK development team. There is a legacy v1 version of the *AutocorrectForDevelopers* script [here](assets/AutocorrectForDevelopersV1Legacy.ahk) which supports AHK v1. A friendly word of caution: this legacy script is not exhaustively tested like the main script nor is it guaranteed to contain the latest rules.
 
 ### How does *AutocorrectForDevelopers.ahk* compare to AutoHotkey's official *AutoCorrect.ahk* script?
 [Here](https://www.autohotkey.com/download/AutoCorrect.ahk) is AutoHotkey's official autocomplete script. It is based in Wikipedia's [common misspellings](https://en.wikipedia.org/wiki/Wikipedia:Lists_of_common_misspellings/For_machines) list which dates back to [2005](https://en.wikipedia.org/w/index.php?title=Wikipedia:Lists_of_common_misspellings/For_machines&oldid=11834258). Jim Biancolo [ported](https://www.biancolo.com/blog/autocorrect/) Wikipedia's list to an AutoHotkey script in 2006 and it has been officially hosted by AutoHotkey.com since 2007. The original script is widely influential and has been used successfully by many people for years.
 
-The official *AutoCorrect.ahk* contains heaps of rules which are either uncommon in developer workflows or introduce accented characters which are correct but developer unfriendly. The official script also hasn't seen much active development in the last 15 years and therefore supports AHK v1-only.
-
-*AutocorrectForDevelopers.ahk*, however, focuses heavily on software engineering terminology and programming languages. The result is that this script will automatically fix a higher percentage of your typos if you are a software developer. The Venn diagram below shows example strings that each script autocorrects to:
+Shown below is a Venn diagram comparing *AutocorrectForDevelopers.ahk* with the official *AutoCorrect.ahk*:
 
 ![Venn diagram](assets/VennDiagram.png)
 
-*AutocorrectForDevelopers.ahk* is shown in purple on the right. It contains many common software engineering terms and concepts which are absent from *AutoCorrect.ahk*. Also, it is a smaller circle because it contains thousands fewer rules than *AutoCorrect.ahk*.
+*AutocorrectForDevelopers.ahk* is shown in purple on the right. It contains many common software engineering terms which are absent from *AutoCorrect.ahk*. Because *AutocorrectForDevelopers.ahk* is developer-centric, it will automatically fix a higher percentage of your typos. Also, it is drawn as a smaller circle because it contains thousands fewer rules than *AutoCorrect.ahk*.
 
-*AutoCorrect.ahk* is shown on the left in yellow. It contains more rules overall, but many of those rules are for rare words which software developers are unlikely ever to need.
+*AutoCorrect.ahk* is shown on the left in yellow. It contains many  rules for rare words which software developers are unlikely ever to need. It also introduces many accented characters which are correct but developer unfriendly. Lastly, the official script hasn't seen much active development in the last 15 years and therefore supports AHK v1-only.
 
 *AutocorrectForDevelopers.ahk* aims to fill the autocorrect gap for developers by including many software development typos which the esteemed *AutoCorrect.ahk* is missing.
 
 ## Common developer typos added for...
-- Languages: C, C++, C#, COBOL, CSS, FORTRAN, Go, Java, JavaScript, Julia, Kotlin, MATLAB, Perl, PHP, Python, R, Ruby, Rust, Scala, SQL, Swift, Visual Basic
+- Languages: AutoHotkey, C, C++, C#, COBOL, CSS, FORTRAN, Go, Java, JavaScript, Julia, Kotlin, MATLAB, Perl, PHP, Python, R, Ruby, Rust, Scala, SQL, Swift, Visual Basic
 - Programs: GDB, Git, PowerShell, UNIX CLI
 - Subjects: algorithms, artificial intelligence, compilers, cryptography, databases, machine learning, networking, operating systems, security
 - (more to come!)
