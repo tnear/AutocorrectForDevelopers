@@ -21,12 +21,12 @@ class TestMatchPrefix(unittest.TestCase):
             newText, rule = Rule.getReplacementText(self.rules, inputText, hasEndChar)
             self.assertEqual(newText, rule.newText)
             self.assertTrue(rule.prefixMatch)
-            self.assertFalse(rule.suffixMatch)
 
         hasEndChar = False
         for inputText in self.prefixRuleList:
             newText, rule = Rule.getReplacementText(self.rules, inputText, hasEndChar)
             self.assertEqual(newText, rule.newText)
+            self.assertTrue(rule.prefixMatch)
 
     def test_explicit(self):
         for inputText, expectedText in EXPLICIT_TESTS.items():
@@ -47,17 +47,17 @@ EXPLICIT_TESTS = {
     'cosntant': 'constant',
     'contianer': 'container', 'contineus': 'continues', 'ocntinued': 'continued', 'contirbutor': 'contributor',
     'contorller': 'controller', 'corectness': 'correctness',
-    'dadtabase': 'database', 'databses': 'databases', 'databaess': 'databases',
+    'dadtabase': 'database',
     'deafults': 'defaults', 'dleetes': 'deletes', 'dpeendency': 'dependency', 'dephtFirst': 'depthFirst',
-    'descendants': 'descendents', 'devleoper': 'developer', 'devloeper': 'developer', 'dveloper': 'developer',
+    'devleoper': 'developer', 'devloeper': 'developer', 'dveloper': 'developer',
     'develoeper': 'developer', 'dififculty': 'difficulty',
     'distnict': 'distinct', 'eignevalue': 'eigenvalue', 'elemtns': 'elements', 'elemnts': 'elements',
     'elmeents': 'elements', 'evlauation': 'evaluation', 'exoprted': 'exported',
     'feasable': 'feasible',
     'fucntions': 'functions', 'funtional': 'functional', 'fnctions': 'functions',
     'grpahs': 'graphs', 'grahping': 'graphing', 'gorups': 'groups', 'gropus': 'groups', 'imoprted': 'imported',
-    'incldues': 'includes', 'incdlues': 'includes', 'inofrmational': 'informational', 'indpeendent': 'independent',
-    'independantly': 'independently', 'inhertiance': 'inheritance', 'inhreits': 'inherits', 'intiialize': 'initialize',
+    'incldues': 'includes', 'incdlues': 'includes', 'inofrmational': 'informational',
+    'inhertiance': 'inheritance', 'inhreits': 'inherits', 'intiialize': 'initialize',
     'isntance': 'instance', 'inteligence': 'intelligence', 'itnerface': 'interface',
     'lsitener': 'listener', 'manfacturer': 'manufacturer',
     'mltithreaded': 'multithreaded', 'mjultithreaded': 'multithreaded', 'northwsetern': 'northwestern',
@@ -93,6 +93,12 @@ EXPLICIT_TESTS = {
     'ssytematic': 'systematic', 'compormised': 'compromised', 'pasrer': 'parser', 'framgentation': 'fragmentation',
     'comapred': 'compared', 'disconencted': 'disconnected', 'allwoable': 'allowable', 'disconection': 'disconnection',
     'ohterwise': 'otherwise', 'defiend': 'defined', 'viusalization': 'visualization', 'visulaization': 'visualization',
+    'expeirmented': 'experimented', 'araryfun': 'arrayfun', 'arrrayfun': 'arrayfun', 'interoplation': 'interpolation',
+    'inteprolation': 'interpolation', 'exeprienced': 'experienced', 'eprformance': 'performance', 'perofrmance': 'performance',
+    'pacakges': 'packages', 'packges': 'packages', 'pakcages': 'packages', 'integerates': 'integrates',
+    'interperets': 'interprets', 'refatoring': 'refactoring', 'reutrning': 'returning', 'retrning': 'returning',
+    'retruning': 'returning', 'retunring': 'returning', 'siwthces': 'switches', 'siwtches': 'switches', 'swiches': 'switches',
+    'swtiches': 'switches',
 }
 
 if __name__ == '__main__':

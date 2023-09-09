@@ -22,7 +22,6 @@ class TestMatchPrefix(unittest.TestCase):
 
             newText, rule = Rule.getReplacementText(self.rules, inputText, hasEndChar)
             self.assertEqual(newText, rule.newText)
-            self.assertFalse(rule.prefixMatch)
             self.assertTrue(rule.suffixMatch)
             self.assertTrue(rule.caseSensitive)
 

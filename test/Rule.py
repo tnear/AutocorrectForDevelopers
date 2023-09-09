@@ -174,7 +174,7 @@ class Rule:
                     replacedText = Rule._replacePreserveCase(inputText, rule.oldText, rule.newText)
                     return replacedText, rule
 
-            elif lhs == rhs:
+            if lhs == rhs:
                 # exact matches
                 if rule.backspace:
                     # found whitelist match, return text unchanged
@@ -184,7 +184,7 @@ class Rule:
                     # found match
                     return rule.newText, rule
 
-            elif rule.suffixMatch:
+            if rule.suffixMatch:
                 # suffix matches
                 if hasEndChar and inputText.endswith(rule.oldText):
                     return rule.newText, rule
