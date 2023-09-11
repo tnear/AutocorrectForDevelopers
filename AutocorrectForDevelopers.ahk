@@ -414,6 +414,14 @@
     {
         ; do not convert this string to -ional
     }
+    :b0:iont::
+    {
+        ; do not convert this string to -oint
+    }
+    :b0:ionts::
+    {
+        ; do not convert this string to -oints
+    }
     :b0:iotn::
     {
         ; do not convert this string to -tion
@@ -421,6 +429,14 @@
     :b0:iotns::
     {
         ; do not convert this string to -tions
+    }
+    :b0:itme::
+    {
+        ; do not convert this string to -time or -items
+    }
+    :b0:itmes::
+    {
+        ; do not convert this string to -times or -items
     }
     :b0:iton::
     {
@@ -686,6 +702,7 @@
     :C:nad::and
     :C:ANd::And
     ::andthe::and the
+    ::antoehr::another
     :*:ansewr::answer               ; answer/s, answered
     ::anhyting::anything
     ::appearence::appearance
@@ -698,8 +715,10 @@
     ::archtiecture::architecture
     ::arugment::argument
     ::arguement::argument
+    ::arguent::argument
     ::arugments::arguments
     ::arguements::arguments
+    ::arguents::arguments
     ::arithemtic::arithmetic
     ::aray::array
     :*:arary::array                 ; array/s/ed, arrayfun (MATLAB)
@@ -746,6 +765,7 @@
     ::backwrad::backward
     ::backwrads::backwards
     :*:blanace::balance             ; balance/s/d
+    :*:blaance::balance
     ::bandwith::bandwidth
     ::baselien::baseline
     ::baseilne::baseline
@@ -756,8 +776,10 @@
     ::begni::begin
     ::behaivor::behavior
     ::behvaior::behavior
+    ::behaior::behavior
     ::behaivors::behaviors
     ::behvaiors::behaviors
+    ::behaiors::behaviors
     ::benhcmark::benchmark
     ::benhcmarks::benchmarks
     ::betwen::between
@@ -766,16 +788,18 @@
     ::boundries::boundaries
     ::boundry::boundary
     :*:brnach::branch               ; branch/ed/es, branching, branchless
-    ::breka::break
-    ::brekas::breaks
+    :*:breka::break                 ; break/s, breakpoint/s, breakthrough
+    :*:brkea::break
     ::breakthrouhg::breakthrough
     :*:braodcast::broadcast         ; broadcast/s/ed/ing/er
     ::borke::broke
     ::borwser::browser
     ::bulid::build
     ::biuld::build
+    ::ubild::build
     ::bulids::builds
     ::biulds::builds
+    ::ubilds::builds
     ::biult::built
     ::ubndle::bundle
     ::ubndles::bundles
@@ -817,6 +841,7 @@
     ::chracters::characters
     :*:chekc::check                 ; checkout, check/s/ed/er, checkpoint
     ::chidl::child
+    ::chlid::child
     ::chidlren::children
     ::chilren::children
     ::chocie::choice
@@ -925,18 +950,23 @@
     :*:contian::contain             ; contains, container
     ::contaienr::container
     ::contaienrs::containers
-    :*:contineu::continue           ; continued, continues
+    :*:contineu::continue           ; continue/d/s
     :*:ocntinue::continue
+    :*:contniue::continue
+    ::conitnuous::continuous
+    ::conitnuously::continuously
     :*:contirbut::contribut         ; contribute/d, contributor
     :*:contorl::control             ; control/s/led/ler/ling
     ::convertes::converts
     ::cookei::cookie
     ::cookeis::cookies
+    ::cpoy::copy
     ::copyrgiht::copyright
-    :*:corect::correct              ; corrected, correctness, correctly
+    :*:corect::correct              ; correct/ed/ion/tly/ness
     ::coudl::could
-    ::coutn::count
-    ::coutns::counts
+    ::coudln't::couldn't
+    :*:coutn::count                 ; count/s/ed/er/ing, countVarName
+    :*:ocunt::count
     ::covearge::coverage
     ::coveage::coverage
     ::crahs::crash
@@ -950,6 +980,7 @@
     ::curent::current
     ::currenet::current
     ::currrent::current
+    ::currnet::current
     ::currenetly::currently
     ::currrently::currently
     ::customie::customize
@@ -974,7 +1005,9 @@
     :*:deafult::default             ; default/s/ed
     :*:defien::define               ; define/s/d
     :*:dleete::delete               ; delete/s/d/r
+    ::dleetion::deletion
     ::dleivery::delivery
+    :*:dmeonstrat::demonstrat       ; demonstrat/e/s/ing/ion/ive
     :*:dpeend::depend               ; depends, dependency, dependence, dependencies
     :*:depenenc::dependenc
     :*:depht::depth                 ; depth, depthFirstSearch
@@ -1025,7 +1058,9 @@
     :*:disconenct::disconnect       ; disconnect/ed/ion/ing/ions/or
     :*:disconect::disconnect
     ::dispaly::display
+    ::idsplay::display
     ::dispalys::displays
+    ::idsplays::displays
     :*:distni::distin               ; distinct/ion, distinguish/ing/ability
     ::distriuted::distributed
     ::distriubtion::distribution
@@ -1179,8 +1214,11 @@
     :*:foudn::found                 ; found/ed/ation/ational
     ::founation::foundation
     :*:framgent::fragment            ; fragment/s/ed/ing/ation
+    ::frmae::frame
+    ::frmaes::frames
     ::frmaework::framework
     ::firend::friend
+    ::firends::friends
     ::forzenset::frozenset
     :*:fucntion::function           ; function/s/al/ality/alities
     :*:funtion::function
@@ -1226,7 +1264,8 @@
 
     ::iamge::image
     ::iamges::images
-    ::implmenet::implement          ; there is a separate -menet suffix rule which should not run
+    :*:implmenet::implement         ; implement/s/ation/ations
+    :*:implmeent::implement
     ::implemenation::implementation
     ::implemenations::implementations
     :*:imoprt::import               ; import/s/ed/er
@@ -1280,6 +1319,7 @@
     ::integriy::integrity
     :*:intelig::intellig            ; intellig/ent/ence/ible
     :*:itner::inter                 ; interface, internal, interact, interval
+    ::interafce::interface
     :*:interopl::interpol           ; interpol/ate/ated/ates/ating
     :*:intepr::interp               ; interpolat/e/ion, interpret/s/ation
     ::internla::internal
@@ -1304,8 +1344,6 @@
     ::isseu:::issue
     ::isseus::issues
     ::isthe::is the
-    ::itme::item
-    ::itmes::items
     ::iteation::iteration
     ::itereation::iteration
     ::iteations::iterations
@@ -1446,6 +1484,7 @@
     ::normlaizes::normalizes
     :*:northwset::northwest
     :C:nto::not
+    ::ntoes::notes
     ::nulll::null
     ::nulptr::nullptr
     ::nulllptr::nullptr
@@ -1455,9 +1494,11 @@
     ::ocurrence::occurrence
     ::occurence::occurrence
     ::occurrance::occurrence
+    ::occurrrence::occurrence
     ::ocurrences::occurrences
     ::occurences::occurrences
     ::occurrances::occurrences
+    ::occurrrences::occurrences
     ::offiical::official
     ::ofthe::of the
     ::ofteh::of the
@@ -1527,6 +1568,7 @@
     ::parameteres::parameters
     ::praent::parent
     ::parenet::parent
+    ::aprent::parent
     :*:pasre::parse                 ; parse/d/s/r
     ::parital::partial
     :*:partiton::partition          ; partition/s/ed/ing
@@ -1548,6 +1590,7 @@
     :*:eprform::perform             ; perform/s/ed/ance
     :*:perofrm::perform
     ::perfomance::performance
+    ::perihperal::peripheral
     ::permanet::permanent
     ::permenant::permanent
     ::permanant::permanent
@@ -1581,6 +1624,8 @@
     ::prefered::preferred
     ::prefecth::prefetch
     ::rpefix::prefix
+    ::preporcessor::preprocessor
+    ::preprocesor::preprocessor
     ::prevelant::prevalent
     :*:pritn::print                 ; print, printf, println
     ::privte::private
@@ -1590,6 +1635,8 @@
     :*:problme::problem
     :*:prblem::problem
     :*:proceudr::procedur           ; procedure/s, procedural/ly
+    ::porcessor::processor
+    ::procesor::processor
     ::procesing::processing
     ::proflie::profile
     ::proflies::profiles
@@ -1601,6 +1648,7 @@
     ::propety::property
     ::proeprties::properties
     ::propeties::properties
+    :*:prtoect::protect             ; protect/s/ed/or/ing/ion
     ::prtoocol::protocol
     ::protocl::protocol
     ::prtoocols::protocols
@@ -1642,6 +1690,8 @@
     ::recrod::record
     ::recrods::records
     ::recurrance::recurrence
+    :*:reudce::reduce               ; reduce/s/d/r
+    ::reduceble::reducible
     ::reudction::reduction
     :*:refator::refactor            ; refactor/s/ed/ing
     :*:refernce::reference          ; reference/s/r/d
@@ -1739,6 +1789,7 @@
     ::svaes::saves
     ::scaleable::scalable
     :*:scheudl::schedul             ; schedule/s/d/r, scheduling
+    ::shcema::schema
     ::scientiifc::scientific
     :*:scritp::script               ; script/s/ed/ing
     :*:sript::script
@@ -1750,8 +1801,8 @@
     ::esconds::seconds
     ::seocnds::seconds
     ::secuirty::security
-    ::sleect::select
-    ::sleects::selects
+    :*:sleect::select               ; select/s/ion/ions
+    :*:seelct::select
     ::selectes::selects
     ::slef::self                    ; Python current class instance
     ::sedner::sender
@@ -1823,6 +1874,9 @@
     ::styel::style
     ::styels::styles
     ::sytling::styling
+    ::subaray::subarray
+    ::subarary::subarray
+    ::subarrray::subarray
     ::subcateogyr::subcategory
     ::subcatagory::subcategory
     ::subclas::subclass
@@ -2007,6 +2061,7 @@
     ::wans't::wasn't
     ::wan't::wasn't
     ::wasnt'::wasn't
+    :*:wtach::watch                 ; watch/ed/es/dog/point
     :*:wieght::weight               ; weight/s/ed
     ::wern't::weren't
     ::whta::what
@@ -2039,6 +2094,7 @@
     ::wont'::won't
     ::wo'nt::won't
     ::own't::won't
+    ::owrd::word
     :*:owrk::work                   ; workaround, worker, workflow
     ::worht::worth
     ::woudl::would
@@ -2107,6 +2163,8 @@
     :C?:oius::ious
     :C?:iison::ision      ; ex: decision, collision, revision
     :C?:tiive::itive      ; ex: positive, primitive, repetitive
+    :C?:itme::time        ; ex: lifetime, realtime, sometime, uptime
+    :C?:itmes::times
     :C?:vie::ive          ; ex: generative, active, relative
     :C?:ivley::ively      ; ex: relatively, actively, intrusively
     :C?:iivty::ivity      ; ex: connectivity, sensitivity, productivity, activity
@@ -2138,8 +2196,10 @@
     :C?:chn::nch          ; ex: branch, launch, bunch
     :C?:ntiy::nity        ; ex: infinity, opportunity, sanity
     :C?:tnation::ntation  ; ex: representation, orientation, segmentation
-    :C?:oitn::oint        ; ex: powerpoint, breakpoint, disjoint
+    :C?:oitn::oint        ; ex: powerpoint, breakpoint, disjoint, watchpoint
     :C?:oitns::oints
+    :C?:iont::oint
+    :C?:ionts::oints
     :C?:oyp::opy          ; ex: copy, entropy, robocopy
     :C?:oudn::ound        ; ex: background, foreground, compound
     :C?:epr::per          ; ex: developer, cheaper, super
