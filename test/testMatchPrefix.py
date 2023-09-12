@@ -101,7 +101,8 @@ EXPLICIT_TESTS = {
     'swtiches': 'switches', 'reudceable': 'reduceable', 'sleection': 'selection', 'seelction': 'selection',
     'prtoection': 'protection', 'wtachpoint': 'watchpoint', 'brekapoint': 'breakpoint', 'brkeapoint': 'breakpoint',
     'coutning': 'counting', 'ocunting': 'counting', 'implmeentation': 'implementation', 'implmenetation': 'implementation',
-    'blaanced': 'balanced',
+    'blaanced': 'balanced', 'ocntroller': 'controller', 'recusive': 'recursive', 'perimtted': 'permitted',
+    'repalced': 'replaced', 'praticed': 'practiced', 'corretcion': 'correction', 'freuqently': 'frequently', 'srots': 'sorts',
 }
 
 if __name__ == '__main__':
