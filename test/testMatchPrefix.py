@@ -103,6 +103,13 @@ EXPLICIT_TESTS = {
     'coutning': 'counting', 'ocunting': 'counting', 'implmeentation': 'implementation', 'implmenetation': 'implementation',
     'blaanced': 'balanced', 'ocntroller': 'controller', 'recusive': 'recursive', 'perimtted': 'permitted',
     'repalced': 'replaced', 'praticed': 'practiced', 'corretcion': 'correction', 'freuqently': 'frequently', 'srots': 'sorts',
+    'whtiespace': 'whitespace', 'exeuction': 'execution', 'defualts': 'defaults', 'elmeetns': 'elements',
+    'otpional': 'optional', 'toekns': 'tokens', 'contsraint': 'constraint', 'requsting': 'requesting',
+    'reqeusting': 'requesting', 'rquesting': 'requesting', 'reuqesting': 'requesting', 'deicsional': 'decisional',
+    'retur ntrue': 'return true', 'rqeusting': 'requesting', 'rserved': 'reserved', 'ocnstant': 'constant',
+    'reawrding': 'rewarding', 'shirnks': 'shrinks', 'consitsently': 'consistently', 'resutled': 'resulted',
+    'difficutly': 'difficulty', 'atachment': 'attachment', 'brachned': 'branched', 'lauchning': 'launching',
+    'manaegment': 'management',
 }
 
 if __name__ == '__main__':
