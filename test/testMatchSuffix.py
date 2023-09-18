@@ -35,5 +35,12 @@ class TestMatchPrefix(unittest.TestCase):
             self.assertEqual(newText, inputText)
             self.assertIsNone(rule)
 
+    def test_noThreeLetterSuffixes(self):
+        threeLetterSuffixes = [rule for rule in self.suffixRuleList if len(rule) <= 3]
+        threeLetterSuffixes.sort()
+
+        # permit only these 3-letter suffixes
+        assert threeLetterSuffixes == ['ign', 'nig']
+
 if __name__ == '__main__':
     unittest.main()
