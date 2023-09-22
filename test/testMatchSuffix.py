@@ -11,8 +11,8 @@ class TestMatchPrefix(unittest.TestCase):
         self.suffixRuleList = [rule.oldText for rule in suffixRules]
 
     def test_ruleLength(self):
-        self.assertGreater(len(self.rules), 1000)
-        self.assertGreater(len(self.suffixRuleList), 100)
+        self.assertGreater(len(self.rules), 2000)
+        self.assertGreater(len(self.suffixRuleList), 170)
 
     def test_replace(self):
         hasEndChar = True
@@ -41,6 +41,14 @@ class TestMatchPrefix(unittest.TestCase):
 
         # permit only these 3-letter suffixes
         assert threeLetterSuffixes == ['ign', 'nig']
+
+    def test_noRedundantSuffixes(self):
+        # ensures that no suffix string ends with another string in the list
+        # ex: a suffix rule for '-paegs=>-pages' is unnecessary if there is already a rule for '-aegs=>-ages'
+        for i, s1 in enumerate(self.suffixRuleList):
+            for j, s2 in enumerate(self.suffixRuleList):
+                hasRedundantSuffix = i != j and s1.endswith(s2)
+                self.assertFalse(hasRedundantSuffix)
 
 if __name__ == '__main__':
     unittest.main()

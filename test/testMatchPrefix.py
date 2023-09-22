@@ -11,8 +11,8 @@ class TestMatchPrefix(unittest.TestCase):
         self.prefixRuleList = [rule.oldText for rule in prefixRules]
 
     def test_ruleLength(self):
-        self.assertGreater(len(self.rules), 1100)
-        self.assertGreater(len(self.prefixRuleList), 160)
+        self.assertGreater(len(self.rules), 2000)
+        self.assertGreater(len(self.prefixRuleList), 270)
 
     def test_replace(self):
         # prefix rules (":*:") match regardless of end char
@@ -113,7 +113,10 @@ EXPLICIT_TESTS = {
     'recusrively': 'recursively', 'nuemrator': 'numerator', 'asserrtion': 'assertion', 'swithcing': 'switching',
     'remvoed': 'removed', 'quikcsort': 'quicksort', 'partiioning': 'partitioning', 'sytematic': 'systematic',
     'acknowlegement': 'acknowledgement', 'recurisvely': 'recursively', 'conssitency': 'consistency',
-    'acknwoledgement': 'acknowledgement', 'ackonwledgement': 'acknowledgement',
+    'acknwoledgement': 'acknowledgement', 'ackonwledgement': 'acknowledgement', 'elmental': 'elemental', 'pahtlib': 'pathlib',
+    'sovler': 'solver', 'entialment': 'entailment', 'ifnormation': 'information', 'reulsts': 'results',
+    'calcualtion': 'calculation', 'caluclation': 'calculation', 'initalise': 'initialise', 'proceessing': 'processing',
+    'porcessor': 'processor', 'preporcessor': 'preprocessor', 'wokrer': 'worker',
 }
 
 if __name__ == '__main__':
