@@ -116,7 +116,10 @@ EXPLICIT_TESTS = {
     'acknwoledgement': 'acknowledgement', 'ackonwledgement': 'acknowledgement', 'elmental': 'elemental', 'pahtlib': 'pathlib',
     'sovler': 'solver', 'entialment': 'entailment', 'ifnormation': 'information', 'reulsts': 'results',
     'calcualtion': 'calculation', 'caluclation': 'calculation', 'initalise': 'initialise', 'proceessing': 'processing',
-    'porcessor': 'processor', 'preporcessor': 'preprocessor', 'wokrer': 'worker',
+    'porcessor': 'processor', 'preporcessor': 'preprocessor', 'wokrer': 'worker', 'foudn': 'found', 'reurtned': 'returned',
+    'chracteristic': 'characteristic', 'orhtogonal': 'orthogonal', 'prjoection': 'projection', 'ocnfigure': 'configure',
+    'assocaitive': 'associative', 'opwerpoint': 'powerpoint', 'rsulted': 'resulted', 'proecdurally': 'procedurally',
+    'clutsering': 'clustering', 'memroize': 'memorize', 'commitee': 'committee', 'resulets': 'results', 'osrted': 'sorted',
 }
 
 if __name__ == '__main__':

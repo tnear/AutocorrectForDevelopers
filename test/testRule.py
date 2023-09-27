@@ -114,7 +114,7 @@ class TestRule(unittest.TestCase):
         rules = Rule.fileToRuleList('AutocorrectForDevelopers.ahk')
 
         for rule in rules:
-            self.assertNotEqual(rule.oldText, rule.newText)
+            self.assertNotEqual(rule.oldText, rule.newText, f'Failed for {rule.newText}')
             self.assertNotEqual(rule.oldText, '')
 
     def test_noMultiLineComments(self):
@@ -146,8 +146,20 @@ class TestRule(unittest.TestCase):
         # get all rules except whitelisted and suffixes because those can also appear in the main section
         oldTextList = [rule.oldText for rule in rules if not rule.backspace and not rule.suffixMatch]
 
-        # verify no duplicates by using a set
-        self.assertEqual(len(oldTextList), len(set(oldTextList)))
+        # verify no duplicate LHS rules
+        seen = set()
+        duplicates = set()
+        for item in oldTextList:
+            if item in seen:
+                duplicates.add(item) # seen before, add to duplicate list
+            seen.add(item)
+    
+        assert len(duplicates) == 0, f'Found duplicate elements: {duplicates}'
+
+    def test_braceEscape(self):
+        # {} should be removed from RHS
+        rule = Rule.lineToRule(':C:#Pragma::{#}pragma')
+        self.assertEqual(rule.newText, '#pragma')
 
 if __name__ == '__main__':
     unittest.main()

@@ -124,10 +124,17 @@ class Rule:
         newText = Rule.unescapeText(newText)
         return newText
 
+    # this is a naive function which doesn't check the context of the
+    # usage of the special characters which it replaces
     @staticmethod
     def unescapeText(text: str):
         # remove all '`' characters from text
-        return text.replace(Rule.escapeChar, '')
+        newText = text.replace(Rule.escapeChar, '')
+
+        # '{' and '}' also have special meaning
+        newText = newText.replace('{', '')
+        newText = newText.replace('}', '')
+        return newText
 
     # ex: inputText = 'Wriet-Output'
     # oldText = 'wriet'
