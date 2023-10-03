@@ -120,6 +120,11 @@ EXPLICIT_TESTS = {
     'chracteristic': 'characteristic', 'orhtogonal': 'orthogonal', 'prjoection': 'projection', 'ocnfigure': 'configure',
     'assocaitive': 'associative', 'opwerpoint': 'powerpoint', 'rsulted': 'resulted', 'proecdurally': 'procedurally',
     'clutsering': 'clustering', 'memroize': 'memorize', 'commitee': 'committee', 'resulets': 'results', 'osrted': 'sorted',
+    'borwsing': 'browsing', 'brwoser': 'browser', 'rueslts': 'results', 'icnremented': 'incremented', 'ntoepad': 'notepad',
+    'collumns': 'columns', 'charcters': 'characters', 'knwos': 'knows', 'konws': 'knows', 'nkows': 'knows',
+    'interupts': 'interrupts', 'reoprting': 'reporting', 'remianing': 'remaining', 'eleemnts': 'elements',
+    'saerching': 'searching', 'diffiuclty': 'difficulty', 'garphs': 'graphs', 'charcaters': 'characters',
+    'preidction': 'prediction',
 }
 
 if __name__ == '__main__':

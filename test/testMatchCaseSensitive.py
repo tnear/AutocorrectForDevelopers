@@ -13,9 +13,9 @@ class TestMatchCaseSensitive(unittest.TestCase):
         self.caseSensitivePrefixList = [rule.oldText for rule in caseSensitivePrefix]
 
     def test_ruleLength(self):
-        self.assertGreater(len(self.rules), 1000)
-        self.assertGreater(len(self.caseSensitiveNoPrefixList), 30)
-        self.assertGreater(len(self.caseSensitivePrefixList), 6)
+        self.assertGreater(len(self.rules), 2100)
+        self.assertGreater(len(self.caseSensitiveNoPrefixList), 60)
+        self.assertGreater(len(self.caseSensitivePrefixList), 4)
 
     # ex: ":C:itn::int"
     def test_noPrefixMatch(self):

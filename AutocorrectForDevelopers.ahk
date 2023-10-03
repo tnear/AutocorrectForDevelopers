@@ -8,7 +8,6 @@
 ; methods, programming languages, and programming disciplines.
 ; Latest version is located here: https://github.com/tnear/AutocorrectForDevelopers
 
-
 ; DOCUMENTATION
 ; AHK hotstrings: https://www.autohotkey.com/docs/v2/Hotstrings.htm
 ;   Prefix dictionary search: https://www.litscape.com/word_tools/starts_with.php
@@ -20,22 +19,22 @@
 ;       ...will convert 'ansewr' -> 'answer' before typing an ending character.
 ;       This lets it match 'answer', 'answers', 'answered', ...
 ; :?: = matches inside other words used for suffixes, ex, :?:tign::ting => testign -> testing.
-;       The '?' option still needs ending char.
+;       The '?' option still needs an ending character.
 
-; END CHARS
+; END CHARACTERS
 ; Add '<' and '>' to supported ending characters (useful for C++ templates).
-;    Note: all EndChars characters below except '<' and '>' are default AHK end chars:
+;    Note: all EndChars characters below except '<' and '>' are default AHK end characters:
 #Hotstring EndChars -()[]{}:;'"/\,.?!`n `t<>
 
-; AHK VERSION 2 vs. VERSION 1
+; AHK VERSION 1 vs. VERSION 2
 ; Relevant AutocorrectForDevelopers v1 <=> v2 differences:
 ; Directives: #HotIf (v2) is #If (v1)
 ; For literal colons, each colon needs to be escaped in v2: `:`:
 ;     For v1, you only need to escape double colon: `::
 
-; SCRIPT
-; Exclude AHK script from MS Word because it already has an autocorrect (though it's not heavy on programming words).
-; Note: this conditional should be changed if you would like to include or exclude other applications.
+; AUTOCORRECT SCRIPT
+; Exclude AHK script from MS Word because it already has an autocorrect (though it doesn't emphasize programming words).
+; Note: this conditional can be changed if you would like to include or exclude other applications.
 #HotIf !WinActive('ahk_exe WINWORD.exe')
 
     ; WHITELIST
@@ -524,6 +523,10 @@
     {
         ; do not convert this string to -graphy
     }
+    :b0:hcing::
+    {
+        ; do not convert this string to -ching
+    }
     :b0:hsing::
     {
         ; do not convert this string to -shing
@@ -572,6 +575,10 @@
     {
         ; do not convert this string to -ivity
     }
+    :b0:ianl::
+    {
+        ; do not convert this string to -inal
+    }
     :b0:inat::
     {
         ; do not convert this string to -iant
@@ -604,6 +611,10 @@
     {
         ; do not convert this string to -times or -items
     }
+    :b0:itng::
+    {
+        ; do not convert this string to -ting
+    }
     :b0:iton::
     {
         ; do not convert this string to -tion
@@ -631,6 +642,10 @@
     :b0:liity::
     {
         ; do not convert this string to -ility
+    }
+    :b0:liyt::
+    {
+        ; do not convert this string to -lity
     }
     :b0:ltiy::
     {
@@ -684,6 +699,7 @@
     {
         ; do not convert this string to -mizes
     }
+
     :b0:naet::
     {
         ; do not convert this string to -nate
@@ -1070,6 +1086,7 @@
     :*:blaance::balance
     ::bandwith::bandwidth
     ::badnwidth::bandwidth
+    ::bandiwdth::bandwidth
     ::baselien::baseline
     ::baseilne::baseline
     ::becaues::because
@@ -1088,6 +1105,7 @@
     ::betwen::between
     ::bniary::binary
     ::ibnary::binary
+    ::binayr::binary
     ::lbock::block
     ::bolean::boolean
     ::boht::both
@@ -1100,10 +1118,8 @@
     ::breakthrouhg::breakthrough
     :*:braodcast::broadcast         ; broadcast/s/ed/ing/er
     ::borke::broke
-    ::borwser::browser
-    ::brwoser::browser
-    ::borwsers::browsers
-    ::brwosers::browsers
+    :*:borws::brows                 ; ex: brows/es/ed/er/ers/ing
+    :*:brwos::brows
     ::bulid::build
     ::biuld::build
     ::ubild::build
@@ -1117,7 +1133,6 @@
 
     ::cahce::cache
     ::cahced::cached
-    ::cahcing::caching
     :*:calcualt::calculat           ; calculat/e/ed/es/or/ion
     :*:caluclat::calculat
     ::calender::calendar
@@ -1149,6 +1164,9 @@
     ::chagnes::changes
     ::chagned::changed
     :*:chracter::character          ; character/s/ize/istic
+    :*:charcter::character
+    :*:charcater::character
+    ::characteres::characters
     ::cheaepr::cheaper
     :*:chekc::check                 ; checkout, check/s/ed/er, checkpoint
     ::chidl::child
@@ -1198,6 +1216,7 @@
     ::colide::collide
     ::colides::collides
     ::colision::collision
+    :*:collumn::column              ; column/s/ar/ate/ise
     ::comibnation::combination
     ::comibnations::combinations
     ::comand::command
@@ -1213,7 +1232,7 @@
     ::comitment::commitment
     ::comitments::commitments
     ::comited::committed
-    :*:commite::committe           ; ex: committe/d/r/rs/e/es
+    :*:commite::committe            ; ex: committe/d/r/rs/e/es
     :*:comapre::compare             ; compare/s/d
     ::comparision::comparison
     ::comparisions::comparisons
@@ -1273,6 +1292,8 @@
     ::constriants::constraints
     ::constuctor::constructor
     ::consutl::consult
+    ::consuem::consume
+    ::consuems::consumes
     ::consuemr::consumer
     ::consuemrs::consumers
     :*:contian::contain             ; contains, container
@@ -1282,7 +1303,9 @@
     :*:ocntinue::continue
     :*:contniue::continue
     ::conitnuous::continuous
+    ::contniuous::continuous
     ::conitnuously::continuously
+    ::contniuously::continuously
     :*:contirbut::contribut         ; contribute/d, contributor
     :*:contorl::control             ; control/s/led/ler/ling
     :*:ocntrol::control
@@ -1334,6 +1357,7 @@
     ::damaeg::damage
     ::dahsboard::dashboard
     :*:dadta::data                  ; data/set/sets/base
+    ::dtaa::data
     ::databse::database
     ::databaes::database
     ::databses::databases
@@ -1399,6 +1423,7 @@
     :*:differnet::different         ; different/ial/iable/iate
     :*:dififcult::difficult         ; difficult, difficulty, difficulties
     :*:difficutl::difficult
+    :*:diffiuclt::difficult
     ::difficulyt::difficulty
     ::difficluty::difficulty
     ::dimensinoal::dimensional
@@ -1457,6 +1482,7 @@
     :*:elmeent::element
     :*:elmeetn::element
     :*:elment::element
+    :*:eleemnt::element
     ::elipse::ellipse
     ::ellitpic::elliptic            ; elliptic curve
     ::eliptic::elliptic
@@ -1565,16 +1591,20 @@
     ::favoriet::favorite
     ::favoriets::favorites
     ::failrue::failure
+    ::fialure::failure
     ::failrues::failures
+    ::fialures::failures
     ::fallthrouhg::fallthrough
     ::flase::false
     ::aflse::false
+    :C:fales::false                 ; case-sensitive to preserve 'Fales' surname
     :*:feasab::feasib               ; feasible, feasibly, feasibility
     ::fethc::fetch
     ::fibonnaci::fibonacci          ; fibonacci sequence, fibonacci heap
     ::fiedl::field
     ::fiedls::fields
-    ::fiel system::file system
+    ::fiel::file
+    ::fiels::files
     ::fielsystem::filesystem
     ::finaly::finally
     ::fidn::find
@@ -1591,6 +1621,7 @@
     ::folowing::following
     :C:fro::for                     ; 'for' keyword
     :C:ofr::for
+    :C:FOr::For
     :C:foreeach::foreach            ; Perl keyword
     ::fo rthe::for the
     ::fort he::for the
@@ -1640,6 +1671,7 @@
     :C:grammer::grammar             ; case sensitive to exclude 'Grammer' surname
     :*:grpah::graph                 ; graphs, graphing, graphics
     :*:grahp::graph
+    :*:garph::graph
     ::gredy::greedy
     ::gerat::great
     ::gorund::ground
@@ -1704,6 +1736,7 @@
     ::inclue::include
     ::inclues::includes
     ::inclsive::inclusive
+    :*:icnrement::increment         ; increment/s/al/ed/ing
     ::indistniguishable::indistinguishable
     ::indistniguishability::indistinguishability
     :*:infeasab::infeasib           ; infeasible, infeasibility
@@ -1733,6 +1766,7 @@
     ::intputs::inputs
     :*:isnert::insert               ; insert/s/ion
     :*:isnta::insta                 ; instance, install, instantiate
+    ::intall::install
     ::intance::instance
     ::instnace::instance
     ::intances::instances
@@ -1758,8 +1792,7 @@
     ::internlas::internals
     :*:interperet::interpret        ; interpret/s/ed/er
     ::interpeter::interpreter
-    ::interupt::interrupt
-    ::interupts::interrupts
+    :*:interupt::interrupt          ; interrupt/s/ed/er/ing/ion
     :C:inot::into                   ; sql keyword
     ::intractible::intractable
     ::inthe::in the
@@ -1804,13 +1837,10 @@
 
     ::keywrod::keyword
     ::keywrods::keywords
-    ::knwo::know
-    ::konw::know
-    ::knwos::knows
-    ::konws::knows
+    :*:knwo::know                   ; ex: know/s/n/ing/ledge
+    :*:konw::know
+    :*:nkow::know
     ::knowlege::knowledge
-    ::knwoledge::knowledge
-    ::konwledge::knowledge
 
     ::lable::label
     ::lables::labels
@@ -1872,15 +1902,13 @@
     ::maintian::maintain
     ::maintians::maintains
     ::mkae::make
-    :C*:amke_::make_                ; C++: make_shared, make_unique, make_pair, ...
-    :C*:mkae_::make_
-    :C*:maek_::make_
+    ::maek::make
+    ::amke::make
     ::maloc::malloc
     :*:manaeg::manage               ; manage/r/d/rs/ment/eable
     :*:manfactur::manufactur        ; manufactur/ed/er/ing
     ::mnay::many
     ::marign::margin
-    ::mathcing::matching
     ::mathamatics::mathematics
     ::mathmatics::mathematics
     ::mathamatical::mathematical
@@ -1943,8 +1971,8 @@
     ::normlaizes::normalizes
     :*:northwset::northwest
     :C:nto::not
+    :*:ntoe::note                   ; ex: note/s/d/pad
     ::notifcation::notification
-    ::ntoes::notes
     ::nulll::null
     ::nulptr::nullptr
     ::nulllptr::nullptr
@@ -1962,6 +1990,7 @@
     ::occurrances::occurrences
     ::occurrrences::occurrences
     ::offiical::official
+    ::offical::official
     ::ofthe::of the
     ::ofteh::of the
     ::ofhte::of the
@@ -1969,6 +1998,8 @@
     ::oft he::of the
     ::ofthis::of this
     ::onthe::on the
+    ::oens::ones
+    ::onlly::only
     :*:opeation::operation          ; operation/al/s
     :*:operaetion::operation
     ::opeator::operator
@@ -2091,7 +2122,9 @@
     ::opint::point
     ::opints::points
     ::poitner::pointer
+    ::pionter::pointer
     ::poitners::pointers
+    ::pionters::pointers
     ::oplicy::policy
     ::oplling::polling
     ::polymorhpic::polymorphic
@@ -2111,6 +2144,7 @@
     ::predecesor::predecessor
     ::rpedicate::predicate          ; a function returing true/false
     ::preidcate::predicate
+    :*:preidct::predict
     ::prefered::preferred
     ::prefecth::prefetch
     ::rpefix::prefix
@@ -2153,6 +2187,7 @@
     ::proove::prove
     :*:pesudo::pseudo               ; pseudocode, pseudorandom
     :*:psuedo::pseudo
+    ::puhs::push
     :C:push+back::push_back         ; common C++ container function
     ::pythno::python
     ::pyton::python
@@ -2179,6 +2214,7 @@
     :*:ranodm::random               ; random/ly/ize/ization
     ::rnage::range
     ::rnages::ranges
+    ::raedy::ready
     ::rela::real
     ::relaly::really
     ::rebulid::rebuild
@@ -2220,8 +2256,7 @@
     ::releaes::release
     ::releaess::releases
     ::relevnat::relevant
-    ::remian::remain
-    ::remians::remains
+    :*:remian::remain               ; ex: remain/s/ed/der/ing
     ::remkae::remake
     ::remnnat::remnant
     :*:rmeove::remove               ; remove/s/d/r
@@ -2235,6 +2270,7 @@
     :C:repeelm::repelem             ; common MATLAB function
     :*:repalce::replace             ; replace/s/d/ment/able
     ::repamt::repmat                ; common MATLAB function
+    :*:reoprt::report               ; report/s/ed/er/ing
     ::repostiroies::repositories
     ::repositoroies::repositories
     ::reposistories::repositories
@@ -2268,6 +2304,7 @@
     :*:resrve::reserve
     ::reislient::resilient
     ::reoslution::resolution
+    ::reoslutions::resolutions
     ::resoruce::resource
     ::reosurce::resource
     ::resoruces::resources
@@ -2290,6 +2327,7 @@
     :*:resutl::result
     :*:reulst::result
     :*:resulet::result
+    :*:rueslt::result
     ::reult::result
     ::reults::results
     ::retian::retain
@@ -2339,6 +2377,7 @@
     :*:sritp::script
     :*:scirpt::script
     :*:serach::search               ; search/ed/es/ing
+    :*:saerch::search
     ::escond::second
     ::seocnd::second
     ::esconds::seconds
@@ -2405,6 +2444,7 @@
     ::sproadically::sporadically
     ::spritnf::sprintf              ; common string formatting function
     ::stakc::stack
+    ::satck::stack
     ::stnadard::standard
     ::starrt::start
     ::staretd::started
@@ -2529,6 +2569,7 @@
     ::thsi::this
     ::htis::this
     ::tihs::this
+    ::thsoe::those
     :*:thoguht::thought             ; thought/s/ful/fully
     ::thershold::threshold
     ::throuhg::through
@@ -2616,9 +2657,11 @@
     ::vetor::vector
     ::vecotr::vector
     ::vetcor::vector
+    ::vecctor::vector
     ::veirfy::verify
     ::vierfy::verify
     ::verifiy::verify
+    ::veriyf::verify
     ::vesrion::version
     ::vesrions::versions
     ::vetex::vertex
@@ -2657,6 +2700,7 @@
     ::whne::when
     ::whent he::when the
     ::hwere::where
+    ::wehre::where
     ::wher ethe::where the
     ::wher eyou::where you
     ::wich::which
@@ -2670,6 +2714,7 @@
     ::whlie::while
     :*:whtie::white                 ; whiteboard, whitelist, whitespace
     ::whoel::whole
+    ::iwdth::width
     ::iwth::with
     ::wiht::with
     ::wtih::with
@@ -2710,6 +2755,7 @@
     :C?:albe::able        ; ex: available, mutable, runnable, readable
     :C?:aegs::ages        ; ex: languages, pages, messages, usages, outages, manages
     :C?:kaes::akes        ; ex: makes, remakes, takes, wakes
+    :C?:allly::ally       ; ex: automatically, finally, optionally, sporadically, computationally
     :C?:aenous::aneous    ; ex: simultaneous, extraneous, instantaneous, miscellaneous
     :C?:aetd::ated        ; ex: emulated, obfuscated, encapsulated, updated
     :C?:taion::ation      ; ex: application, optimization, stabilization, mutation, replication
@@ -2740,6 +2786,7 @@
     :C?:caions::cations
     :C?:cetp::cept        ; ex: accept, concept, except, intercept
     :C?:cetps::cepts
+    :C?:hcing::ching      ; ex: caching, matching, touching, watching, launching
     :C?:ctiy::city        ; ex: capacity, opacity, scarcity, atomicity
     :C?:ciyt::city
     :C?:denet::dent       ; ex: independent, descendent, dependent, indent
@@ -2764,6 +2811,7 @@
     :C?:ietns::ients
     :C?:igth::ight        ; ex: copyright, height, eight, weight
     :C?:liity::ility      ; ex: probability, stability, feasibility, capability, utility
+    :C?:ianl::inal        ; ex: terminal, final, original, ordinal, marginal
     :C?:ign::ing          ; ex: running, string, meaning, testing, working, learning, mapping
                           ; Note: see whitelist at the top for valid -ign words
     :C?:nig::ing
@@ -2785,7 +2833,8 @@
     :C?:iezd::ized        ; ex: equalized, synchronized, amortized, randomized
     :C?:kaeg::kage        ; ex: package, leakage, linkage, subpackage
     :C?:alble::lable      ; ex: available, callable, scalable, unscalable
-    :C?:ltiy::lity        ; ex: probability, stability, feasibility, capability, utility
+    :C?:ltiy::lity        ; ex: probability, stability, quality, capability, utility
+    :C?:liyt::lity
     :C?:laod::load        ; ex: overload, download, upload, workload, offload
     :C?:laoded::loaded
     :C?:laoder::loader
@@ -2869,6 +2918,7 @@
     :C?:tiem::time
     :C?:itmes::times
     :C?:tiems::times
+    :C?:itng::ting        ; ex: selecting, testing, printing, routing, collecting
     :C?:iton::tion        ; ex: function, exception, condition, transaction, authentication
     :C?:tino::tion
     :C?:toin::tion
