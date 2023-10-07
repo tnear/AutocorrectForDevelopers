@@ -1,7 +1,7 @@
 import unittest
 from Rule import Rule
 
-# ex:: ":*:valeu::value"
+# ex: ":*:valeu::value" <- the '*' denotes a prefix rule
 class TestMatchPrefix(unittest.TestCase):
     @classmethod
     def setUpClass(self):
@@ -11,8 +11,8 @@ class TestMatchPrefix(unittest.TestCase):
         self.prefixRuleList = [rule.oldText for rule in prefixRules]
 
     def test_ruleLength(self):
-        self.assertGreater(len(self.rules), 2000)
-        self.assertGreater(len(self.prefixRuleList), 270)
+        self.assertGreater(len(self.rules), 2100)
+        self.assertGreater(len(self.prefixRuleList), 300)
 
     def test_replace(self):
         # prefix rules (":*:") match regardless of end char
@@ -36,6 +36,16 @@ class TestMatchPrefix(unittest.TestCase):
                 'These tests are meant to match beyond what is specified in the rule')
             self.assertTrue(rule.prefixMatch)
             self.assertFalse(rule.suffixMatch)
+
+    def test_allPrefixRulesHaveTests(self):
+        # every prefix test in ahk script should have an entry in EXPLICIT_TESTS
+        testKeys = list(EXPLICIT_TESTS.keys())
+        for prefix in self.prefixRuleList:
+            if prefix == '.cmo':
+                continue # todo: lift limitation for prefix + suffix + case sensitive rules
+
+            testList = [x for x in testKeys if x.startswith(prefix)]
+            self.assertGreater(len(testList), 0, f'The prefix "{prefix}" does not have an automated test')
 
 EXPLICIT_TESTS = {
     'abstarction': 'abstraction', 'accomodating': 'accommodating',
@@ -124,7 +134,11 @@ EXPLICIT_TESTS = {
     'collumns': 'columns', 'charcters': 'characters', 'knwos': 'knows', 'konws': 'knows', 'nkows': 'knows',
     'interupts': 'interrupts', 'reoprting': 'reporting', 'remianing': 'remaining', 'eleemnts': 'elements',
     'saerching': 'searching', 'diffiuclty': 'difficulty', 'garphs': 'graphs', 'charcaters': 'characters',
-    'preidction': 'prediction',
+    'preidction': 'prediction', 'algoirhtms': 'algorithms', 'bakcward': 'backward', 'contniue': 'continue',
+    'dmeonstration': 'demonstration', 'detphFirst': 'depthFirst', 'recogniess': 'recognises', 'recogniezs': 'recognizes',
+    'std;:cout': 'std::cout', 'inculdes': 'includes', 'hahsed': 'hashed', 'preocmputing': 'precomputing',
+    'comptuer': 'computer', 'ocmputer': 'computer', 'looops': 'loops', 'winowds': 'windows', 'prevetns': 'prevents',
+    'prserves': 'preserves',
 }
 
 if __name__ == '__main__':

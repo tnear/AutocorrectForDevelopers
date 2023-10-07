@@ -1,5 +1,5 @@
 # AutocorrectForDevelopers
-**_AutocorrectForDevelopers_** is an [AutoHotkey](https://www.autohotkey.com/) (AHK) script which automatically fixes typos using rules tailored for software developer environments. Its rules contain many corrections for common developer words involving keywords, classes, methods, programming languages, and programming disciplines. This script will reduces runtime errors, decreases compilation times, and boosts developer productivity.
+**_AutocorrectForDevelopers_** is an [AutoHotkey](https://www.autohotkey.com/) (AHK) script which automatically fixes typos using rules tailored for software developer environments. Its rules contain many corrections for common developer words involving keywords, classes, methods, programming languages, and programming disciplines. This script reduces runtime errors, decreases compilation times, and boosts developer productivity.
 
 ## How does it work?
 Corrections happen automatically as you type:

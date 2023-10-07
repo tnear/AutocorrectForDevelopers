@@ -153,7 +153,7 @@ class TestRule(unittest.TestCase):
             if item in seen:
                 duplicates.add(item) # seen before, add to duplicate list
             seen.add(item)
-    
+
         assert len(duplicates) == 0, f'Found duplicate elements: {duplicates}'
 
     def test_braceEscape(self):

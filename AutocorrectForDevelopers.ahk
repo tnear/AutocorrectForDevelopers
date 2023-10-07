@@ -88,7 +88,7 @@
     :b0:ign::
     {
     }
-    :b0:align::
+    :?b0:align::
     {
     }
     :b0:arraign::
@@ -108,9 +108,6 @@
     :b0:campaign::
     {
     }
-    :b0:codesign::
-    {
-    }
     :b0:condign::
     {
     }
@@ -123,19 +120,13 @@
     :b0:countersign::
     {
     }
-    :b0:dealign::
-    {
-    }
     :b0:deign::
     {
     }
     :b0:deraign::
     {
     }
-    :b0:design::
-    {
-    }
-    :b0:disalign::
+    :?b0:design::
     {
     }
     :b0:eloign::
@@ -147,46 +138,22 @@
     :b0:feign::
     {
     }
-    :b0:foreign::
-    {
-    }
-    :b0:malign::
-    {
-    }
-    :b0:misalign::
+    :?b0:foreign::
     {
     }
     :b0:misassign::
     {
     }
-    :b0:nondesign::
-    {
-    }
-    :b0:outdesign::
-    {
-    }
     :b0:outreign::
     {
     }
-    :b0:overdesign::
-    {
-    }
     :b0:preassign::
-    {
-    }
-    :b0:predesign::
-    {
-    }
-    :b0:realign::
     {
     }
     :b0:reassign::
     {
     }
     :b0:reconsign::
-    {
-    }
-    :b0:redesign::
     {
     }
     :b0:reign::
@@ -204,22 +171,13 @@
     :b0:sovereign::
     {
     }
-    :b0:unalign::
-    {
-    }
     :b0:unassign::
     {
     }
     :b0:unbenign::
     {
     }
-    :b0:underdesign::
-    {
-    }
     :b0:undersign::
-    {
-    }
-    :b0:undesign::
     {
     }
     :b0:unsign::
@@ -230,7 +188,7 @@
     :b0:igns::
     {
     }
-    :b0:aligns::
+    :?b0:aligns::
     {
     }
     :b0:arraigns::
@@ -240,9 +198,6 @@
     {
     }
     :b0:campaigns::
-    {
-    }
-    :b0:codesigns::
     {
     }
     :b0:consigns::
@@ -257,13 +212,7 @@
     :b0:countersigns::
     {
     }
-    :b0:dealigns::
-    {
-    }
-    :b0:designs::
-    {
-    }
-    :b0:disaligns::
+    :?b0:designs::
     {
     }
     :b0:eloigns::
@@ -275,40 +224,19 @@
     :b0:feigns::
     {
     }
-    :b0:maligns::
-    {
-    }
-    :b0:misaligns::
-    {
-    }
     :b0:misassigns::
-    {
-    }
-    :b0:outdesigns::
     {
     }
     :b0:outreigns::
     {
     }
-    :b0:overdesigns::
-    {
-    }
     :b0:preassigns::
-    {
-    }
-    :b0:predesigns::
-    {
-    }
-    :b0:realigns::
     {
     }
     :b0:reassigns::
     {
     }
     :b0:reconsigns::
-    {
-    }
-    :b0:redesigns::
     {
     }
     :b0:reigns::
@@ -326,13 +254,7 @@
     :b0:sovereigns::
     {
     }
-    :b0:unaligns::
-    {
-    }
     :b0:unassigns::
-    {
-    }
-    :b0:underdesigns::
     {
     }
     :b0:undersigns::
@@ -435,6 +357,10 @@
     {
         ; do not convert this string to -lable
     }
+    :b0:airty::
+    {
+        ; do not convert this string to -arity
+    }
     :b0:athc::
     {
         ; do not convert this string to -atch
@@ -531,6 +457,10 @@
     {
         ; do not convert this string to -shing
     }
+    :b0:iarty::
+    {
+        ; do not convert this string to -arity
+    }
     :b0:iavte::
     {
         ; do not convert this string to -ivate
@@ -578,6 +508,14 @@
     :b0:ianl::
     {
         ; do not convert this string to -inal
+    }
+    :b0:ienet::
+    {
+        ; do not convert this string to -ient
+    }
+    :b0:ienets::
+    {
+        ; do not convert this string to -ients
     }
     :b0:inat::
     {
@@ -892,10 +830,6 @@
     {
         ; do not convert this string to -tions
     }
-    :b0:tiyt::
-    {
-        ; do not convert this string to -tity
-    }
     :b0:tnat::
     {
         ; do not convert this string to -tant
@@ -919,10 +853,6 @@
     :b0:toins::
     {
         ; do not convert this string to -tions
-    }
-    :b0:ttiy::
-    {
-        ; do not convert this string to -tity
     }
     :b0:tuer::
     {
@@ -968,7 +898,7 @@
     :C:#Include::{#}include         ; directive in C/C++. '#' on RHS must be escaped by enclosing in '{}'
     :C:#Pragma::{#}pragma           ; directive in C/C++
     :C?*:.cmo::.com                 ; top-level domain
-    
+
     ::abotu::about
     ::abvoe::above
     ::absoltue::absolute
@@ -982,6 +912,7 @@
     ::activaet::activate
     ::actula::actual
     ::acutal::actual
+    ::adjacnet::adjacent
     ::adjancecy::adjacency
     ::adminstrator::administrator
     ::administator::administrator
@@ -1042,9 +973,7 @@
     :*:asserrt::assert
     ::assesment::assessment
     ::assesments::assessments
-    ::asign::assign
     ::asisgn::assign
-    ::asigns::assigns
     ::asisgns::assigns
     ::asignment::assignment
     ::asignments::assignments
@@ -1092,6 +1021,7 @@
     ::becaues::because
     ::becasue::because
     ::becuase::because
+    ::becauase::because
     ::beofre::before
     ::begni::begin
     ::behaivor::behavior
@@ -1100,6 +1030,7 @@
     ::behaivors::behaviors
     ::behvaiors::behaviors
     ::behaiors::behaviors
+    ::bleow::below
     ::benhcmark::benchmark
     ::benhcmarks::benchmarks
     ::betwen::between
@@ -1111,6 +1042,7 @@
     ::boht::both
     ::boundries::boundaries
     ::boundry::boundary
+    ::boudnary::boundary
     :*:brnach::branch               ; branch/ed/es, branching, branchless
     :*:brachn::branch
     :*:breka::break                 ; break/s, breakpoint/s, breakthrough
@@ -1200,10 +1132,8 @@
     ::clikcs::clicks
     ::clinet::client
     ::cleint::client
-    ::clienet::client
     ::clinets::clients
     ::cleints::clients
-    ::clienets::clients
     ::clcok::clock
     ::clcoks::clocks
     ::cloen::clone
@@ -1254,11 +1184,8 @@
     ::composeite::composite
     ::comopsition::composition
     :*:compormis::compromis         ; compromis/e/ed/es/ing
-    ::comptue::compute
-    ::comptuer::computer            ; whitelist for -tuer -> -ture
-    ::ocmputer::computer
-    ::comptuers::computers
-    ::ocmputers::computers
+    :*:comptue::compute             ; compute/r/s/d/rs
+    :*:ocmpute::compute
     ::concatneate::concatenate
     ::concatneates::concatenates
     ::conceptula::conceptual
@@ -1336,6 +1263,7 @@
     ::cralwer::crawler              ; web crawler
     ::creat::create                 ; note: there exists a legacy C syscall called 'creat'
     ::creats::creates
+    ::creaet::create
     ::criteira::criteria
     :*:crytpo::crypto               ; cryptography, cryptographic/ally
     :C:CTrl::Ctrl                   ; 'Control' keyboard modifier
@@ -1382,7 +1310,6 @@
     :*:dmeonstrat::demonstrat       ; demonstrat/e/s/ing/ion/ive
     :*:dpeend::depend               ; depends, dependency, dependence, dependencies
     :*:depenenc::dependenc
-    ::dependnet::dependent
     :*:depht::depth                 ; depth, depthFirstSearch
     :*:detph::depth
     :*:derefernce::dereference      ; dereference/s/d
@@ -1503,8 +1430,11 @@
     ::encapuslation::encapsulation
     :C:ENd::End                     ; common Visual Basic keyword
     ::engaeg::engage
+    ::egnine::engine
     ::enginer::engineer
+    ::egnineer::engineer
     ::enginers::engineers
+    ::egnineers::engineers
     :*:enahnce::enhance             ; enhance/d/s/ment/ments
     ::enhancment::enhancement
     ::enhancments::enhancements
@@ -1512,6 +1442,9 @@
     ::ensrue::ensure
     ::ensrues::ensures
     :*:ential::entail               ; ential/s/ed/ing/ment
+    ::enttiy::entity
+    ::entiyt::entity
+    ::enitty::entity
     ::entroyp::entropy
     ::enumeate::enumerate
     ::enumeates::enumerates
@@ -1609,6 +1542,7 @@
     ::finaly::finally
     ::fidn::find
     ::fidns::finds
+    ::finishsed::finished
     ::fisrt::first
     ::firsrt::first
     ::flahs::flash
@@ -1681,6 +1615,7 @@
 
     :C:hsa::has
     :C:Hsa::Has
+    :*:hahs::hash                   ; hash/es/ed/ing/table
     ::hvae::have
     ::ahve::have
     ::haev::have
@@ -1712,6 +1647,9 @@
     ::hyperparaemters::hyperparameters
     ::hyperparmaeters::hyperparameters
 
+    ::identtiy::identity
+    ::identiyt::identity
+    ::idenitty::identity
     ::igonre::ignore
     ::igonres::ignores
     ::iamge::image
@@ -1732,6 +1670,7 @@
     ::imposisble::impossible
     :*:incldue::include             ; include/s/d
     :*:incdlue::include
+    :*:inculde::include
     ::includ::include
     ::inclue::include
     ::inclues::includes
@@ -1870,15 +1809,17 @@
     ::laison::liaison
     ::laiason::liaison
     ::librarry::library
-    ::lifetiem::lifetime
     ::liek::like
     :C:ilne::line
     ::lienar::linear
+    ::linera::linear
     ::lienarly::linearly
+    ::lineraly::linearly
     ::ilnes::lines
     :C:LInux::Linux
     ::lniux::linux
     ::lsit::list
+    ::lsited::listed
     ::lsits::lists
     :*:lsiten::listen               ; listen/s/er/ers/ing
     ::listenr::listener
@@ -1888,8 +1829,7 @@
     ::lgoical::logical
     ::loign::login
     ::lookaisde::lookaside          ; translation lookaside buffer (TLB)
-    ::looop::loop
-    ::looops::loops
+    :*:looop::loop                  ; loop/s/ed/ing
     ::lwoer::lower
     ::lwoercase::lowercase
 
@@ -2140,6 +2080,7 @@
     ::prgama::pragma                ; #pragma
     ::prealocate::preallocate
     ::prealocates::preallocates
+    :*:preocmput::precomput         ; precomput/e/es/ed/ing
     ::predecssor::predecessor
     ::predecesor::predecessor
     ::rpedicate::predicate          ; a function returing true/false
@@ -2150,7 +2091,9 @@
     ::rpefix::prefix
     :*:preporcess::preprocess       ; preprocess/es/or/ing
     ::preprocesor::preprocessor
+    :*:prserve::preserve            ; preserve/s/d/r
     ::prevelant::prevalent
+    :*:prevetn::prevent             ; prevent/s/ed/ion/able
     ::pirmary::primary
     :*:pritn::print                 ; print, printf, println
     ::privte::private
@@ -2197,6 +2140,8 @@
 
     ::qualyit::quality
     ::quanitty::quantity
+    ::quanttiy::quantity
+    ::quantiyt::quantity
     ::queyr::query
     ::queyring::querying
     :*:qustion::question            ; question/s/ed/ing/able
@@ -2355,8 +2300,8 @@
     :*:rihgt::right
     ::orund::round
     ::rotue::route
-    ::rotuer::router                ; whitelist for -tuer  -> -ture
-    ::rotuers::routers              ; whitelist for -tuers -> -tures
+    ::rotuer::router                ; exception for -tuer  -> -ture
+    ::rotuers::routers              ; exception for -tuers -> -tures
     ::runenr::runner
     ::runing::running
 
@@ -2417,7 +2362,7 @@
     :*:shirnk::shrink               ; shrink/s/ing
     :*:signla::signal               ; signal/s/ed/er/ing
     ::significnat::significant
-    ::simultaenous::simultaneous
+    ::similarty::similarity
     ::simulatenous::simultaneous
     ::signle::single
     ::singluar::singular
@@ -2713,8 +2658,12 @@
     ::hwile::while
     ::whlie::while
     :*:whtie::white                 ; whiteboard, whitelist, whitespace
+    ::whitelsit::whitelist
+    ::whitelsited::whitelisted
+    ::whitelsits::whitelists
     ::whoel::whole
     ::iwdth::width
+    :*:winowd::window               ; window/s/ed/ing
     ::iwth::with
     ::wiht::with
     ::wtih::with
@@ -2757,10 +2706,12 @@
     :C?:kaes::akes        ; ex: makes, remakes, takes, wakes
     :C?:allly::ally       ; ex: automatically, finally, optionally, sporadically, computationally
     :C?:aenous::aneous    ; ex: simultaneous, extraneous, instantaneous, miscellaneous
+    :C?:airty::arity      ; ex: parity, modularity, similarity, linearity, popularity
+    :C?:iarty::arity
     :C?:aetd::ated        ; ex: emulated, obfuscated, encapsulated, updated
     :C?:taion::ation      ; ex: application, optimization, stabilization, mutation, replication
     :C?:taoin::ation
-    :C?:taions::ations 
+    :C?:taions::ations
     :C?:taoins::ations
     :C?:autl::ault        ; ex: fault, segfault, default, vault
     :C?:athc::atch        ; ex: catch, batch, match, watch, dispatch
@@ -2807,8 +2758,10 @@
     :C?:aites::iates
     :C?:icla::ical        ; ex: topological, canonical, symmetrical, logical
     :C?:iicent::icient    ; ex: efficient, deficient, coefficient, inefficient, sufficient
-    :C?:ietn::ient        ; ex: gradient, quotient, client, transient
+    :C?:ietn::ient        ; ex: gradient, quotient, client, transient, recipient
+    :C?:ienet::ient
     :C?:ietns::ients
+    :C?:ienets::ients
     :C?:igth::ight        ; ex: copyright, height, eight, weight
     :C?:liity::ility      ; ex: probability, stability, feasibility, capability, utility
     :C?:ianl::inal        ; ex: terminal, final, original, ordinal, marginal
@@ -2883,7 +2836,7 @@
     :C?:rnats::rants
     :C?:raet::rate        ; ex: enumerate, migrate, integrate, generate
     :C?:raets::rates
-    :C?:rtiy::rity        ; ex: security, priority, parity, integrity
+    :C?:rtiy::rity        ; ex: security, priority, parity, integrity, modularity
     :C?:rvoe::rove        ; ex: improve, approve, prove, disprove
     :C?:rvoes::roves
     :C?:sehd::shed        ; ex: distinguished, flushed, pushed, published
@@ -2912,9 +2865,9 @@
     :C?:tatns::tants
     :C?:thces::tches      ; ex: catches, batches, switches, matches
     :C?:tenet::tent       ; ex: persistent, content, existent, latent
-    :C?:tehr::ther        ; ex: another, either, other, together
+    :C?:tehr::ther        ; ex: another, either, other, together, gather
     :C?:hting::thing      ; ex: thing, something, anything, nothing
-    :C?:itme::time        ; ex: lifetime, realtime, uptime, runtime
+    :C?:itme::time        ; ex: lifetime, realtime, uptime, downtime, runtime
     :C?:tiem::time
     :C?:itmes::times
     :C?:tiems::times
@@ -2929,10 +2882,8 @@
     :C?:iotns::tions
     :C?:tiosn::tions
     :C?:itonal::tional    ; ex: directional, functional, positional, conditional
-    :C?:ttiy::tity        ; ex: entity, identity, quantity, quality
-    :C?:tiyt::tity
     :C?:tvie::tive        ; ex: generative, active, relative, effective
-    :C?:tuer::ture        ; ex: feature, picture, future, structure
+    :C?:tuer::ture        ; ex: feature, picture, future, structure, capture
     :C?:tuers::tures
     :C?:utls::ults        ; ex: results, defaults, faults, segfaults
     :C?:tued::uted        ; ex: permuted, contributed, distributed, computed
@@ -2943,7 +2894,7 @@
     :C?:vtiy::vity        ; ex: activity, connectivity, sensitivity, productivity
     :C?:wrae::ware        ; ex: software, hardware, shareware, firmware
     :C?:owrk::work        ; ex: work, network, framework, rework, homework
-    :C?:owrks::works
     :C?:wokr::work
+    :C?:owrks::works
     :C?:wokrs::works
 #HotIf

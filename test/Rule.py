@@ -194,6 +194,10 @@ class Rule:
             if rule.suffixMatch:
                 # suffix matches
                 if hasEndChar and inputText.endswith(rule.oldText):
+                    if rule.backspace:
+                        # found whitelist match, return text unchanged
+                        return inputText, rule
+
                     return rule.newText, rule
 
         # no match found, return input text
