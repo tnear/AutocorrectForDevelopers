@@ -138,7 +138,11 @@ EXPLICIT_TESTS = {
     'dmeonstration': 'demonstration', 'detphFirst': 'depthFirst', 'recogniess': 'recognises', 'recogniezs': 'recognizes',
     'std;:cout': 'std::cout', 'inculdes': 'includes', 'hahsed': 'hashed', 'preocmputing': 'precomputing',
     'comptuer': 'computer', 'ocmputer': 'computer', 'looops': 'loops', 'winowds': 'windows', 'prevetns': 'prevents',
-    'prserves': 'preserves',
+    'prserves': 'preserves', 'esitmation': 'estimation', 'proudction': 'production', 'publihser': 'publisher',
+    'subcriber': 'subscriber', 'euqals': 'equals', 'datdabase': 'database', 'driection': 'direction', 'disocvery': 'discovery',
+    'rquires': 'requires', 'liimts': 'limits', 'ocmbines': 'combines', 'duplcation': 'duplication', 'apramters': 'parameters',
+    'entworks': 'networks', 'algortihms': 'algorithms', 'strutured': 'structured', 'structcured': 'structured',
+    'strucutred': 'structured', 'insretion': 'insertion',
 }
 
 if __name__ == '__main__':

@@ -123,7 +123,8 @@ EXPLICIT_TESTS = {
     'featuer': 'feature', 'featuers': 'features', 'defautls': 'defaults', 'permtued': 'permuted',
     'rotues': 'routes', 'exectuion': 'execution', 'exectuions': 'executions', 'discoveyr': 'discovery',
     'activtiy': 'activity', 'softwrae': 'software', 'frameowrk': 'framework', 'framewokr': 'framework',
-    'frameowrks': 'frameworks', 'framewokrs': 'frameworks',
+    'frameowrks': 'frameworks', 'framewokrs': 'frameworks', 'finishsed': 'finished', 'totalign': 'totaling',
+    'scalign': 'scaling', 'agetn': 'agent', 'finishesd': 'finished', 'successfullly': 'successfully',
 }
 
 if __name__ == '__main__':

@@ -123,6 +123,7 @@ class TestRule(unittest.TestCase):
             lines = [line.strip('\n ') for line in f]
 
         # for now, only single line comments (';') are supported
+        # this is to ensure that every line is self-contained
         for line in lines:
             self.assertNotIn('/*', line)
             self.assertNotIn('*/', line)
