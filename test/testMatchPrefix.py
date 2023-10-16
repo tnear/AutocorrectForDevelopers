@@ -11,8 +11,8 @@ class TestMatchPrefix(unittest.TestCase):
         self.prefixRuleList = [rule.oldText for rule in prefixRules]
 
     def test_ruleLength(self):
-        self.assertGreater(len(self.rules), 2100)
-        self.assertGreater(len(self.prefixRuleList), 300)
+        self.assertGreater(len(self.rules), 2300)
+        self.assertGreater(len(self.prefixRuleList), 340)
 
     def test_replace(self):
         # prefix rules (":*:") match regardless of end char
@@ -142,7 +142,10 @@ EXPLICIT_TESTS = {
     'subcriber': 'subscriber', 'euqals': 'equals', 'datdabase': 'database', 'driection': 'direction', 'disocvery': 'discovery',
     'rquires': 'requires', 'liimts': 'limits', 'ocmbines': 'combines', 'duplcation': 'duplication', 'apramters': 'parameters',
     'entworks': 'networks', 'algortihms': 'algorithms', 'strutured': 'structured', 'structcured': 'structured',
-    'strucutred': 'structured', 'insretion': 'insertion',
+    'strucutred': 'structured', 'insretion': 'insertion', 'rnadomize': 'randomize', 'srings': 'strings', 'stirngs': 'strings',
+    'tsrings': 'strings', 'reuslets': 'results', 'rsluts': 'results', 'parittions': 'partitions', 'inserrtion': 'insertion',
+    'updadted': 'updated', 'leements': 'elements', 'memroise': 'memorise', 'defaluted': 'defaulted', 'sqltie3': 'sqlite3',
+    'ocnditional': 'conditional', 'slqite3': 'sqlite3', 'consdiers': 'considers',
 }
 
 if __name__ == '__main__':

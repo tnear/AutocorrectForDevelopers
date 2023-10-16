@@ -13,7 +13,7 @@ class TestMatchPrefix(unittest.TestCase):
 
     def test_ruleLength(self):
         self.assertGreater(len(self.rules), 2100)
-        self.assertGreater(len(self.suffixRuleList), 190)
+        self.assertGreater(len(self.suffixRuleList), 200)
 
     def test_replace(self):
         hasEndChar = True
@@ -125,6 +125,8 @@ EXPLICIT_TESTS = {
     'activtiy': 'activity', 'softwrae': 'software', 'frameowrk': 'framework', 'framewokr': 'framework',
     'frameowrks': 'frameworks', 'framewokrs': 'frameworks', 'finishsed': 'finished', 'totalign': 'totaling',
     'scalign': 'scaling', 'agetn': 'agent', 'finishesd': 'finished', 'successfullly': 'successfully',
+    'previosu': 'previous', 'accoutn': 'account', 'accoutns': 'accounts', 'updaet': 'update', 'updaets': 'updates',
+    'automaticalyl': 'automatically', 'successfulyl': 'successfully', 'optoinally': 'optionally',
 }
 
 if __name__ == '__main__':
