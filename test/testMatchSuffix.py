@@ -127,6 +127,8 @@ EXPLICIT_TESTS = {
     'scalign': 'scaling', 'agetn': 'agent', 'finishesd': 'finished', 'successfullly': 'successfully',
     'previosu': 'previous', 'accoutn': 'account', 'accoutns': 'accounts', 'updaet': 'update', 'updaets': 'updates',
     'automaticalyl': 'automatically', 'successfulyl': 'successfully', 'optoinally': 'optionally',
+    'direcotry': 'directory', 'noitfy': 'notify', 'defintiion': 'definition', 'condtiioning': 'conditioning',
+    'postiions': 'positions',
 }
 
 if __name__ == '__main__':

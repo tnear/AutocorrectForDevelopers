@@ -121,7 +121,7 @@ EXPLICIT_TESTS = {
     'difficutly': 'difficulty', 'atachment': 'attachment', 'brachned': 'branched', 'lauchning': 'launching',
     'manaegment': 'management', 'resrved': 'reserved', 'imblanaced': 'imbalanced', 'imblaanced': 'imbalanced',
     'recusrively': 'recursively', 'nuemrator': 'numerator', 'asserrtion': 'assertion', 'swithcing': 'switching',
-    'remvoed': 'removed', 'quikcsort': 'quicksort', 'partiioning': 'partitioning', 'sytematic': 'systematic',
+    'remvoed': 'removed', 'quikcsort': 'quicksort', 'sytematic': 'systematic',
     'acknowlegement': 'acknowledgement', 'recurisvely': 'recursively', 'conssitency': 'consistency',
     'acknwoledgement': 'acknowledgement', 'ackonwledgement': 'acknowledgement', 'elmental': 'elemental', 'pahtlib': 'pathlib',
     'sovler': 'solver', 'entialment': 'entailment', 'ifnormation': 'information', 'reulsts': 'results',
@@ -145,7 +145,10 @@ EXPLICIT_TESTS = {
     'strucutred': 'structured', 'insretion': 'insertion', 'rnadomize': 'randomize', 'srings': 'strings', 'stirngs': 'strings',
     'tsrings': 'strings', 'reuslets': 'results', 'rsluts': 'results', 'parittions': 'partitions', 'inserrtion': 'insertion',
     'updadted': 'updated', 'leements': 'elements', 'memroise': 'memorise', 'defaluted': 'defaulted', 'sqltie3': 'sqlite3',
-    'ocnditional': 'conditional', 'slqite3': 'sqlite3', 'consdiers': 'considers',
+    'ocnditional': 'conditional', 'slqite3': 'sqlite3', 'consdiers': 'considers', 'indeexes': 'indexes',
+    'peformance': 'performance', 'paritcipant': 'participant', 'unsubcribed': 'unsubscribed', 'rqeuirement': 'requirement',
+    'fucnitons': 'functions', 'fucntinos': 'functions', 'fucntoins': 'functions', 'fucniotns': 'functions',
+    'porgramming': 'programming', 'igonre': 'ignore', 'funtcions': 'functions', 'prpeares': 'prepares', 'schedluer': 'scheduler',
 }
 
 if __name__ == '__main__':
