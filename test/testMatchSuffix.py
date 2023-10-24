@@ -59,7 +59,7 @@ class TestMatchPrefix(unittest.TestCase):
 
             # verify the replaced string
             self.assertEqual(newText, expectedText)
-            self.assertTrue(rule.suffixMatch)
+            self.assertTrue(rule.suffixMatch, f'Failed for input text: "{inputText}"')
 
     def test_allSuffixRulesHaveTests(self):
         # every suffix test in ahk script should have an entry in EXPLICIT_TESTS
@@ -77,24 +77,24 @@ EXPLICIT_TESTS = {
     'availalbe': 'available', 'languaegs': 'languages', 'mkaes': 'makes', 'automaticallly': 'automatically',
     'simultaenous': 'simultaneous', 'pairty': 'parity', 'piarty': 'parity', 'emulaetd': 'emulated',
     'applictaion': 'application', 'applictaoin': 'application', 'applictaions': 'applications',
-    'applictaoins': 'applications', 'fautl': 'fault', 'mathc': 'match', 'natie': 'native', 'ntaive': 'native',
+    'applictaoins': 'applications', 'mathc': 'match', 'natie': 'native', 'ntaive': 'native',
     'callbakc': 'callback', 'callbakcs': 'callbacks', 'abilties': 'abilities', 'ablities': 'abilities',
     'abilites': 'abilities', 'ablites': 'abilities', 'abilty': 'ability', 'ablity': 'ability',
     'keybaord': 'keyboard', 'keyborad': 'keyboard', 'keybaords': 'keyboards', 'keyborads': 'keyboards',
-    'attribtue': 'attribute', 'loctaing': 'locating', 'notificaction': 'notification',
+    'loctaing': 'locating', 'notificaction': 'notification',
     'notificaion': 'notification', 'notificactions': 'notifications', 'notificaions': 'notifications',
-    'excetp': 'except', 'excetps': 'excepts', 'cahcing': 'caching', 'capactiy': 'capacity',
+    'cahcing': 'caching', 'capactiy': 'capacity',
     'capaciyt': 'capacity', 'dependenet': 'dependent', 'dependnet': 'dependent', 'finidng': 'finding',
     'markdonw': 'markdown', 'markodwn': 'markdown', 'adjacnecy': 'adjacency', 'adjacenyc': 'adjacency',
-    'simultanoeus': 'simultaneous', 'platofrm': 'platform', 'platofrms': 'platforms', 
+    'simultanoeus': 'simultaneous', 'platofrm': 'platform', 'platofrms': 'platforms',
     'cryptogarphy': 'cryptography', 'cryptograhpy': 'cryptography', 'varinat': 'variant', 'initaite': 'initiate',
     'initaites': 'initiates', 'logicla': 'logical', 'effiicent': 'efficient', 'gradietn': 'gradient',
     'gradienet': 'gradient', 'gradietns': 'gradients', 'gradienets': 'gradients', 'heigth': 'height',
     'utliity': 'utility', 'fianl': 'final', 'closign': 'closing', 'strnig': 'string', 'strnigs': 'strings',
     'strigns': 'strings', 'optoinal': 'optional', 'optioanl': 'optional', 'prevouis': 'previous',
     'prevoius': 'previous', 'deciison': 'decision', 'deciisons': 'decisions', 'edtiing': 'editing',
-    'transtiive': 'transitive', 'primtiives': 'primitives', 'priavte': 'private', 'recursivley': 'recursively',
-    'actiivty': 'activity', 'activiyt': 'activity', 'amortiezd': 'amortized', 'packaeg': 'package',
+    'transtiive': 'transitive', 'primtiives': 'primitives', 'recursivley': 'recursively',
+    'actiivty': 'activity', 'activiyt': 'activity', 'amortiezd': 'amortized',
     'scaalble': 'scalable', 'qualtiy': 'quality', 'qualiyt': 'quality', 'uplaod': 'upload',
     'uplaoded': 'uploaded', 'uplaoder': 'uploader', 'uplaods': 'uploads', 'estiamte': 'estimate',
     'estiamtes': 'estimates', 'estimaion': 'estimation', 'estimaions': 'estimations', 'commenet': 'comment',
@@ -120,7 +120,7 @@ EXPLICIT_TESTS = {
     'tesitng': 'testing', 'funciton': 'function', 'functino': 'function', 'functoin': 'function',
     'funciotn': 'function', 'funcitons': 'functions', 'functinos': 'functions', 'functoins': 'functions',
     'funciotns': 'functions', 'functiosn': 'functions', 'funcitonal': 'functional', 'actvie': 'active',
-    'featuer': 'feature', 'featuers': 'features', 'defautls': 'defaults', 'permtued': 'permuted',
+    'featuer': 'feature', 'featuers': 'features', 'fautls': 'faults', 'permtued': 'permuted',
     'rotues': 'routes', 'exectuion': 'execution', 'exectuions': 'executions', 'discoveyr': 'discovery',
     'activtiy': 'activity', 'softwrae': 'software', 'frameowrk': 'framework', 'framewokr': 'framework',
     'frameowrks': 'frameworks', 'framewokrs': 'frameworks', 'finishsed': 'finished', 'totalign': 'totaling',
@@ -128,7 +128,8 @@ EXPLICIT_TESTS = {
     'previosu': 'previous', 'accoutn': 'account', 'accoutns': 'accounts', 'updaet': 'update', 'updaets': 'updates',
     'automaticalyl': 'automatically', 'successfulyl': 'successfully', 'optoinally': 'optionally',
     'direcotry': 'directory', 'noitfy': 'notify', 'defintiion': 'definition', 'condtiioning': 'conditioning',
-    'postiions': 'positions',
+    'postiions': 'positions', 'poitner': 'pointer', 'poitners': 'pointers', 'passign': 'passing',
+    'automtaed': 'automated', 'packgaes': 'packages',
 }
 
 if __name__ == '__main__':

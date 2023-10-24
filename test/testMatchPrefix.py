@@ -144,11 +144,17 @@ EXPLICIT_TESTS = {
     'entworks': 'networks', 'algortihms': 'algorithms', 'strutured': 'structured', 'structcured': 'structured',
     'strucutred': 'structured', 'insretion': 'insertion', 'rnadomize': 'randomize', 'srings': 'strings', 'stirngs': 'strings',
     'tsrings': 'strings', 'reuslets': 'results', 'rsluts': 'results', 'parittions': 'partitions', 'inserrtion': 'insertion',
-    'updadted': 'updated', 'leements': 'elements', 'memroise': 'memorise', 'defaluted': 'defaulted', 'sqltie3': 'sqlite3',
-    'ocnditional': 'conditional', 'slqite3': 'sqlite3', 'consdiers': 'considers', 'indeexes': 'indexes',
+    'updadted': 'updated', 'leements': 'elements', 'memroise': 'memorise', 'defaluted': 'defaulted',
+    'ocnditional': 'conditional', 'consdiers': 'considers', 'indeexes': 'indexes',
     'peformance': 'performance', 'paritcipant': 'participant', 'unsubcribed': 'unsubscribed', 'rqeuirement': 'requirement',
     'fucnitons': 'functions', 'fucntinos': 'functions', 'fucntoins': 'functions', 'fucniotns': 'functions',
     'porgramming': 'programming', 'igonre': 'ignore', 'funtcions': 'functions', 'prpeares': 'prepares', 'schedluer': 'scheduler',
+    'braek;': 'break;', 'ajdusting': 'adjusting', 'dfeaulted': 'defaulted', 'reminas': 'remains', 'folows': 'follows',
+    'reciever': 'receiver', 'replciate': 'replicate', 'winodws': 'windows', 'restircts': 'restricts',
+    'excpetion': 'exception', 'cmoputes': 'computes', 'defauilted': 'defaulted', 'defautls': 'defaults',
+    'excetpion': 'exception', 'packaegs': 'packages', 'represneted': 'represented', 'reprsented': 'represented',
+    'reutnred': 'returned', 'wrties': 'writes', 'fuctions': 'functions', 'quetsions': 'questions',
+    'dfiferential': 'differential', 'resluets': 'results',
 }
 
 if __name__ == '__main__':

@@ -162,5 +162,27 @@ class TestRule(unittest.TestCase):
         rule = Rule.lineToRule(':C:#Pragma::{#}pragma')
         self.assertEqual(rule.newText, '#pragma')
 
+    def test_whitelistShortLetterRules(self):
+        # short rules should be kept to a minimum because they often conflict with acronyms
+        rules = Rule.fileToRuleList('AutocorrectForDevelopers.ahk')
+
+        # remove whitelist rule (zero-length replacement text)
+        replacementRules = [rule for rule in rules if not rule.backspace]
+
+        # get short rules (length < 3)
+        shortLen = 3
+        shortRules = [rule for rule in replacementRules if len(rule.newText) <= shortLen]
+
+        # convert rule into lowercase replacement text
+        text = [rule.newText.lower() for rule in shortRules]
+
+        # get unique text
+        text = set(text)
+
+        # check that all short rules are in this whitelist
+        whitelist = ['and', 'ing', 'can', "i'd", 'the', 'was', 'for', 'you', 'int', 'has', 'end', "i'm", 'not']
+        for rule in text:
+            assert rule in whitelist, f'Found short rule not in whitelist: "{rule}"'
+
 if __name__ == '__main__':
     unittest.main()

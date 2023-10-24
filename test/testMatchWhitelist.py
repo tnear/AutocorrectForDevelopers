@@ -43,7 +43,8 @@ class TestMatchWhitelist(unittest.TestCase):
 # explicit tests for whitelisted words (usually as part of bug fixes)
 WHITELIST = [
     'systemdesign', 'keyforeign', 'beign', 'itme',
-    'assign', 'assigns', 'redesigns', 'misalign', 'misaligns', 'foreigns',
+    'assign', 'assigns', 'redesigns', 'misalign', 'misaligns', 'foreigns', 'pairpartner',
+    'pairpartners',
 ]
 
 if __name__ == '__main__':
