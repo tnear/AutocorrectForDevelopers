@@ -44,960 +44,339 @@
 
     ; -aite word suffix whitelist (do not convert these to -iate)
     :b0:aite::
-    {
-    }
     :b0:ilvaite::
-    {
-    }
     :b0:waite::
     {
-        ; surname
+        ; waite = surname
     }
 
     ; -aites word suffix whitelist (do not convert these to -iates)
     :b0:aites::
-    {
-    }
     :b0:ilvaites::
-    {
-    }
     :b0:waites::
     {
-        ; surname
+        ; waites = surname
     }
 
     ; -atie word suffix whitelist (do not convert these to -ative)
     :b0:atie::
-    {
-    }
     :b0:catie::
-    {
-    }
     :b0:katie::
     {
     }
 
     ; -dnet word suffix whitelist (do not convert these to -dent)
     :b0:dnet::
-    {
-    }
     :b0:wordnet::
-    {
-    }
 
     ; -ign word suffix whitelist (do not convert these to -ing)
     :b0:ign::
-    {
-    }
     :b0:align::
-    {
-    }
     :b0:arraign::
-    {
-    }
     :b0:assign::
-    {
-    }
     :b0:benign::
-    {
-    }
-    :b0:beign::
-    {
-        ; not a word, but ambiguous between 'begin', 'being', and 'benign'
-        ; therefore, whitelist it
-    }
+    :b0:beign::                 ; not a word, but ambiguous between 'begin', 'being', and 'benign'
     :b0:campaign::
-    {
-    }
     :b0:condign::
-    {
-    }
     :b0:consign::
-    {
-    }
     :b0:cosign::
-    {
-    }
     :b0:countersign::
-    {
-    }
     :b0:deign::
-    {
-    }
     :b0:deraign::
-    {
-    }
     :?b0:design::
-    {
-    }
     :b0:disalign::
-    {
-    }
     :b0:eloign::
-    {
-    }
     :b0:ensign::
-    {
-    }
     :b0:feign::
-    {
-    }
     :?b0:foreign::
-    {
-    }
     :b0:malign::
-    {
-    }
     :b0:misalign::
-    {
-    }
     :b0:misassign::
-    {
-    }
     :b0:outreign::
-    {
-    }
     :b0:preassign::
-    {
-    }
     :b0:realign::
-    {
-    }
     :b0:reassign::
-    {
-    }
     :b0:reconsign::
-    {
-    }
     :b0:reign::
-    {
-    }
     :b0:resign::
-    {
-    }
     :b0:roadsign::
-    {
-    }
     :b0:sign::
-    {
-    }
     :b0:sovereign::
-    {
-    }
     :b0:unalign::
-    {
-    }
     :b0:unassign::
-    {
-    }
     :b0:unbenign::
-    {
-    }
     :b0:undersign::
-    {
-    }
     :b0:unsign::
     {
     }
 
     ; -igns word suffix whitelist (do not convert these to -ings)
     :b0:igns::
-    {
-    }
     :b0:aligns::
-    {
-    }
     :b0:arraigns::
-    {
-    }
     :b0:assigns::
-    {
-    }
     :b0:campaigns::
-    {
-    }
     :b0:consigns::
-    {
-    }
     :b0:coreigns::
-    {
-    }
     :b0:cosigns::
-    {
-    }
     :b0:countersigns::
-    {
-    }
     :b0:dealigns::
-    {
-    }
     :?b0:designs::
-    {
-    }
     :b0:disaligns::
-    {
-    }
     :b0:eloigns::
-    {
-    }
     :b0:ensigns::
-    {
-    }
     :b0:feigns::
-    {
-    }
     :b0:foreigns::
-    {
-    }
     :b0:maligns::
-    {
-    }
     :b0:misaligns::
-    {
-    }
     :b0:misassigns::
-    {
-    }
     :b0:outreigns::
-    {
-    }
     :b0:preassigns::
-    {
-    }
     :b0:reassigns::
-    {
-    }
     :b0:reconsigns::
-    {
-    }
     :b0:reigns::
-    {
-    }
     :b0:resigns::
-    {
-    }
     :b0:roadsigns::
-    {
-    }
     :b0:signs::
-    {
-    }
     :b0:sovereigns::
-    {
-    }
     :b0:unaligns::
-    {
-    }
     :b0:unassigns::
-    {
-    }
     :b0:undersigns::
     {
     }
 
     ; -itonal word suffix whitelist (do not convert these to -tional)
     :b0:itonal::
-    {
-    }
     :b0:baritonal::
     {
     }
 
     ; -mnet word suffix whitelist (do not convert these to -ment)
     :b0:mnet::
-    {
-    }
     :b0:boomnet::
     {
     }
 
     ; -ntae word suffix whitelist (do not convert these to -nate)
     :b0:ntae::
-    {
-    }
     :b0:placentae::
     {
     }
 
     ; -otry word suffix whitelist (do not convert these to -tory)
     :b0:otry::
-    {
-    }
     :b0:bigotry::
-    {
-    }
     :b0:harlotry::
-    {
-    }
     :b0:quixotry::
-    {
-    }
     :b0:zealotry::
     {
     }
 
     ; -ouis word suffix whitelist (do not convert these to -ious)
     :b0:ouis::
-    {
-    }
     :b0:louis::
     {
     }
 
     ; -sino word suffix whitelist (do not convert these to -sion)
     :b0:sino::
-    {
-    }
     :b0:casino::
     {
     }
 
     ; -sinos word suffix whitelist (do not convert these to -sions)
     :b0:sinos::
-    {
-    }
     :b0:casinos::
     {
     }
 
     ; -tino word suffix whitelist (do not convert these to -tion)
     :b0:tino::
-    {
-    }
     :b0:latino::
     {
     }
 
     ; -tinos word suffix whitelist (do not convert these to -tions)
     :b0:tinos::
-    {
-    }
     :b0:latinos::
     {
     }
 
     ; -tner word suffix whitelist (do not convert these to -nter)
     :b0:tner::
-    {
-    }
     :b0:kingergartner::
-    {
-    }
     :?b0:partner::
-    {
-    }
     :b0:vintner::
     {
     }
 
     ; -tners word suffix whitelist (do not convert these to -nters)
     :b0:tners::
-    {
-    }
     :b0:kingergartners::
-    {
-    }
     :?b0:partners::
-    {
-    }
     :b0:vintners::
     {
     }
 
     ; -tued word suffix whitelist (do not convert these to -uted)
     :b0:tued::
-    {
-    }
     :b0:statued::
     {
     }
 
     ; -tues word suffix whitelist (do not convert these to -utes)
     :b0:tues::
-    {
-    }
     :b0:statues::
-    {
-    }
     :b0:virtues::
     {
     }
 
     ; whitelist suffixes (only autocorrect these when they appear as suffixes, see bottom of script)
-    :b0:aenous::
-    {
-        ; do not convert this string to -aneous
-    }
-    :b0:aetd::
-    {
-        ; do not convert this string to -ated
-    }
-    :b0:alble::
-    {
-        ; do not convert this string to -lable
-    }
-    :b0:airty::
-    {
-        ; do not convert this string to -arity
-    }
-    :b0:athc::
-    {
-        ; do not convert this string to -atch
-    }
-    :b0:athces::
-    {
-        ; do not convert this string to -atches
-    }
-    :b0:bilties::
-    {
-        ; do not convert this string to -bilities
-    }
-    :b0:bilites::
-    {
-        ; do not convert this string to -bilities
-    }
-    :b0:bilty::
-    {
-        ; do not convert this string to -bility
-    }
-    :b0:blites::
-    {
-        ; do not convert this string to -bilities
-    }
-    :b0:blities::
-    {
-        ; do not convert this string to -bilities
-    }
-    :b0:blity::
-    {
-        ; do not convert this string to -bility
-    }
-    :b0:borad::
-    {
-        ; do not convert this string to -board
-    }
-    :b0:caction::
-    {
-        ; do not convert this string to -cation
-    }
-    :b0:cactions::
-    {
-        ; do not convert this string to -cations
-    }
-    :b0:caion::
-    {
-        ; do not convert this string to -cation
-    }
-    :b0:caions::
-    {
-        ; do not convert this string to -cations
-    }
-    :b0:denet::
-    {
-        ; do not convert this string to -dent
-    }
-    :b0:emnt::
-    {
-        ; do not convert this string to -ment
-    }
-    :b0:emnts::
-    {
-        ; do not convert this string to -ments
-    }
-    :b0:enyc::
-    {
-        ; do not convert this string to -ency
-    }
-    :b0:gaes::
-    {
-        ; do not convert this string to -ages
-    }
-    :b0:garphy::
-    {
-        ; do not convert this string to -graphy
-    }
-    :b0:getn::
-    {
-        ; do not convert this string to -gent
-    }
-    :b0:hcing::
-    {
-        ; do not convert this string to -ching
-    }
-    :b0:hsing::
-    {
-        ; do not convert this string to -shing
-    }
-
-    :b0:iarty::
-    {
-        ; do not convert this string to -arity
-    }
-    :b0:icla::
-    {
-        ; do not convert this string to -ical
-    }
-    :b0:idng::
-    {
-        ; do not convert this string to -ding
-    }
-    :b0:ietn::
-    {
-        ; do not convert this string to -ient
-    }
-    :b0:ietns::
-    {
-        ; do not convert this string to -ients
-    }
-    :b0:iezd::
-    {
-        ; do not convert this string to -ized
-    }
-    :b0:igth::
-    {
-        ; do not convert this string to -ight
-    }
-    :b0:iicent::
-    {
-        ; do not convert this string to -icient
-    }
-    :b0:iison::
-    {
-        ; do not convert this string to -ision
-    }
-    :b0:iisons::
-    {
-        ; do not convert this string to -isions
-    }
-    :b0:iivty::
-    {
-        ; do not convert this string to -ivity
-    }
-    :b0:ianl::
-    {
-        ; do not convert this string to -inal
-    }
-    :b0:ienet::
-    {
-        ; do not convert this string to -ient
-    }
-    :b0:ienets::
-    {
-        ; do not convert this string to -ients
-    }
-    :b0:inat::
-    {
-        ; do not convert this string to -iant
-    }
-    :b0:itfy::
-    {
-        ; do not convert this string to -tify
-    }
-    :b0:ioanl::
-    {
-        ; do not convert this string to -ional
-    }
-    :b0:iont::
-    {
-        ; do not convert this string to -oint
-    }
-    :b0:ionts::
-    {
-        ; do not convert this string to -oints
-    }
-    :b0:iosu::
-    {
-        ; do not convert this string to -ious
-    }
-    :b0:iotn::
-    {
-        ; do not convert this string to -tion
-    }
-    :b0:iotns::
-    {
-        ; do not convert this string to -tions
-    }
-    :b0:itme::
-    {
-        ; do not convert this string to -time or -items
-    }
-    :b0:itmes::
-    {
-        ; do not convert this string to -times or -items
-    }
-    :b0:itng::
-    {
-        ; do not convert this string to -ting
-    }
-    :b0:iton::
-    {
-        ; do not convert this string to -tion
-    }
-    :b0:itons::
-    {
-        ; do not convert this string to -tions
-    }
-    :b0:ivley::
-    {
-        ; do not convert this string to -ively
-    }
-    :b0:iviyt::
-    {
-        ; do not convert this string to -ivity
-    }
-    :b0:kaes::
-    {
-        ; do not convert this string to -akes
-    }
-    :b0:liity::
-    {
-        ; do not convert this string to -ility
-    }
-    :b0:liyt::
-    {
-        ; do not convert this string to -lity
-    }
-    :b0:ltiy::
-    {
-        ; do not convert this string to -lity
-    }
-    :b0:maeg::
-    {
-        ; do not convert this string to -mage
-    }
-    :b0:maion::
-    {
-        ; do not convert this string to -mation
-    }
-    :b0:maions::
-    {
-        ; do not convert this string to -mations
-    }
-    :b0:meents::
-    {
-        ; do not convert this string to -ments
-    }
-    :b0:menet::
-    {
-        ; do not convert this string to -ment
-    }
-    :b0:menets::
-    {
-        ; do not convert this string to -ments
-    }
-    :b0:metn::
-    {
-        ; do not convert this string to -ment
-    }
-    :b0:metns::
-    {
-        ; do not convert this string to -ments
-    }
-    :b0:mnets::
-    {
-        ; do not convert this string to -ments
-    }
-    :b0:mzie::
-    {
-        ; do not convert this string to -mize
-    }
-    :b0:mzied::
-    {
-        ; do not convert this string to -mized
-    }
-    :b0:mzies::
-    {
-        ; do not convert this string to -mizes
-    }
-
-    :b0:naet::
-    {
-        ; do not convert this string to -nate
-    }
-    :b0:naets::
-    {
-        ; do not convert this string to -nates
-    }
-    :b0:necy::
-    {
-        ; do not convert this string to -ency
-    }
-    :b0:nig::
-    {
-        ; do not convert this string to -ing
-    }
-    :b0:nigs::
-    {
-        ; do not convert this string to -ings
-    }
-    :b0:ntaes::
-    {
-        ; do not convert this string to -nates
-    }
-    :b0:ntiy::
-    {
-        ; do not convert this string to -nity
-    }
-    :b0:oeus::
-    {
-        ; do not convert this string to -eous
-    }
-    :b0:ofrm::
-    {
-        ; do not convert this string to -form
-    }
-    :b0:ofrms::
-    {
-        ; do not convert this string to -forms
-    }
-    :b0:oinal::
-    {
-        ; do not convert this string to -ional
-    }
-    :b0:oinally::
-    {
-        ; do not convert this string to -ionally
-    }
-    :b0:oitn::
-    {
-        ; do not convert this string to -oint
-    }
-    :b0:oitns::
-    {
-        ; do not convert this string to -oints
-    }
-    :b0:oius::
-    {
-        ; do not convert this string to -ious
-    }
-    :b0:onit::
-    {
-        ; do not convert this string to -oint
-    }
-    :b0:onits::
-    {
-        ; do not convert this string to -oints
-    }
-    :b0:prot::
-    {
-        ; do not convert this string to -port
-    }
-    :b0:prots::
-    {
-        ; do not convert this string to -ports
-    }
-    :b0:rnat::
-    {
-        ; do not convert this string to -rant
-    }
-    :b0:rtiy::
-    {
-        ; do not convert this string to -rity
-    }
-    :b0:oisn::
-    {
-        ; do not convert this string to -sion
-    }
-    :b0:oisns::
-    {
-        ; do not convert this string to -sions
-    }
-    :b0:oudn::
-    {
-        ; do not convert this string to -ound
-    }
-    :b0:oudns::
-    {
-        ; do not convert this string to -ounds
-    }
-    :b0:outn::
-    {
-        ; do not convert this string to -ount
-    }
-    :b0:outns::
-    {
-        ; do not convert this string to -ounts
-    }
-    :b0:raeg::
-    {
-        ; do not convert this string to -rage
-    }
-    :b0:rvoe::
-    {
-        ; do not convert this string to -rove
-    }
-    :b0:rvoes::
-    {
-        ; do not convert this string to -roves
-    }
-    :b0:saeg::
-    {
-        ; do not convert this string to -sage
-    }
-    :b0:sehd::
-    {
-        ; do not convert this string to -shed
-    }
-    :b0:soin::
-    {
-        ; do not convert this string to -sion
-    }
-    :b0:soins::
-    {
-        ; do not convert this string to -sions
-    }
-    :b0:stiy::
-    {
-        ; do not convert this string to -sity
-    }
-    :b0:svie::
-    {
-        ; do not convert this string to -sive
-    }
-
-    :b0:taed::
-    {
-        ; do not convert this string to -ated
-    }
-    :b0:taeg::
-    {
-        ; do not convert this string to -tage
-    }
-    :b0:taion::
-    {
-        ; do not convert this string to -ation
-    }
-    :b0:taions::
-    {
-        ; do not convert this string to -ations
-    }
-    :b0:taive::
-    {
-        ; do not convert this string to -ative
-    }
-    :b0:taoin::
-    {
-        ; do not convert this string to -ation
-    }
-    :b0:taoins::
-    {
-        ; do not convert this string to -ations
-    }
-    :b0:tatn::
-    {
-        ; do not convert this string to -tant
-    }
-    :b0:tatns::
-    {
-        ; do not convert this string to -tants
-    }
-    :b0:tehr::
-    {
-        ; do not convert this string to -ther
-    }
-    :b0:tenet::
-    {
-        ; do not convert this string to -tent
-    }
-    :b0:thces::
-    {
-        ; do not convert this string to -tches
-    }
-    :b0:tiing::
-    {
-        ; do not convert this string to -iting
-    }
-    :b0:tiion::
-    {
-        ; do not convert this string to -ition
-    }
-    :b0:tiioning::
-    {
-        ; do not convert this string to -itioning
-    }
-    :b0:tiions::
-    {
-        ; do not convert this string to -itions
-    }
-    :b0:tiive::
-    {
-        ; do not convert this string to -itive
-    }
-    :b0:tiives::
-    {
-        ; do not convert this string to -itives
-    }
-    :b0:tiosn::
-    {
-        ; do not convert this string to -tions
-    }
-    :b0:tnat::
-    {
-        ; do not convert this string to -tant
-    }
-    :b0:tnats::
-    {
-        ; do not convert this string to -tants
-    }
-    :b0:tnation::
-    {
-        ; do not convert this string to -ntation
-    }
-    :b0:tnations::
-    {
-        ; do not convert this string to -ntations
-    }
-    :b0:toin::
-    {
-        ; do not convert this string to -tion
-    }
-    :b0:toins::
-    {
-        ; do not convert this string to -tions
-    }
-    :b0:tuer::
-    {
-        ; do not convert this string to -ture
-    }
-    :b0:tuers::
-    {
-        ; do not convert this string to -tures
-    }
-    :b0:tues::
-    {
-        ; do not convert this string to -utes
-    }
-    :b0:tuion::
-    {
-        ; do not convert this string to -ution
-    }
-    :b0:tuions::
-    {
-        ; do not convert this string to -utions
-    }
-    :b0:tvie::
-    {
-        ; do not convert this string to -tive
-    }
-    :b0:ullly::
-    {
-        ; do not convert this string to -ully
-    }
-    :b0:ulyl::
-    {
-        ; do not convert this string to -ully
-    }
-    :b0:utls::
-    {
-        ; do not convert this string to -ults
-    }
-    :b0:vtiy::
-    {
-        ; do not convert this string to -vity
-    }
-    :b0:wrae::
-    {
-        ; do not convert this string to -ware
+    :b0:aenous::       ; do not convert this string to -aneous
+    :b0:aetd::         ; do not convert this string to -ated
+    :b0:alble::        ; do not convert this string to -lable
+    :b0:airty::        ; do not convert this string to -arity
+    :b0:athc::         ; do not convert this string to -atch
+    :b0:athces::       ; do not convert this string to -atches
+    :b0:bilties::      ; do not convert this string to -bilities
+    :b0:bilites::      ; do not convert this string to -bilities
+    :b0:bilty::        ; do not convert this string to -bility
+    :b0:blites::       ; do not convert this string to -bilities
+    :b0:blities::      ; do not convert this string to -bilities
+    :b0:blity::        ; do not convert this string to -bility
+    :b0:borad::        ; do not convert this string to -board
+    :b0:caction::      ; do not convert this string to -cation
+    :b0:cactions::     ; do not convert this string to -cations
+    :b0:caion::        ; do not convert this string to -cation
+    :b0:caions::       ; do not convert this string to -cations
+    :b0:denet::        ; do not convert this string to -dent
+    :b0:emnt::         ; do not convert this string to -ment
+    :b0:emnts::        ; do not convert this string to -ments
+    :b0:enyc::         ; do not convert this string to -ency
+    :b0:gaes::         ; do not convert this string to -ages
+    :b0:garphy::       ; do not convert this string to -graphy
+    :b0:getn::         ; do not convert this string to -gent
+    :b0:hcing::        ; do not convert this string to -ching
+    :b0:hsing::        ; do not convert this string to -shing
+    :b0:iarty::        ; do not convert this string to -arity
+    :b0:icla::         ; do not convert this string to -ical
+    :b0:idng::         ; do not convert this string to -ding
+    :b0:ietn::         ; do not convert this string to -ient
+    :b0:ietns::        ; do not convert this string to -ients
+    :b0:iezd::         ; do not convert this string to -ized
+    :b0:igth::         ; do not convert this string to -ight
+    :b0:iicent::       ; do not convert this string to -icient
+    :b0:iison::        ; do not convert this string to -ision
+    :b0:iisons::       ; do not convert this string to -isions
+    :b0:iivty::        ; do not convert this string to -ivity
+    :b0:ianl::         ; do not convert this string to -inal
+    :b0:ienet::        ; do not convert this string to -ient
+    :b0:ienets::       ; do not convert this string to -ients
+    :b0:inat::         ; do not convert this string to -iant
+    :b0:itfy::         ; do not convert this string to -tify
+    :b0:ioanl::        ; do not convert this string to -ional
+    :b0:iont::         ; do not convert this string to -oint
+    :b0:ionts::        ; do not convert this string to -oints
+    :b0:iosu::         ; do not convert this string to -ious
+    :b0:iotn::         ; do not convert this string to -tion
+    :b0:iotns::        ; do not convert this string to -tions
+    :b0:itme::         ; do not convert this string to -time or -items
+    :b0:itmes::        ; do not convert this string to -times or -items
+    :b0:itng::         ; do not convert this string to -ting
+    :b0:iton::         ; do not convert this string to -tion
+    :b0:itons::        ; do not convert this string to -tions
+    :b0:ivley::        ; do not convert this string to -ively
+    :b0:iviyt::        ; do not convert this string to -ivity
+    :b0:kaes::         ; do not convert this string to -akes
+    :b0:liity::        ; do not convert this string to -ility
+    :b0:liyt::         ; do not convert this string to -lity
+    :b0:ltiy::         ; do not convert this string to -lity
+    :b0:maeg::         ; do not convert this string to -mage
+    :b0:maion::        ; do not convert this string to -mation
+    :b0:maions::       ; do not convert this string to -mations
+    :b0:meents::       ; do not convert this string to -ments
+    :b0:menet::        ; do not convert this string to -ment
+    :b0:menets::       ; do not convert this string to -ments
+    :b0:metn::         ; do not convert this string to -ment
+    :b0:metns::        ; do not convert this string to -ments
+    :b0:mnets::        ; do not convert this string to -ments
+    :b0:mzie::         ; do not convert this string to -mize
+    :b0:mzied::        ; do not convert this string to -mized
+    :b0:mzies::        ; do not convert this string to -mizes
+    :b0:naet::         ; do not convert this string to -nate
+    :b0:naets::        ; do not convert this string to -nates
+    :b0:necy::         ; do not convert this string to -ency
+    :b0:nig::          ; do not convert this string to -ing
+    :b0:nigs::         ; do not convert this string to -ings
+    :b0:ntaes::        ; do not convert this string to -nates
+    :b0:ntiy::         ; do not convert this string to -nity
+    :b0:oeus::         ; do not convert this string to -eous
+    :b0:ofrm::         ; do not convert this string to -form
+    :b0:ofrms::        ; do not convert this string to -forms
+    :b0:oinal::        ; do not convert this string to -ional
+    :b0:oinally::      ; do not convert this string to -ionally
+    :b0:oitn::         ; do not convert this string to -oint
+    :b0:oitns::        ; do not convert this string to -oints
+    :b0:oius::         ; do not convert this string to -ious
+    :b0:onit::         ; do not convert this string to -oint
+    :b0:onits::        ; do not convert this string to -oints
+    :b0:prot::         ; do not convert this string to -port
+    :b0:prots::        ; do not convert this string to -ports
+    :b0:rnat::         ; do not convert this string to -rant
+    :b0:rtiy::         ; do not convert this string to -rity
+    :b0:oisn::         ; do not convert this string to -sion
+    :b0:oisns::        ; do not convert this string to -sions
+    :b0:oudn::         ; do not convert this string to -ound
+    :b0:oudns::        ; do not convert this string to -ounds
+    :b0:outn::         ; do not convert this string to -ount
+    :b0:outns::        ; do not convert this string to -ounts
+    :b0:raeg::         ; do not convert this string to -rage
+    :b0:rvoe::         ; do not convert this string to -rove
+    :b0:rvoes::        ; do not convert this string to -roves
+    :b0:saeg::         ; do not convert this string to -sage
+    :b0:sehd::         ; do not convert this string to -shed
+    :b0:soin::         ; do not convert this string to -sion
+    :b0:soins::        ; do not convert this string to -sions
+    :b0:stiy::         ; do not convert this string to -sity
+    :b0:svie::         ; do not convert this string to -sive
+    :b0:taed::         ; do not convert this string to -ated
+    :b0:taeg::         ; do not convert this string to -tage
+    :b0:taion::        ; do not convert this string to -ation
+    :b0:taions::       ; do not convert this string to -ations
+    :b0:taive::        ; do not convert this string to -ative
+    :b0:taoin::        ; do not convert this string to -ation
+    :b0:taoins::       ; do not convert this string to -ations
+    :b0:tatn::         ; do not convert this string to -tant
+    :b0:tatns::        ; do not convert this string to -tants
+    :b0:tehr::         ; do not convert this string to -ther
+    :b0:tenet::        ; do not convert this string to -tent
+    :b0:thces::        ; do not convert this string to -tches
+    :b0:tiing::        ; do not convert this string to -iting
+    :b0:tiion::        ; do not convert this string to -ition
+    :b0:tiioning::     ; do not convert this string to -itioning
+    :b0:tiions::       ; do not convert this string to -itions
+    :b0:tiive::        ; do not convert this string to -itive
+    :b0:tiives::       ; do not convert this string to -itives
+    :b0:tiosn::        ; do not convert this string to -tions
+    :b0:tnat::         ; do not convert this string to -tant
+    :b0:tnats::        ; do not convert this string to -tants
+    :b0:tnation::      ; do not convert this string to -ntation
+    :b0:tnations::     ; do not convert this string to -ntations
+    :b0:toin::         ; do not convert this string to -tion
+    :b0:toins::        ; do not convert this string to -tions
+    :b0:tuer::         ; do not convert this string to -ture
+    :b0:tuers::        ; do not convert this string to -tures
+    :b0:tues::         ; do not convert this string to -utes
+    :b0:tuion::        ; do not convert this string to -ution
+    :b0:tuions::       ; do not convert this string to -utions
+    :b0:tvie::         ; do not convert this string to -tive
+    :b0:ullly::        ; do not convert this string to -ully
+    :b0:ulyl::         ; do not convert this string to -ully
+    :b0:utls::         ; do not convert this string to -ults
+    :b0:vtiy::         ; do not convert this string to -vity
+    :b0:wrae::         ; do not convert this string to -ware
+    {
+        ; see bottom of script for examples of these suffixes
     }
 
     ; AUTOCORRECT LIST
