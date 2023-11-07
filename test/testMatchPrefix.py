@@ -154,7 +154,13 @@ EXPLICIT_TESTS = {
     'excpetion': 'exception', 'cmoputes': 'computes', 'defauilted': 'defaulted', 'defautls': 'defaults',
     'excetpion': 'exception', 'packaegs': 'packages', 'represneted': 'represented', 'reprsented': 'represented',
     'reutnred': 'returned', 'wrties': 'writes', 'fuctions': 'functions', 'quetsions': 'questions',
-    'dfiferential': 'differential', 'resluets': 'results',
+    'dfiferential': 'differential', 'resluets': 'results', 'seuqence': 'sequence', 'monitros': 'monitors',
+    'repliacs': 'replicas', 'rquries': 'requires', 'sysetms': 'systems', 'crahsed': 'crashed', 'carshed': 'crashed',
+    'documentns': 'documents', 'documnts': 'documents', 'resuelts': 'results', 'transofrms': 'transforms',
+    'dpulicate': 'duplicate', 'reviists': 'revisits', 'frquency': 'frequency', 'oeprator': 'operator', 'stakcs': 'stacks',
+    'satcks': 'stacks', 'asser(': 'assert(', 'messsages': 'messages', 'reqruies': 'requires', 'irghtNode': 'rightNode',
+    'acquries': 'acquires', 'cancles': 'cancels', 'clsuters': 'clusters', 'mangaer': 'manager', 'maanger': 'manager',
+    'conitnue': 'continue', 'evaulation': 'evaluation', 'proflier': 'profiler',
 }
 
 if __name__ == '__main__':

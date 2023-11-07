@@ -13,8 +13,8 @@ class TestMatchExact(unittest.TestCase):
         self.exactMatchList = [rule.oldText for rule in exactMatchRules]
 
     def test_ruleLength(self):
-        self.assertGreater(len(self.rules), 1100)
-        self.assertGreater(len(self.exactMatchList), 600)
+        self.assertGreater(len(self.rules), 2600)
+        self.assertGreater(len(self.exactMatchList), 1600)
 
     def test_replace(self):
         hasEndChar = True
@@ -34,6 +34,18 @@ class TestMatchExact(unittest.TestCase):
             newText, rule = Rule.getReplacementText(self.rules, inputText, hasEndChar)
             self.assertEqual(newText, inputText)
             self.assertIsNone(rule)
+
+    def test_explicit(self):
+        for inputText, expectedText in EXPLICIT_TESTS.items():
+            newText, rule = Rule.getReplacementText(self.rules, inputText, True)
+            self.assertEqual(inputText, rule.oldText)
+            self.assertEqual(expectedText, rule.newText)
+            self.assertEqual(expectedText, newText)
+
+# Explicitly test these pairs. Usually this is done for bug fixes
+EXPLICIT_TESTS = {
+    'apges': 'pages',
+}
 
 if __name__ == '__main__':
     unittest.main()

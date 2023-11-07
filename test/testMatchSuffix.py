@@ -129,7 +129,11 @@ EXPLICIT_TESTS = {
     'automaticalyl': 'automatically', 'successfulyl': 'successfully', 'optoinally': 'optionally',
     'direcotry': 'directory', 'noitfy': 'notify', 'defintiion': 'definition', 'condtiioning': 'conditioning',
     'postiions': 'positions', 'poitner': 'pointer', 'poitners': 'pointers', 'passign': 'passing',
-    'automtaed': 'automated', 'packgaes': 'packages',
+    'automtaed': 'automated', 'packgaes': 'packages', 'abiliites': 'abilities', 'stroed': 'stored',
+    'ownershpi': 'ownership', 'facotyr': 'factory', 'transfomr': 'transform', 'transfomrs': 'transforms',
+    'duplicaet': 'duplicate', 'anyhwere': 'anywhere', 'TreeNOde': 'TreeNode', 'broadcsat': 'broadcast',
+    'efficeintly': 'efficiently', 'efficietnly': 'efficiently', 'efficienetly': 'efficiently',
+    'initilaize': 'initialize', 'coroutien': 'coroutine', 'coroutiens': 'coroutines', 'relationshpis': 'relationships',
 }
 
 if __name__ == '__main__':
