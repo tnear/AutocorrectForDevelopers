@@ -160,7 +160,10 @@ EXPLICIT_TESTS = {
     'dpulicate': 'duplicate', 'reviists': 'revisits', 'frquency': 'frequency', 'oeprator': 'operator', 'stakcs': 'stacks',
     'satcks': 'stacks', 'asser(': 'assert(', 'messsages': 'messages', 'reqruies': 'requires', 'irghtNode': 'rightNode',
     'acquries': 'acquires', 'cancles': 'cancels', 'clsuters': 'clusters', 'mangaer': 'manager', 'maanger': 'manager',
-    'conitnue': 'continue', 'evaulation': 'evaluation', 'proflier': 'profiler',
+    'conitnue': 'continue', 'evaulation': 'evaluation', 'proflier': 'profiler', 'adress': 'address', 'imapct': 'impact',
+    'elemtens': 'elements', 'odrered': 'ordered', 'benhcmark': 'benchmark', 'benchamrk': 'benchmark',
+    'consturct': 'construct', 'ilsten': 'listen', 'proudcer': 'producer', 'prdoucer': 'producer', 'prodcuer': 'producer',
+    'acqruie': 'acquire', 'unlokc': 'unlock',
 }
 
 if __name__ == '__main__':

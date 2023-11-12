@@ -134,6 +134,12 @@ EXPLICIT_TESTS = {
     'duplicaet': 'duplicate', 'anyhwere': 'anywhere', 'TreeNOde': 'TreeNode', 'broadcsat': 'broadcast',
     'efficeintly': 'efficiently', 'efficietnly': 'efficiently', 'efficienetly': 'efficiently',
     'initilaize': 'initialize', 'coroutien': 'coroutine', 'coroutiens': 'coroutines', 'relationshpis': 'relationships',
+    'investigaion': 'investigation', 'investigaions': 'investigations', 'combinaion': 'combination',
+    'combinaions': 'combinations', 'catpion': 'caption', 'catpions': 'captions', 'initilaized': 'initialized',
+    'initilaizes': 'initializes', 'csats': 'casts', 'duplicaets': 'duplicates', 'weigths': 'weights',
+    'accoutned': 'accounted', 'exproted': 'exported', 'imprvoed': 'improved', 'captuerd': 'captured',
+    'transopse': 'transpose', 'statitsic': 'statistic', 'statitsics': 'statistics', 'speciifc': 'specific',
+    'materila': 'material', 'GraphNdoe': 'GraphNode',
 }
 
 if __name__ == '__main__':

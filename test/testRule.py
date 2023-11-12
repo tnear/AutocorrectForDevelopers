@@ -180,7 +180,7 @@ class TestRule(unittest.TestCase):
         text = set(text)
 
         # check that all short rules are in this whitelist
-        whitelist = ['and', 'ing', 'can', "i'd", 'the', 'was', 'for', 'you', 'int', 'has', 'end', "i'm", 'not']
+        whitelist = ['and', 'ing', 'can', "i'd", 'the', 'was', 'for', 'you', 'int', 'has', 'end', "i'm", 'not', 'but']
         for rule in text:
             assert rule in whitelist, f'Found short rule not in whitelist: "{rule}"'
 
