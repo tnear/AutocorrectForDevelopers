@@ -23,7 +23,7 @@ MATCH_NONE_LIST = [
     'overidentify', 'ADN', 'NAD', 'HTE', 'TEH', 'CNA', 'HSA', 'hwo', 'quantitiy', # incorrectly converted to 'quantiity'
     'OFR', 'Push+Back', 'STD:;', 'SDT::', 'SDT:;', 'STD;:', 'code', 'doesnt', # interferes with "doesnt'"
     'end', 'Pop+Back', 'CAES', 'MAEK_', 'Grammer', 'APGE', 'forsome', 'cant', 'ZEOR', 'AUOT', 'ONDE', 'SendInput',
-    'exponentiation', 'ISZE', 'ELFT', 'ILNE', 'Fales', 'hwo', # ambiguous between 'who' and 'how'
+    'exponentiation', 'ISZE', 'ILNE', 'Fales', 'hwo', # ambiguous between 'who' and 'how'
     'from', 'form', 'Alvie', 'Horus', 'triangle', 'braek', # break/brake
 ]
 

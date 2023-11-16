@@ -139,7 +139,8 @@ EXPLICIT_TESTS = {
     'initilaizes': 'initializes', 'csats': 'casts', 'duplicaets': 'duplicates', 'weigths': 'weights',
     'accoutned': 'accounted', 'exproted': 'exported', 'imprvoed': 'improved', 'captuerd': 'captured',
     'transopse': 'transpose', 'statitsic': 'statistic', 'statitsics': 'statistics', 'speciifc': 'specific',
-    'materila': 'material', 'GraphNdoe': 'GraphNode',
+    'materila': 'material', 'GraphNdoe': 'GraphNode', 'conidtion': 'condition', 'launhicng': 'launching',
+    'veriifes': 'verifies',
 }
 
 if __name__ == '__main__':

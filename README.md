@@ -34,5 +34,5 @@ Shown below is a Venn diagram comparing *AutocorrectForDevelopers.ahk* with the 
 ## Common developer typos added for...
 - Languages: AutoHotkey, C, C++, C#, COBOL, CSS, FORTRAN, Go, Java, JavaScript, Julia, Kotlin, MATLAB, Perl, PHP, Python, R, Ruby, Rust, Scala, SQL, Swift, Visual Basic
 - Programs: GDB, Git, PowerShell, UNIX CLI
-- Subjects: algorithms, artificial intelligence, compilers, cryptography, databases, linear algebra, machine learning, networking, operating systems, security
+- Subjects: algorithms, artificial intelligence, compilers, concurrency, cryptography, databases, distributed systems, linear algebra, machine learning, networking, operating systems, security, system design
 - (more to come!)
