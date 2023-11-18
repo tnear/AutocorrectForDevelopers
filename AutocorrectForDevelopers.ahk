@@ -298,6 +298,7 @@
     :b0:iisons::       ; do not convert this string to -isions
     :b0:iites::        ; do not convert this string to -ities
     :b0:iivty::        ; do not convert this string to -ivity
+    :b0:ilbity::       ; do not convert this string to -bility
     :b0:inat::         ; do not convert this string to -iant
     :b0:ioanl::        ; do not convert this string to -ional
     :b0:iont::         ; do not convert this string to -oint
@@ -580,8 +581,12 @@
     ::backgournd::background
     ::backwrad::backward
     ::backwrads::backwards
-    :*:blanace::balance             ; balance/s/d
-    :*:blaance::balance
+    ::blanace::balance
+    ::blaance::balance
+    ::blanaced::balanced
+    ::blaanced::balanced
+    ::blanaces::balances
+    ::blaances::balances
     ::bandwith::bandwidth
     ::badnwidth::bandwidth
     ::bandiwdth::bandwidth
@@ -595,6 +600,7 @@
     ::becaseu::because
     ::beccause::because
     ::beacuse::because
+    ::beocme::become
     ::beofre::before
     ::befoer::before
     ::begni::begin
@@ -609,6 +615,8 @@
     :*:benhcmark::benchmark         ; benchmark/s/ed/ing
     :*:benchamrk::benchmark
     :*:bnehcmark::benchmark
+    :*:benchmakr::benchmark
+    :*:bnechmark::benchmark
     ::betwen::between
     ::beyodn::beyond
     ::billino::billion
@@ -662,9 +670,11 @@
     :C:Cna::Can
     :*:cancle::cancel               ; cancel/s/ed/ing/ation
     ::cnadidate::candidate
+    ::canddiate::candidate
     ::cnadidates::candidates
+    ::canddiates::candidates
     ::cannonical::canonical
-    ; ::cant::can't ; interferes with "cant'" rule below
+    ::canoncial::canonical
     ::cant'::can't
     ::captrue::capture
     ::catpure::capture
@@ -685,11 +695,15 @@
     ::chagne::change
     ::chagnes::changes
     ::chagned::changed
-    :*:chracter::character          ; character/s/ize/istic
-    :*:charcter::character
-    :*:charcater::character
-    :*:charater::character
+    ::chracter::character
+    ::charcter::character
+    ::charcater::character
+    ::charater::character
     ::characteres::characters
+    ::chracters::characters
+    ::charcters::characters
+    ::charcaters::characters
+    ::charaters::characters
     ::cheaepr::cheaper
     :*:chekc::check                 ; checkout, check/s/ed/er, checkpoint
     ::chidl::child
@@ -741,7 +755,9 @@
     ::clsoe::close
     ::clsoed::closed
     ::clsoure::closure
+    ::closrue::closure
     ::clsoures::closures
+    ::closrues::closures
     ::clodu::cloud
     :*:clutser::cluster             ; cluster/s/ed/ing
     :*:clsuter::cluster
@@ -768,7 +784,9 @@
     ::comited::committed
     :*:commite::committe            ; ex: committe/d/r/rs/e/es
     ::companeis::companies
-    :*:comapre::compare             ; compare/s/d
+    ::comapre::compare
+    ::comapred::compared
+    ::comapres::compares
     ::comparision::comparison
     ::comparisions::comparisons
     ::compatability::compatibility
@@ -798,6 +816,9 @@
     ::concetp::concept
     ::conceptula::conceptual
     ::conceputal::conceptual
+    ::ocncurrency::concurrency
+    ::ocncurrent::concurrent
+    ::ocncurrently::concurrently
     :*:ocndition::condition         ; condition/s/ed/al/ing
     :*:condiion::condition
     ::condiitonals::conditionals    ; singular form covered by a suffix rule
@@ -819,7 +840,7 @@
     ::cosole::console
     ::consoe::console
     ::conosle::console
-    :*:cosnt::const                 ; const, constant, contructor, constraint
+    :*:cosnt::const                 ; const, constant, constructor, constraint
     :*:conts::const
     :*:ocnst::const
     ::constexrp::constexpr          ; C++ keyword
@@ -843,9 +864,15 @@
     ::contians::contains
     :*:contniu::continu             ; continu/e/ous/ously/ally
     :*:conitnu::continu
-    :*:contineu::continue           ; continue/d/s
-    :*:ocntinue::continue
-    :*:conintue::continue
+    ::contineu::continue
+    ::ocntinue::continue
+    ::conintue::continue
+    ::contineud::continued
+    ::ocntinued::continued
+    ::conintued::continued
+    ::contineus::continues
+    ::ocntinues::continues
+    ::conintues::continues
     :*:contirbut::contribut         ; contribute/d/s, contributor
     ::contribtue::contribute
     ::contriubte::contribute
@@ -928,7 +955,9 @@
     ::deallcoates::deallocates
     ::debuger::debugger
     ::debuging::debugging
-    :*:deicsion::decision           ; decision/s/al
+    ::deicsion::decision
+    ::deicsional::decisional
+    ::deicsions::decisions
     ::decrase::decrease
     ::decrases::decreases
     ::deepcpoy::deepcopy
@@ -938,7 +967,9 @@
     :*:dfeault::default
     :*:defauilt::default
     :*:defautl::default
-    :*:defien::define               ; define/s/d
+    ::defien::define
+    ::defiend::defined
+    ::defiens::defines
     :*:dleete::delete               ; delete/s/d/r
     ::deletd::deleted
     ::dleetion::deletion
@@ -948,7 +979,9 @@
     :*:depenenc::dependenc
     :*:depht::depth                 ; depth, depthFirstSearch
     :*:detph::depth
-    :*:derefernce::dereference      ; dereference/s/d
+    ::derefernce::dereference
+    ::derefernced::dereferenced
+    ::derefernces::dereferences
     ::deriavte::derivate
     ::dervie::derive
     ::descendnat::descendant
@@ -959,6 +992,12 @@
     ::desing::design
     ::deisgn::design
     ::deisng::design
+    ::desinged::designed
+    ::deisgned::designed
+    ::deisnged::designed
+    ::desinging::designing
+    ::deisgning::designing
+    ::deisnging::designing
     ::desings::designs
     ::deisgns::designs
     ::deisngs::designs
@@ -1002,6 +1041,8 @@
     ::diretory::directory
     ::directoroy::directory
     ::diretories::directories
+    ::directoires::directories
+    ::direcotires::directories
     ::diable::disable
     ::diables::disables
     ::disadvnatage::disadvantage
@@ -1062,7 +1103,10 @@
     ::ediotrs::editors
     ::editros::editors
     ::edidtors::editors
-    :*:eigne::eigen                 ; eigenvalues, eigenvectors, eigenspace
+    ::eigne::eigen
+    ::eignespace::eigenspace
+    ::eignevalue::eigenvalue
+    ::eignevector::eigenvector
     ::electornic::electronic
     ::electornics::electronics
     :*:elemtn::element              ; element/s/al/ary
@@ -1170,6 +1214,8 @@
     ::existance::existence
     ::exectuer::executer            ; exception for '-tuer' -> '-ture'
     ::exectuers::executers
+    ::exeution::execution
+    ::execuion::execution
     ::exapnd::expand
     ::exapnds::expands
     ::expanison::expansion
@@ -1247,6 +1293,7 @@
     ::flaots::floats
     ::flaoting::floating            ; floating-point
     ::flwo::flow
+    :*:ofcus::focus                 ; focus/es/ed/ing
     ::fodler::folder
     ::fodlers::folders
     ::fodling::folding
@@ -1254,11 +1301,11 @@
     :C:fro::for                     ; 'for' keyword
     :C:ofr::for
     :C:FOr::For
-    :C:foreeach::foreach            ; Perl keyword
+    ::foreeach::foreach            ; Perl keyword
     ::foregorund::foreground
     ::foregournd::foreground
     ::foriegn::foreign
-    ::froeign::foreign              ; exception for '-ign' to '-ing'
+    ::froeign::foreign              ; exception for correcting '-ign' to '-ing'
     ::foreing::foreign
     ::froms::forms
     :C:forSOme::forSome             ; Scala keyword
@@ -1311,6 +1358,7 @@
     ::goe sto::goes to
     ::goign::going
     ::oging::going
+    ::going ot::going to
     ::goot::goto
     ::gradiet::gradient
     :C:grammer::grammar             ; case sensitive to preserve 'Grammer' surname
@@ -1332,6 +1380,7 @@
     ::ahve::have
     ::haev::have
     :C:HAve::Have
+    ::have ot::have to
     ::have'nt::haven't
     ::havn'et::haven't
     ::havne't::haven't
@@ -1481,6 +1530,7 @@
     :*:interupt::interrupt          ; interrupt/s/ed/er/ing/ion
     :C:inot::into
     ::intractible::intractable
+    ::intutive::intuitive
     ::invariatn::invariant
     ::ivnariant::invariant
     ::invariatns::invariants
@@ -1496,6 +1546,7 @@
     ::isotream::iostream
     ::isintance::isinstance         ; Python function
     ::ins't::isn't
+    ::isnt'::isn't
     ::isseu:::issue
     ::isseus::issues
     ::isthe::is the
@@ -1510,6 +1561,7 @@
     ::iteators::iterators
     ::istelf::itself
     ::i'ts::it's
+    ::it ot::it to
     ::i"d::i'd
     ::i"ll::i'll
     ::i"m::i'm
@@ -1660,6 +1712,9 @@
     ::maxinum::maximum
     ::menas::means
     ::menat::meant
+    ::measrue::measure
+    ::measureable::measurable
+    ::membesr::members
     ::memoiation::memoization
     :*:memroiz::memoriz             ; memoriz/e/ed/ation
     :*:memrois::memoris
@@ -1741,6 +1796,7 @@
     ::nulptr::nullptr               ; C++
     ::nulllptr::nullptr
     ::nubmer::number
+    ::numbesr::numbers
     :*:nuemr::numer                 ; ex: numerator, numeric, numeral
 
     :*:ojbect::object               ; object/s, objective/s
@@ -1767,6 +1823,7 @@
     ::oens::ones
     ::onlly::only
     :*:oeprat::operat               ; operat/es/ed/ion/ional
+    :*:opereat::operate
     :*:opeation::operation          ; operation/al/s
     :*:operaetion::operation
     ::opeator::operator
@@ -1917,7 +1974,9 @@
     :*:pwoer::power                 ; power/ed, powerpoint, powershell
     :*:opwer::power
     ::ppritn::pprint                ; Python pretty printer
-    :*:pratice::practice            ; practice/s/d
+    ::pratice::practice
+    ::praticed::practiced
+    ::pratices::practices
     ::prgama::pragma                ; #pragma
     ::prealocate::preallocate
     ::prealocates::preallocates
@@ -1942,7 +2001,10 @@
     ::pirmary::primary
     ::priamry::primary
     ::primiive::primitive
-    :*:pritn::print                 ; print, printf, println
+    ::pritn::print
+    ::pritnf::printf
+    ::pritning::printing
+    ::pritnln::println
     ::privte::private
     ::priavte::private
     ::privelege::privilege
@@ -1972,6 +2034,7 @@
     :*:porgram::program
     ::programable::programmable
     ::programatic::programmatic
+    ::programing::programming
     :*:proejct::project             ; project/s/ed/ing/ion
     :*:prjoect::project
     ::promsie::promise
@@ -2132,8 +2195,12 @@
     ::resaerch::research
     ::reserach::research
     ::resarch::research
-    :*:rserve::reserve              ; reserve/s/d
-    :*:resrve::reserve
+    ::rserve::reserve
+    ::resrve::reserve
+    ::rserved::reserved
+    ::resrved::reserved
+    ::rserves::reserves
+    ::resrves::reserves
     ::reisde::reside
     ::reisdes::resides
     ::reislient::resilient
@@ -2271,7 +2338,10 @@
     ::shaeps::shapes
     ::shraed::shared
     ::sahred::shared
-    :*:shrot::short                 ; short, shortest, shortcut
+    ::shrot::short
+    ::shrotcut::shortcut
+    ::shrotest::shortest
+    ::shrots::shorts
     ::shortctu::shortcut
     ::shortctus::shortcuts
     ::shoud::should
@@ -2286,7 +2356,9 @@
     ::hsowed::showed
     ::hsowing::showing
     ::hsows::shows
-    :*:shirnk::shrink               ; shrink/s/ing
+    ::shirnk::shrink
+    ::shirnking::shrinking
+    ::shirnks::shrinks
     :*:signla::signal               ; signal/s/ed/er/ing
     ::significnat::significant
     ::ismilar::similar
@@ -2358,6 +2430,7 @@
     ::stoarge::storage
     ::stoage::storage
     ::stroe::store
+    ::tsore::store
     ::streategy::strategy
     ::strenghten::strengthen
     :*:sring::string                ; ex: string/s/ent/ify
@@ -2387,6 +2460,7 @@
     ::submoduel::submodule
     ::submoduels::submodules
     :*:subcribe::subscribe          ; subscribe/d/r/s
+    ::subscribesr::subscribers
     ::subscritp::subscript          ; Swift keyword
     ::subscirpt::subscript
     ::subseuqent::subsequent
@@ -2567,7 +2641,9 @@
 
     ::undfeined::undefined
     ::undefiend::undefined
-    :*:udner::under                 ; underneath, understand/s
+    ::udner::under
+    ::udnerstand::understand
+    ::udnerstands::understands
     ::uniofrmly::uniformly
     ::uniformotuput::uniformoutput  ; common MATLAB name/value pair
     ::uniqeu::unique
@@ -2578,8 +2654,12 @@
     ::unviersal::universal
     ::unkonwn::unknown
     :*:unlokc::unlock               ; unlock/s/ed/ing
-    :*:unorderd::unordered          ; unordered_map, unordered_set ('_' is not an AHK end char)
-    :*:unordrerd::unordered
+    ::unorderd::unordered
+    ::unordrerd::unordered
+    ::unorderd_map::unordered_map
+    ::unordrerd_map::unordered_map
+    ::unorderd_set::unordered_set
+    ::unordrerd_set::unordered_set
     ::unsaef::unsafe
     ::unsfae::unsafe
     ::unsgined::unsigned
@@ -2587,9 +2667,18 @@
     :*:unsubcribe::unsubscribe      ; unsubscribe/d/s
     ::unitl::until
     ::utnil::until
-    :*:udpate::update               ; update/s/d/r
-    :*:upadte::update
-    :*:updadte::update
+    ::udpate::update
+    ::upadte::update
+    ::updadte::update
+    ::udpated::updated
+    ::upadted::updated
+    ::updadted::updated
+    ::udpater::updater
+    ::upadter::updater
+    ::updadter::updater
+    ::udpates::updates
+    ::upadtes::updates
+    ::updadtes::updates
     ::upsream::upstream
     ::uinsg::using
     ::uesd::used
@@ -2599,11 +2688,20 @@
     ::vacnat::vacant
     ::vlaid::valid
     ::valueable::valuable
-    :*:vlaue::value                 ; value/s/d
-    :*:avlue::value
-    :*:vluae::value
-    :*:valeu::value
+    ::vlaue::value
+    ::avlue::value
+    ::vluae::value
+    ::valeu::value
     ::vlue::value
+    ::vlaued::valued
+    ::avlued::valued
+    ::vluaed::valued
+    ::valeud::valued
+    ::vlued::valued
+    ::vlaues::values
+    ::avlues::values
+    ::vluaes::values
+    ::valeus::values
     ::vlues::values
     ::vareiable::variable
     ::varibale::variable
@@ -2663,6 +2761,7 @@
     :*:wtach::watch                 ; watch/ed/es/dog/point
     :*:wieght::weight               ; weight/s/ed/ing
     ::wern't::weren't
+    ::werent'::weren't
     ::whta::what
     ::hwat::what
     ::waht::what
@@ -2773,8 +2872,9 @@
     :C?:blities::bilities
     :C?:bilites::bilities
     :C?:blites::bilities
-    :C?:bilty::bility     ; ex: scalability, ability, mutability, probability, stability
+    :C?:bilty::bility     ; ex: scalability, ability, mutability, probability, stability, visiblity
     :C?:blity::bility
+    :C?:ilbity::bility
     :C?:baord::board      ; ex: keyboard, clipboard, dashboard, motherboard, soundboard
     :C?:borad::board
     :C?:baords::boards

@@ -140,7 +140,7 @@ EXPLICIT_TESTS = {
     'accoutned': 'accounted', 'exproted': 'exported', 'imprvoed': 'improved', 'captuerd': 'captured',
     'transopse': 'transpose', 'statitsic': 'statistic', 'statitsics': 'statistics', 'speciifc': 'specific',
     'materila': 'material', 'GraphNdoe': 'GraphNode', 'conidtion': 'condition', 'launhicng': 'launching',
-    'veriifes': 'verifies',
+    'veriifes': 'verifies', 'visiilbity': 'visibility',
 }
 
 if __name__ == '__main__':
