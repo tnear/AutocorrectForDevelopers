@@ -10,10 +10,17 @@ class TestMatchPrefix(unittest.TestCase):
         # get all suffix rules. note: backspace rules should be ignored because they are whitelisted
         suffixRules = [rule for rule in self.rules if rule.suffixMatch and not rule.backspace]
         self.suffixRuleList = [rule.oldText for rule in suffixRules]
+        self.suffixRuleDict = {rule.oldText : rule.newText for rule in suffixRules}
+
+        # get all exact match rules
+        exactMatchRules = [rule for rule in self.rules
+                           if not rule.prefixMatch and not rule.suffixMatch and not rule.backspace and
+                           not rule.caseSensitive and not rule.backspace]
+        self.exactMatchDict = {rule.oldText : rule.newText for rule in exactMatchRules}
 
     def test_ruleLength(self):
-        self.assertGreater(len(self.rules), 2100)
-        self.assertGreater(len(self.suffixRuleList), 200)
+        self.assertGreater(len(self.rules), 2900)
+        self.assertGreater(len(self.suffixRuleList), 250)
 
     def test_replace(self):
         hasEndChar = True
@@ -42,13 +49,13 @@ class TestMatchPrefix(unittest.TestCase):
         # permit only these 3-letter suffixes
         assert threeLetterSuffixes == ['ign', 'nig']
 
-    def test_noRedundantSuffixes(self):
+    def test_noRedundantSuffixRules(self):
         # ensures that no suffix string ends with another string in the list
         # ex: a suffix rule for '-paegs=>-pages' is unnecessary if there is already a rule for '-aegs=>-ages'
         for i, s1 in enumerate(self.suffixRuleList):
             for j, s2 in enumerate(self.suffixRuleList):
                 hasRedundantSuffix = i != j and s1.endswith(s2)
-                self.assertFalse(hasRedundantSuffix, f'Found redundant suffix: "{s2}" in "{s1}"')
+                self.assertFalse(hasRedundantSuffix, f'Found redundant suffix rule: "{s2}" in "{s1}"')
 
     def test_explicit(self):
         for inputText, expectedText in EXPLICIT_TESTS.items():
@@ -71,6 +78,14 @@ class TestMatchPrefix(unittest.TestCase):
             testList = [x for x in testKeys if x.endswith(suffix)]
             self.assertGreater(len(testList), 0, f'The suffix "{suffix}" does not have an automated test')
 
+    def test_noRedundantExactMatchRule(self):
+        # there is no need for a regular rule which is encompassed by a suffix rule
+        # ex: the rule 'exectues::executes' is unnecessary when there is the suffix rule ':?:tues::utes'
+        for oldText, newText in self.suffixRuleDict.items():
+            for oldTextExact, newTextExact in self.exactMatchDict.items():
+                hasRedundantExactMatchRule = oldTextExact.endswith(oldText) and newTextExact.endswith(newText)
+                self.assertFalse(hasRedundantExactMatchRule,
+                                 f'Found redundant exact match rule: "{oldTextExact}" not needed due to "{oldText}"')
 
 # explicit tests for suffix words (usually as part of bug fixes)
 EXPLICIT_TESTS = {
@@ -115,7 +130,7 @@ EXPLICIT_TESTS = {
     'sparstiy': 'sparsity', 'recursvie': 'recursive', 'mergesrot': 'mergesort', 'worksapce': 'workspace',
     'workspcae': 'workspace', 'worksapces': 'workspaces', 'workspcaes': 'workspaces', 'outaeg': 'outage',
     'constnat': 'constant', 'constatn': 'constant', 'constnats': 'constants', 'constatns': 'constants',
-    'cathces': 'catches', 'persistenet': 'persistent', 'anotehr': 'another', 'somehting': 'something',
+    'cathces': 'catches', 'persistenet': 'persistent', 'anotehr': 'another',
     'lifeitme': 'lifetime', 'lifetiem': 'lifetime', 'lifeitmes': 'lifetimes', 'lifetiems': 'lifetimes',
     'tesitng': 'testing', 'funciton': 'function', 'functino': 'function', 'functoin': 'function',
     'funciotn': 'function', 'funcitons': 'functions', 'functinos': 'functions', 'functoins': 'functions',
@@ -123,7 +138,7 @@ EXPLICIT_TESTS = {
     'featuer': 'feature', 'featuers': 'features', 'fautls': 'faults', 'permtued': 'permuted',
     'rotues': 'routes', 'exectuion': 'execution', 'exectuions': 'executions', 'discoveyr': 'discovery',
     'activtiy': 'activity', 'softwrae': 'software', 'frameowrk': 'framework', 'framewokr': 'framework',
-    'frameowrks': 'frameworks', 'framewokrs': 'frameworks', 'finishsed': 'finished', 'totalign': 'totaling',
+    'frameowrks': 'frameworks', 'framewokrs': 'frameworks', 'totalign': 'totaling',
     'scalign': 'scaling', 'agetn': 'agent', 'finishesd': 'finished', 'successfullly': 'successfully',
     'previosu': 'previous', 'accoutn': 'account', 'accoutns': 'accounts', 'updaet': 'update', 'updaets': 'updates',
     'automaticalyl': 'automatically', 'successfulyl': 'successfully', 'optoinally': 'optionally',
@@ -140,7 +155,12 @@ EXPLICIT_TESTS = {
     'accoutned': 'accounted', 'exproted': 'exported', 'imprvoed': 'improved', 'captuerd': 'captured',
     'transopse': 'transpose', 'statitsic': 'statistic', 'statitsics': 'statistics', 'speciifc': 'specific',
     'materila': 'material', 'GraphNdoe': 'GraphNode', 'conidtion': 'condition', 'launhicng': 'launching',
-    'veriifes': 'verifies', 'visiilbity': 'visibility',
+    'veriifes': 'verifies', 'visiilbity': 'visibility', 'emulatro': 'emulator', 'emulatros': 'emulators',
+    'gradeint': 'gradient', 'gradeints': 'gradients', 'averaegd': 'averaged', 'captrued': 'captured',
+    'clikced': 'clicked', 'appedned': 'appended', 'appedns': 'appends', 'benchamrk': 'benchmark',
+    'benchamrked': 'benchmarked', 'benchamrks': 'benchmarks', 'cloend': 'cloned', 'compsoed': 'composed',
+    'trianed': 'trained', 'eraesd': 'erased', 'puhsed': 'pushed', 'cahced': 'cached', 'adatped': 'adapted',
+    'leadres': 'leaders', 'tetsed': 'tested',
 }
 
 if __name__ == '__main__':

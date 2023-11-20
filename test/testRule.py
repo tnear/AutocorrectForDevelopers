@@ -107,7 +107,7 @@ class TestRule(unittest.TestCase):
         self.assertEqual(len(lines), 1)
 
         # the chars '<' and '>' are non-default ending characters
-        self.assertTrue(lines[0].endswith('-()[]{}:;\'"/\\,.?!`n `t<>'))
+        self.assertTrue(lines[0].endswith('-()[]{}:;\'"/\\,.?!`n `t<>*'))
 
     def test_allRulesMustChangeText(self):
         # prevents a rule where oldText equals newText (causes unnecessary flicker)

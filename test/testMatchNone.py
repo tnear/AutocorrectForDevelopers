@@ -24,7 +24,7 @@ MATCH_NONE_LIST = [
     'OFR', 'Push+Back', 'STD:;', 'SDT::', 'SDT:;', 'STD;:', 'code', 'doesnt', # interferes with "doesnt'"
     'end', 'Pop+Back', 'CAES', 'MAEK_', 'Grammer', 'APGE', 'forsome', 'cant', 'ZEOR', 'AUOT', 'ONDE', 'SendInput',
     'exponentiation', 'ISZE', 'ILNE', 'Fales', 'hwo', # ambiguous between 'who' and 'how'
-    'from', 'form', 'Alvie', 'Horus', 'triangle', 'braek', # break/brake
+    'from', 'form', 'Alvie', 'Horus', 'triangle', 'highlighting', 'sightings', 'braek', # break/brake
 ]
 
 if __name__ == '__main__':
