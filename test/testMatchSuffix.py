@@ -160,7 +160,10 @@ EXPLICIT_TESTS = {
     'clikced': 'clicked', 'appedned': 'appended', 'appedns': 'appends', 'benchamrk': 'benchmark',
     'benchamrked': 'benchmarked', 'benchamrks': 'benchmarks', 'cloend': 'cloned', 'compsoed': 'composed',
     'trianed': 'trained', 'eraesd': 'erased', 'puhsed': 'pushed', 'cahced': 'cached', 'adatped': 'adapted',
-    'leadres': 'leaders', 'tetsed': 'tested',
+    'leadres': 'leaders', 'tetsed': 'tested', 'lisetd': 'listed', 'gradeitn': 'gradient', 'gradeitns': 'gradients',
+    'noityf': 'notify', 'wrapepr': 'wrapper', 'csated': 'casted', 'encoidngs': 'encodings', 'conidtions': 'conditions',
+    'ofrmed': 'formed', 'fomred': 'formed', 'estiamted': 'estimated', 'generla': 'general', 'priavte': 'private',
+    'actiavted': 'activated', 'actiavtes': 'activates', 'activaets': 'activates',
 }
 
 if __name__ == '__main__':

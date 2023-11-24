@@ -162,6 +162,8 @@ EXPLICIT_TESTS = {
     'consturct': 'construct', 'ilsten': 'listen', 'proudcer': 'producer', 'prdoucer': 'producer', 'prodcuer': 'producer',
     'unlokc': 'unlock', 'condiions': 'conditions', 'bnehcmark': 'benchmark', 'opereats': 'operates',
     'benchmakr': 'benchmark', 'bnechmark': 'benchmark', 'ofcus': 'focus', 'attahcment': 'attachment', 'ofrmat': 'format',
+    'preceeded': 'preceded', 'infreuqently': 'infrequently', 'infrquently': 'infrequently', 'optmial': 'optimal',
+    'asesrt': 'assert', 'inesrtion': 'insertion',
 }
 
 if __name__ == '__main__':
