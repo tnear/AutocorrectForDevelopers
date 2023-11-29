@@ -506,11 +506,13 @@
     :*:abstarct::abstract           ; abstract/s, abstracted, abstraction/s
     ::accetp::accept
     ::accetps::accepts
+    :*:acceess::access
     :*:accomodat::accommodat        ; accommodate/s/d, accommodating
     ::accomplihs::accomplish
     ::accomplihses::accomplishes
     ::accruacy::accuracy
     ::accruate::accurate
+    :*:ahciev::achiev               ; achiev/able/e/es/ed/ing/ement
     :*:acknowlege::acknowledge      ; acknowledge/d/s/ment/ments
     :*:acknwoledge::acknowledge
     :*:ackonwledge::acknowledge
@@ -585,6 +587,7 @@
     ::appilcation::application
     ::appications::applications
     ::appilcations::applications
+    :*:apporach::approach           ; approach/es/ed/ing
     ::arhitecture::architecture
     ::archtiecture::architecture
     ::archvie::archive
@@ -725,8 +728,11 @@
     ::breakthrouhg::breakthrough
     :*:braodcast::broadcast         ; broadcast/s/ed/ing/er
     ::borke::broke
+    ::borken::broken
     :*:borws::brows                 ; ex: brows/es/ed/er/ers/ing
     :*:brwos::brows
+    ::buckte::bucket
+    ::bucktes::buckets
     ::bulid::build
     ::biuld::build
     ::ubild::build
@@ -785,6 +791,8 @@
     ::cauess::causes
     ::casues::causes
     ::certian::certain
+    ::cahining::chaining
+    ::chaingn::chaining
     ::chagne::change
     ::chagned::changed
     ::chagnes::changes
@@ -809,6 +817,7 @@
     ::chocie::choice
     ::chocies::choices
     ::chosoe::choose
+    ::chorme::chrome
     ::cihper::cipher
     ::cihpertext::ciphertext
     ::circuti::circuit
@@ -899,7 +908,7 @@
     ::compatable::compatible
     ::comiplation::compilation
     :*:comiple::compile             ; compile/r/d/s
-    ::complier::compiler            ; 'complier' is a valid but rare word
+    :*:compiel::compile
     ::comiler::compiler
     ::compliers::compilers
     ::compileres::compilers
@@ -964,11 +973,15 @@
     ::consuemr::consumer
     ::consuemrs::consumers
     ::contian::contain
+    ::contina::contain
     ::contians::contains
+    ::continas::contains
     ::contianer::container
     ::contaienr::container
+    ::continaer::container
     ::contianers::containers
     ::contaienrs::containers
+    ::continaers::containers
     :*:contniu::continu             ; continu/e/ous/ously/ally
     :*:conitnu::continu
     ::contineu::continue
@@ -998,6 +1011,8 @@
     ::cpoy::copy
     ::coyp::copy
     ::copyrgiht::copyright
+    ::corenr::corner
+    ::corenrs::corners
     :*:corect::correct              ; correct/ed/ion/tly/ness
     :*:corretc::correct
     ::corresopnd::correspond
@@ -1025,6 +1040,7 @@
     ::creaetes::creates
     ::criteira::criteria
     ::crtieria::criteria
+    ::ciritcal::critical
     :*:crytpo::crypto               ; cryptography, cryptographic/ally
     :C:CTrl::Ctrl                   ; 'Control' keyboard modifier
     ::curent::current
@@ -1154,6 +1170,7 @@
     ::difficulyt::difficulty
     ::difficluty::difficulty
     ::digets::digest
+    :*:diigt::digit                 ; digit/s/al/ally
     ::dimensinoal::dimensional
     ::dimensinoality::dimensionality
     :*:driect::direct               ; direct/s/ed/ly/ive/ion/ory
@@ -1234,10 +1251,8 @@
     ::ediotrs::editors
     ::editros::editors
     ::edidtors::editors
-    ::eigne::eigen
-    ::eignespace::eigenspace
-    ::eignevalue::eigenvalue
-    ::eignevector::eigenvector
+    :*:eigne::eigen                 ; eigen/space/value/vector
+    ::iether::either
     ::electornic::electronic
     ::electornics::electronics
     :*:elemtn::element              ; element/s/al/ary
@@ -1336,11 +1351,13 @@
     ::exaple::example
     ::exmaple::example
     ::exampel::example
+    ::exam]le::example
     ::eamples::examples
     ::examles::examples
     ::exaples::examples
     ::exmaples::examples
     ::exampels::examples
+    ::exam]les::examples
     :*:excpet::except               ; except/s/ed/ion/ions
     :*:excetp::except
     ::excahnge::exchange
@@ -1433,6 +1450,7 @@
     ::fidn::find
     :C:FInd::Find
     ::fidns::finds
+    ::fireofx::firefox
     ::fisrt::first
     ::firsrt::first
     ::ifrst::first
@@ -1549,6 +1567,8 @@
     ::hvaen't::haven't
     ::haevn't::haven't
     ::haven'et::haven't
+    ::helath::health
+    ::helathy::healthy
     ::hieght::height
     ::heihgt::height
     ::hieghts::heights
@@ -1682,7 +1702,9 @@
     ::intercetp::intercept
     ::intercetps::intercepts
     ::interafce::interface
+    ::inteface::interface
     ::interafces::interfaces
+    ::intefaces::interfaces
     :*:interopl::interpol           ; interpol/ate/ated/ates/ating
     :*:intepr::interp               ; interpolat/e/ion, interpret/s/ation
     ::internla::internal
@@ -1695,7 +1717,11 @@
     ::interpeter::interpreter
     :*:interupt::interrupt          ; interrupt/s/ed/er/ing/ion
     ::interavl::interval
+    ::intervla::interval
+    ::intreval::interval
     ::interavls::intervals
+    ::intervlas::intervals
+    ::intrevals::intervals
     :C:inot::into
     ::intractible::intractable
     ::intutive::intuitive
@@ -1709,7 +1735,7 @@
     ::i nrange::in range            ; Python loop
     ::inthe::in the
     ::in th::in the
-    ::iosream::iostream             ; standard C++ I/O header
+    ::iosream::iostream             ; C++ I/O header
     ::iosteam::iostream
     ::isotream::iostream
     ::isintance::isinstance         ; Python function
@@ -1738,6 +1764,7 @@
     ::i'ev::i've
     ::i"ev::i've
 
+    :C:JAva::Java
     :C:javascritp::javascript       ; with 2 capital letters, this word does not fit AHK's traditional model
     :C:JavaScritp::JavaScript       ; therefore, it needs twice the rules
     :C:jaascript::javascript
@@ -1746,6 +1773,8 @@
     :C:Javacript::JavaScript
     :C:javasript::javascript
     :C:JavaSript::JavaScript
+    :C:JAvaScript::JavaScript
+    :C:JavaSCript::JavaScript
     ::jion::join
     ::jioned::joined
     ::jioning::joining
@@ -1785,7 +1814,10 @@
     ::lagnuages::languages
     ::lnagauges::languages
     ::lanaguages::languages
+    ::alrge::large
+    ::alrger::larger
     ::largets::largest
+    ::alrgest::largest
     :*:lauchn::launch               ; launch/es/ed/ing
     ::leadre::leader
     ::laeder::leader
@@ -1993,6 +2025,7 @@
     :*:nuemr::numer                 ; ex: numerator, numeric, numeral
 
     :*:ojbect::object               ; object/s, objective/s
+    :*:obejct::object
     ::ocurred::occurred
     ::occured::occurred
     ::ocurrence::occurrence
@@ -2202,6 +2235,8 @@
     :*:prserve::preserve            ; preserve/s/d/r
     ::prevelant::prevalent
     :*:prevetn::prevent             ; prevent/s/ed/ion/able
+    :*:prvent::prevent
+    :*:prevenet::prevent
     ::preivous::previous
     ::pirmary::primary
     ::priamry::primary
@@ -2276,12 +2311,15 @@
     ::quanitty::quantity
     ::quanttiy::quantity
     ::quantiyt::quantity
-    ::qeuries::queries
-    ::queires::queries
     ::qeuried::queried
     ::queired::queried
+    ::quried::queried
+    ::qeuries::queries
+    ::queires::queries
+    ::quries::queries
     ::queyr::query
     ::qeury::query
+    ::qury::query
     ::queyring::querying
     ::qeurying::querying
     :*:qustion::question            ; question/s/ed/ing/able
@@ -2457,6 +2495,7 @@
     :*:rslut::result
     :*:resluet::result
     :*:resuelt::result
+    :*:rseult::result
     ::reults::results
     ::retian::retain
     ::retians::retains
@@ -2476,6 +2515,8 @@
     ::reveiw::review
     ::reivewed::reviewed
     ::reveiwed::reviewed
+    ::reivewer::reviewer
+    ::reveiwer::reviewer
     ::reivews::reviews
     ::reveiws::reviews
     ::reivsion::revision
@@ -2499,6 +2540,7 @@
     ::runenr::runner
     ::runenrs::runners
     ::runing::running
+    :C:RUst::Rust
 
     :*:saef::safe                   ; safety, safer, safest
     ::sfae::safe
@@ -2570,17 +2612,21 @@
     ::serivce::service
     ::esrvice::service
     ::srevice::service
+    ::ersvice::service
     ::serivces::services
     ::esrvices::services
     ::srevices::services
+    ::ersvices::services
     ::setapram::setparam            ; Kotlin soft keyword
     :C:setTimeotu::setTimeout       ; JavaScript function
     ::serverity::severity
     ::shaep::shape
     ::shaepd::shaped
     ::shaeps::shapes
+    :*:hsard::shard                 ; shard/s/ed/ing
     ::shraed::shared
     ::sahred::shared
+    ::hsared::shared
     ::shrot::short
     ::shrotcut::shortcut
     ::shortctu::shortcut
@@ -2624,7 +2670,10 @@
     ::slwo::slow
     ::slwoer::slower
     ::slwoest::slowest
+    ::samll::small
     ::smalelr::smaller
+    ::samller::smaller
+    ::smalelst::smallest
     ::smoohting::smoothing
     ::snaphsot::snapshot
     ::snaphsots::snapshots
@@ -2647,6 +2696,7 @@
     ::soretd::sorted
     ::soruce::source
     ::soruces::sources
+    ::spawsn::spawns
     ::sproadic::sporadic
     ::sproadically::sporadically
     ::spraed::spread
@@ -2760,6 +2810,7 @@
     :*:swtich::switch
     :*:swithc::switch
     :*:synchor::synchro             ; synchronous/ly, synchronized
+    :*:syncrho::synchro
     ::synchroniation::synchronization
     ::sychrnous::synchronous
     ::sytnax::syntax
@@ -2844,8 +2895,11 @@
     ::thsoe::those
     :*:thoguht::thought             ; thought/s/ful/fully
     ::thrad::thread
+    ::htread::thread
     ::thrading::threading
+    ::htreading::threading
     ::thrads::threads
+    ::htreads::threads
     ::thershold::threshold
     ::throuhg::through
     ::thorw::throw
@@ -2901,6 +2955,8 @@
     ::treee::tree
     ::treees::trees
     ::triaeg::triage
+    ::trillino::trillion
+    ::trillinos::trillions
     ::ture::true
     :C:TRue::True
     ::trucate::truncate
@@ -2929,9 +2985,11 @@
     ::unqiue::unique
     ::uniuqe::unique
     ::uniqe::unique
+    ::uinque::unique
     ::uniqeuly::uniquely
     ::unqiuely::uniquely
     ::uniuqely::uniquely
+    ::uinquely::uniquely
     ::uniqely::uniquely
     ::unittets::unittest            ; Python testing framework
     ::unviersal::universal
@@ -3084,12 +3142,15 @@
     ::hwihc::which
     ::whcih::which
     :C:WHich::Which
+    ::wihch::which
     ::whicht he::which the
     ::whiel::while
     ::hwile::while
     ::whlie::while
     ::whlei::while
     ::wihle::while
+    ::hwlie::while
+    :C:WHile::While
     :*:whtie::white                 ; whiteboard, whitelist, whitespace
     ::whitelsit::whitelist
     ::whitelsited::whitelisted
@@ -3219,6 +3280,8 @@
     :C?:fomr::form
     :C?:ofrmed::formed
     :C?:fomred::formed
+    :C?:ofrming::forming
+    :C?:fomring::forming
     :C?:ofrms::forms
     :C?:fomrs::forms
     :C?:gaion::gation     ; ex: aggregation, propagation, investigation, mitigation, negation
@@ -3380,6 +3443,7 @@
     :C?:tsics::stics
 
     :C?:taeg::tage        ; ex: advantage, shortage, outage, stage, percentage
+    :C?:atlly::tally      ; ex: horizontally, vertically, digitally, totally, incrementally
     :C?:tnat::tant        ; ex: constant, important, instant, distant, inhabitant
     :C?:tatn::tant
     :C?:tnats::tants

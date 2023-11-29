@@ -7,7 +7,7 @@ class TestMatchNone(unittest.TestCase):
         self.rules = Rule.fileToRuleList('AutocorrectForDevelopers.ahk')
 
     def test_ruleLength(self):
-        self.assertGreater(len(self.rules), 2000)
+        self.assertGreater(len(self.rules), 3200)
         self.assertGreater(len(MATCH_NONE_LIST), 50)
 
     def test_replace(self):
@@ -23,7 +23,7 @@ MATCH_NONE_LIST = [
     'overidentify', 'ADN', 'NAD', 'HTE', 'TEH', 'CNA', 'HSA', 'hwo', 'quantitiy', # incorrectly converted to 'quantiity'
     'OFR', 'Push+Back', 'STD:;', 'SDT::', 'SDT:;', 'STD;:', 'code', 'doesnt', # interferes with "doesnt'"
     'end', 'Pop+Back', 'CAES', 'MAEK_', 'Grammer', 'APGE', 'forsome', 'cant', 'ZEOR', 'AUOT', 'ONDE', 'SendInput',
-    'exponentiation', 'ISZE', 'ILNE', 'Fales', 'hwo', # ambiguous between 'who' and 'how'
+    'exponentiation', 'ISZE', 'ILNE', 'Fales', 'complier', 'hwo', # ambiguous between 'who' and 'how'
     'from', 'form', 'Alvie', 'Horus', 'triangle', 'highlighting', 'sightings', 'braek', # break/brake
 ]
 

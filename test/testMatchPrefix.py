@@ -163,7 +163,9 @@ EXPLICIT_TESTS = {
     'unlokc': 'unlock', 'condiions': 'conditions', 'bnehcmark': 'benchmark', 'opereats': 'operates',
     'benchmakr': 'benchmark', 'bnechmark': 'benchmark', 'ofcus': 'focus', 'attahcment': 'attachment', 'ofrmat': 'format',
     'preceeded': 'preceded', 'infreuqently': 'infrequently', 'infrquently': 'infrequently', 'optmial': 'optimal',
-    'asesrt': 'assert', 'inesrtion': 'insertion',
+    'asesrt': 'assert', 'inesrtion': 'insertion', 'prvent': 'prevent', 'prevenet': 'prevent', 'acceess': 'access',
+    'eignevalue': 'eigenvalue', 'obejct': 'object', 'compiel': 'compile', 'rseult': 'result', 'diigt': 'digit',
+    'syncrhonous': 'synchronous', 'ahcieve': 'achieve', 'apporach': 'approach', 'hsard': 'shard',
 }
 
 if __name__ == '__main__':

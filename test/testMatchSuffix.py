@@ -163,7 +163,8 @@ EXPLICIT_TESTS = {
     'leadres': 'leaders', 'tetsed': 'tested', 'lisetd': 'listed', 'gradeitn': 'gradient', 'gradeitns': 'gradients',
     'noityf': 'notify', 'wrapepr': 'wrapper', 'csated': 'casted', 'encoidngs': 'encodings', 'conidtions': 'conditions',
     'ofrmed': 'formed', 'fomred': 'formed', 'estiamted': 'estimated', 'generla': 'general', 'priavte': 'private',
-    'actiavted': 'activated', 'actiavtes': 'activates', 'activaets': 'activates',
+    'actiavted': 'activated', 'actiavtes': 'activates', 'activaets': 'activates', 'inofrming': 'informing',
+    'infomring': 'informing', 'horizonatlly': 'horizontally',
 }
 
 if __name__ == '__main__':
