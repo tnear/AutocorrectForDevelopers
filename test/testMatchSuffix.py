@@ -143,7 +143,7 @@ EXPLICIT_TESTS = {
     'previosu': 'previous', 'accoutn': 'account', 'accoutns': 'accounts', 'updaet': 'update', 'updaets': 'updates',
     'automaticalyl': 'automatically', 'successfulyl': 'successfully', 'optoinally': 'optionally',
     'direcotry': 'directory', 'noitfy': 'notify', 'defintiion': 'definition', 'condtiioning': 'conditioning',
-    'postiions': 'positions', 'poitner': 'pointer', 'poitners': 'pointers', 'passign': 'passing',
+    'postiions': 'positions', 'poitner': 'pointer', 'poitners': 'pointers',
     'automtaed': 'automated', 'packgaes': 'packages', 'abiliites': 'abilities', 'stroed': 'stored',
     'ownershpi': 'ownership', 'facotyr': 'factory', 'transfomr': 'transform', 'transfomrs': 'transforms',
     'duplicaet': 'duplicate', 'anyhwere': 'anywhere', 'TreeNOde': 'TreeNode', 'broadcsat': 'broadcast',
@@ -164,7 +164,9 @@ EXPLICIT_TESTS = {
     'noityf': 'notify', 'wrapepr': 'wrapper', 'csated': 'casted', 'encoidngs': 'encodings', 'conidtions': 'conditions',
     'ofrmed': 'formed', 'fomred': 'formed', 'estiamted': 'estimated', 'generla': 'general', 'priavte': 'private',
     'actiavted': 'activated', 'actiavtes': 'activates', 'activaets': 'activates', 'inofrming': 'informing',
-    'infomring': 'informing', 'horizonatlly': 'horizontally',
+    'infomring': 'informing', 'horizonatlly': 'horizontally', 'dependenices': 'dependencies', 'literlas': 'literals',
+    'remaisn': 'remains', 'lokcing': 'locking', 'shraed': 'shared', 'boadr': 'board', 'remotley': 'remotely',
+    'perforemd': 'performed',
 }
 
 if __name__ == '__main__':

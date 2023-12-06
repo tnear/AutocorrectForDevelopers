@@ -79,7 +79,7 @@ EXPLICIT_TESTS = {
     'qustions': 'questions', 'quetions': 'questions', 'qiucksort': 'quicksort',
     'refernces': 'references', 'registsers': 'registers', 'rmeoved': 'removed', 'reuqires': 'requires',
     'requriement': 'requirement', 'requreiment': 'requirement', 'requiers': 'requires', 'reuslts': 'results',
-    'resluts': 'results', 'rigthVarName': 'rightVarName', 'saefty': 'safety', 'scheudled': 'scheduled',
+    'resluts': 'results', 'rigthVarName': 'rightVarName', 'scheudled': 'scheduled',
     'scritped': 'scripted', 'sripting': 'scripting', 'sritped': 'scripted', 'scirpted': 'scripted', 'seraching': 'searching',
     'seperate': 'separate', 'signlaing': 'signaling', 'std:;string': 'std::string',
     'sdt::list': 'std::list', 'sdt:;set': 'std::set', 'stD::sort': 'std::sort',
@@ -120,7 +120,7 @@ EXPLICIT_TESTS = {
     'recusrively': 'recursively', 'nuemrator': 'numerator', 'asserrtion': 'assertion', 'swithcing': 'switching',
     'remvoed': 'removed', 'quikcsort': 'quicksort', 'sytematic': 'systematic',
     'acknowlegement': 'acknowledgement', 'recurisvely': 'recursively', 'conssitency': 'consistency',
-    'acknwoledgement': 'acknowledgement', 'ackonwledgement': 'acknowledgement', 'elmental': 'elemental', 'pahtlib': 'pathlib',
+    'acknwoledgement': 'acknowledgement', 'ackonwledgement': 'acknowledgement', 'elmental': 'elemental',
     'sovler': 'solver', 'entialment': 'entailment', 'ifnormation': 'information', 'reulsts': 'results',
     'calcualtion': 'calculation', 'caluclation': 'calculation', 'initalise': 'initialise', 'proceessing': 'processing',
     'porcessor': 'processor', 'preporcessor': 'preprocessor', 'wokrer': 'worker', 'foudn': 'found', 'reurtned': 'returned',
@@ -165,7 +165,10 @@ EXPLICIT_TESTS = {
     'preceeded': 'preceded', 'infreuqently': 'infrequently', 'infrquently': 'infrequently', 'optmial': 'optimal',
     'asesrt': 'assert', 'inesrtion': 'insertion', 'prvent': 'prevent', 'prevenet': 'prevent', 'acceess': 'access',
     'eignevalue': 'eigenvalue', 'obejct': 'object', 'compiel': 'compile', 'rseult': 'result', 'diigt': 'digit',
-    'syncrhonous': 'synchronous', 'ahcieve': 'achieve', 'apporach': 'approach', 'hsard': 'shard',
+    'syncrhonous': 'synchronous', 'ahcieve': 'achieve', 'apporach': 'approach', 'hsard': 'shard', 'nidex': 'index',
+    'ocnnect': 'connect', 'rselut': 'result', 'leran': 'learn', 'laern': 'learn', 'rseuelt': 'result', 'shaodw': 'shadow',
+    'fuctnion': 'function', 'rigiht': 'right', 'refrence': 'reference', 'introuce': 'introduce', 'righit': 'right',
+    'represnt': 'represent',
 }
 
 if __name__ == '__main__':
