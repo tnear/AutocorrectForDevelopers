@@ -168,7 +168,10 @@ EXPLICIT_TESTS = {
     'syncrhonous': 'synchronous', 'ahcieve': 'achieve', 'apporach': 'approach', 'hsard': 'shard', 'nidex': 'index',
     'ocnnect': 'connect', 'rselut': 'result', 'leran': 'learn', 'laern': 'learn', 'rseuelt': 'result', 'shaodw': 'shadow',
     'fuctnion': 'function', 'rigiht': 'right', 'refrence': 'reference', 'introuce': 'introduce', 'righit': 'right',
-    'represnt': 'represent',
+    'represnt': 'represent', 'decrment': 'decrement', 'foramt': 'format', 'incrment': 'increment', 'rseulet': 'result',
+    'indistniguishable': 'indistinguishable', 'assesrt': 'assert', 'mtach': 'match', 'amtch': 'match',
+    'progrma': 'program', 'suceed': 'succeed', 'idemoptent': 'idempotent', 'acount': 'account', 'impelement': 'implement',
+    'reqiure': 'require', 'staet': 'state',
 }
 
 if __name__ == '__main__':

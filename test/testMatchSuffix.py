@@ -166,7 +166,9 @@ EXPLICIT_TESTS = {
     'actiavted': 'activated', 'actiavtes': 'activates', 'activaets': 'activates', 'inofrming': 'informing',
     'infomring': 'informing', 'horizonatlly': 'horizontally', 'dependenices': 'dependencies', 'literlas': 'literals',
     'remaisn': 'remains', 'lokcing': 'locking', 'shraed': 'shared', 'boadr': 'board', 'remotley': 'remotely',
-    'perforemd': 'performed',
+    'perforemd': 'performed', 'clokcs': 'clocks', 'smalelr': 'smaller', 'transofmr': 'transform',
+    'transofmred': 'transformed', 'transofmring': 'transforming', 'transofmrs': 'transforms', 'deliverey': 'delivery',
+    'tikcet': 'ticket', 'tikcets': 'tickets', 'traiend': 'trained', 'curretn': 'current', 'veriifed': 'verified',
 }
 
 if __name__ == '__main__':
