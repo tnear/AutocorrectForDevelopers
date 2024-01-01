@@ -18,11 +18,12 @@ class TestMatchExact(unittest.TestCase):
 
     def test_replace(self):
         hasEndChar = True
+        startIdx = 0
         for inputText in self.exactMatchList:
             # these rules are case insensitive, so test with a capital first letter
             inputText = inputText.capitalize()
 
-            newText, rule = Rule.getReplacementText(self.rules, inputText, hasEndChar)
+            newText, rule, startIdx = Rule.getReplacementText(self.rules, inputText, hasEndChar, startIdx)
             self.assertEqual(newText, rule.newText)
             self.assertFalse(rule.prefixMatch)
             self.assertFalse(rule.suffixMatch)
@@ -30,14 +31,15 @@ class TestMatchExact(unittest.TestCase):
 
         # without ending char, these should not be replaced
         hasEndChar = False
+        startIdx = 0
         for inputText in self.exactMatchList:
-            newText, rule = Rule.getReplacementText(self.rules, inputText, hasEndChar)
+            newText, rule, startIdx = Rule.getReplacementText(self.rules, inputText, hasEndChar, startIdx)
             self.assertEqual(newText, inputText)
             self.assertIsNone(rule)
 
     def test_explicit(self):
         for inputText, expectedText in EXPLICIT_TESTS.items():
-            newText, rule = Rule.getReplacementText(self.rules, inputText, True)
+            newText, rule, _ = Rule.getReplacementText(self.rules, inputText, True)
             self.assertEqual(inputText, rule.oldText)
             self.assertEqual(expectedText, rule.newText)
             self.assertEqual(expectedText, newText)

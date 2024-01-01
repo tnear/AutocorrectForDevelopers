@@ -6,11 +6,11 @@ All tests are written in Python. Testing is supported on all major platforms (al
 
 ## Running tests
 
-Navigate to the `test` directory and run `python -m unittest`:
+Navigate to the `test` directory then run `python -m unittest`:
 
 ```
 AutocorrectForDevelopers/test> python -m unittest
-....................................
+.......................................
 ----------------------------------------------------------------------
-Ran 36 tests in 3.962s
+Ran 39 tests in 2.472s
 ```

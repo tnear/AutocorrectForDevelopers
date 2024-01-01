@@ -7,12 +7,12 @@ class TestMatchNone(unittest.TestCase):
         self.rules = Rule.fileToRuleList('AutocorrectForDevelopers.ahk')
 
     def test_ruleLength(self):
-        self.assertGreater(len(self.rules), 3200)
-        self.assertGreater(len(MATCH_NONE_LIST), 50)
+        self.assertGreater(len(self.rules), 3400)
+        self.assertGreater(len(MATCH_NONE_LIST), 60)
 
     def test_replace(self):
         for inputText in MATCH_NONE_LIST:
-            newText, rule = Rule.getReplacementText(self.rules, inputText, True)
+            newText, rule, _ = Rule.getReplacementText(self.rules, inputText, True)
             self.assertEqual(newText, inputText)
             self.assertIsNone(rule)
 
@@ -25,7 +25,7 @@ MATCH_NONE_LIST = [
     'end', 'Pop+Back', 'CAES', 'MAEK_', 'Grammer', 'APGE', 'forsome', 'cant', 'ZEOR', 'AUOT', 'ONDE', 'SendInput',
     'exponentiation', 'ISZE', 'ILNE', 'Fales', 'complier', 'hwo', # ambiguous between 'who' and 'how'
     'from', 'form', 'Alvie', 'Horus', 'triangle', 'highlighting', 'sightings', 'braek', # break/brake
-    'fro',
+    'fro', 'Then',
 ]
 
 if __name__ == '__main__':

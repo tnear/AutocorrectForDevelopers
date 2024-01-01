@@ -19,23 +19,25 @@ class TestMatchWhitelist(unittest.TestCase):
 
     def test_replace(self):
         # whitelists rules are never autocorrected
+        startIdx = 0
         hasEndChar = True
         for inputText in self.whitelistList:
-            newText, rule = Rule.getReplacementText(self.rules, inputText, hasEndChar)
+            newText, rule, startIdx = Rule.getReplacementText(self.rules, inputText, hasEndChar, startIdx)
             self.assertEqual(newText, inputText)
             self.assertTrue(rule.backspace)
             self.assertFalse(rule.caseSensitive)
 
+        startIdx = 0
         hasEndChar = False
         for inputText in self.whitelistList:
-            newText, rule = Rule.getReplacementText(self.rules, inputText, hasEndChar)
+            newText, rule, startIdx = Rule.getReplacementText(self.rules, inputText, hasEndChar, startIdx)
             self.assertEqual(newText, inputText)
             self.assertTrue(rule.backspace)
             self.assertFalse(rule.caseSensitive)
 
     def test_whitelistExplicit(self):
         for inputText in WHITELIST:
-            newText, rule = Rule.getReplacementText(self.rules, inputText, True)
+            newText, rule, _ = Rule.getReplacementText(self.rules, inputText, True)
             # backspace rules preserve the original text
             self.assertEqual(newText, inputText)
             self.assertTrue(rule.backspace)

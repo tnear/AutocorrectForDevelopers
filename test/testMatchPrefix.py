@@ -11,26 +11,28 @@ class TestMatchPrefix(unittest.TestCase):
         self.prefixRuleList = [rule.oldText for rule in prefixRules]
 
     def test_ruleLength(self):
-        self.assertGreater(len(self.rules), 2300)
-        self.assertGreater(len(self.prefixRuleList), 340)
+        self.assertGreater(len(self.rules), 3500)
+        self.assertGreater(len(self.prefixRuleList), 430)
 
     def test_replace(self):
         # prefix rules (":*:") match regardless of end char
+        startIdx = 0
         hasEndChar = True
         for inputText in self.prefixRuleList:
-            newText, rule = Rule.getReplacementText(self.rules, inputText, hasEndChar)
+            newText, rule, startIdx = Rule.getReplacementText(self.rules, inputText, hasEndChar, startIdx)
             self.assertEqual(newText, rule.newText)
             self.assertTrue(rule.prefixMatch)
 
+        startIdx = 0
         hasEndChar = False
         for inputText in self.prefixRuleList:
-            newText, rule = Rule.getReplacementText(self.rules, inputText, hasEndChar)
+            newText, rule, startIdx = Rule.getReplacementText(self.rules, inputText, hasEndChar, startIdx)
             self.assertEqual(newText, rule.newText)
             self.assertTrue(rule.prefixMatch)
 
     def test_explicit(self):
         for inputText, expectedText in EXPLICIT_TESTS.items():
-            newText, rule = Rule.getReplacementText(self.rules, inputText, False)
+            newText, rule, _ = Rule.getReplacementText(self.rules, inputText, False)
             self.assertEqual(newText, expectedText)
             self.assertNotEqual(newText, inputText,
                 'These tests are meant to match beyond what is specified in the rule')
@@ -171,7 +173,10 @@ EXPLICIT_TESTS = {
     'represnt': 'represent', 'decrment': 'decrement', 'foramt': 'format', 'incrment': 'increment', 'rseulet': 'result',
     'indistniguishable': 'indistinguishable', 'assesrt': 'assert', 'mtach': 'match', 'amtch': 'match',
     'progrma': 'program', 'suceed': 'succeed', 'idemoptent': 'idempotent', 'acount': 'account', 'impelement': 'implement',
-    'reqiure': 'require', 'staet': 'state',
+    'reqiure': 'require', 'staet': 'state', 'reustl': 'result', 'alhpabet': 'alphabet', 'seuence': 'sequence',
+    'prdouct': 'product', 'reuire': 'require', 'privelege': 'privilege', 'priviledge': 'privilege', 'queyr': 'query',
+    'qeury': 'query', 'unsroted': 'unsorted', 'unosrted': 'unsorted', 'inerst': 'insert', 'sorrt': 'sort',
+    'unsorrt': 'unsort', 'ranges:;': 'ranges::', 'rangeS::': 'ranges::', 'ranges;:': 'ranges::',
 }
 
 if __name__ == '__main__':

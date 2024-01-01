@@ -24,21 +24,23 @@ class TestMatchPrefix(unittest.TestCase):
 
     def test_replace(self):
         hasEndChar = True
+        startIdx = 0
         for inputText in self.suffixRuleList:
             # suffix rules need a prefix which isn't whitelisted
             inputText = 'prefix' + inputText
 
-            newText, rule = Rule.getReplacementText(self.rules, inputText, hasEndChar)
+            newText, rule, startIdx = Rule.getReplacementText(self.rules, inputText, hasEndChar, startIdx)
             self.assertEqual(newText, rule.newText)
             self.assertTrue(rule.suffixMatch)
 
         # suffix rules are NOT autocorrected unless they have an end char
         hasEndChar = False
+        startIdx = 0
         for inputText in self.suffixRuleList:
             # suffix rules need a prefix which isn't whitelisted
             inputText = 'prefix' + inputText
 
-            newText, rule = Rule.getReplacementText(self.rules, inputText, hasEndChar)
+            newText, rule, startIdx = Rule.getReplacementText(self.rules, inputText, hasEndChar, startIdx)
             self.assertEqual(newText, inputText)
             self.assertIsNone(rule)
 
@@ -59,7 +61,7 @@ class TestMatchPrefix(unittest.TestCase):
 
     def test_explicit(self):
         for inputText, expectedText in EXPLICIT_TESTS.items():
-            _, rule = Rule.getReplacementText(self.rules, inputText, True)
+            _, rule, _ = Rule.getReplacementText(self.rules, inputText, True)
 
             # perform the string replacement
             newText = inputText.replace(rule.oldText, rule.newText)
@@ -79,12 +81,12 @@ class TestMatchPrefix(unittest.TestCase):
             self.assertGreater(len(testList), 0, f'The suffix "{suffix}" does not have an automated test')
 
     def test_noRedundantExactMatchRule(self):
-        # there is no need for a regular rule which is encompassed by a suffix rule
-        # ex: the rule 'exectues::executes' is unnecessary when there is the suffix rule ':?:tues::utes'
+        # there is no need for a regular rule which is already encompassed by a suffix rule.
+        # ex: the rule 'exectues::executes' is unnecessary with this suffix rule ':?:tues::utes'
         for oldText, newText in self.suffixRuleDict.items():
             for oldTextExact, newTextExact in self.exactMatchDict.items():
-                hasRedundantExactMatchRule = oldTextExact.endswith(oldText) and newTextExact.endswith(newText)
-                self.assertFalse(hasRedundantExactMatchRule,
+                hasRedundancy = oldTextExact.endswith(oldText) and newTextExact.endswith(newText)
+                self.assertFalse(hasRedundancy,
                                  f'Found redundant exact match rule: "{oldTextExact}" not needed due to "{oldText}"')
 
 # explicit tests for suffix words (usually as part of bug fixes)
@@ -169,6 +171,12 @@ EXPLICIT_TESTS = {
     'perforemd': 'performed', 'clokcs': 'clocks', 'smalelr': 'smaller', 'transofmr': 'transform',
     'transofmred': 'transformed', 'transofmring': 'transforming', 'transofmrs': 'transforms', 'deliverey': 'delivery',
     'tikcet': 'ticket', 'tikcets': 'tickets', 'traiend': 'trained', 'curretn': 'current', 'veriifed': 'verified',
+    'softawre': 'software', 'chaesr': 'chaser', 'chaesrs': 'chasers', 'mathcer': 'matcher', 'mathcers': 'matchers',
+    'lokcer': 'locker', 'lokcers': 'lockers', 'platofrmer': 'platformer', 'platfomrer': 'platformer',
+    'platofmrer': 'platformer', 'platofrmers': 'platformers', 'platfomrers': 'platformers', 'platofmrers': 'platformers',
+    'veriifer': 'verifier', 'veriifers': 'verifiers', 'randomiezr': 'randomizer', 'randomiezrs': 'randomizers',
+    'respodner': 'responder', 'respodners': 'responders', 'exproter': 'exporter', 'exproters': 'exporters',
+    'raech': 'reach', 'equaliesd': 'equalised', 'equaliesr': 'equaliser',
 }
 
 if __name__ == '__main__':

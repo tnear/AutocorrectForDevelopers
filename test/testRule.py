@@ -3,6 +3,9 @@ from Rule import Rule
 import string
 
 class TestRule(unittest.TestCase):
+    @classmethod
+    def setUpClass(self):
+        self.rules = Rule.fileToRuleList('AutocorrectForDevelopers.ahk')
 
     def test_file(self):
         lines = Rule.cleanFile('AutocorrectForDevelopers.ahk')
@@ -110,10 +113,8 @@ class TestRule(unittest.TestCase):
         self.assertTrue(lines[0].endswith('-()[]{}:;\'"/\\,.?!`n `t<>*'))
 
     def test_allRulesMustChangeText(self):
-        # prevents a rule where oldText equals newText (causes unnecessary flicker)
-        rules = Rule.fileToRuleList('AutocorrectForDevelopers.ahk')
-
-        for rule in rules:
+        # prevents a redundant rule where oldText equals newText (causes unnecessary flicker)
+        for rule in self.rules:
             self.assertNotEqual(rule.oldText, rule.newText, f'Failed for {rule.newText}')
             self.assertNotEqual(rule.oldText, '')
 
@@ -142,10 +143,8 @@ class TestRule(unittest.TestCase):
 
     def test_uniqueRules(self):
         # no rule lhs should appear more than once
-        rules = Rule.fileToRuleList('AutocorrectForDevelopers.ahk')
-
         # get all rules except whitelisted and suffixes because those can also appear in the main section
-        oldTextList = [rule.oldText for rule in rules if not rule.backspace and not rule.suffixMatch]
+        oldTextList = [rule.oldText for rule in self.rules if not rule.backspace and not rule.suffixMatch]
 
         # verify no duplicate LHS rules
         seen = set()
@@ -164,10 +163,8 @@ class TestRule(unittest.TestCase):
 
     def test_whitelistShortLetterRules(self):
         # short rules should be kept to a minimum because they often conflict with acronyms
-        rules = Rule.fileToRuleList('AutocorrectForDevelopers.ahk')
-
         # remove whitelist rule (zero-length replacement text)
-        replacementRules = [rule for rule in rules if not rule.backspace]
+        replacementRules = [rule for rule in self.rules if not rule.backspace]
 
         # get short rules (length < 3)
         shortLen = 3
@@ -183,7 +180,56 @@ class TestRule(unittest.TestCase):
         whitelist = ['and', 'ing', 'can', "i'd", 'the', 'was', 'for', 'you', 'int', 'has',
                      'end', "i'm", 'not', 'but', 'who', 'how', 'why']
         for rule in text:
-            assert rule in whitelist, f'Found short rule not in whitelist: "{rule}"'
+            self.assertIn(rule, whitelist, f'Found short rule not in whitelist: "{rule}"')
+
+    # prevent typos of form: '::isseu:::issue' where there is an extra colon
+    def test_noExtraColon(self):
+        colonRules = [rule for rule in self.rules if rule.oldText.startswith(':') or rule.newText.startswith(':')]
+        for colonRule in colonRules:
+            self.assertTrue(colonRule.oldText.startswith(':') and colonRule.newText.startswith(':'))
+
+    # ensures that rules are in sorted order. this isn't strictly necessary,
+    # but does allow for additional performance optimizations
+    def test_sortedRules(self):
+        # there are three alphabetized groupings of rules in the script
+        backspaceRules, nonSuffixRules, suffixRules = partitionRules(self.rules)
+        sortedBackspaceRules, sortedNonSuffixRules, sortedSuffixRules = sortRules(self.rules)
+
+        idx = findFirstDifference(backspaceRules, sortedBackspaceRules)
+        if idx != -1:
+            msg = f'Found unsorted rule: "{backspaceRules[idx].newText}" should be after "{sortedBackspaceRules[idx].newText}"'
+            self.assertTrue(False, msg)
+
+        idx = findFirstDifference(nonSuffixRules, sortedNonSuffixRules)
+        if idx != -1:
+            msg = f'Found unsorted rule: "{nonSuffixRules[idx].newText}" should be after "{sortedNonSuffixRules[idx].newText}"'
+            self.assertTrue(False, msg)
+
+        idx = findFirstDifference(suffixRules, sortedSuffixRules)
+        if idx != -1:
+            msg = f'Found unsorted rule: "{suffixRules[idx].newText}" should be after "{sortedSuffixRules[idx].newText}"'
+            self.assertTrue(False, msg)
+
+def partitionRules(rules: list):
+    # 1. backspace rules, 2. non-suffix rules, 3. suffix rules
+    backspaceRules = [rule for rule in rules if rule.backspace]
+    nonSuffixRules = [rule for rule in rules if not rule.backspace and not rule.suffixMatch]
+    suffixRules = [rule for rule in rules if rule.suffixMatch]
+    return backspaceRules, nonSuffixRules, suffixRules
+
+def sortRules(rules: list):
+    backspaceRules, nonSuffixRules, suffixRules = partitionRules(rules)
+    backspaceRules.sort(key = lambda rule: rule.newText.lower())
+    nonSuffixRules.sort(key = lambda rule: rule.newText.lower())
+    suffixRules.sort(key = lambda rule: rule.newText.lower())
+    return backspaceRules, nonSuffixRules, suffixRules
+
+def findFirstDifference(sortedList, unsortedList):
+    assert len(sortedList) == len(unsortedList)
+    for i in range(len(sortedList)):
+        if sortedList[i].newText != unsortedList[i].newText:
+            return i
+    return -1
 
 if __name__ == '__main__':
     unittest.main()

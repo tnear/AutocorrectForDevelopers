@@ -12,6 +12,7 @@ class Rule:
         self.prefixMatch = prefixMatch
 
         self.oldText = Rule.getOldText(line)
+        self.oldTextLower = self.oldText.lower() # lower() is slow to call in a loop, so do it once here
         self.newText = Rule.getNewText(line)
 
     # loads AHK file and returns list of Rules
@@ -164,14 +165,30 @@ class Rule:
 
     # iterates through rules trying to find a match
     @staticmethod
-    def getReplacementText(rules: list, inputText: str, hasEndChar: bool):
-        for rule in rules:
+    def getReplacementText(rules: list, inputText: str, hasEndChar: bool, startIdx = 0):
+        # startIdx is an optimization to allow the next test to start where the previous left off.
+        # it only works when the order of tests exactly matches what is in the .ahk file
+        # e.g., no unordered explicit tests
+
+        inputTextLower = inputText.lower() # lower() is slow to call in a loop, so do it once here
+        for idx in range(startIdx, len(rules)):
+            rule = rules[idx]
             if rule.caseSensitive:
                 lhs = rule.oldText
                 rhs = inputText
             else:
-                lhs = rule.oldText.lower()
-                rhs = inputText.lower()
+                lhs = rule.oldTextLower
+                rhs = inputTextLower
+
+            if lhs == rhs:
+                # exact match
+                if rule.backspace:
+                    # found whitelist match, return text unchanged
+                    return inputText, rule, idx
+
+                if hasEndChar:
+                    # found match
+                    return rule.newText, rule, idx
 
             if rule.prefixMatch:
                 # prefix rules, :*:, only need to start with text
@@ -179,26 +196,16 @@ class Rule:
                 # ex: :*:grahp should match "graphing"
                 if rhs.startswith(rule.oldText):
                     replacedText = Rule._replacePreserveCase(inputText, rule.oldText, rule.newText)
-                    return replacedText, rule
-
-            if lhs == rhs:
-                # exact matches
-                if rule.backspace:
-                    # found whitelist match, return text unchanged
-                    return inputText, rule
-
-                if hasEndChar:
-                    # found match
-                    return rule.newText, rule
+                    return replacedText, rule, idx
 
             if rule.suffixMatch:
                 # suffix matches
                 if hasEndChar and inputText.endswith(rule.oldText):
                     if rule.backspace:
                         # found whitelist match, return text unchanged
-                        return inputText, rule
+                        return inputText, rule, idx
 
-                    return rule.newText, rule
+                    return rule.newText, rule, idx
 
         # no match found, return input text
-        return inputText, None
+        return inputText, None, 0
