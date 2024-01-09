@@ -54,11 +54,11 @@ class TestMatchCaseSensitive(unittest.TestCase):
             self.assertTrue(rule.caseSensitive)
             self.assertTrue(rule.prefixMatch)
 
-    # verify that no rules have a forgotten case sensitive flag
+    # verify that no rules with capital letters have a forgotten case sensitive flag,
     # ex: '::THen::Then' should be case sensitive => ':C:THen::Then'
     def test_capitalizedRulesAreCaseSensitive(self):
-        capitalRules = [rule for rule in self.rules if rule.oldText[0].isupper()]
-        self.assertTrue(len(capitalRules) > 50)
+        capitalRules = [rule for rule in self.rules if rule.oldTextLower != rule.oldText]
+        self.assertTrue(len(capitalRules) > 64)
         for rule in capitalRules:
             self.assertTrue(rule.caseSensitive, f'The rule "{rule.oldText}" should be made case sensitive')
 

@@ -74,9 +74,6 @@ class TestMatchPrefix(unittest.TestCase):
         # every suffix test in ahk script should have an entry in EXPLICIT_TESTS
         testKeys = list(EXPLICIT_TESTS.keys())
         for suffix in self.suffixRuleList:
-            if suffix == '.cmo':
-                continue  # todo: lift limitation for prefix + suffix + case sensitive rules
-
             testList = [x for x in testKeys if x.endswith(suffix)]
             self.assertGreater(len(testList), 0, f'The suffix "{suffix}" does not have an automated test')
 
@@ -145,7 +142,7 @@ EXPLICIT_TESTS = {
     'previosu': 'previous', 'accoutn': 'account', 'accoutns': 'accounts', 'updaet': 'update', 'updaets': 'updates',
     'automaticalyl': 'automatically', 'successfulyl': 'successfully', 'optoinally': 'optionally',
     'direcotry': 'directory', 'noitfy': 'notify', 'defintiion': 'definition', 'condtiioning': 'conditioning',
-    'postiions': 'positions', 'poitner': 'pointer', 'poitners': 'pointers',
+    'postiions': 'positions',
     'automtaed': 'automated', 'packgaes': 'packages', 'abiliites': 'abilities', 'stroed': 'stored',
     'ownershpi': 'ownership', 'facotyr': 'factory', 'transfomr': 'transform', 'transfomrs': 'transforms',
     'duplicaet': 'duplicate', 'anyhwere': 'anywhere', 'TreeNOde': 'TreeNode', 'broadcsat': 'broadcast',
@@ -176,7 +173,10 @@ EXPLICIT_TESTS = {
     'platofmrer': 'platformer', 'platofrmers': 'platformers', 'platfomrers': 'platformers', 'platofmrers': 'platformers',
     'veriifer': 'verifier', 'veriifers': 'verifiers', 'randomiezr': 'randomizer', 'randomiezrs': 'randomizers',
     'respodner': 'responder', 'respodners': 'responders', 'exproter': 'exporter', 'exproters': 'exporters',
-    'raech': 'reach', 'equaliesd': 'equalised', 'equaliesr': 'equaliser',
+    'raech': 'reach', 'equaliesd': 'equalised', 'equaliesr': 'equaliser', 'speciified': 'specified',
+    'speciifier': 'specifier', 'speciifiers': 'specifiers', 'speciifies': 'specifies', 'travleing': 'traveling',
+    'compraes': 'compares', 'visualzie': 'visualize', 'representaitno': 'representation',
+    'representaitnos': 'representations', 'direcitnoal': 'directional',
 }
 
 if __name__ == '__main__':

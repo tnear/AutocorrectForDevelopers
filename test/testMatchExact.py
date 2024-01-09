@@ -13,8 +13,8 @@ class TestMatchExact(unittest.TestCase):
         self.exactMatchList = [rule.oldText for rule in self.exactMatchRules]
 
     def test_ruleLength(self):
-        self.assertGreater(len(self.rules), 2900)
-        self.assertGreater(len(self.exactMatchList), 1900)
+        self.assertGreater(len(self.rules), 3600)
+        self.assertGreater(len(self.exactMatchList), 2300)
 
     def test_replace(self):
         hasEndChar = True
@@ -65,6 +65,10 @@ class TestMatchExact(unittest.TestCase):
 
         # sort by values (most common suffixes)
         sortedSuffixes = sorted(suffixes.items(), key=lambda item: item[1], reverse=True)
+
+        # ignore these whitelisted suffixes
+        whitelist = ['tner', 'ners']
+        sortedSuffixes = [x for x in sortedSuffixes if x[0] not in whitelist]
 
         # ensure the most common suffix is below some threshold. If this asserts, then
         # there is likely a missing suffix rule

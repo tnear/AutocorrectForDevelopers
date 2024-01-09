@@ -43,9 +43,6 @@ class TestMatchPrefix(unittest.TestCase):
         # every prefix test in ahk script should have an entry in EXPLICIT_TESTS
         testKeys = list(EXPLICIT_TESTS.keys())
         for prefix in self.prefixRuleList:
-            if prefix == '.cmo':
-                continue # todo: lift limitation for prefix + suffix + case sensitive rules
-
             testList = [x for x in testKeys if x.startswith(prefix)]
             self.assertGreater(len(testList), 0, f'The prefix "{prefix}" does not have an automated test')
 
@@ -176,7 +173,9 @@ EXPLICIT_TESTS = {
     'reqiure': 'require', 'staet': 'state', 'reustl': 'result', 'alhpabet': 'alphabet', 'seuence': 'sequence',
     'prdouct': 'product', 'reuire': 'require', 'privelege': 'privilege', 'priviledge': 'privilege', 'queyr': 'query',
     'qeury': 'query', 'unsroted': 'unsorted', 'unosrted': 'unsorted', 'inerst': 'insert', 'sorrt': 'sort',
-    'unsorrt': 'unsort', 'ranges:;': 'ranges::', 'rangeS::': 'ranges::', 'ranges;:': 'ranges::',
+    'unsorrt': 'unsort', 'ranges:;': 'ranges::', 'rangeS::': 'ranges::', 'ranges;:': 'ranges::', 'reeturn': 'return',
+    'otekn': 'token', 'clalback': 'callback', 'seocnd': 'second', 'secodn': 'second', 'preprae': 'prepare',
+    'dierct': 'direct', 'establihs': 'establish', 'estalbish': 'establish', 'reoslve': 'resolve', 'optizmie': 'optimize',
 }
 
 if __name__ == '__main__':

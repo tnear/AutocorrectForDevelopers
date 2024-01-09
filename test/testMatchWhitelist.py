@@ -14,8 +14,8 @@ class TestMatchWhitelist(unittest.TestCase):
 
     def test_ruleLength(self):
         # assert that many tests are being run
-        self.assertGreater(len(self.rules), 2100)
-        self.assertGreater(len(self.whitelistList), 240)
+        self.assertGreater(len(self.rules), 3600)
+        self.assertGreater(len(self.whitelistList), 350)
 
     def test_replace(self):
         # whitelists rules are never autocorrected
@@ -45,8 +45,8 @@ class TestMatchWhitelist(unittest.TestCase):
 # explicit tests for whitelisted words (usually as part of bug fixes)
 WHITELIST = [
     'systemdesign', 'keyforeign', 'beign', 'itme',
-    'assign', 'assigns', 'redesigns', 'misalign', 'misaligns', 'foreigns', 'pairpartner',
-    'pairpartners', 'variableassign',
+    'assign', 'assigns', 'redesigns', 'misalign', 'misaligns', 'foreigns', 'variableassign',
+    'gardner', 'gardners',
 ]
 
 if __name__ == '__main__':
