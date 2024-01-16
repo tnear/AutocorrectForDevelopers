@@ -176,6 +176,8 @@ EXPLICIT_TESTS = {
     'unsorrt': 'unsort', 'ranges:;': 'ranges::', 'rangeS::': 'ranges::', 'ranges;:': 'ranges::', 'reeturn': 'return',
     'otekn': 'token', 'clalback': 'callback', 'seocnd': 'second', 'secodn': 'second', 'preprae': 'prepare',
     'dierct': 'direct', 'establihs': 'establish', 'estalbish': 'establish', 'reoslve': 'resolve', 'optizmie': 'optimize',
+    'frueqen': 'frequen', 'inejct': 'inject', 'reuiqre': 'require', 'suport': 'support', 'assocate': 'associate',
+    'brak;': 'break;', 'confilct': 'conflict',
 }
 
 if __name__ == '__main__':

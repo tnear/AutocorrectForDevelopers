@@ -176,7 +176,9 @@ EXPLICIT_TESTS = {
     'raech': 'reach', 'equaliesd': 'equalised', 'equaliesr': 'equaliser', 'speciified': 'specified',
     'speciifier': 'specifier', 'speciifiers': 'specifiers', 'speciifies': 'specifies', 'travleing': 'traveling',
     'compraes': 'compares', 'visualzie': 'visualize', 'representaitno': 'representation',
-    'representaitnos': 'representations', 'direcitnoal': 'directional',
+    'representaitnos': 'representations', 'direcitnoal': 'directional', 'distnace': 'distance', 'distnaced': 'distanced',
+    'distnaces': 'distances', 'optimzier': 'optimizer', 'functinoal': 'functional', 'opitonally': 'optionally',
+    'opitnoally': 'optionally', 'optinoally': 'optionally', 'tempalte': 'template', 'tempaltes': 'templates',
 }
 
 if __name__ == '__main__':
