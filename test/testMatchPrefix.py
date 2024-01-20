@@ -177,7 +177,9 @@ EXPLICIT_TESTS = {
     'otekn': 'token', 'clalback': 'callback', 'seocnd': 'second', 'secodn': 'second', 'preprae': 'prepare',
     'dierct': 'direct', 'establihs': 'establish', 'estalbish': 'establish', 'reoslve': 'resolve', 'optizmie': 'optimize',
     'frueqen': 'frequen', 'inejct': 'inject', 'reuiqre': 'require', 'suport': 'support', 'assocate': 'associate',
-    'brak;': 'break;', 'confilct': 'conflict',
+    'brak;': 'break;', 'confilct': 'conflict', 'speciifc': 'specific', 'genearte': 'generate', 'releation': 'relation',
+    'reuest': 'request', 'profiel': 'profile', 'qeustion': 'question', 'bleong': 'belong', 'rnaodm': 'random', 'lerna': 'learn',
+    'restul': 'result', 'belogn': 'belong', 'equla': 'equal', 'apir<': 'pair<', 'addvance': 'advance',
 }
 
 if __name__ == '__main__':

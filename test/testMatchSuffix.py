@@ -152,7 +152,7 @@ EXPLICIT_TESTS = {
     'combinaions': 'combinations', 'catpion': 'caption', 'catpions': 'captions', 'initilaized': 'initialized',
     'initilaizes': 'initializes', 'csats': 'casts', 'duplicaets': 'duplicates', 'weigths': 'weights',
     'accoutned': 'accounted', 'exproted': 'exported', 'imprvoed': 'improved', 'captuerd': 'captured',
-    'transopse': 'transpose', 'statitsic': 'statistic', 'statitsics': 'statistics', 'speciifc': 'specific',
+    'transopse': 'transpose', 'statitsic': 'statistic', 'statitsics': 'statistics', 'scientiifc': 'scientific',
     'materila': 'material', 'GraphNdoe': 'GraphNode', 'conidtion': 'condition', 'launhicng': 'launching',
     'veriifes': 'verifies', 'visiilbity': 'visibility', 'emulatro': 'emulator', 'emulatros': 'emulators',
     'gradeint': 'gradient', 'gradeints': 'gradients', 'averaegd': 'averaged', 'captrued': 'captured',
@@ -164,7 +164,7 @@ EXPLICIT_TESTS = {
     'ofrmed': 'formed', 'fomred': 'formed', 'estiamted': 'estimated', 'generla': 'general', 'priavte': 'private',
     'actiavted': 'activated', 'actiavtes': 'activates', 'activaets': 'activates', 'inofrming': 'informing',
     'infomring': 'informing', 'horizonatlly': 'horizontally', 'dependenices': 'dependencies', 'literlas': 'literals',
-    'remaisn': 'remains', 'lokcing': 'locking', 'shraed': 'shared', 'boadr': 'board', 'remotley': 'remotely',
+    'remaisn': 'remains', 'lokcing': 'locking', 'boadr': 'board', 'remotley': 'remotely',
     'perforemd': 'performed', 'clokcs': 'clocks', 'smalelr': 'smaller', 'transofmr': 'transform',
     'transofmred': 'transformed', 'transofmring': 'transforming', 'transofmrs': 'transforms', 'deliverey': 'delivery',
     'tikcet': 'ticket', 'tikcets': 'tickets', 'traiend': 'trained', 'curretn': 'current', 'veriifed': 'verified',
@@ -179,6 +179,11 @@ EXPLICIT_TESTS = {
     'representaitnos': 'representations', 'direcitnoal': 'directional', 'distnace': 'distance', 'distnaced': 'distanced',
     'distnaces': 'distances', 'optimzier': 'optimizer', 'functinoal': 'functional', 'opitonally': 'optionally',
     'opitnoally': 'optionally', 'optinoally': 'optionally', 'tempalte': 'template', 'tempaltes': 'templates',
+    'pointesr': 'pointers', 'objectvies': 'objectives', 'sequentialy': 'sequentially', 'whitepsace': 'whitespace',
+    'namepsaces': 'namespaces', 'simultaenously': 'simultaneously', 'natiely': 'natively', 'ntaively': 'natively',
+    'simultanoeusly': 'simultaneously', 'urgetnly': 'urgently', 'effiicently': 'efficiently', 'optioanlly': 'optionally',
+    'postiively': 'positively', 'differetnly': 'differently', 'recursviely': 'recursively', 'constnatly': 'constantly',
+    'constatnly': 'constantly', 'actviely': 'actively', 'memberhsip': 'membership', 'memberhsips': 'memberships',
 }
 
 if __name__ == '__main__':
