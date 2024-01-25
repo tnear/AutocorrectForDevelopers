@@ -184,6 +184,9 @@ EXPLICIT_TESTS = {
     'simultanoeusly': 'simultaneously', 'urgetnly': 'urgently', 'effiicently': 'efficiently', 'optioanlly': 'optionally',
     'postiively': 'positively', 'differetnly': 'differently', 'recursviely': 'recursively', 'constnatly': 'constantly',
     'constatnly': 'constantly', 'actviely': 'actively', 'memberhsip': 'membership', 'memberhsips': 'memberships',
+    'negaitvely': 'negatively', 'memberhspi': 'membership', 'memberhspis': 'memberships', 'incremeent': 'increment',
+    'visualiez': 'visualize', 'visualzied': 'visualized', 'visualzier': 'visualizer', 'dispalyed': 'displayed',
+    'conidtional': 'conditional', 'picutre': 'picture', 'picutred': 'pictured', 'picutres': 'pictures',
 }
 
 if __name__ == '__main__':
