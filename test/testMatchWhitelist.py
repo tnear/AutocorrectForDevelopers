@@ -9,13 +9,13 @@ class TestMatchWhitelist(unittest.TestCase):
         self.rules = Rule.fileToRuleList('AutocorrectForDevelopers.ahk')
 
         # get whitelist rules
-        whitelistRules = [rule for rule in self.rules if rule.backspace]
+        whitelistRules = [rule for rule in self.rules if rule.backspace and not rule.containsBackspacing]
         self.whitelistList = [text.oldText for text in whitelistRules]
 
     def test_ruleLength(self):
         # assert that many tests are being run
-        self.assertGreater(len(self.rules), 3600)
-        self.assertGreater(len(self.whitelistList), 350)
+        self.assertGreater(len(self.rules), 3900)
+        self.assertGreater(len(self.whitelistList), 400)
 
     def test_replace(self):
         # whitelists rules are never autocorrected
@@ -46,7 +46,7 @@ class TestMatchWhitelist(unittest.TestCase):
 WHITELIST = [
     'systemdesign', 'keyforeign', 'beign', 'itme',
     'assign', 'assigns', 'redesigns', 'misalign', 'misaligns', 'foreigns', 'variableassign',
-    'gardner', 'gardners',
+    'gardner', 'gardners', 'cupertino',
 ]
 
 if __name__ == '__main__':

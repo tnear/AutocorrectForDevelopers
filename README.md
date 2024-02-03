@@ -25,11 +25,9 @@ Shown below is a Venn diagram comparing *AutocorrectForDevelopers.ahk* with the 
 
 ![Venn diagram](assets/VennDiagram.png)
 
-*AutocorrectForDevelopers.ahk* is shown in purple on the right. It contains many common software engineering terms which are absent from *AutoCorrect.ahk*. Because *AutocorrectForDevelopers.ahk* is developer-centric, it will automatically fix a higher percentage of your typos. Also, it is drawn as a smaller circle because it contains fewer rules than *AutoCorrect.ahk*.
+*AutocorrectForDevelopers.ahk* contains many common software engineering terms which are absent from *AutoCorrect.ahk*. Because *AutocorrectForDevelopers.ahk* is developer-centric, it will fix a higher percentage of your typos. Also, it is drawn as a smaller circle because it contains fewer rules than *AutoCorrect.ahk*.
 
-*AutoCorrect.ahk* is shown on the left. It contains many rules for rare words which software developers are unlikely to need. It also introduces many accented characters which are correct but developer unfriendly. Lastly, the official script hasn't seen much active development in the last 15 years and therefore supports AHK v1-only.
-
-*AutocorrectForDevelopers.ahk* aims to fill the autocorrect gap for developers by including many software development typos which the esteemed *AutoCorrect.ahk* is missing.
+*AutoCorrect.ahk*, shown on the left, contains many rules for rare words which software engineers are unlikely to need. It also introduces many accented characters which are correct but developer unfriendly. Lastly, the official script hasn't seen much active development in the last 15 years and therefore supports AHK v1-only.
 
 ## Common developer typos added for...
 - Languages: AutoHotkey, C, C++, C#, COBOL, CSS, FORTRAN, Go, Java, JavaScript, Julia, Kotlin, MATLAB, Perl, PHP, Python, R, Ruby, Rust, Scala, SQL, Swift, Visual Basic

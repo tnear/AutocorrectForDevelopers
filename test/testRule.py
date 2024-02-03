@@ -39,21 +39,21 @@ class TestRule(unittest.TestCase):
         self.assertEqual(oldText, 'std:;')
 
     def test_getNewText(self):
-        newText = Rule.getNewText('::abc::def')
+        newText, _ = Rule.getNewText('::abc::def')
         self.assertEqual(newText, 'def')
 
-        newText = Rule.getNewText(':b0:ABC::')
+        newText, _ = Rule.getNewText(':b0:ABC::')
         self.assertEqual(newText, '')
 
-        newText = Rule.getNewText(':C*:yz::123')
+        newText, _ = Rule.getNewText(':C*:yz::123')
         self.assertEqual(newText, '123')
 
         # should remove escape char, `
-        newText = Rule.getNewText(':C*:std:`;::std`:`:')
+        newText, _ = Rule.getNewText(':C*:std:`;::std`:`:')
         self.assertEqual(newText, 'std::')
 
         # should delimit on first unescaped '::'
-        newText = Rule.getNewText(':C*:sdt`:`:::std`:`:')
+        newText, _ = Rule.getNewText(':C*:sdt`:`:::std`:`:')
         self.assertEqual(newText, 'std::')
 
     def test_lineToRule(self):
@@ -160,6 +160,15 @@ class TestRule(unittest.TestCase):
         # {} should be removed from RHS
         rule = Rule.lineToRule(':C:#Pragma::{#}pragma')
         self.assertEqual(rule.newText, '#pragma')
+
+    def test_trailingSpace(self):
+        rule = Rule.lineToRule(':*:retur n::return `')
+        self.assertEqual(rule.newText, 'return ')
+
+    def test_backspacing(self):
+        rule = Rule.lineToRule(':*b0:{`n`n]::{bs 1}{}}')
+        self.assertEqual(rule.newText, '{`n`n}')
+        self.assertTrue(rule.containsBackspacing)
 
     def test_whitelistShortLetterRules(self):
         # short rules should be kept to a minimum because they often conflict with acronyms

@@ -181,7 +181,11 @@ EXPLICIT_TESTS = {
     'reuest': 'request', 'profiel': 'profile', 'qeustion': 'question', 'bleong': 'belong', 'rnaodm': 'random', 'lerna': 'learn',
     'restul': 'result', 'belogn': 'belong', 'equla': 'equal', 'apir<': 'pair<', 'addvance': 'advance', 'follwo': 'follow',
     'altenrate': 'alternate', 'invovle': 'involve', 'resovle': 'resolve', 'reaosn': 'reason', 'fasel;': 'false;',
-    'relaitve': 'relative', 'replya': 'replay', 'retuern': 'return', 'reomve': 'remove', 'rmoeve': 'remove',
+    'relaitve': 'relative', 'replya': 'replay', 'retuern': 'return', 'reomve': 'remove', 'rmoeve': 'remove', 'fo r(': 'for (',
+    'expalin': 'explain', 'distirbute': 'distribute', 'contian': 'contain', 'contina': 'contain', 'ocntain': 'contain',
+    'porblem': 'problem', 'whitelsit': 'whitelist', 'permtue': 'permute', 'pemrute': 'permute',  '{`n`n]': '{`n`n}',
+    'configrue': 'configure', 'aproach': 'approach', 'rpelica': 'replica', 'rewtach': 'rewatch', 'brnahc': 'branch',
+    'reigster': 'register',
 }
 
 if __name__ == '__main__':

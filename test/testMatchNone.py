@@ -20,7 +20,7 @@ class TestMatchNone(unittest.TestCase):
 MATCH_NONE_LIST = [
     'valid', 'firmwaer', 'FRO', 'ITN', 'INOT', 'LINUX', 'NTO', 'SIE_T', 'SIZET', 'SIZE_T', 'SIZE-T',
     'WSA', 'YUO', 'JAVAScritp', 'std::', 'MKAE_', 'AMKE_', 'PyThOn', 'overidealize',
-    'overidentify', 'ADN', 'NAD', 'HTE', 'TEH', 'CNA', 'HSA', 'hwo', 'quantitiy', # incorrectly converted to 'quantiity'
+    'overidentify', 'ADN', 'NAD', 'HTE', 'TEH', 'CNA', 'HSA', 'quantitiy', # incorrectly converted to 'quantiity'
     'OFR', 'Push+Back', 'STD:;', 'SDT::', 'SDT:;', 'STD;:', 'code', 'doesnt', # interferes with "doesnt'"
     'end', 'Pop+Back', 'CAES', 'MAEK_', 'Grammer', 'APGE', 'forsome', 'cant', 'ZEOR', 'AUOT', 'ONDE', 'SendInput',
     'exponentiation', 'ISZE', 'ILNE', 'Fales', 'complier', 'hwo', # ambiguous between 'who' and 'how'

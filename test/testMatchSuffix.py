@@ -134,7 +134,7 @@ EXPLICIT_TESTS = {
     'tesitng': 'testing', 'funciton': 'function', 'functino': 'function', 'functoin': 'function',
     'funciotn': 'function', 'funcitons': 'functions', 'functinos': 'functions', 'functoins': 'functions',
     'funciotns': 'functions', 'functiosn': 'functions', 'funcitonal': 'functional', 'actvie': 'active',
-    'featuer': 'feature', 'featuers': 'features', 'fautls': 'faults', 'permtued': 'permuted',
+    'featuer': 'feature', 'featuers': 'features', 'fautls': 'faults', 'exectued': 'executed',
     'rotues': 'routes', 'exectuion': 'execution', 'exectuions': 'executions', 'discoveyr': 'discovery',
     'activtiy': 'activity', 'softwrae': 'software', 'frameowrk': 'framework', 'framewokr': 'framework',
     'frameowrks': 'frameworks', 'framewokrs': 'frameworks', 'totalign': 'totaling',
@@ -187,6 +187,8 @@ EXPLICIT_TESTS = {
     'negaitvely': 'negatively', 'memberhspi': 'membership', 'memberhspis': 'memberships', 'incremeent': 'increment',
     'visualiez': 'visualize', 'visualzied': 'visualized', 'visualzier': 'visualizer', 'dispalyed': 'displayed',
     'conidtional': 'conditional', 'picutre': 'picture', 'picutred': 'pictured', 'picutres': 'pictures',
+    'exaclty': 'exactly', 'contaienr': 'container', 'contaienrs': 'containers', 'securitiy': 'security',
+    'heihgt': 'height', 'heihgts': 'heights', 'exectuing': 'executing',
 }
 
 if __name__ == '__main__':

@@ -77,7 +77,8 @@ class TestMatchExact(unittest.TestCase):
 # Explicitly test these pairs. Although every rule is iterated over automatically,
 # this section is useful for bug fixes to ensure the behavior does not regress.
 EXPLICIT_TESTS = {
-    'apges': 'pages', 'somehting': 'something', 'thraed': 'thread', 'declraed': 'declared',
+    'apges': 'pages', 'somehting': 'something', 'thraed': 'thread', 'declraed': 'declared', 'piotn': 'point',
+    'piotns': 'points', 'breakpiotn': 'breakpoint',
 }
 
 if __name__ == '__main__':
