@@ -188,7 +188,10 @@ EXPLICIT_TESTS = {
     'visualiez': 'visualize', 'visualzied': 'visualized', 'visualzier': 'visualizer', 'dispalyed': 'displayed',
     'conidtional': 'conditional', 'picutre': 'picture', 'picutred': 'pictured', 'picutres': 'pictures',
     'exaclty': 'exactly', 'contaienr': 'container', 'contaienrs': 'containers', 'securitiy': 'security',
-    'heihgt': 'height', 'heihgts': 'heights', 'exectuing': 'executing',
+    'heihgt': 'height', 'heihgts': 'heights', 'exectuing': 'executing', 'utilitiy': 'utility', 'utiltiies': 'utilities',
+    'securiyt': 'security', 'servesr': 'servers', 'funcotins': 'functions', 'laoding': 'loading',
+    'adidtionally': 'additionally', 'indetn': 'indent', 'indenets': 'indents', 'indnets': 'indents',
+    'indetns': 'indents',
 }
 
 if __name__ == '__main__':

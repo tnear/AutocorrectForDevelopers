@@ -185,7 +185,8 @@ EXPLICIT_TESTS = {
     'expalin': 'explain', 'distirbute': 'distribute', 'contian': 'contain', 'contina': 'contain', 'ocntain': 'contain',
     'porblem': 'problem', 'whitelsit': 'whitelist', 'permtue': 'permute', 'pemrute': 'permute',  '{`n`n]': '{`n`n}',
     'configrue': 'configure', 'aproach': 'approach', 'rpelica': 'replica', 'rewtach': 'rewatch', 'brnahc': 'branch',
-    'reigster': 'register',
+    'reigster': 'register', 'geneate': 'generate', 'lisetn': 'listen', 'repilca': 'replica', 'excepet': 'except',
+    'cralw': 'crawl', 'carwl': 'crawl', 'awtch': 'watch', 'differnt': 'different', 'repaly': 'replay',
 }
 
 if __name__ == '__main__':

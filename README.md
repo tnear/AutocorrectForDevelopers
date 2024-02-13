@@ -21,7 +21,7 @@ Absolutely! (although v2 is preferred). AHK v1 is deprecated by the AHK developm
 ### How does *AutocorrectForDevelopers.ahk* compare to AutoHotkey's official *AutoCorrect.ahk* script?
 [Here](https://www.autohotkey.com/download/AutoCorrect.ahk) is AutoHotkey's official autocomplete script. It is based in Wikipedia's [common misspellings](https://en.wikipedia.org/wiki/Wikipedia:Lists_of_common_misspellings/For_machines) list which dates back to [2005](https://en.wikipedia.org/w/index.php?title=Wikipedia:Lists_of_common_misspellings/For_machines&oldid=11834258). Jim Biancolo [ported](https://www.biancolo.com/blog/autocorrect/) Wikipedia's list to an AutoHotkey script in 2006 and it has been officially hosted by AutoHotkey.com since 2007. The original script is widely influential and has been used successfully by many people for years.
 
-Shown below is a Venn diagram comparing *AutocorrectForDevelopers.ahk* with the official *AutoCorrect.ahk*:
+Shown below is a Venn diagram comparing excerpts from the official *AutoCorrect.ahk* with *AutocorrectForDevelopers.ahk*:
 
 ![Venn diagram](assets/VennDiagram.png)
 
