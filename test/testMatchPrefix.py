@@ -187,6 +187,13 @@ EXPLICIT_TESTS = {
     'configrue': 'configure', 'aproach': 'approach', 'rpelica': 'replica', 'rewtach': 'rewatch', 'brnahc': 'branch',
     'reigster': 'register', 'geneate': 'generate', 'lisetn': 'listen', 'repilca': 'replica', 'excepet': 'except',
     'cralw': 'crawl', 'carwl': 'crawl', 'awtch': 'watch', 'differnt': 'different', 'repaly': 'replay',
+    'rectnagle': 'rectangle', 'recntagle': 'rectangle', 'rectangel': 'rectangle', 'quatnity': 'quantity',
+    'donwload': 'download', 'downloda': 'download', 'uploda': 'upload', 'overlfow': 'overflow', 'blaance': 'balance',
+    'execucte': 'execute', 'explian': 'explain', 'resaerch': 'research', 'reserach': 'research', 'resarch': 'research',
+    'compelte': 'complete', 'euqla': 'equal', 'accumualte': 'accumulate', 'extrapoalte': 'extrapolate', 'formualte': 'formulate',
+    'popualte': 'populate', 'regualte': 'regulate', 'simualte': 'simulate', 'transalte': 'translate',
+    'concatneate': 'concatenate', 'condtion': 'condition', 'donwlaod': 'download', 'iwndow': 'window', 'yuor': 'your',
+    'autocompelte': 'autocomplete',
 }
 
 if __name__ == '__main__':

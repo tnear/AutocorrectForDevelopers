@@ -6,7 +6,7 @@ Corrections happen automatically as you type:
 
 ![Autocorrect](assets/cpp.gif)
 
-*AutocorrectForDevelopers.ahk* runs on all applications (except Microsoft Word), although the script can be customized to enable or disable any application of your choice (see the `#HotIf/#If` statement early in the script).
+*AutocorrectForDevelopers.ahk* runs on all applications (except Microsoft Word), although the script can be customized to enable or disable any application (see the `#HotIf/#If` statement early in the script).
 
 ## Installation
 Download [AutoHotkey](https://www.autohotkey.com/) v2, then run [*AutocorrectForDevelopers.ahk*](AutocorrectForDevelopers.ahk).

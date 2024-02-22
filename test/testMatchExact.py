@@ -1,4 +1,5 @@
 import unittest
+import collections
 from Rule import Rule
 
 # ex: "::abc::def"
@@ -46,7 +47,7 @@ class TestMatchExact(unittest.TestCase):
 
     # tool to find most common suffixes which get autocorrected
     def test_mostCommonSuffixes(self):
-        suffixes = {}
+        suffixes = collections.defaultdict(int)
         suffixLen = 4
         for rule in self.exactMatchRules:
             if len(rule.oldText) < suffixLen or len(rule.newText) < suffixLen:
@@ -59,20 +60,19 @@ class TestMatchExact(unittest.TestCase):
             # check if the rule changes the suffix
             if oldSuffix != newSuffix:
                 # if so, increment its count
-                if oldSuffix not in suffixes:
-                    suffixes[oldSuffix] = 0
                 suffixes[oldSuffix] += 1
 
         # sort by values (most common suffixes)
         sortedSuffixes = sorted(suffixes.items(), key=lambda item: item[1], reverse=True)
 
         # ignore these whitelisted suffixes
-        whitelist = ['tner', 'ners', 'raed']
+        whitelist = ['tner', 'ners', 'raed', 'alte', 'ltes', 'dnet', 'nets']
         sortedSuffixes = [x for x in sortedSuffixes if x[0] not in whitelist]
 
         # ensure the most common suffix is below some threshold. If this asserts, then
         # there is likely a missing suffix rule
-        assert sortedSuffixes[0][1] <= 8, f'Check if suffix "{sortedSuffixes[0][0]}" needs a suffix rule'
+        MAX_CAPACITY = 8
+        assert sortedSuffixes[0][1] <= MAX_CAPACITY, f'Check if suffix "{sortedSuffixes[0][0]}" needs a suffix rule'
 
 # Explicitly test these pairs. Although every rule is iterated over automatically,
 # this section is useful for bug fixes to ensure the behavior does not regress.

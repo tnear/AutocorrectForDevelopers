@@ -98,7 +98,7 @@ EXPLICIT_TESTS = {
     'loctaing': 'locating', 'notificaction': 'notification',
     'notificaion': 'notification', 'notificactions': 'notifications', 'notificaions': 'notifications',
     'cahcing': 'caching', 'capactiy': 'capacity',
-    'capaciyt': 'capacity', 'dependenet': 'dependent', 'dependnet': 'dependent', 'finidng': 'finding',
+    'capaciyt': 'capacity', 'dependenet': 'dependent', 'finidng': 'finding',
     'markdonw': 'markdown', 'markodwn': 'markdown', 'adjacnecy': 'adjacency', 'adjacenyc': 'adjacency',
     'simultanoeus': 'simultaneous', 'platofrm': 'platform', 'platofrms': 'platforms',
     'cryptogarphy': 'cryptography', 'cryptograhpy': 'cryptography', 'varinat': 'variant', 'initaite': 'initiate',
@@ -178,7 +178,7 @@ EXPLICIT_TESTS = {
     'compraes': 'compares', 'visualzie': 'visualize', 'representaitno': 'representation',
     'representaitnos': 'representations', 'direcitnoal': 'directional', 'distnace': 'distance', 'distnaced': 'distanced',
     'distnaces': 'distances', 'optimzier': 'optimizer', 'functinoal': 'functional', 'opitonally': 'optionally',
-    'opitnoally': 'optionally', 'optinoally': 'optionally', 'tempalte': 'template', 'tempaltes': 'templates',
+    'opitnoally': 'optionally', 'optinoally': 'optionally',
     'pointesr': 'pointers', 'objectvies': 'objectives', 'sequentialy': 'sequentially', 'whitepsace': 'whitespace',
     'namepsaces': 'namespaces', 'simultaenously': 'simultaneously', 'natiely': 'natively', 'ntaively': 'natively',
     'simultanoeusly': 'simultaneously', 'urgetnly': 'urgently', 'effiicently': 'efficiently', 'optioanlly': 'optionally',
@@ -190,8 +190,9 @@ EXPLICIT_TESTS = {
     'exaclty': 'exactly', 'contaienr': 'container', 'contaienrs': 'containers', 'securitiy': 'security',
     'heihgt': 'height', 'heihgts': 'heights', 'exectuing': 'executing', 'utilitiy': 'utility', 'utiltiies': 'utilities',
     'securiyt': 'security', 'servesr': 'servers', 'funcotins': 'functions', 'laoding': 'loading',
-    'adidtionally': 'additionally', 'indetn': 'indent', 'indenets': 'indents', 'indnets': 'indents',
-    'indetns': 'indents',
+    'adidtionally': 'additionally', 'indetn': 'indent', 'indenets': 'indents',
+    'indetns': 'indents', 'quickosrt': 'quicksort', 'recommendadtion': 'recommendation', 'netowrking': 'networking',
+    'netwokring': 'networking', 'varaible': 'variable',
 }
 
 if __name__ == '__main__':

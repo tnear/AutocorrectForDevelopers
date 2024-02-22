@@ -26,6 +26,7 @@ MATCH_NONE_LIST = [
     'exponentiation', 'ISZE', 'ILNE', 'Fales', 'complier', 'hwo', # ambiguous between 'who' and 'how'
     'from', 'form', 'Alvie', 'Horus', 'triangle', 'highlighting', 'sightings', 'braek', # break/brake
     'fro', 'Then', 'Shatner', 'escond', 'halted', 'lien', 'rootin', 'have OT', 'spraed', # spread/spared
+    'falte', 'baltes', 'hadnet', 'wordnets', 'yuo', 'Yuo',
 ]
 
 if __name__ == '__main__':
