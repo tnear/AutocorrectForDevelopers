@@ -63,7 +63,7 @@ EXPLICIT_TESTS = {
     'elmeents': 'elements', 'evlauation': 'evaluation', 'exoprted': 'exported',
     'feasable': 'feasible',
     'fucntions': 'functions', 'funtional': 'functional', 'fnctions': 'functions',
-    'grpahs': 'graphs', 'grahping': 'graphing', 'gorups': 'groups', 'gropus': 'groups', 'imoprted': 'imported',
+    'grpahs': 'graphs', 'grahping': 'graphing', 'gropus': 'groups', 'imoprted': 'imported',
     'inofrmational': 'informational',
     'inhertiance': 'inheritance', 'inhreits': 'inherits', 'intiialize': 'initialize',
     'isntance': 'instance', 'inteligence': 'intelligence', 'itnerface': 'interface',
@@ -193,7 +193,11 @@ EXPLICIT_TESTS = {
     'compelte': 'complete', 'euqla': 'equal', 'accumualte': 'accumulate', 'extrapoalte': 'extrapolate', 'formualte': 'formulate',
     'popualte': 'populate', 'regualte': 'regulate', 'simualte': 'simulate', 'transalte': 'translate',
     'concatneate': 'concatenate', 'condtion': 'condition', 'donwlaod': 'download', 'iwndow': 'window', 'yuor': 'your',
-    'autocompelte': 'autocomplete',
+    'autocompelte': 'autocomplete', 'ocncurrent': 'concurrent', 'concurent': 'concurrent', 'dyanmic': 'dynamic',
+    'systme': 'system', 'reblaance': 'rebalance', 'respodn': 'respond', 'resopnd': 'respond', 'repsond': 'respond',
+    'qurey': 'query', 'infomr': 'inform', 'oritent': 'orient', 'rehsape': 'reshape', 'rehspae': 'reshape',
+    'deliimt': 'delimit', 'ture;': 'true;', 'glithc': 'glitch', 'occassion': 'occasion', 'agregate': 'aggregate',
+    'itn ': 'int ',
 }
 
 if __name__ == '__main__':

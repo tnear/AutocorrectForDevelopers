@@ -163,7 +163,7 @@ EXPLICIT_TESTS = {
     'noityf': 'notify', 'wrapepr': 'wrapper', 'csated': 'casted', 'encoidngs': 'encodings', 'conidtions': 'conditions',
     'ofrmed': 'formed', 'fomred': 'formed', 'estiamted': 'estimated', 'generla': 'general', 'priavte': 'private',
     'actiavted': 'activated', 'actiavtes': 'activates', 'activaets': 'activates', 'inofrming': 'informing',
-    'infomring': 'informing', 'horizonatlly': 'horizontally', 'dependenices': 'dependencies', 'literlas': 'literals',
+    'transfomring': 'transforming', 'horizonatlly': 'horizontally', 'dependenices': 'dependencies', 'literlas': 'literals',
     'remaisn': 'remains', 'lokcing': 'locking', 'boadr': 'board', 'remotley': 'remotely',
     'perforemd': 'performed', 'clokcs': 'clocks', 'smalelr': 'smaller', 'transofmr': 'transform',
     'transofmred': 'transformed', 'transofmring': 'transforming', 'transofmrs': 'transforms', 'deliverey': 'delivery',
@@ -172,7 +172,7 @@ EXPLICIT_TESTS = {
     'lokcer': 'locker', 'lokcers': 'lockers', 'platofrmer': 'platformer', 'platfomrer': 'platformer',
     'platofmrer': 'platformer', 'platofrmers': 'platformers', 'platfomrers': 'platformers', 'platofmrers': 'platformers',
     'veriifer': 'verifier', 'veriifers': 'verifiers', 'randomiezr': 'randomizer', 'randomiezrs': 'randomizers',
-    'respodner': 'responder', 'respodners': 'responders', 'exproter': 'exporter', 'exproters': 'exporters',
+    'redner': 'render', 'redners': 'renders', 'exproter': 'exporter', 'exproters': 'exporters',
     'raech': 'reach', 'equaliesd': 'equalised', 'equaliesr': 'equaliser', 'speciified': 'specified',
     'speciifier': 'specifier', 'speciifiers': 'specifiers', 'speciifies': 'specifies', 'travleing': 'traveling',
     'compraes': 'compares', 'visualzie': 'visualize', 'representaitno': 'representation',
@@ -192,7 +192,10 @@ EXPLICIT_TESTS = {
     'securiyt': 'security', 'servesr': 'servers', 'funcotins': 'functions', 'laoding': 'loading',
     'adidtionally': 'additionally', 'indetn': 'indent', 'indenets': 'indents',
     'indetns': 'indents', 'quickosrt': 'quicksort', 'recommendadtion': 'recommendation', 'netowrking': 'networking',
-    'netwokring': 'networking', 'varaible': 'variable',
+    'netwokring': 'networking', 'varaible': 'variable', 'virtaul': 'virtual', 'mutaully': 'mutually',
+    'regitsration': 'registration', 'replaicng': 'replacing', 'referenicng': 'referencing', 'directoreis': 'directories',
+    'demontsrations': 'demonstrations', 'finlaly': 'finally', 'substirng': 'substring', 'substirngs': 'substrings',
+    'augmeented': 'augmented', 'augmeneted': 'augmented', 'augmneted': 'augmented', 'angualr': 'angular',
 }
 
 if __name__ == '__main__':
