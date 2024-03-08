@@ -196,6 +196,8 @@ EXPLICIT_TESTS = {
     'regitsration': 'registration', 'replaicng': 'replacing', 'referenicng': 'referencing', 'directoreis': 'directories',
     'demontsrations': 'demonstrations', 'finlaly': 'finally', 'substirng': 'substring', 'substirngs': 'substrings',
     'augmeented': 'augmented', 'augmeneted': 'augmented', 'augmneted': 'augmented', 'angualr': 'angular',
+    'abiilty': 'ability', 'misisng': 'missing', 'proceissng': 'processing', 'abiilties': 'abilities',
+    'finindg': 'finding', 'finindgs': 'findings', 'softwaer': 'software', 'itearting': 'iterating',
 }
 
 if __name__ == '__main__':

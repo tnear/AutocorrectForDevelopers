@@ -18,7 +18,7 @@ class TestMatchNone(unittest.TestCase):
 
 # words which should not be changed by AHK (but are NOT whitelisted)
 MATCH_NONE_LIST = [
-    'valid', 'firmwaer', 'FRO', 'ITN', 'INOT', 'LINUX', 'NTO', 'SIE_T', 'SIZET', 'SIZE_T', 'SIZE-T',
+    'valid', 'FRO', 'ITN', 'INOT', 'NTO', 'SIE_T', 'SIZET', 'SIZE_T', 'SIZE-T',
     'WSA', 'YUO', 'JAVAScritp', 'std::', 'MKAE_', 'AMKE_', 'PyThOn', 'overidealize',
     'overidentify', 'ADN', 'NAD', 'HTE', 'TEH', 'CNA', 'HSA', 'quantitiy', # incorrectly converted to 'quantiity'
     'OFR', 'Push+Back', 'STD:;', 'SDT::', 'SDT:;', 'STD;:', 'code', 'doesnt', # interferes with "doesnt'"
@@ -27,7 +27,7 @@ MATCH_NONE_LIST = [
     'from', 'form', 'Alvie', 'Horus', 'triangle', 'highlighting', 'sightings', 'braek', # break/brake
     'fro', 'Then', 'Shatner', 'escond', 'halted', 'lien', 'rootin', 'have OT', 'spraed', # spread/spared
     'falte', 'baltes', 'hadnet', 'wordnets', 'yuo', 'Yuo', 'Gorup', 'bahs', 'clas', 'fiel', 'moer', 'rela',
-    'saem', 'ture', 'itn', 'nto',
+    'saem', 'ture', 'nto', 'allWords',
 ]
 
 if __name__ == '__main__':

@@ -190,14 +190,19 @@ EXPLICIT_TESTS = {
     'rectnagle': 'rectangle', 'recntagle': 'rectangle', 'rectangel': 'rectangle', 'quatnity': 'quantity',
     'donwload': 'download', 'downloda': 'download', 'uploda': 'upload', 'overlfow': 'overflow', 'blaance': 'balance',
     'execucte': 'execute', 'explian': 'explain', 'resaerch': 'research', 'reserach': 'research', 'resarch': 'research',
-    'compelte': 'complete', 'euqla': 'equal', 'accumualte': 'accumulate', 'extrapoalte': 'extrapolate', 'formualte': 'formulate',
-    'popualte': 'populate', 'regualte': 'regulate', 'simualte': 'simulate', 'transalte': 'translate',
+    'compelte': 'complete', 'accumualte': 'accumulate', 'extrapoalte': 'extrapolate', 'formualte': 'formulate',
+    'popualte': 'populate', 'regualte': 'regulate', 'simualte': 'simulate', 'transalte': 'translate', 'euqla': 'equal',
     'concatneate': 'concatenate', 'condtion': 'condition', 'donwlaod': 'download', 'iwndow': 'window', 'yuor': 'your',
     'autocompelte': 'autocomplete', 'ocncurrent': 'concurrent', 'concurent': 'concurrent', 'dyanmic': 'dynamic',
     'systme': 'system', 'reblaance': 'rebalance', 'respodn': 'respond', 'resopnd': 'respond', 'repsond': 'respond',
     'qurey': 'query', 'infomr': 'inform', 'oritent': 'orient', 'rehsape': 'reshape', 'rehspae': 'reshape',
     'deliimt': 'delimit', 'ture;': 'true;', 'glithc': 'glitch', 'occassion': 'occasion', 'agregate': 'aggregate',
-    'itn ': 'int ',
+    'comunicate': 'communicate', 'bakctrack': 'backtrack', 'esarch': 'search', 'surorund': 'surround',
+    'corresopnd': 'correspond', 'correspodn': 'correspond', 'corespond': 'correspond', 'whle (': 'while (',
+    'udpate': 'update', 'upadte': 'update', 'updadte': 'update', 'itnroduction': 'introduction', 'integeration': 'integration',
+    'impelment': 'implement', 'invnetory': 'inventory', 'erturn': 'return', 'idmepotency': 'idempotency',
+    'seqeuence': 'sequence', 'berak;': 'break;', 'ersult': 'result', 'idnetify': 'identify', 'cusotm': 'custom',
+    'backtrakc': 'backtrack', 'visaul': 'visual',
 }
 
 if __name__ == '__main__':
