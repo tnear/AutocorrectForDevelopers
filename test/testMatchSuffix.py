@@ -197,7 +197,11 @@ EXPLICIT_TESTS = {
     'demontsrations': 'demonstrations', 'finlaly': 'finally', 'substirng': 'substring', 'substirngs': 'substrings',
     'augmeented': 'augmented', 'augmeneted': 'augmented', 'augmneted': 'augmented', 'angualr': 'angular',
     'abiilty': 'ability', 'misisng': 'missing', 'proceissng': 'processing', 'abiilties': 'abilities',
-    'finindg': 'finding', 'finindgs': 'findings', 'softwaer': 'software', 'itearting': 'iterating',
+    'finindg': 'finding', 'finindgs': 'findings', 'softwaer': 'software', 'itearting': 'iterating', 'identiyf': 'identify',
+    'broekr': 'broker', 'comemnted': 'commented', 'myVlaue': 'myValue', 'myVluae': 'myValue', 'myValeu': 'myValue',
+    'myVaule': 'myValue', 'myVlaues': 'myValues', 'myVluaes': 'myValues', 'myValeus': 'myValues', 'myVaules': 'myValues',
+    'myDAta': 'myData', 'mySTring': 'myString', 'folloewr': 'follower', 'folloewrs': 'followers', 'deciaml': 'decimal',
+    'commentayr': 'commentary',
 }
 
 if __name__ == '__main__':

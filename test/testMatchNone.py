@@ -27,7 +27,7 @@ MATCH_NONE_LIST = [
     'from', 'form', 'Alvie', 'Horus', 'triangle', 'highlighting', 'sightings', 'braek', # break/brake
     'fro', 'Then', 'Shatner', 'escond', 'halted', 'lien', 'rootin', 'have OT', 'spraed', # spread/spared
     'falte', 'baltes', 'hadnet', 'wordnets', 'yuo', 'Yuo', 'Gorup', 'bahs', 'clas', 'fiel', 'moer', 'rela',
-    'saem', 'ture', 'nto', 'allWords',
+    'saem', 'ture', 'nto', 'allWords', 'Stroe',
 ]
 
 if __name__ == '__main__':

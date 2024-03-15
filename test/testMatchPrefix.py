@@ -202,7 +202,12 @@ EXPLICIT_TESTS = {
     'udpate': 'update', 'upadte': 'update', 'updadte': 'update', 'itnroduction': 'introduction', 'integeration': 'integration',
     'impelment': 'implement', 'invnetory': 'inventory', 'erturn': 'return', 'idmepotency': 'idempotency',
     'seqeuence': 'sequence', 'berak;': 'break;', 'ersult': 'result', 'idnetify': 'identify', 'cusotm': 'custom',
-    'backtrakc': 'backtrack', 'visaul': 'visual',
+    'backtrakc': 'backtrack', 'visaul': 'visual', 'faeture': 'feature', 'fetaure': 'feature', 'reivew': 'review',
+    'reveiw': 'review', 'appraoch': 'approach', 'cehck': 'check', 'dgiit': 'digit', 'oragnise': 'organise',
+    'oragnize': 'organize', 'pari<int, int>': 'pair<int, int>', 'explina': 'explain', 'striaght': 'straight',
+    'sturcture': 'structure', 'assert9': 'assert(', 'udner': 'under', 'encoutner': 'encounter',
+    'docuemntation': 'documentation', 'whle(': 'while(', 'tiemstamp': 'timestamp', 'itmestamp': 'timestamp',
+    'timestmap': 'timestamp', 'tirgger': 'trigger',
 }
 
 if __name__ == '__main__':
