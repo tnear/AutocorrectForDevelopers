@@ -201,7 +201,8 @@ EXPLICIT_TESTS = {
     'broekr': 'broker', 'comemnted': 'commented', 'myVlaue': 'myValue', 'myVluae': 'myValue', 'myValeu': 'myValue',
     'myVaule': 'myValue', 'myVlaues': 'myValues', 'myVluaes': 'myValues', 'myValeus': 'myValues', 'myVaules': 'myValues',
     'myDAta': 'myData', 'mySTring': 'myString', 'folloewr': 'follower', 'folloewrs': 'followers', 'deciaml': 'decimal',
-    'commentayr': 'commentary',
+    'commentayr': 'commentary', 'acquriing': 'acquiring', 'roudning': 'rounding', 'reltaional': 'relational',
+    'consntat': 'constant', 'consntats': 'constants', 'reisde': 'reside', 'reisdes': 'resides', 'moderaetly': 'moderately',
 }
 
 if __name__ == '__main__':

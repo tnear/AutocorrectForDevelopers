@@ -207,7 +207,12 @@ EXPLICIT_TESTS = {
     'oragnize': 'organize', 'pari<int, int>': 'pair<int, int>', 'explina': 'explain', 'striaght': 'straight',
     'sturcture': 'structure', 'assert9': 'assert(', 'udner': 'under', 'encoutner': 'encounter',
     'docuemntation': 'documentation', 'whle(': 'while(', 'tiemstamp': 'timestamp', 'itmestamp': 'timestamp',
-    'timestmap': 'timestamp', 'tirgger': 'trigger',
+    'timestmap': 'timestamp', 'tirgger': 'trigger', 'intorduce': 'introduce', 'adjsut': 'adjust', 'traget': 'target',
+    'resltu': 'result', 'inidcate': 'indicate', 'avdance': 'advance', 'vectro<': 'vector<', 'contets': 'contest',
+    'contanier': 'container', 'accetp': 'accept', 'rpoblem': 'problem', 'partenr': 'partner', 'exatc': 'exact',
+    'approahc': 'approach', 'cosnistent': 'consistent', 'accumlate': 'accumulate', 'idnicate': 'indicate',
+    'inehrit': 'inherit', 'inehrti': 'inherit', 'ansewr': 'answer', 'naswer': 'answer', 'attemtp': 'attempt',
+    'catgeory': 'category', 'rectnagel': 'rectangle', 'dsitribute': 'distribute',
 }
 
 if __name__ == '__main__':

@@ -46,7 +46,7 @@ class TestMatchWhitelist(unittest.TestCase):
 WHITELIST = [
     'systemdesign', 'keyforeign', 'beign', 'itme',
     'assign', 'assigns', 'redesigns', 'misalign', 'misaligns', 'foreigns', 'variableassign',
-    'gardner', 'gardners', 'cupertino', 'fomr', # from/form
+    'gardner', 'gardners', 'cupertino', 'moriarty', 'fomr', # from/form
 ]
 
 if __name__ == '__main__':
