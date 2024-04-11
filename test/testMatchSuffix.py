@@ -203,6 +203,11 @@ EXPLICIT_TESTS = {
     'myDAta': 'myData', 'mySTring': 'myString', 'folloewr': 'follower', 'folloewrs': 'followers', 'deciaml': 'decimal',
     'commentayr': 'commentary', 'acquriing': 'acquiring', 'roudning': 'rounding', 'reltaional': 'relational',
     'consntat': 'constant', 'consntats': 'constants', 'reisde': 'reside', 'reisdes': 'resides', 'moderaetly': 'moderately',
+    'capacitiy': 'capacity', 'reisze': 'resize', 'reiszed': 'resized', 'reiszes': 'resizes', 'vieiwng': 'viewing',
+    'experiecne': 'experience', 'expereince': 'experience', 'baselnie': 'baseline', 'baselnies': 'baselines',
+    'benchamrking': 'benchmarking', 'contnetion': 'contention', 'prevoiusly': 'previously', 'prevouisly': 'previously',
+    'previosuly': 'previously', 'experiecnes': 'experiences', 'expereinces': 'experiences', 'mnetions': 'mentions',
+    'pipelnied': 'pipelined', 'draiwngs': 'drawings',
 }
 
 if __name__ == '__main__':

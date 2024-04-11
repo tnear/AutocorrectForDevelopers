@@ -174,7 +174,7 @@ EXPLICIT_TESTS = {
     'prdouct': 'product', 'reuire': 'require', 'privelege': 'privilege', 'priviledge': 'privilege', 'queyr': 'query',
     'qeury': 'query', 'unsroted': 'unsorted', 'unosrted': 'unsorted', 'inerst': 'insert', 'sorrt': 'sort',
     'unsorrt': 'unsort', 'ranges:;': 'ranges::', 'rangeS::': 'ranges::', 'ranges;:': 'ranges::', 'reeturn': 'return',
-    'otekn': 'token', 'clalback': 'callback', 'seocnd': 'second', 'secodn': 'second', 'preprae': 'prepare',
+    'otekn': 'token', 'seocnd': 'second', 'secodn': 'second', 'preprae': 'prepare',
     'dierct': 'direct', 'establihs': 'establish', 'estalbish': 'establish', 'reoslve': 'resolve', 'optizmie': 'optimize',
     'frueqen': 'frequen', 'inejct': 'inject', 'reuiqre': 'require', 'suport': 'support', 'assocate': 'associate',
     'brak;': 'break;', 'confilct': 'conflict', 'speciifc': 'specific', 'genearte': 'generate', 'releation': 'relation',
@@ -212,7 +212,10 @@ EXPLICIT_TESTS = {
     'contanier': 'container', 'accetp': 'accept', 'rpoblem': 'problem', 'partenr': 'partner', 'exatc': 'exact',
     'approahc': 'approach', 'cosnistent': 'consistent', 'accumlate': 'accumulate', 'idnicate': 'indicate',
     'inehrit': 'inherit', 'inehrti': 'inherit', 'ansewr': 'answer', 'naswer': 'answer', 'attemtp': 'attempt',
-    'catgeory': 'category', 'rectnagel': 'rectangle', 'dsitribute': 'distribute',
+    'catgeory': 'category', 'rectnagel': 'rectangle', 'dsitribute': 'distribute', 'advacne': 'advance',
+    'distacne': 'distance', 'enhacne': 'enhance', 'ntoify': 'notify', 'inovlve': 'involve', 'ctonain': 'contain',
+    'requset': 'request', 'detemrine': 'determine', 'desturct': 'destruct', 'sytesm': 'system', 'lcoality': 'locality',
+    'uqeyr': 'query', 'imorptant': 'important', 'facotr': 'factor', 'refacotr': 'refactor',
 }
 
 if __name__ == '__main__':
