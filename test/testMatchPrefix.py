@@ -215,7 +215,13 @@ EXPLICIT_TESTS = {
     'catgeory': 'category', 'rectnagel': 'rectangle', 'dsitribute': 'distribute', 'advacne': 'advance',
     'distacne': 'distance', 'enhacne': 'enhance', 'ntoify': 'notify', 'inovlve': 'involve', 'ctonain': 'contain',
     'requset': 'request', 'detemrine': 'determine', 'desturct': 'destruct', 'sytesm': 'system', 'lcoality': 'locality',
-    'uqeyr': 'query', 'imorptant': 'important', 'facotr': 'factor', 'refacotr': 'refactor',
+    'uqeyr': 'query', 'imorptant': 'important', 'facotr': 'factor', 'refacotr': 'refactor', 'rseutl': 'result',
+    'maintian': 'maintain', 'maintina': 'maintain', 'detial': 'detail', 'idgit': 'digit', 'proofraed': 'proofread',
+    'ruselt': 'result', 'extedn': 'extend', 'exetnd': 'extend', 'presetn': 'present', 'overwheml': 'overwhelm',
+    'overhwelm': 'overwhelm', 'seqeunce': 'sequence', 'stinrg': 'string', 'dveelop': 'develop', 'parition': 'partition',
+    'muliptle': 'multiple', 'elsatic': 'elastic', 'elstaic': 'elastic', 'uspport': 'support', 'drvier': 'driver',
+    'strenght': 'strength', 'prodcut': 'product', 'mdoify': 'modify', 'paralel': 'parallel', 'parllel': 'parallel',
+    'aprallel': 'parallel', 'parlalel': 'parallel', 'praallel': 'parallel', 'etxend': 'extend',
 }
 
 if __name__ == '__main__':

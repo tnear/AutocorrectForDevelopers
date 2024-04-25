@@ -207,7 +207,11 @@ EXPLICIT_TESTS = {
     'experiecne': 'experience', 'expereince': 'experience', 'baselnie': 'baseline', 'baselnies': 'baselines',
     'benchamrking': 'benchmarking', 'contnetion': 'contention', 'prevoiusly': 'previously', 'prevouisly': 'previously',
     'previosuly': 'previously', 'experiecnes': 'experiences', 'expereinces': 'experiences', 'mnetions': 'mentions',
-    'pipelnied': 'pipelined', 'draiwngs': 'drawings',
+    'pipelnied': 'pipelined', 'draiwngs': 'drawings', 'produtc': 'product', 'produtcs': 'products', 'benchmrak': 'benchmark',
+    'benchmraked': 'benchmarked', 'benchmraking': 'benchmarking', 'benchmarekd': 'benchmarked', 'produtcion': 'production',
+    'resposnive': 'responsive', 'adatpive': 'adaptive', 'statisitc': 'statistic', 'statisitcal': 'statistical',
+    'statitsical': 'statistical', 'statisitcs': 'statistics', 'deviaotin': 'deviation', 'notifiaction': 'notification',
+    'bookmraks': 'bookmarks',
 }
 
 if __name__ == '__main__':

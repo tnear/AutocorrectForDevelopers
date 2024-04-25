@@ -423,6 +423,7 @@
     :b0:aisn::         ; do not convert this string to -ains
     :b0:aitvely::      ; do not convert this string to -atively
     :b0:alyed::        ; do not convert this string to -layed
+    :b0:aotin::        ; do not convert this string to -ation
     :b0:athc::         ; do not convert this string to -atch
     :b0:athces::       ; do not convert this string to -atches
     :b0:atiely::       ; do not convert this string to -atively
@@ -453,6 +454,9 @@
     :b0:detns::        ; do not convert this string to -dents
     :b0:dned::         ; do not convert this string to -nded
     :b0:dning::        ; do not convert this string to -nding
+    :b0:dutc::         ; do not convert this string to -duct
+    :b0:dutcion::      ; do not convert this string to -duction
+    :b0:dutcs::        ; do not convert this string to -ducts
     :b0:earting::      ; do not convert this string to -erating
     :b0:eince::        ; do not convert this string to -ience
     :b0:einces::       ; do not convert this string to -iences
@@ -478,6 +482,7 @@
     :b0:hcing::        ; do not convert this string to -ching
     :b0:hicng::        ; do not convert this string to -ching
     :b0:hsing::        ; do not convert this string to -shing
+    :b0:iaction::      ; do not convert this string to -ication
     :b0:ialy::         ; do not convert this string to -ially
     :b0:iaml::         ; do not convert this string to -imal
     :b0:ianl::         ; do not convert this string to -inal
@@ -631,6 +636,7 @@
     :b0:outn::         ; do not convert this string to -ount
     :b0:outns::        ; do not convert this string to -ounts
     :b0:raeg::         ; do not convert this string to -rage
+    :b0:rekd::         ; do not convert this string to -rked
     :b0:remd::         ; do not convert this string to -rmed
     :b0:retnly::       ; do not convert this string to -rently
     :b0:rila::         ; do not convert this string to -rial
@@ -642,6 +648,9 @@
     :b0:sehd::         ; do not convert this string to -shed
     :b0:shpi::         ; do not convert this string to -ship
     :b0:sisng::        ; do not convert this string to -ssing
+    :b0:sitc::         ; do not convert this string to -stic
+    :b0:sitcal::       ; do not convert this string to -stical
+    :b0:snive::        ; do not convert this string to -nsive
     :b0:sntat::        ; do not convert this string to -stant
     :b0:sntats::       ; do not convert this string to -stants
     :b0:soin::         ; do not convert this string to -sion
@@ -693,6 +702,7 @@
     :b0:tped::         ; do not convert this string to -pted
     :b0:tpion::        ; do not convert this string to -ption
     :b0:tpions::       ; do not convert this string to -ptions
+    :b0:tpive::        ; do not convert this string to -ptive
     :b0:tsed::         ; do not convert this string to -sted
     :b0:tsic::         ; do not convert this string to -stic
     :b0:tsics::        ; do not convert this string to -stics
@@ -802,6 +812,7 @@
     ::algorihms::algorithms
     ::algorthms::algorithms
     ::algorithims::algorithms
+    ::algorithsm::algorithms
     ::alais::alias
     ::alaises::aliases
     :C:alvie::alive
@@ -828,6 +839,8 @@
     :C:nad::and
     :C:ANd::And
     ::andthe::and the
+    ::announcment::announcement
+    ::announcments::announcements
     ::antoehr::another
     ::antoher::another
     :*:ansewr::answer               ; answer/s/ed/ing
@@ -846,6 +859,8 @@
     ::appilcations::applications
     ::aplications::applications
     ::applicatons::applications
+    ::appleid::applied
+    ::appleis::applies
     :*:apporach::approach           ; approach/es/ed/ing
     :*:aproach::approach
     :*:appraoch::approach
@@ -871,6 +886,7 @@
     :C:aray::array
     :*:arary::array                 ; array/s/ed, arrayfun (MATLAB)
     :*:arrray::array
+    :C:ArayList::ArrayList          ; Java resizable array
     ::arays::arrays
     ::artifiical::artificial
     ::artifical::artificial
@@ -941,6 +957,7 @@
     ::aovid::avoid
     ::avodi::avoid
     ::aviod::avoid
+    ::vaoid::avoid
     ::awiat::await
     ::awkae::awake
 
@@ -1003,6 +1020,7 @@
     :*:bnehcmark::benchmark
     :*:benchmakr::benchmark
     :*:bnechmark::benchmark
+    ::benefist::benefits
     ::betwen::between
     ::beyodn::beyond
     ::billino::billion
@@ -1125,10 +1143,13 @@
     ::challegning::challenging
     ::chagne::change
     ::cahnge::change
+    ::chagen::change
     ::chagned::changed
     ::cahnged::changed
+    ::chagend::changed
     ::chagnes::changes
     ::cahnges::changes
+    ::chagens::changes
     ::channle::channel
     ::channles::channels
     ::chatper::chapter
@@ -1321,12 +1342,14 @@
     ::compsoe::compose
     ::compsoes::composes
     ::composeite::composite
+    ::compostie::composite
     ::comopsition::composition
     :*:compormis::compromis         ; compromis/e/ed/es/ing
     :*:comptue::compute             ; compute/r/s/d/rs
     :*:ocmpute::compute
     :*:cmopute::compute
     ::compuer::computer
+    ::computre::computer
     ::compuers::computers
     :*:concatneate::concatenate     ; concatenate/d/r/s
     ::concetp::concept
@@ -1389,8 +1412,11 @@
     :*:ocntain::contain
     :*:ctonain::contain
     :*:contanier::container         ; container/s/ise/ized
+    ::contaiing::containing
     ::cnotent::content
+    ::contnet::content
     ::cnotents::contents
+    ::contnets::contents
     :*:contets::contest             ; contest/s/ed/ant/ing
     :*:contniu::continu             ; continu/e/ous/ously/ally
     :*:conitnu::continu
@@ -1438,6 +1464,8 @@
     ::copeis::copies
     ::cpoy::copy
     ::coyp::copy
+    ::cpoyable::copyable
+    ::coypable::copyable
     ::copyrgiht::copyright
     ::corenr::corner
     ::corenrs::corners
@@ -1475,6 +1503,7 @@
     ::craeting::creating
     ::criteira::criteria
     ::crtieria::criteria
+    ::critiera::criteria
     ::ciritcal::critical
     ::criitcal::critical
     ::criticial::critical
@@ -1541,6 +1570,8 @@
     ::defien::define
     ::defiend::defined
     ::defiens::defines
+    ::defintion::definition
+    ::defintions::definitions
     :*:dleete::delete               ; delete/s/d/r
     ::deletd::deleted
     ::dleetion::deletion
@@ -1590,6 +1621,7 @@
     ::destiation::destination
     ::destiations::destinations
     :*:desturct::destruct           ; destruct/s/ed/or/ing/ive
+    :*:detial::detail               ; detail/s/ed/er/ing
     :*:detemrin::determin           ; determin/e/ed/ant/ation/istic
     ::deteminant::determinant
     ::determien::determine
@@ -1601,6 +1633,7 @@
     :*:devloep::develop
     :*:dvelop::develop
     :*:develoep::develop
+    :*:dveelop::develop
     ::developr::developer
     ::developrs::developers
     ::developeres::developers
@@ -1626,8 +1659,10 @@
     ::idff::diff
     ::diference::difference
     ::dfiference::difference
+    ::differnce::difference
     ::diferences::differences
     ::dfiferences::differences
+    ::differnces::differences
     ::diferent::different
     :*:differnet::different         ; different/ial/iable/iate
     :*:dfiferent::different
@@ -1640,6 +1675,7 @@
     ::digets::digest
     :*:diigt::digit                 ; digit/s/al/ally
     :*:dgiit::digit
+    :*:idgit::digit
     ::digist::digits
     ::dimensinoal::dimensional
     ::dimensinoality::dimensionality
@@ -1677,7 +1713,7 @@
     ::distriubtions::distributions
     ::od not::do not
     ::do nto::do not
-    :*:docment::document            ; document/s/ed/ation
+    :*:docment::document            ; document/s/ed/ing/ation
     :*:odcument::document
     :*:doucment::document
     :*:documentn::document
@@ -1695,7 +1731,10 @@
     ::dosen't::doesn't
     ::odesn't::doesn't
     ::odens't::doesn't
+    ::does'nt::doesn't
+    ::doe'snt::doesn't
     ::dont'::don't
+    ::dno't::don't
     ::doubel::double
     ::duoble::double
     ::doulbe::double
@@ -1712,9 +1751,7 @@
     ::donwstream::downstream
     ::darw::draw
     ::darwing::drawing
-    ::drvie::drive
-    ::drvien::driven
-    ::drvies::drives
+    :*:drvie::drive                 ; drive/n/r/rs/s
     ::dupm::dump
     ::dupmed::dumped
     ::dupms::dumps
@@ -1753,9 +1790,11 @@
     ::eidts::edits
     ::efficeincy::efficiency
     ::eficient::efficient
+    ::efficent::efficient
     :*:eigne::eigen                 ; eigen/space/value/vector
     ::iether::either
-    ::elsatic::elastic
+    :*:elsatic::elastic             ; elastic/ically/search
+    :*:elstaic::elastic
     ::electornic::electronic
     ::electornics::electronics
     :*:elemtn::element              ; element/s/al/ary
@@ -1948,14 +1987,15 @@
     ::expresions::expressions
     ::exprssions::expressions
     ::expreessions::expressions
-    ::extedn::extend
-    ::exetnd::extend
-    ::exetnded::extended
-    ::exetnds::extends
+    :*:extedn::extend               ; extend/s/ed/er/ing
+    :*:exetnd::extend
+    :*:etxend::extend
     ::extnesion::extension
     ::extenison::extension
+    ::etxension::extension
     ::extnesions::extensions
     ::extenisons::extensions
+    ::etxensions::extensions
     ::externla::external
     ::extenral::external
     ::exteranl::external
@@ -2129,6 +2169,7 @@
     :*:geneart::generat             ; generat/e/s/or/ing/ion
     :*:geneate::generate
     ::geneating::generating
+    ::geospaital::geospatial
     ::githbu::github
     ::gvie::give
     ::gvien::given
@@ -2137,7 +2178,6 @@
     ::glboal::global
     ::glboally::globally
     ::glboals::globals
-    ::mgail::gmail
     :C:go ot::go to
     ::goe sto::goes to
     ::oging::going
@@ -2161,16 +2201,22 @@
     :*:gropu::group                 ; group/s/ed/ing
     :C:gorup::group                 ; whitelist 'Gorup' surname
     ::goruped::grouped
+    ::grouepd::grouped
     ::goruping::grouping
     ::gorups::groups
 
     ::hlaf::half
     ::hadnle::handle
+    ::hadnler::handler
+    ::handelr::handler
+    ::hadnlers::handlers
+    ::handelrs::handlers
     ::hadnles::handles
     ::hadnling::handling
     ::hapen::happen
     ::hapened::happened
     ::hapepned::happened
+    ::hapepend::happened
     ::hapening::happening
     ::hapepning::happening
     ::hapens::happens
@@ -2179,6 +2225,9 @@
     :C:Hsa::Has
     :C:HAs::Has
     :*:hahs::hash                   ; hash/es/ed/ing/map/table
+    ::hasnt'::hasn't
+    ::has'nt::hasn't
+    ::hans't::hasn't
     ::hvae::have
     ::ahve::have
     ::haev::have
@@ -2553,6 +2602,8 @@
     ::laetncy::latency
     ::altency::latency
     :*:lauchn::launch               ; launch/es/ed/ing
+    ::layotu::layout
+    ::layotus::layouts
     ::leadre::leader
     ::laeder::leader
     ::laeders::leaders
@@ -2659,9 +2710,8 @@
     ::macines::machines
     ::macihnes::machines
     ::macintohs::macintosh
-    ::maintian::maintain
-    ::maintianing::maintaining
-    ::maintians::maintains
+    :*:maintian::maintain           ; maintain/s/ed/ing
+    :*:maintina::maintain
     ::mjaor::major
     ::mkae::make
     ::maek::make
@@ -2746,6 +2796,7 @@
     ::mdoels::models
     ::moderatly::moderately
     ::mdoes::modes
+    :*:mdoif::modif                 ; modif/y/ied/ies/ication
     ::modifcation::modification
     ::modifcations::modifications
     ::modluar::modular
@@ -2769,6 +2820,7 @@
     :*:mlti::multi                  ; multi/threaded/plex/process/tasking/ply
     :*:mjulti::multi
     :*:mulitp::multip
+    :*:mulipt::multip
     ::multipel::multiple
     ::multipels::multiples
     ::multipleid::multiplied
@@ -2922,7 +2974,8 @@
     ::overide::override             ; cannot do ':*:' b/c of words like overidealize and overidentify
     ::overides::overrides
     ::oveview::overview
-    ::overwheml::overwhelm
+    :*:overwheml::overwhelm         ; overwhelm/s/ed/ing
+    :*:overhwelm::overwhelm
     ::overwrtie::overwrite
     ::overwrties::overwrites
     ::onwer::owner
@@ -2943,11 +2996,12 @@
     :*:apir<::pair<                 ; C++ template container
     :*:pari<::pair<
     ::pallette::palette             ; ex: VSCode Command Palette
-    ::paralel::parallel
-    ::parllel::parallel
-    ::aprallel::parallel
-    ::parlalel::parallel
-    ::praallel::parallel
+    :*:paralel::parallel            ; parallel/s/ise/ize/ism
+    :*:parllel::parallel
+    :*:aprallel::parallel
+    :*:parlalel::parallel
+    :*:praallel::parallel
+    ::parallelsim::parallelism
     :*:pareamter::parameter         ; parameter/s/ise/ize/ization/isation
     :*:paraemter::parameter
     :*:parameer::parameter
@@ -2976,6 +3030,7 @@
     ::partiuclar::particular
     :*:partiton::partition          ; partition/s/ed/ing
     :*:parittion::partition
+    :*:parition::partition
     ::partitoining::partitioning
     :*:partenr::partner             ; partner/s/ed/ing/ship
     ::pasive::passive
@@ -3113,8 +3168,7 @@
     :*:preprae::prepare
     :*:preporcess::preprocess       ; preprocess/es/or/ing
     ::preprocesor::preprocessor
-    ::presetner::presenter
-    ::presetners::presenters
+    :*:presetn::present             ; present/s/ed/er/ers/ation
     :*:prserve::preserve            ; preserve/s/d/r
     ::prevelant::prevalent
     :*:prevetn::prevent             ; prevent/s/ed/ion/able
@@ -3165,6 +3219,7 @@
     ::produers::producers
     :*:proudct::product             ; product/s/ion/ive/ivity
     :*:prdouct::product
+    :*:prodcut::product
     :*:proflie::profile             ; profile/d/s/r
     :*:profiel::profile
     :*:prgoram::program             ; program/s/med/ming/mable/matic
@@ -3178,7 +3233,7 @@
     ::promsie::promise
     ::pormise::promise
     ::proimse::promise
-    ::proofraed::proofread
+    :*:proofraed::proofread         ; proofread/s/er/ing
     ::proepr::proper
     ::proeprties::properties
     ::propeties::properties
@@ -3237,10 +3292,10 @@
     :*:qurey::query
     :*:uqeyr::query
     ::qury::query
+    :*:qeust::quest                 ; quest/ion/ions/ioning
     :*:qustion::question            ; question/s/ed/ing/able
     :*:quetion::question
     :*:quetsion::question
-    :*:qeustion::question
     ::queu::queue
     ::qeuue::queue
     ::qeueu::queue
@@ -3334,6 +3389,7 @@
     ::refersh::refresh
     ::refershed::refreshed
     ::refershes::refreshes
+    ::regiosn::regions
     :*:registser::register          ; register/s/ed/ing
     :*:reigster::register
     ::regresion::regression
@@ -3387,6 +3443,8 @@
     :*:repliac::replica
     :*:rpelica::replica
     :*:repilca::replica
+    ::repleid::replied
+    ::repleis::replies
     ::repamt::repmat                ; common MATLAB function
     :*:reoprt::report               ; report/s/ed/er/ing
     ::repostiroies::repositories
@@ -3416,6 +3474,7 @@
     :*:rqeust::request
     :*:reuest::request
     :*:requset::request
+    ::requets::request
     ::requesets::requests
     :*:reuqire::require             ; require/s/d/ment
     :*:requrie::require
@@ -3433,9 +3492,11 @@
     ::requirment::requirement
     ::rquirment::requirement
     ::requiement::requirement
+    ::reqruiment::requirement
     ::requirments::requirements
     ::rquirments::requirements
     ::requiements::requirements
+    ::reqruiments::requirements
     ::requies::requires
     ::requirse::requires
     ::requirs::requires
@@ -3502,7 +3563,10 @@
     :*:restul::result
     :*:ersult::result
     :*:resltu::result
+    :*:rseutl::result
+    :*:ruselt::result
     ::reults::results
+    ::resulst::results
     ::resuem::resume
     ::resuemd::resumed
     ::resuems::resumes
@@ -3566,9 +3630,13 @@
     ::saefty::safety
     ::smae::same
     ::sampel::sample
+    ::smaple::sample
     ::sampeld::sampled
+    ::smapled::sampled
     ::sampelr::sampler
+    ::smapler::sampler
     ::sampels::samples
+    ::smaples::samples
     ::svae::save
     ::svaed::saved
     ::svaes::saves
@@ -3580,6 +3648,7 @@
     ::scnearios::scenarios
     :*:scheudl::schedul             ; schedule/s/d/r, scheduling
     :*:schedlu::schedul
+    ::scheduelr::scheduler
     ::shcema::schema
     ::schmea::schema
     ::shcmea::schema
@@ -3625,8 +3694,9 @@
     ::seprate::separate
     ::seprated::separated
     ::seprates::separates
-    :*:seuqen::sequen               ; sequen/ce/cing/tial
+    :*:seuqen::sequen               ; sequen/ce/ces/cing/tial
     :*:seqeuen::sequen
+    :*:seqeun::sequen
     :*:seuenc::sequenc
     ::seuqnce::sequence
     ::sequnce::sequence
@@ -3777,6 +3847,8 @@
     ::soruce::source
     ::soruces::sources
     ::sorucing::sourcing
+    ::sprase::sparse
+    ::spaital::spatial
     ::spawsn::spawns
     ::speical::special
     :*:speciifc::specific           ; specific/s/ly/ied/ation
@@ -3850,11 +3922,12 @@
     ::straeming::streaming
     ::stremas::streams
     ::straems::streams
-    ::strenghten::strengthen
+    :*:strenght::strength           ; strength/en/ens/ened/ening
     ::striek::strike
     :*:sring::string                ; ex: string/s/ent/ify
     :*:stirng::string
     :*:tsring::string
+    :*:stinrg::string
     ::storng::strong
     ::stornger::stronger
     ::storngest::strongest
@@ -3920,6 +3993,7 @@
     ::succesfully::successfully
     ::succesor::successor
     :C:usch::such
+    ::suhc::such
     ::suggets::suggest
     ::sutie::suite                  ; test suite
     ::suties::suites
@@ -3930,7 +4004,9 @@
     ::superscirpt::superscript
     ::superivsed::supervised
     ::superivses::supervises
+    ::suppleid::supplied
     :*:suport::support              ; support/s/ed/ing/ive
+    :*:uspport::support
     :*:surorund::surround           ; surround/s/ed/ing
     :C:sawp::swap
     :*:siwthc::switch               ; switch/es/ing/case
@@ -4133,7 +4209,7 @@
     ::ot test::to test
     ::ot that::to that
     ::ot the::to the
-    ::ot hte::to the
+    ::ot hte::to the                ; this rule and next do not work
     ::ot teh::to the
     ::to th::to the
     ::tothe::to the
@@ -4220,7 +4296,7 @@
 
     ::undfeined::undefined
     ::undefiend::undefined
-    :*:udner::under                 ; under/stand/neath/whelm/flow
+    :*:udner::under                 ; under/flow/neath/stand/whelm
     ::underwheml::underwhelm
     ::uniofrmly::uniformly
     ::uniformotuput::uniformoutput  ; MATLAB name/value pair
@@ -4347,10 +4423,13 @@
     ::veriyf::verify
     ::vesrion::version
     ::veriosn::version
+    ::verisno::version
     ::vesrioning::versioning
     ::veriosning::versioning
+    ::verisnoing::versioning
     ::vesrions::versions
     ::veriosns::versions
+    ::verisnos::versions
     ::vetex::vertex
     ::veritcal::vertical
     ::veritical::vertical
@@ -4432,6 +4511,8 @@
     ::wher eare::where are
     ::wher ethe::where the
     ::wher eyou::where you
+    ::wehrever::wherever
+    ::whreever::wherever
     ::wich::which
     ::hwich::which
     ::whihc::which
@@ -4493,6 +4574,9 @@
     :*:owrk::work                   ; workaround, worker, workflow
     :*:wokr::work
     ::workaorund::workaround
+    ::wroker::worker
+    ::workeres::workers
+    ::wrokers::workers
     ::workflwo::workflow
     ::worklfow::workflow
     ::workflwos::workflows
@@ -4557,8 +4641,9 @@
     :C?:aetd::ated        ; ex: emulated, obfuscated, encapsulated, updated, automated, related
     :C?:taed::ated
     :C?:aetly::ately      ; ex: accurately, moderately, approximately, immediately, ultimately, deliverately
-    :C?:taion::ation      ; ex: application, optimization, relation, mutation, replication
+    :C?:taion::ation      ; ex: application, optimization, relation, mutation, replication, deviation
     :C?:taoin::ation
+    :C?:aotin::ation
     :C?:taional::ational  ; ex: relational, educational, operational, rational, observational
     :C?:taions::ations
     :C?:taoins::ations
@@ -4629,6 +4714,9 @@
     :C?:idtions::ditions
     :C?:donw::down        ; ex: down, markdown, shutdown, slowdown, teardown
     :C?:odwn::down
+    :C?:dutc::duct        ; ex: product, conduct, byproduct, deduct, induct
+    :C?:dutcion::duction  ; ex: production, introduction, reduction, deduction, induction
+    :C?:dutcs::ducts
     :C?:aech::each        ; ex: each, reach, teach, breach, foreach
     :C?:leing::eling      ; ex: traveling, leveling, labeling, canceling, modeling
     :C?:necy::ency        ; ex: adjacency, consistency, frequency, dependency, latency
@@ -4672,6 +4760,7 @@
     :C?:aite::iate        ; ex: exponentiate, initiate, instantiate, immediate, associate
     :C?:aites::iates
     :C?:icla::ical        ; ex: topological, canonical, symmetrical, logical, lexical
+    :C?:iaction::ication  ; ex: notification, replication, application, communication, classification
     :C?:iicent::icient    ; ex: efficient, deficient, coefficient, inefficient, sufficient
     :C?:iicently::iciently
     :C?:iecne::ience      ; ex: experience, science, patience, convenience, audience, resilience
@@ -4761,9 +4850,13 @@
     :C?:laoding::loading
     :C?:laods::loads
     :C?:amrk::mark        ; ex: mark, benchmark, bookmark, checkmark, trademark
+    :C?:mrak::mark
     :C?:amrked::marked
+    :C?:mraked::marked
     :C?:amrking::marking
+    :C?:mraking::marking
     :C?:amrks::marks
+    :C?:mraks::marks
     :C?:amte::mate        ; ex: approximate, estimate, animate, automate, summate
     :C?:amted::mated
     :C?:amtes::mates
@@ -4805,6 +4898,7 @@
     :C?:ntiy::nity        ; ex: infinity, opportunity, sanity, vicinity, unity
     :C?:NOde::Node        ; ex: Node, TreeNode, ListNode, CurrentNode, GraphNode
     :C?:Ndoe::Node
+    :C?:snive::nsive      ; ex: responsive, espensive, defensive, offensive, expansive, extensive
     :C?:tnation::ntation  ; ex: representation, orientation, segmentation, documentation, implementation
     :C?:tnations::ntations
     :C?:tned::nted        ; ex: counted, discounted, mounted, segmented, augmented
@@ -4839,6 +4933,7 @@
     :C?:tped::pted        ; ex: accepted, adapted, scripted, encrypted, decrypted, interrupted
     :C?:tpion::ption      ; ex: exception, adoption, caption, option, reception
     :C?:tpions::ptions
+    :C?:tpive::ptive      ; ex: adaptive, descriptive, receptive, disruptive, perceptive
     :C?:raeg::rage        ; ex: coverage, average, storage, leverage, overage
     :C?:rnat::rant        ; ex: grant, entrant, reentrant, quadrant, tolerant
     :C?:rnats::rants
@@ -4852,6 +4947,7 @@
     :C?:rtiy::rity        ; ex: security, priority, parity, integrity, modularity, similarity
     :C?:ritiy::rity
     :C?:riyt::rity
+    :C?:rekd::rked        ; ex: marked, worked, benchmarked, bookmarked, checkmarked, sparked
     :C?:remd::rmed        ; ex: performed, alarmed, confirmed, transformed, formed
     :C?:rvoe::rove        ; ex: improve, approve, prove, disprove, drove
     :C?:rvoed::roved
@@ -4897,8 +4993,12 @@
     :C?:sntats::stants
     :C?:tsed::sted        ; ex: nested, tested, rested, interested, posted, invested, listed
     :C?:setd::sted
-    :C?:tsic::stic        ; ex: heuristic, statistic, deterministic, stochastic, characteristic
+    :C?:tsic::stic        ; ex: heuristic, statistic, deterministic, stochastic, logistic, elastic
+    :C?:sitc::stic
+    :C?:tsical::stical
+    :C?:sitcal::stical
     :C?:tsics::stics
+    :C?:sitcs::stics
     :C?:tsration::stration ; ex: orchestration, administration, demonstration, registration, illustration
     :C?:tsrations::strations
     :C?:STring::String    ; ex: String, myString, firstString, oldString, initialString

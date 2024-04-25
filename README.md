@@ -1,12 +1,12 @@
 # AutocorrectForDevelopers
-**_AutocorrectForDevelopers_** is an [AutoHotkey](https://www.autohotkey.com/) (AHK) script which automatically fixes typos using rules tailored for software developer environments. Its rules contain many corrections for common developer words involving keywords, classes, methods, programming languages, and programming disciplines. This script reduces runtime errors, decreases compilation times, and boosts developer productivity.
+**_AutocorrectForDevelopers_** is an [AutoHotkey](https://www.autohotkey.com/) (AHK) script which automatically fixes typos using rules tailored for software developers. Its rules contain many corrections for common developer words involving keywords, classes, methods, programming languages, and programming disciplines. This script reduces runtime errors, decreases compilation times, and boosts developer productivity.
 
 ## How does it work?
 Corrections happen automatically as you type:
 
 ![Autocorrect](assets/cpp.gif)
 
-*AutocorrectForDevelopers.ahk* runs on all applications (except Microsoft Word), although the script can be customized to enable or disable any application (see the `#HotIf/#If` statement early in the script).
+By default, *AutocorrectForDevelopers.ahk* runs against all applications (except Microsoft Word), although the script can be customized to enable or disable any application (see the `#HotIf/#If` statement early in the script).
 
 ## Installation
 Download [AutoHotkey](https://www.autohotkey.com/) v2, then run [*AutocorrectForDevelopers.ahk*](AutocorrectForDevelopers.ahk).
@@ -25,12 +25,12 @@ Shown below is a Venn diagram comparing excerpts from the official *AutoCorrect.
 
 ![Venn diagram](assets/VennDiagram.png)
 
-*AutocorrectForDevelopers.ahk* contains many common software engineering terms which are absent from *AutoCorrect.ahk*. Because *AutocorrectForDevelopers.ahk* is developer-centric, it will fix a higher percentage of your typos. Also, it is drawn as a smaller circle because it contains fewer rules than *AutoCorrect.ahk*.
+*AutoCorrect.ahk*, shown on the left, contains many rules for rare words which software engineers are unlikely to need. It also introduces many accented characters which are correct but developer unfriendly. Lastly, the official script hasn't seen much active development in the last 15 years and therefore is missing new technology terminology.
 
-*AutoCorrect.ahk*, shown on the left, contains many rules for rare words which software engineers are unlikely to need. It also introduces many accented characters which are correct but developer unfriendly. Lastly, the official script hasn't seen much active development in the last 15 years and therefore supports AHK v1-only.
+*AutocorrectForDevelopers.ahk*, however, contains many common software engineering terms which are absent from *AutoCorrect.ahk*. Because *AutocorrectForDevelopers.ahk* is developer-centric, it will fix a higher percentage of your typos.
 
 ## Common developer typos added for...
 - Languages: AutoHotkey, C, C++, C#, COBOL, CSS, FORTRAN, Go, Java, JavaScript, Julia, Kotlin, MATLAB, Perl, PHP, Python, R, Ruby, Rust, Scala, SQL, Swift, Visual Basic
 - Programs: GDB, Git, PowerShell, UNIX CLI
-- Subjects: algorithms, artificial intelligence, compilers, concurrency, cryptography, databases, distributed systems, linear algebra, machine learning, networking, operating systems, security, system design
+- Subjects: algorithms, artificial intelligence, compilers, concurrency, cryptography, databases, distributed systems, linear algebra, machine learning, networking, operating systems, security, statistics, system design
 - (more to come!)
