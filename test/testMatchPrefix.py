@@ -212,8 +212,8 @@ EXPLICIT_TESTS = {
     'contanier': 'container', 'accetp': 'accept', 'rpoblem': 'problem', 'partenr': 'partner', 'exatc': 'exact',
     'approahc': 'approach', 'cosnistent': 'consistent', 'accumlate': 'accumulate', 'idnicate': 'indicate',
     'inehrit': 'inherit', 'inehrti': 'inherit', 'ansewr': 'answer', 'naswer': 'answer', 'attemtp': 'attempt',
-    'catgeory': 'category', 'rectnagel': 'rectangle', 'dsitribute': 'distribute', 'advacne': 'advance',
-    'distacne': 'distance', 'enhacne': 'enhance', 'ntoify': 'notify', 'inovlve': 'involve', 'ctonain': 'contain',
+    'catgeory': 'category', 'rectnagel': 'rectangle', 'dsitribute': 'distribute',
+    'enhacne': 'enhance', 'ntoify': 'notify', 'inovlve': 'involve', 'ctonain': 'contain',
     'requset': 'request', 'detemrine': 'determine', 'desturct': 'destruct', 'sytesm': 'system', 'lcoality': 'locality',
     'uqeyr': 'query', 'imorptant': 'important', 'facotr': 'factor', 'refacotr': 'refactor', 'rseutl': 'result',
     'maintian': 'maintain', 'maintina': 'maintain', 'detial': 'detail', 'idgit': 'digit', 'proofraed': 'proofread',
@@ -221,7 +221,11 @@ EXPLICIT_TESTS = {
     'overhwelm': 'overwhelm', 'seqeunce': 'sequence', 'stinrg': 'string', 'dveelop': 'develop', 'parition': 'partition',
     'muliptle': 'multiple', 'elsatic': 'elastic', 'elstaic': 'elastic', 'uspport': 'support', 'drvier': 'driver',
     'strenght': 'strength', 'prodcut': 'product', 'mdoify': 'modify', 'paralel': 'parallel', 'parllel': 'parallel',
-    'aprallel': 'parallel', 'parlalel': 'parallel', 'praallel': 'parallel', 'etxend': 'extend',
+    'aprallel': 'parallel', 'parlalel': 'parallel', 'praallel': 'parallel', 'etxend': 'extend', 'perosn': 'person',
+    'itnegration': 'integration', 'envrionment': 'environment', 'enviornment': 'environment', 'envirnoment': 'environment',
+    'enviroment': 'environment', 'obesrve': 'observe', 'oreint': 'orient', 'comptuation': 'computation',
+    'introudce': 'introduce', 'colelct': 'collect', 'laucnh': 'launch', 'ocntext': 'context', 'conetxt': 'context',
+    'retreive': 'retrieve',
 }
 
 if __name__ == '__main__':

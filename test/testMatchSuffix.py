@@ -146,7 +146,7 @@ EXPLICIT_TESTS = {
     'automtaed': 'automated', 'packgaes': 'packages', 'abiliites': 'abilities', 'stroed': 'stored',
     'ownershpi': 'ownership', 'facotyr': 'factory', 'transfomr': 'transform', 'transfomrs': 'transforms',
     'duplicaet': 'duplicate', 'anyhwere': 'anywhere', 'TreeNOde': 'TreeNode', 'broadcsat': 'broadcast',
-    'efficeintly': 'efficiently', 'efficietnly': 'efficiently', 'efficienetly': 'efficiently',
+    'efficeintly': 'efficiently', 'efficietnly': 'efficiently',
     'initilaize': 'initialize', 'coroutien': 'coroutine', 'coroutiens': 'coroutines', 'relationshpis': 'relationships',
     'investigaion': 'investigation', 'investigaions': 'investigations', 'combinaion': 'combination',
     'combinaions': 'combinations', 'catpion': 'caption', 'catpions': 'captions', 'initilaized': 'initialized',
@@ -211,7 +211,9 @@ EXPLICIT_TESTS = {
     'benchmraked': 'benchmarked', 'benchmraking': 'benchmarking', 'benchmarekd': 'benchmarked', 'produtcion': 'production',
     'resposnive': 'responsive', 'adatpive': 'adaptive', 'statisitc': 'statistic', 'statisitcal': 'statistical',
     'statitsical': 'statistical', 'statisitcs': 'statistics', 'deviaotin': 'deviation', 'notifiaction': 'notification',
-    'bookmraks': 'bookmarks',
+    'bookmraks': 'bookmarks', 'likning': 'linking', 'activaet': 'activate', 'producesr': 'producers',
+    'concurrnetly': 'concurrently', 'sequentailly': 'sequentially', 'formatetd': 'formatted', 'modluar': 'modular',
+    'balacne': 'balance', 'balacned': 'balanced', 'balacnes': 'balances',
 }
 
 if __name__ == '__main__':
