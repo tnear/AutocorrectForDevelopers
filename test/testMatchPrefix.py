@@ -172,8 +172,8 @@ EXPLICIT_TESTS = {
     'progrma': 'program', 'suceed': 'succeed', 'idemoptent': 'idempotent', 'acount': 'account', 'impelement': 'implement',
     'reqiure': 'require', 'staet': 'state', 'reustl': 'result', 'alhpabet': 'alphabet', 'seuence': 'sequence',
     'prdouct': 'product', 'reuire': 'require', 'privelege': 'privilege', 'priviledge': 'privilege', 'queyr': 'query',
-    'qeury': 'query', 'unsroted': 'unsorted', 'unosrted': 'unsorted', 'inerst': 'insert', 'sorrt': 'sort',
-    'unsorrt': 'unsort', 'ranges:;': 'ranges::', 'rangeS::': 'ranges::', 'ranges;:': 'ranges::', 'reeturn': 'return',
+    'qeury': 'query', 'unsroted': 'unsorted', 'unosrted': 'unsorted', 'inerst': 'insert',
+    'ranges:;': 'ranges::', 'rangeS::': 'ranges::', 'ranges;:': 'ranges::', 'reeturn': 'return',
     'otekn': 'token', 'seocnd': 'second', 'secodn': 'second', 'preprae': 'prepare',
     'dierct': 'direct', 'establihs': 'establish', 'estalbish': 'establish', 'reoslve': 'resolve', 'optizmie': 'optimize',
     'frueqen': 'frequen', 'inejct': 'inject', 'reuiqre': 'require', 'suport': 'support', 'assocate': 'associate',
@@ -185,7 +185,7 @@ EXPLICIT_TESTS = {
     'expalin': 'explain', 'distirbute': 'distribute', 'contian': 'contain', 'contina': 'contain', 'ocntain': 'contain',
     'porblem': 'problem', 'whitelsit': 'whitelist', 'permtue': 'permute', 'pemrute': 'permute',  '{`n`n]': '{`n`n}',
     'configrue': 'configure', 'aproach': 'approach', 'rpelica': 'replica', 'rewtach': 'rewatch', 'brnahc': 'branch',
-    'reigster': 'register', 'geneate': 'generate', 'lisetn': 'listen', 'repilca': 'replica', 'excepet': 'except',
+    'reigster': 'register', 'lisetn': 'listen', 'repilca': 'replica', 'excepet': 'except',
     'cralw': 'crawl', 'carwl': 'crawl', 'awtch': 'watch', 'differnt': 'different', 'repaly': 'replay',
     'rectnagle': 'rectangle', 'recntagle': 'rectangle', 'rectangel': 'rectangle', 'quatnity': 'quantity',
     'donwload': 'download', 'downloda': 'download', 'uploda': 'upload', 'overlfow': 'overflow', 'blaance': 'balance',
@@ -225,7 +225,12 @@ EXPLICIT_TESTS = {
     'itnegration': 'integration', 'envrionment': 'environment', 'enviornment': 'environment', 'envirnoment': 'environment',
     'enviroment': 'environment', 'obesrve': 'observe', 'oreint': 'orient', 'comptuation': 'computation',
     'introudce': 'introduce', 'colelct': 'collect', 'laucnh': 'launch', 'ocntext': 'context', 'conetxt': 'context',
-    'retreive': 'retrieve',
+    'retreive': 'retrieve', 'uniqeu': 'unique', 'unqiue': 'unique', 'uniuqe': 'unique', 'uinque': 'unique',
+    'uqniue': 'unique', 'unqieu': 'unique', 'uqnieu': 'unique',
+    'auotmatic': 'automatic', 'montiro': 'monitor', 'devlop': 'develop', 'alocate': 'allocate',
+    'appaer': 'appear', 'speicfic': 'specific', 'swtihc': 'switch', 'confiugre': 'configure', 'orgnaise': 'organise',
+    'orgnaize': 'organize', 'notiifcation': 'notification', 'shcedule': 'schedule', 'adidtion': 'addition',
+    'conidtion': 'condition', 'enhnacement': 'enhancement', 'interpert': 'interpret', 'parmaters': 'parameters',
 }
 
 if __name__ == '__main__':

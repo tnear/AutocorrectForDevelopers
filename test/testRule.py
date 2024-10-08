@@ -154,7 +154,7 @@ class TestRule(unittest.TestCase):
                 duplicates.add(item) # seen before, add to duplicate list
             seen.add(item)
 
-        assert len(duplicates) == 0, f'Found duplicate elements: {duplicates}'
+        self.assertEqual(duplicates, set(), f'Found duplicate elements: {duplicates}')
 
     def test_braceEscape(self):
         # {} should be removed from RHS

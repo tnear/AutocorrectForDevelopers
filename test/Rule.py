@@ -2,6 +2,8 @@ import pathlib
 import re
 
 class Rule:
+    yamlIndent = '    '
+
     def __init__(self, line, backspace, caseSensitive, suffixMatch, prefixMatch):
         self.line = line
         self.backspace = backspace
@@ -156,7 +158,7 @@ class Rule:
         # newText = '{`n`n]'
         # oldText = '{bs 1}}'
         # => updatedText = '{`n`n}'
-        updatedText = re.sub('{bs \d+}', backspacedNewText, newText)
+        updatedText = re.sub(r'{bs \d+}', backspacedNewText, newText)
         return updatedText, True
 
     # ex: inputText = 'Wriet-Output'
@@ -236,3 +238,39 @@ class Rule:
 
         # no match found, return input text
         return inputText, None, 0
+
+    @staticmethod
+    def convertToEspanso(rules):
+        yaml = '---\n# Auto-generated Espanso YAML file\nmatches:\n'
+        for rule in rules:
+            yaml += Rule._convertOneRuleToEspanso(rule)
+
+        return yaml
+
+    @staticmethod
+    def _convertOneRuleToEspanso(rule):
+        newText = rule.newText
+        if rule.backspace:
+            # whitelist a rule by making old text same as new text
+            newText = rule.oldText
+
+        oldText = rule.oldText
+        if '"' in oldText:
+            # double quotes must be escaped with \ in yaml
+            oldText = oldText.replace('"', '\\"')
+
+        yaml = f'  - trigger: "{oldText}"\n'
+        yaml = yaml + Rule.yamlIndent + f'replace: "{newText}"\n'
+        if rule.prefixMatch:
+            yaml = yaml + Rule.yamlIndent + 'left_word: true\n'
+        elif rule.suffixMatch:
+            yaml = yaml + Rule.yamlIndent + 'right_word: true\n'
+        else:
+            yaml = yaml + Rule.yamlIndent + 'word: true\n'
+
+        if not rule.caseSensitive and not rule.backspace:
+            # autocorrect regardless of case
+            yaml = yaml + Rule.yamlIndent + f'propagate_case: true\n'
+
+        yaml += '\n'
+        return yaml

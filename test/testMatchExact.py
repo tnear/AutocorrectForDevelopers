@@ -72,7 +72,7 @@ class TestMatchExact(unittest.TestCase):
         # ensure the most common suffix is below some threshold. If this asserts, then
         # there is likely a missing suffix rule
         MAX_CAPACITY = 8
-        assert sortedSuffixes[0][1] <= MAX_CAPACITY, f'Check if suffix "{sortedSuffixes[0][0]}" needs a suffix rule'
+        self.assertLessEqual(sortedSuffixes[0][1], MAX_CAPACITY, f'Check if suffix "{sortedSuffixes[0][0]}" needs a suffix rule')
 
 # Explicitly test these pairs. Although every rule is iterated over automatically,
 # this section is useful for bug fixes to ensure the behavior does not regress.

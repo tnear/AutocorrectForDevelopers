@@ -46,10 +46,7 @@ class TestMatchPrefix(unittest.TestCase):
 
     def test_noThreeLetterSuffixes(self):
         threeLetterSuffixes = [rule for rule in self.suffixRuleList if len(rule) <= 3]
-        threeLetterSuffixes.sort()
-
-        # permit only these 3-letter suffixes
-        assert threeLetterSuffixes == ['ign', 'nig']
+        self.assertEqual(threeLetterSuffixes, [])
 
     def test_noRedundantSuffixRules(self):
         # ensures that no suffix string ends with another string in the list
@@ -62,6 +59,7 @@ class TestMatchPrefix(unittest.TestCase):
     def test_explicit(self):
         for inputText, expectedText in EXPLICIT_TESTS.items():
             _, rule, _ = Rule.getReplacementText(self.rules, inputText, True)
+            self.assertIsNotNone(rule, f'Could not find word "{inputText}"')
 
             # perform the string replacement
             newText = inputText.replace(rule.oldText, rule.newText)
@@ -89,9 +87,9 @@ class TestMatchPrefix(unittest.TestCase):
 # explicit tests for suffix words (usually as part of bug fixes)
 EXPLICIT_TESTS = {
     'availalbe': 'available', 'languaegs': 'languages', 'mkaes': 'makes', 'automaticallly': 'automatically',
-    'simultaenous': 'simultaneous', 'pairty': 'parity', 'piarty': 'parity', 'emulaetd': 'emulated',
+    'simultaenous': 'simultaneous', 'pairty': 'parity', 'emulaetd': 'emulated',
     'applictaion': 'application', 'applictaoin': 'application', 'applictaions': 'applications',
-    'applictaoins': 'applications', 'mathc': 'match', 'natie': 'native', 'ntaive': 'native',
+    'applictaoins': 'applications', 'mathc': 'match', 'ntaive': 'native',
     'callbakc': 'callback', 'callbakcs': 'callbacks', 'abilties': 'abilities', 'ablities': 'abilities',
     'abilites': 'abilities', 'ablites': 'abilities', 'abilty': 'ability', 'ablity': 'ability',
     'keybaord': 'keyboard', 'keyborad': 'keyboard', 'keybaords': 'keyboards', 'keyborads': 'keyboards',
@@ -101,11 +99,12 @@ EXPLICIT_TESTS = {
     'capaciyt': 'capacity', 'dependenet': 'dependent', 'finidng': 'finding',
     'markdonw': 'markdown', 'markodwn': 'markdown', 'adjacnecy': 'adjacency', 'adjacenyc': 'adjacency',
     'simultanoeus': 'simultaneous', 'platofrm': 'platform', 'platofrms': 'platforms',
-    'cryptogarphy': 'cryptography', 'cryptograhpy': 'cryptography', 'varinat': 'variant', 'initaite': 'initiate',
-    'initaites': 'initiates', 'logicla': 'logical', 'effiicent': 'efficient', 'gradietn': 'gradient',
+    'cryptogarphy': 'cryptography', 'cryptograhpy': 'cryptography', 'varinat': 'variant',
+    'logicla': 'logical', 'effiicent': 'efficient', 'gradietn': 'gradient',
     'gradienet': 'gradient', 'gradietns': 'gradients', 'gradienets': 'gradients', 'heigth': 'height',
-    'utliity': 'utility', 'fianl': 'final', 'closign': 'closing', 'strnig': 'string', 'strnigs': 'strings',
-    'strigns': 'strings', 'optoinal': 'optional', 'optioanl': 'optional', 'prevouis': 'previous',
+    'utliity': 'utility', 'fianl': 'final', 'closign': 'closing',
+    'strnig': 'string', 'strnigs': 'strings', 'strign': 'string', 'strigns': 'strings',
+    'optoinal': 'optional', 'optioanl': 'optional', 'prevouis': 'previous',
     'prevoius': 'previous', 'deciison': 'decision', 'deciisons': 'decisions', 'edtiing': 'editing',
     'transtiive': 'transitive', 'primtiives': 'primitives', 'recursivley': 'recursively',
     'actiivty': 'activity', 'activiyt': 'activity', 'amortiezd': 'amortized',
@@ -135,7 +134,7 @@ EXPLICIT_TESTS = {
     'funciotn': 'function', 'funcitons': 'functions', 'functinos': 'functions', 'functoins': 'functions',
     'funciotns': 'functions', 'functiosn': 'functions', 'funcitonal': 'functional', 'actvie': 'active',
     'featuer': 'feature', 'featuers': 'features', 'fautls': 'faults', 'exectued': 'executed',
-    'rotues': 'routes', 'exectuion': 'execution', 'exectuions': 'executions', 'discoveyr': 'discovery',
+    'exectuion': 'execution', 'exectuions': 'executions', 'discoveyr': 'discovery',
     'activtiy': 'activity', 'softwrae': 'software', 'frameowrk': 'framework', 'framewokr': 'framework',
     'frameowrks': 'frameworks', 'framewokrs': 'frameworks', 'totalign': 'totaling',
     'scalign': 'scaling', 'agetn': 'agent', 'finishesd': 'finished', 'successfullly': 'successfully',
@@ -153,18 +152,18 @@ EXPLICIT_TESTS = {
     'initilaizes': 'initializes', 'csats': 'casts', 'duplicaets': 'duplicates', 'weigths': 'weights',
     'accoutned': 'accounted', 'exproted': 'exported', 'imprvoed': 'improved', 'captuerd': 'captured',
     'transopse': 'transpose', 'statitsic': 'statistic', 'statitsics': 'statistics', 'scientiifc': 'scientific',
-    'materila': 'material', 'GraphNdoe': 'GraphNode', 'conidtion': 'condition', 'launhicng': 'launching',
+    'materila': 'material', 'GraphNdoe': 'GraphNode', 'launhicng': 'launching',
     'veriifes': 'verifies', 'visiilbity': 'visibility', 'emulatro': 'emulator', 'emulatros': 'emulators',
     'gradeint': 'gradient', 'gradeints': 'gradients', 'averaegd': 'averaged', 'captrued': 'captured',
     'clikced': 'clicked', 'appedned': 'appended', 'appedns': 'appends', 'benchamrk': 'benchmark',
     'benchamrked': 'benchmarked', 'benchamrks': 'benchmarks', 'cloend': 'cloned', 'compsoed': 'composed',
     'trianed': 'trained', 'eraesd': 'erased', 'puhsed': 'pushed', 'cahced': 'cached', 'adatped': 'adapted',
     'leadres': 'leaders', 'tetsed': 'tested', 'lisetd': 'listed', 'gradeitn': 'gradient', 'gradeitns': 'gradients',
-    'noityf': 'notify', 'wrapepr': 'wrapper', 'csated': 'casted', 'encoidngs': 'encodings', 'conidtions': 'conditions',
+    'noityf': 'notify', 'wrapepr': 'wrapper', 'csated': 'casted', 'encoidngs': 'encodings',
     'ofrmed': 'formed', 'fomred': 'formed', 'estiamted': 'estimated', 'generla': 'general', 'priavte': 'private',
     'actiavted': 'activated', 'actiavtes': 'activates', 'activaets': 'activates', 'inofrming': 'informing',
     'transfomring': 'transforming', 'horizonatlly': 'horizontally', 'dependenices': 'dependencies', 'literlas': 'literals',
-    'remaisn': 'remains', 'lokcing': 'locking', 'boadr': 'board', 'remotley': 'remotely',
+    'remaisn': 'remains', 'lokcing': 'locking', 'boadr': 'board',
     'perforemd': 'performed', 'clokcs': 'clocks', 'smalelr': 'smaller', 'transofmr': 'transform',
     'transofmred': 'transformed', 'transofmring': 'transforming', 'transofmrs': 'transforms', 'deliverey': 'delivery',
     'tikcet': 'ticket', 'tikcets': 'tickets', 'traiend': 'trained', 'curretn': 'current', 'veriifed': 'verified',
@@ -176,7 +175,7 @@ EXPLICIT_TESTS = {
     'raech': 'reach', 'equaliesd': 'equalised', 'equaliesr': 'equaliser', 'speciified': 'specified',
     'speciifier': 'specifier', 'speciifiers': 'specifiers', 'speciifies': 'specifies', 'travleing': 'traveling',
     'compraes': 'compares', 'visualzie': 'visualize', 'representaitno': 'representation',
-    'representaitnos': 'representations', 'direcitnoal': 'directional', 'distnace': 'distance', 'distnaced': 'distanced',
+    'representaitnos': 'representations', 'direcitnoal': 'directional', 'distnace': 'distance',
     'distnaces': 'distances', 'optimzier': 'optimizer', 'functinoal': 'functional', 'opitonally': 'optionally',
     'opitnoally': 'optionally', 'optinoally': 'optionally',
     'pointesr': 'pointers', 'objectvies': 'objectives', 'sequentialy': 'sequentially', 'whitepsace': 'whitespace',
@@ -186,11 +185,11 @@ EXPLICIT_TESTS = {
     'constatnly': 'constantly', 'actviely': 'actively', 'memberhsip': 'membership', 'memberhsips': 'memberships',
     'negaitvely': 'negatively', 'memberhspi': 'membership', 'memberhspis': 'memberships', 'incremeent': 'increment',
     'visualiez': 'visualize', 'visualzied': 'visualized', 'visualzier': 'visualizer', 'dispalyed': 'displayed',
-    'conidtional': 'conditional', 'picutre': 'picture', 'picutred': 'pictured', 'picutres': 'pictures',
+    'picutre': 'picture', 'picutred': 'pictured', 'picutres': 'pictures',
     'exaclty': 'exactly', 'contaienr': 'container', 'contaienrs': 'containers', 'securitiy': 'security',
     'heihgt': 'height', 'heihgts': 'heights', 'exectuing': 'executing', 'utilitiy': 'utility', 'utiltiies': 'utilities',
     'securiyt': 'security', 'servesr': 'servers', 'funcotins': 'functions', 'laoding': 'loading',
-    'adidtionally': 'additionally', 'indetn': 'indent', 'indenets': 'indents',
+    'indetn': 'indent', 'indenets': 'indents',
     'indetns': 'indents', 'quickosrt': 'quicksort', 'recommendadtion': 'recommendation', 'netowrking': 'networking',
     'netwokring': 'networking', 'varaible': 'variable', 'virtaul': 'virtual', 'mutaully': 'mutually',
     'regitsration': 'registration', 'replaicng': 'replacing', 'referenicng': 'referencing', 'directoreis': 'directories',
@@ -212,8 +211,22 @@ EXPLICIT_TESTS = {
     'resposnive': 'responsive', 'adatpive': 'adaptive', 'statisitc': 'statistic', 'statisitcal': 'statistical',
     'statitsical': 'statistical', 'statisitcs': 'statistics', 'deviaotin': 'deviation', 'notifiaction': 'notification',
     'bookmraks': 'bookmarks', 'likning': 'linking', 'activaet': 'activate', 'producesr': 'producers',
-    'concurrnetly': 'concurrently', 'sequentailly': 'sequentially', 'formatetd': 'formatted', 'modluar': 'modular',
-    'balacne': 'balance', 'balacned': 'balanced', 'balacnes': 'balances',
+    'concurrnetly': 'concurrently', 'formatetd': 'formatted', 'modluar': 'modular',
+    'balacne': 'balance', 'balacned': 'balanced', 'balacnes': 'balances', 'packte': 'packet', 'packtes': 'packets',
+    'parinsg': 'parsing', 'deadlcok': 'deadlock', 'resiez': 'resize', 'reszie': 'resize', 'reszied': 'resized',
+    'resiezs': 'resizes', 'reszies': 'resizes', 'codign': 'coding', 'sampligns': 'samplings', 'declinign': 'declining',
+    'findigns': 'findings', 'openigns': 'openings', 'describign': 'describing',
+    'tracign': 'tracing', 'debuggign': 'debugging', 'cachign': 'caching', 'maskign': 'masking',
+    'timign': 'timing', 'timigns': 'timings', 'mappign': 'mapping', 'mappigns': 'mappings', 'testign': 'testing',
+    'havign': 'having', 'drawign': 'drawing', 'drawigns': 'drawings', 'indexign': 'indexing', 'copyign': 'copying',
+    'visualizign': 'visualizing', 'describnig': 'describing', 'tracnig': 'tracing', 'findnig': 'finding',
+    'findnigs': 'findings', 'changnig': 'changing', 'hashnig': 'hashing', 'networknig': 'networking',
+    'profilnig': 'profiling', 'profilnigs': 'profilings', 'timnig': 'timing', 'timnigs': 'timings',
+    'functionnig': 'functioning', 'functionnigs': 'functionings', 'mappnig': 'mapping', 'mappnigs': 'mappings',
+    'usnig': 'using', 'printnig': 'printing', 'havnig': 'having', 'viewnig': 'viewing', 'viewnigs':'viewings',
+    'indexnig': 'indexing', 'copynig': 'copying', 'visualiznig': 'visualizing', 'foldesr': 'folders', 'templaet': 'template',
+    'enumearte': 'enumerate', 'shadwoed': 'shadowed', 'enumearted': 'enumerated', 'enumeartes': 'enumerates',
+    'templaets': 'templates', 'lcoks': 'locks',
 }
 
 if __name__ == '__main__':

@@ -38,15 +38,17 @@ class TestMatchWhitelist(unittest.TestCase):
     def test_whitelistExplicit(self):
         for inputText in WHITELIST:
             newText, rule, _ = Rule.getReplacementText(self.rules, inputText, True)
+            self.assertIsNotNone(rule, f'Could not find whitelist rule for "{inputText}"')
             # backspace rules preserve the original text
             self.assertEqual(newText, inputText)
             self.assertTrue(rule.backspace)
 
 # explicit tests for whitelisted words (usually as part of bug fixes)
 WHITELIST = [
-    'systemdesign', 'keyforeign', 'beign', 'itme',
-    'assign', 'assigns', 'redesigns', 'misalign', 'misaligns', 'foreigns', 'variableassign',
-    'gardner', 'gardners', 'cupertino', 'moriarty', 'bailly', 'snig', 'fomr', # from/form
+    'systemdesign', 'itme',
+    'assign', 'misalign', 'misaligns', 'variableassign',
+    'gardner', 'gardners', 'cupertino', 'snig', 'fomr', # from/form
+    'ligns', 'realigns',
 ]
 
 if __name__ == '__main__':

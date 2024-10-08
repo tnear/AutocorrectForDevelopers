@@ -27,7 +27,8 @@ MATCH_NONE_LIST = [
     'from', 'form', 'Alvie', 'Horus', 'triangle', 'highlighting', 'sightings', 'braek', # break/brake
     'fro', 'Then', 'Shatner', 'escond', 'halted', 'lien', 'rootin', 'have OT', 'spraed', # spread/spared
     'falte', 'baltes', 'hadnet', 'wordnets', 'yuo', 'Yuo', 'Gorup', 'bahs', 'clas', 'fiel', 'moer', 'rela',
-    'saem', 'ture', 'nto', 'allWords', 'Stroe',
+    'saem', 'ture', 'nto', 'allWords', 'Stroe', 'keyforeign', 'beign', 'assigns', 'redesigns', 'foreigns',
+    'moriarty', 'ign', 'bailly', 'motley', # '-tley' requires too many whitelists
 ]
 
 if __name__ == '__main__':
