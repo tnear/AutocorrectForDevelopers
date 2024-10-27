@@ -36,6 +36,6 @@ Shown below is a Venn diagram comparing excerpts from the official *AutoCorrect.
 - (more to come!)
 
 ## Does this support [Espanso](https://github.com/espanso/espanso)?
-Yes! Espanso is a cross-platform text expander while AutoHotkey is scoped to Microsoft Windows. Load the generated file [*AutocorrectForDevelopers.yaml*](AutocorrectForDevelopers.yaml) in Espanso if you need non-Windows support.
+Yes! Espanso is a cross-platform (Windows, macOS, Linux) text expander while AutoHotkey is scoped to Microsoft Windows. Load the generated file [*AutocorrectForDevelopers.yaml*](AutocorrectForDevelopers.yaml) in Espanso if you need non-Windows support.
 
 The test point *test_writeToEspansoYamlFile* translates AutocorrectForDevelopers.ahk into YAML which can be consumed by Espanso.

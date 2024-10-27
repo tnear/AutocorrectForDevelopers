@@ -30,7 +30,7 @@ class Rule:
         file = Rule.getRelativeFileName(file)
 
         # read file (removing trailing whitespace)
-        with open(file) as f:
+        with open(file, encoding='utf-8') as f:
             lines = [line.strip('\n ') for line in f]
 
         # remove empty lines
@@ -52,7 +52,7 @@ class Rule:
         lines = [line.strip() for line in lines]
 
         # lines are now of form: "::old::new"
-        assert all([line.startswith(':') for line in lines])
+        assert all(line.startswith(':') for line in lines)
 
         assert len(lines) > 0
         return lines
@@ -171,8 +171,8 @@ class Rule:
         mismatchIdx = []
 
         # get idx of capitalization mismatch
-        for idx in range(len(oldText)):
-            if inputText[idx].lower() == oldText[idx].lower() and inputText[idx] != oldText[idx]:
+        for idx, oldChar in enumerate(oldText):
+            if inputText[idx].lower() == oldChar.lower() and inputText[idx] != oldChar:
                 # found a capitalization mismatch
                 mismatchIdx.append( (inputText[idx], idx) )
 
@@ -241,7 +241,9 @@ class Rule:
 
     @staticmethod
     def convertToEspanso(rules):
-        yaml = '---\n# Auto-generated Espanso YAML file\nmatches:\n'
+        yaml = '---\n# Auto-generated Espanso YAML file\n'
+        yaml += '# https://github.com/tnear/AutocorrectForDevelopers\n'
+        yaml += 'matches:\n'
         for rule in rules:
             yaml += Rule._convertOneRuleToEspanso(rule)
 
@@ -250,6 +252,10 @@ class Rule:
     @staticmethod
     def _convertOneRuleToEspanso(rule):
         newText = rule.newText
+        if '`n' in rule.oldText:
+            # ahk newlines in trigger are not supported by espanso, so skip them
+            return ''
+    
         if rule.backspace:
             # whitelist a rule by making old text same as new text
             newText = rule.oldText
@@ -270,7 +276,7 @@ class Rule:
 
         if not rule.caseSensitive and not rule.backspace:
             # autocorrect regardless of case
-            yaml = yaml + Rule.yamlIndent + f'propagate_case: true\n'
+            yaml = yaml + Rule.yamlIndent + 'propagate_case: true\n'
 
         yaml += '\n'
         return yaml

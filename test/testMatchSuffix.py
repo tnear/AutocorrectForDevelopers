@@ -18,9 +18,13 @@ class TestMatchPrefix(unittest.TestCase):
                            not rule.caseSensitive and not rule.backspace]
         self.exactMatchDict = {rule.oldText : rule.newText for rule in exactMatchRules}
 
+        # save all whitelist rules in set
+        whitelistRules = [rule for rule in self.rules if rule.backspace and not rule.containsBackspacing]
+        self.whitelistSet = {text.oldText for text in whitelistRules}
+
     def test_ruleLength(self):
-        self.assertGreater(len(self.rules), 2900)
-        self.assertGreater(len(self.suffixRuleList), 250)
+        self.assertGreater(len(self.rules), 5100)
+        self.assertGreater(len(self.suffixRuleList), 500)
 
     def test_replace(self):
         hasEndChar = True
@@ -83,6 +87,29 @@ class TestMatchPrefix(unittest.TestCase):
                 hasRedundancy = oldTextExact.endswith(oldText) and newTextExact.endswith(newText)
                 self.assertFalse(hasRedundancy,
                                  f'Found redundant exact match rule: "{oldTextExact}" not needed due to "{oldText}"')
+                
+    def test_suffixRulesHaveWhitelist(self):
+        # every suffix needs a decision on whether it should be whitelisted.
+        # ex: typing 'kcet' should not autocorrect to 'cket' even though it is a suffix rule.
+        # but typing 'owrk' should autocorrect to 'work'.
+        for inputText in self.suffixRuleList:
+            if not inputText in NO_WHITELIST_EXCEPTIONS:
+                self.assertTrue(inputText in self.whitelistSet, f'"{inputText}" does not have a whitelist (or exception).')
+
+# these are suffixes which should not be whitelisted. These should be autocorrected to actual words.
+NO_WHITELIST_EXCEPTIONS = {
+    'aicng', 'aegs', 'allly', 'bakc', 'bakcs', 'baord', 'boadr', 'baords', 'borads', 'csated', 'csats', 'ctiy', 'ciyt',
+    'citiy', 'DAta', 'daets', 'digns', 'donw', 'odwn', 'aech', 'edns', 'ofrm', 'ofmr', 'ofrmed', 'formed', 'fomred',
+    'ofmred', 'ofrmer', 'fomrer', 'ofmrer', 'ofrmers', 'fomrers', 'ofmrers', 'ofrming', 'fomring', 'ofmring', 'ofrms',
+    'fomrs', 'ofmrs', 'getnly', 'grahpy', 'lnied', 'lnies', 'laod', 'laoded', 'laoder', 'laoding', 'laods', 'lcok',
+    'lcoks', 'amrk', 'mrak', 'amrked', 'mraked', 'amrking', 'mraking', 'amrks', 'mraks', 'amte', 'amted', 'naion',
+    'naions', 'NOde', 'Ndoe', 'paeg', 'pign', 'pnig', 'pigns', 'pnigs', 'opint', 'opints', 'raets', 'retn', 'irng',
+    'rign', 'rnig', 'irngs', 'rigns', 'rnigs', 'shesd', 'hsed', 'sihp', 'hsip', 'hspi', 'sihps', 'shpis', 'hsips',
+    'hspis', 'isze', 'siez', 'szie', 'iszed', 'szied', 'iszes', 'siezs', 'szies', 'srot', 'osrt', 'sapce', 'spcae',
+    'psace', 'sapces', 'spcaes', 'psaces', 'STring', 'tbale', 'atlly', 'itno', 'Vlaue', 'Vluae', 'Valeu', 'Vaule',
+    'Vlaues', 'Vluaes', 'Valeus', 'Vaules', 'veyr', 'verey', 'hwere', 'wign', 'wnig', 'iwngs', 'wigns', 'wnigs',
+    'owrk', 'wokr', 'owrking', 'wokring', 'owrks', 'wokrs', 'dtae', 'dtaes', 'wehre',
+}
 
 # explicit tests for suffix words (usually as part of bug fixes)
 EXPLICIT_TESTS = {
@@ -142,7 +169,7 @@ EXPLICIT_TESTS = {
     'automaticalyl': 'automatically', 'successfulyl': 'successfully', 'optoinally': 'optionally',
     'direcotry': 'directory', 'noitfy': 'notify', 'defintiion': 'definition', 'condtiioning': 'conditioning',
     'postiions': 'positions',
-    'automtaed': 'automated', 'packgaes': 'packages', 'abiliites': 'abilities', 'stroed': 'stored',
+    'automtaed': 'automated', 'messgaes': 'messages', 'abiliites': 'abilities', 'stroed': 'stored',
     'ownershpi': 'ownership', 'facotyr': 'factory', 'transfomr': 'transform', 'transfomrs': 'transforms',
     'duplicaet': 'duplicate', 'anyhwere': 'anywhere', 'TreeNOde': 'TreeNode', 'broadcsat': 'broadcast',
     'efficeintly': 'efficiently', 'efficietnly': 'efficiently',
@@ -226,7 +253,10 @@ EXPLICIT_TESTS = {
     'usnig': 'using', 'printnig': 'printing', 'havnig': 'having', 'viewnig': 'viewing', 'viewnigs':'viewings',
     'indexnig': 'indexing', 'copynig': 'copying', 'visualiznig': 'visualizing', 'foldesr': 'folders', 'templaet': 'template',
     'enumearte': 'enumerate', 'shadwoed': 'shadowed', 'enumearted': 'enumerated', 'enumeartes': 'enumerates',
-    'templaets': 'templates', 'lcoks': 'locks',
+    'templaets': 'templates', 'lcoks': 'locks', 'upcomgin': 'upcoming', 'timgins': 'timings', 'executbale': 'executable',
+    'validtae': 'validate', 'validtaes': 'validates', 'storgae': 'storage', 'anywehre': 'anywhere', 'contaeinr': 'container',
+    'contaeinrs': 'containers', 'caleld': 'called', 'customsie': 'customise', 'customsied': 'customised',
+    'customsier': 'customiser', 'customsies': 'customises',
 }
 
 if __name__ == '__main__':

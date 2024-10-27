@@ -11,8 +11,8 @@ class TestMatchPrefix(unittest.TestCase):
         self.prefixRuleList = [rule.oldText for rule in prefixRules]
 
     def test_ruleLength(self):
-        self.assertGreater(len(self.rules), 3500)
-        self.assertGreater(len(self.prefixRuleList), 430)
+        self.assertGreater(len(self.rules), 5100)
+        self.assertGreater(len(self.prefixRuleList), 700)
 
     def test_replace(self):
         # prefix rules (":*:") match regardless of end char
@@ -231,6 +231,7 @@ EXPLICIT_TESTS = {
     'appaer': 'appear', 'speicfic': 'specific', 'swtihc': 'switch', 'confiugre': 'configure', 'orgnaise': 'organise',
     'orgnaize': 'organize', 'notiifcation': 'notification', 'shcedule': 'schedule', 'adidtion': 'addition',
     'conidtion': 'condition', 'enhnacement': 'enhancement', 'interpert': 'interpret', 'parmaters': 'parameters',
+    'packgae': 'package', 'crucnh': 'crunch', 'progarms': 'programs',
 }
 
 if __name__ == '__main__':

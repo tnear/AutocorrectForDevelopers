@@ -1,5 +1,6 @@
 ---
 # Auto-generated Espanso YAML file
+# https://github.com/tnear/AutocorrectForDevelopers
 matches:
   - trigger: "atro"
     replace: "atro"
@@ -113,14 +114,6 @@ matches:
     replace: "unaligns"
     word: true
 
-  - trigger: "mnet"
-    replace: "mnet"
-    word: true
-
-  - trigger: "boomnet"
-    replace: "boomnet"
-    word: true
-
   - trigger: "nace"
     replace: "nace"
     word: true
@@ -221,8 +214,8 @@ matches:
     replace: "roed"
     word: true
 
-  - trigger: "rezored"
-    replace: "rezored"
+  - trigger: "rezeroed"
+    replace: "rezeroed"
     word: true
 
   - trigger: "zeroed"
@@ -533,10 +526,6 @@ matches:
     replace: "aetly"
     word: true
 
-  - trigger: "alble"
-    replace: "alble"
-    word: true
-
   - trigger: "aible"
     replace: "aible"
     word: true
@@ -557,8 +546,24 @@ matches:
     replace: "aitvely"
     word: true
 
+  - trigger: "albe"
+    replace: "albe"
+    word: true
+
+  - trigger: "alble"
+    replace: "alble"
+    word: true
+
   - trigger: "alyed"
     replace: "alyed"
+    word: true
+
+  - trigger: "alyl"
+    replace: "alyl"
+    word: true
+
+  - trigger: "amtes"
+    replace: "amtes"
     word: true
 
   - trigger: "aotin"
@@ -601,12 +606,24 @@ matches:
     replace: "bign"
     word: true
 
-  - trigger: "bilties"
-    replace: "bilties"
+  - trigger: "biilties"
+    replace: "biilties"
+    word: true
+
+  - trigger: "biilty"
+    replace: "biilty"
     word: true
 
   - trigger: "bilites"
     replace: "bilites"
+    word: true
+
+  - trigger: "bilties"
+    replace: "bilties"
+    word: true
+
+  - trigger: "bilty"
+    replace: "bilty"
     word: true
 
   - trigger: "blites"
@@ -615,14 +632,6 @@ matches:
 
   - trigger: "blities"
     replace: "blities"
-    word: true
-
-  - trigger: "biilties"
-    replace: "biilties"
-    word: true
-
-  - trigger: "bilty"
-    replace: "bilty"
     word: true
 
   - trigger: "blity"
@@ -683,6 +692,14 @@ matches:
 
   - trigger: "cnig"
     replace: "cnig"
+    word: true
+
+  - trigger: "csat"
+    replace: "csat"
+    word: true
+
+  - trigger: "ctaing"
+    replace: "ctaing"
     word: true
 
   - trigger: "dadtion"
@@ -765,8 +782,20 @@ matches:
     replace: "einces"
     word: true
 
+  - trigger: "einr"
+    replace: "einr"
+    word: true
+
+  - trigger: "einrs"
+    replace: "einrs"
+    word: true
+
   - trigger: "eintly"
     replace: "eintly"
+    word: true
+
+  - trigger: "eints"
+    replace: "eints"
     word: true
 
   - trigger: "eitn"
@@ -787,6 +816,14 @@ matches:
 
   - trigger: "emnts"
     replace: "emnts"
+    word: true
+
+  - trigger: "emtn"
+    replace: "emtn"
+    word: true
+
+  - trigger: "emtns"
+    replace: "emtns"
     word: true
 
   - trigger: "enyc"
@@ -921,6 +958,14 @@ matches:
     replace: "ienrs"
     word: true
 
+  - trigger: "iesd"
+    replace: "iesd"
+    word: true
+
+  - trigger: "iesr"
+    replace: "iesr"
+    word: true
+
   - trigger: "ietn"
     replace: "ietn"
     word: true
@@ -955,6 +1000,10 @@ matches:
 
   - trigger: "ihgt"
     replace: "ihgt"
+    word: true
+
+  - trigger: "ihgts"
+    replace: "ihgts"
     word: true
 
   - trigger: "iicent"
@@ -1085,10 +1134,6 @@ matches:
     replace: "itfy"
     word: true
 
-  - trigger: "ityf"
-    replace: "ityf"
-    word: true
-
   - trigger: "itme"
     replace: "itme"
     word: true
@@ -1109,6 +1154,10 @@ matches:
     replace: "itnoally"
     word: true
 
+  - trigger: "itnos"
+    replace: "itnos"
+    word: true
+
   - trigger: "iton"
     replace: "iton"
     word: true
@@ -1125,12 +1174,16 @@ matches:
     replace: "itons"
     word: true
 
-  - trigger: "ivley"
-    replace: "ivley"
+  - trigger: "ityf"
+    replace: "ityf"
     word: true
 
   - trigger: "iviyt"
     replace: "iviyt"
+    word: true
+
+  - trigger: "ivley"
+    replace: "ivley"
     word: true
 
   - trigger: "iwng"
@@ -1169,12 +1222,12 @@ matches:
     replace: "kign"
     word: true
 
-  - trigger: "knig"
-    replace: "knig"
-    word: true
-
   - trigger: "kigns"
     replace: "kigns"
+    word: true
+
+  - trigger: "knig"
+    replace: "knig"
     word: true
 
   - trigger: "knigs"
@@ -1205,12 +1258,16 @@ matches:
     replace: "laly"
     word: true
 
-  - trigger: "lelr"
-    replace: "lelr"
-    word: true
-
   - trigger: "leing"
     replace: "leing"
+    word: true
+
+  - trigger: "leld"
+    replace: "leld"
+    word: true
+
+  - trigger: "lelr"
+    replace: "lelr"
     word: true
 
   - trigger: "liez"
@@ -1235,6 +1292,10 @@ matches:
 
   - trigger: "lnig"
     replace: "lnig"
+    word: true
+
+  - trigger: "lnigs"
+    replace: "lnigs"
     word: true
 
   - trigger: "ltiy"
@@ -1301,6 +1362,26 @@ matches:
     replace: "metns"
     word: true
 
+  - trigger: "mgin"
+    replace: "mgin"
+    word: true
+
+  - trigger: "mgins"
+    replace: "mgins"
+    word: true
+
+  - trigger: "mign"
+    replace: "mign"
+    word: true
+
+  - trigger: "migns"
+    replace: "migns"
+    word: true
+
+  - trigger: "mnet"
+    replace: "mnet"
+    word: true
+
   - trigger: "mneted"
     replace: "mneted"
     word: true
@@ -1309,20 +1390,28 @@ matches:
     replace: "mnets"
     word: true
 
-  - trigger: "mign"
-    replace: "mign"
-    word: true
-
   - trigger: "mnig"
     replace: "mnig"
     word: true
 
-  - trigger: "migns"
-    replace: "migns"
-    word: true
-
   - trigger: "mnigs"
     replace: "mnigs"
+    word: true
+
+  - trigger: "msie"
+    replace: "msie"
+    word: true
+
+  - trigger: "msied"
+    replace: "msied"
+    word: true
+
+  - trigger: "msier"
+    replace: "msier"
+    word: true
+
+  - trigger: "msies"
+    replace: "msies"
     word: true
 
   - trigger: "mzie"
@@ -1369,6 +1458,10 @@ matches:
     replace: "nicng"
     word: true
 
+  - trigger: "nigns"
+    replace: "nigns"
+    word: true
+
   - trigger: "nnig"
     replace: "nnig"
     word: true
@@ -1385,24 +1478,12 @@ matches:
     replace: "ntiy"
     word: true
 
-  - trigger: "oiusly"
-    replace: "oiusly"
-    word: true
-
   - trigger: "oekr"
     replace: "oekr"
     word: true
 
   - trigger: "oend"
     replace: "oend"
-    word: true
-
-  - trigger: "oewr"
-    replace: "oewr"
-    word: true
-
-  - trigger: "oewrs"
-    replace: "oewrs"
     word: true
 
   - trigger: "oeus"
@@ -1413,12 +1494,28 @@ matches:
     replace: "oeusly"
     word: true
 
+  - trigger: "oewr"
+    replace: "oewr"
+    word: true
+
+  - trigger: "oewrs"
+    replace: "oewrs"
+    word: true
+
   - trigger: "oinal"
     replace: "oinal"
     word: true
 
   - trigger: "oinally"
     replace: "oinally"
+    word: true
+
+  - trigger: "oisn"
+    replace: "oisn"
+    word: true
+
+  - trigger: "oisns"
+    replace: "oisns"
     word: true
 
   - trigger: "oitn"
@@ -1433,6 +1530,10 @@ matches:
     replace: "oius"
     word: true
 
+  - trigger: "oiusly"
+    replace: "oiusly"
+    word: true
+
   - trigger: "okcs"
     replace: "okcs"
     word: true
@@ -1445,12 +1546,36 @@ matches:
     replace: "onits"
     word: true
 
+  - trigger: "opse"
+    replace: "opse"
+    word: true
+
+  - trigger: "oreis"
+    replace: "oreis"
+    word: true
+
   - trigger: "otyr"
     replace: "otyr"
     word: true
 
+  - trigger: "oudn"
+    replace: "oudn"
+    word: true
+
+  - trigger: "oudns"
+    replace: "oudns"
+    word: true
+
   - trigger: "ouisly"
     replace: "ouisly"
+    word: true
+
+  - trigger: "outn"
+    replace: "outn"
+    word: true
+
+  - trigger: "outns"
+    replace: "outns"
     word: true
 
   - trigger: "pepr"
@@ -1477,56 +1602,12 @@ matches:
     replace: "prots"
     word: true
 
-  - trigger: "riing"
-    replace: "riing"
-    word: true
-
-  - trigger: "riyt"
-    replace: "riyt"
-    word: true
-
-  - trigger: "rnat"
-    replace: "rnat"
-    word: true
-
-  - trigger: "rtiy"
-    replace: "rtiy"
-    word: true
-
-  - trigger: "oisn"
-    replace: "oisn"
-    word: true
-
-  - trigger: "oisns"
-    replace: "oisns"
-    word: true
-
-  - trigger: "opse"
-    replace: "opse"
-    word: true
-
-  - trigger: "oreis"
-    replace: "oreis"
-    word: true
-
-  - trigger: "oudn"
-    replace: "oudn"
-    word: true
-
-  - trigger: "oudns"
-    replace: "oudns"
-    word: true
-
-  - trigger: "outn"
-    replace: "outn"
-    word: true
-
-  - trigger: "outns"
-    replace: "outns"
-    word: true
-
   - trigger: "raeg"
     replace: "raeg"
+    word: true
+
+  - trigger: "raet"
+    replace: "raet"
     word: true
 
   - trigger: "rekd"
@@ -1541,12 +1622,36 @@ matches:
     replace: "retnly"
     word: true
 
+  - trigger: "rgae"
+    replace: "rgae"
+    word: true
+
+  - trigger: "riing"
+    replace: "riing"
+    word: true
+
   - trigger: "rila"
     replace: "rila"
     word: true
 
   - trigger: "ritiy"
     replace: "ritiy"
+    word: true
+
+  - trigger: "riyt"
+    replace: "riyt"
+    word: true
+
+  - trigger: "rnat"
+    replace: "rnat"
+    word: true
+
+  - trigger: "rnats"
+    replace: "rnats"
+    word: true
+
+  - trigger: "rtiy"
+    replace: "rtiy"
     word: true
 
   - trigger: "rvoe"
@@ -1569,6 +1674,10 @@ matches:
     replace: "sehd"
     word: true
 
+  - trigger: "setd"
+    replace: "setd"
+    word: true
+
   - trigger: "shpi"
     replace: "shpi"
     word: true
@@ -1583,6 +1692,10 @@ matches:
 
   - trigger: "sitcal"
     replace: "sitcal"
+    word: true
+
+  - trigger: "sitcs"
+    replace: "sitcs"
     word: true
 
   - trigger: "snig"
@@ -1631,6 +1744,10 @@ matches:
 
   - trigger: "taion"
     replace: "taion"
+    word: true
+
+  - trigger: "taional"
+    replace: "taional"
     word: true
 
   - trigger: "taions"
@@ -1693,8 +1810,12 @@ matches:
     replace: "thces"
     word: true
 
-  - trigger: "taional"
-    replace: "taional"
+  - trigger: "tiem"
+    replace: "tiem"
+    word: true
+
+  - trigger: "tiems"
+    replace: "tiems"
     word: true
 
   - trigger: "tien"
@@ -1761,20 +1882,20 @@ matches:
     replace: "tnat"
     word: true
 
-  - trigger: "tnatly"
-    replace: "tnatly"
-    word: true
-
-  - trigger: "tnats"
-    replace: "tnats"
-    word: true
-
   - trigger: "tnation"
     replace: "tnation"
     word: true
 
   - trigger: "tnations"
     replace: "tnations"
+    word: true
+
+  - trigger: "tnatly"
+    replace: "tnatly"
+    word: true
+
+  - trigger: "tnats"
+    replace: "tnats"
     word: true
 
   - trigger: "tned"
@@ -1815,6 +1936,10 @@ matches:
 
   - trigger: "tsic"
     replace: "tsic"
+    word: true
+
+  - trigger: "tsical"
+    replace: "tsical"
     word: true
 
   - trigger: "tsics"
@@ -1953,10 +2078,6 @@ matches:
     replace: "#pragma"
     word: true
 
-  - trigger: "{`n`n]"
-    replace: "{`n`n]"
-    left_word: true
-
   - trigger: "alot"
     replace: "a lot"
     word: true
@@ -1988,6 +2109,16 @@ matches:
     propagate_case: true
 
   - trigger: "absoltue"
+    replace: "absolute"
+    word: true
+    propagate_case: true
+
+  - trigger: "absoulte"
+    replace: "absolute"
+    word: true
+    propagate_case: true
+
+  - trigger: "aboslute"
     replace: "absolute"
     word: true
     propagate_case: true
@@ -2754,6 +2885,16 @@ matches:
     word: true
     propagate_case: true
 
+  - trigger: "artifcat"
+    replace: "artifact"
+    word: true
+    propagate_case: true
+
+  - trigger: "artifcats"
+    replace: "artifacts"
+    word: true
+    propagate_case: true
+
   - trigger: "artifiical"
     replace: "artificial"
     word: true
@@ -3367,6 +3508,11 @@ matches:
     word: true
     propagate_case: true
 
+  - trigger: "beahvior"
+    replace: "behavior"
+    word: true
+    propagate_case: true
+
   - trigger: "behaivors"
     replace: "behaviors"
     word: true
@@ -3383,6 +3529,11 @@ matches:
     propagate_case: true
 
   - trigger: "behaviros"
+    replace: "behaviors"
+    word: true
+    propagate_case: true
+
+  - trigger: "beahviors"
     replace: "behaviors"
     word: true
     propagate_case: true
@@ -3660,6 +3811,41 @@ matches:
     word: true
     propagate_case: true
 
+  - trigger: "buidl"
+    replace: "build"
+    word: true
+    propagate_case: true
+
+  - trigger: "biudl"
+    replace: "build"
+    word: true
+    propagate_case: true
+
+  - trigger: "bulider"
+    replace: "builder"
+    word: true
+    propagate_case: true
+
+  - trigger: "biulder"
+    replace: "builder"
+    word: true
+    propagate_case: true
+
+  - trigger: "ubilder"
+    replace: "builder"
+    word: true
+    propagate_case: true
+
+  - trigger: "buidler"
+    replace: "builder"
+    word: true
+    propagate_case: true
+
+  - trigger: "biudler"
+    replace: "builder"
+    word: true
+    propagate_case: true
+
   - trigger: "buliding"
     replace: "building"
     word: true
@@ -3671,6 +3857,16 @@ matches:
     propagate_case: true
 
   - trigger: "ubilding"
+    replace: "building"
+    word: true
+    propagate_case: true
+
+  - trigger: "buidling"
+    replace: "building"
+    word: true
+    propagate_case: true
+
+  - trigger: "biudling"
     replace: "building"
     word: true
     propagate_case: true
@@ -3690,6 +3886,16 @@ matches:
     word: true
     propagate_case: true
 
+  - trigger: "buidls"
+    replace: "builds"
+    word: true
+    propagate_case: true
+
+  - trigger: "biudls"
+    replace: "builds"
+    word: true
+    propagate_case: true
+
   - trigger: "biult"
     replace: "built"
     word: true
@@ -3697,6 +3903,11 @@ matches:
 
   - trigger: "ubilt"
     replace: "built"
+    word: true
+    propagate_case: true
+
+  - trigger: "bucnh"
+    replace: "bunch"
     word: true
     propagate_case: true
 
@@ -3775,11 +3986,6 @@ matches:
 
   - trigger: "clalback"
     replace: "callback"
-    word: true
-    propagate_case: true
-
-  - trigger: "caleld"
-    replace: "called"
     word: true
     propagate_case: true
 
@@ -5955,6 +6161,11 @@ matches:
     word: true
     propagate_case: true
 
+  - trigger: "crucnh"
+    replace: "crunch"
+    left_word: true
+    propagate_case: true
+
   - trigger: "crytpo"
     replace: "crypto"
     left_word: true
@@ -6201,6 +6412,16 @@ matches:
 
   - trigger: "declraed"
     replace: "declared"
+    word: true
+    propagate_case: true
+
+  - trigger: "decoartor"
+    replace: "decorator"
+    word: true
+    propagate_case: true
+
+  - trigger: "decoartors"
+    replace: "decorators"
     word: true
     propagate_case: true
 
@@ -6854,6 +7075,21 @@ matches:
     word: true
     propagate_case: true
 
+  - trigger: "diminsih"
+    replace: "diminish"
+    word: true
+    propagate_case: true
+
+  - trigger: "diminsihes"
+    replace: "diminishes"
+    word: true
+    propagate_case: true
+
+  - trigger: "diminsihing"
+    replace: "diminishing"
+    word: true
+    propagate_case: true
+
   - trigger: "driect"
     replace: "direct"
     left_word: true
@@ -7254,6 +7490,11 @@ matches:
     left_word: true
     propagate_case: true
 
+  - trigger: "due ot"
+    replace: "due to"
+    word: true
+    propagate_case: true
+
   - trigger: "dupm"
     replace: "dump"
     word: true
@@ -7261,6 +7502,11 @@ matches:
 
   - trigger: "dupmed"
     replace: "dumped"
+    word: true
+    propagate_case: true
+
+  - trigger: "dupming"
+    replace: "dumping"
     word: true
     propagate_case: true
 
@@ -7336,6 +7582,11 @@ matches:
 
   - trigger: "eahc"
     replace: "each"
+    word: true
+    propagate_case: true
+
+  - trigger: "eralier"
+    replace: "earlier"
     word: true
     propagate_case: true
 
@@ -7666,6 +7917,11 @@ matches:
     replace: "endl"
     word: true
 
+  - trigger: "endores"
+    replace: "endorse"
+    word: true
+    propagate_case: true
+
   - trigger: "engaeg"
     replace: "engage"
     word: true
@@ -7752,6 +8008,11 @@ matches:
     propagate_case: true
 
   - trigger: "enuogh"
+    replace: "enough"
+    word: true
+    propagate_case: true
+
+  - trigger: "enouhg"
     replace: "enough"
     word: true
     propagate_case: true
@@ -8067,11 +8328,6 @@ matches:
 
   - trigger: "evertyhing"
     replace: "everything"
-    word: true
-    propagate_case: true
-
-  - trigger: "everywehre"
-    replace: "everywhere"
     word: true
     propagate_case: true
 
@@ -8605,6 +8861,11 @@ matches:
     word: true
     propagate_case: true
 
+  - trigger: "failuer"
+    replace: "failure"
+    word: true
+    propagate_case: true
+
   - trigger: "failrues"
     replace: "failures"
     word: true
@@ -8631,6 +8892,11 @@ matches:
     propagate_case: true
 
   - trigger: "failuesr"
+    replace: "failures"
+    word: true
+    propagate_case: true
+
+  - trigger: "failuers"
     replace: "failures"
     word: true
     propagate_case: true
@@ -8684,6 +8950,11 @@ matches:
     propagate_case: true
 
   - trigger: "familar"
+    replace: "familiar"
+    word: true
+    propagate_case: true
+
+  - trigger: "familair"
     replace: "familiar"
     word: true
     propagate_case: true
@@ -8887,6 +9158,11 @@ matches:
 
   - trigger: "fnids"
     replace: "finds"
+    word: true
+    propagate_case: true
+
+  - trigger: "finsih"
+    replace: "finish"
     word: true
     propagate_case: true
 
@@ -9440,6 +9716,11 @@ matches:
     word: true
     propagate_case: true
 
+  - trigger: "gneeric"
+    replace: "generic"
+    word: true
+    propagate_case: true
+
   - trigger: "geospaital"
     replace: "geospatial"
     word: true
@@ -9731,7 +10012,17 @@ matches:
     word: true
     propagate_case: true
 
+  - trigger: "ahrd"
+    replace: "hard"
+    word: true
+    propagate_case: true
+
   - trigger: "hadrware"
+    replace: "hardware"
+    word: true
+    propagate_case: true
+
+  - trigger: "ahrdware"
     replace: "hardware"
     word: true
     propagate_case: true
@@ -9866,6 +10157,11 @@ matches:
     word: true
     propagate_case: true
 
+  - trigger: "healhty"
+    replace: "healthy"
+    word: true
+    propagate_case: true
+
   - trigger: "hieght"
     replace: "height"
     word: true
@@ -9873,6 +10169,26 @@ matches:
 
   - trigger: "hieghts"
     replace: "heights"
+    word: true
+    propagate_case: true
+
+  - trigger: "hlep"
+    replace: "help"
+    word: true
+    propagate_case: true
+
+  - trigger: "hleper"
+    replace: "helper"
+    word: true
+    propagate_case: true
+
+  - trigger: "hleping"
+    replace: "helping"
+    word: true
+    propagate_case: true
+
+  - trigger: "hleps"
+    replace: "helps"
     word: true
     propagate_case: true
 
@@ -9967,7 +10283,17 @@ matches:
     replace: "How"
     word: true
 
+  - trigger: "hwo it"
+    replace: "how it"
+    word: true
+    propagate_case: true
+
   - trigger: "howthe"
+    replace: "how the"
+    word: true
+    propagate_case: true
+
+  - trigger: "hwo the"
     replace: "how the"
     word: true
     propagate_case: true
@@ -11154,6 +11480,11 @@ matches:
     word: true
     propagate_case: true
 
+  - trigger: "iostraem"
+    replace: "iostream"
+    word: true
+    propagate_case: true
+
   - trigger: "is nto"
     replace: "is not"
     word: true
@@ -12301,6 +12632,11 @@ matches:
 
   - trigger: "mnay"
     replace: "many"
+    word: true
+    propagate_case: true
+
+  - trigger: "mapifle"
+    replace: "mapfile"
     word: true
     propagate_case: true
 
@@ -13568,6 +13904,11 @@ matches:
     word: true
     propagate_case: true
 
+  - trigger: "outpust"
+    replace: "outputs"
+    word: true
+    propagate_case: true
+
   - trigger: "overlfow"
     replace: "overflow"
     left_word: true
@@ -13659,6 +14000,11 @@ matches:
     propagate_case: true
 
   - trigger: "packaeg"
+    replace: "package"
+    left_word: true
+    propagate_case: true
+
+  - trigger: "packgae"
     replace: "package"
     left_word: true
     propagate_case: true
@@ -14906,6 +15252,11 @@ matches:
     left_word: true
     propagate_case: true
 
+  - trigger: "progarm"
+    replace: "program"
+    left_word: true
+    propagate_case: true
+
   - trigger: "programable"
     replace: "programmable"
     word: true
@@ -14929,11 +15280,6 @@ matches:
   - trigger: "prjoect"
     replace: "project"
     left_word: true
-    propagate_case: true
-
-  - trigger: "promsie"
-    replace: "promise"
-    word: true
     propagate_case: true
 
   - trigger: "pormise"
@@ -15050,6 +15396,15 @@ matches:
     replace: "proximity"
     word: true
     propagate_case: true
+
+  - trigger: "pruen"
+    replace: "prune"
+    word: true
+    propagate_case: true
+
+  - trigger: "purne"
+    replace: "prune"
+    word: true
 
   - trigger: "pesudo"
     replace: "pseudo"
@@ -17076,12 +17431,27 @@ matches:
     word: true
     propagate_case: true
 
+  - trigger: "scoep"
+    replace: "scope"
+    word: true
+    propagate_case: true
+
   - trigger: "socped"
     replace: "scoped"
     word: true
     propagate_case: true
 
+  - trigger: "scoepd"
+    replace: "scoped"
+    word: true
+    propagate_case: true
+
   - trigger: "socpes"
+    replace: "scopes"
+    word: true
+    propagate_case: true
+
+  - trigger: "scoeps"
     replace: "scopes"
     word: true
     propagate_case: true
@@ -18254,6 +18624,16 @@ matches:
     word: true
     propagate_case: true
 
+  - trigger: "stnading"
+    replace: "standing"
+    word: true
+    propagate_case: true
+
+  - trigger: "stnadup"
+    replace: "standup"
+    word: true
+    propagate_case: true
+
   - trigger: "starrt"
     replace: "start"
     word: true
@@ -18291,6 +18671,11 @@ matches:
 
   - trigger: "sttaic"
     replace: "static"
+    word: true
+    propagate_case: true
+
+  - trigger: "sttaus"
+    replace: "status"
     word: true
     propagate_case: true
 
@@ -19215,6 +19600,11 @@ matches:
     word: true
     propagate_case: true
 
+  - trigger: "temporray"
+    replace: "temporary"
+    word: true
+    propagate_case: true
+
   - trigger: "tendancy"
     replace: "tendency"
     word: true
@@ -19652,6 +20042,11 @@ matches:
     word: true
     propagate_case: true
 
+  - trigger: "thorugh"
+    replace: "through"
+    word: true
+    propagate_case: true
+
   - trigger: "throuhgput"
     replace: "throughput"
     word: true
@@ -19868,6 +20263,11 @@ matches:
     propagate_case: true
 
   - trigger: "to og"
+    replace: "to go"
+    word: true
+    propagate_case: true
+
+  - trigger: "t ogo"
     replace: "to go"
     word: true
     propagate_case: true
@@ -20430,6 +20830,21 @@ matches:
     word: true
     propagate_case: true
 
+  - trigger: "unhelathy"
+    replace: "unhealthy"
+    word: true
+    propagate_case: true
+
+  - trigger: "unheatlhy"
+    replace: "unhealthy"
+    word: true
+    propagate_case: true
+
+  - trigger: "unhealhty"
+    replace: "unhealthy"
+    word: true
+    propagate_case: true
+
   - trigger: "uniofrmly"
     replace: "uniformly"
     word: true
@@ -20742,6 +21157,16 @@ matches:
 
   - trigger: "avlidates"
     replace: "validates"
+    word: true
+    propagate_case: true
+
+  - trigger: "avlidation"
+    replace: "validation"
+    word: true
+    propagate_case: true
+
+  - trigger: "vlaidation"
+    replace: "validation"
     word: true
     propagate_case: true
 
@@ -21442,11 +21867,6 @@ matches:
 
   - trigger: "hwenever"
     replace: "whenever"
-    word: true
-    propagate_case: true
-
-  - trigger: "wehre"
-    replace: "where"
     word: true
     propagate_case: true
 
@@ -22365,7 +22785,15 @@ matches:
     replace: "date"
     right_word: true
 
+  - trigger: "dtae"
+    replace: "date"
+    right_word: true
+
   - trigger: "daets"
+    replace: "dates"
+    right_word: true
+
+  - trigger: "dtaes"
     replace: "dates"
     right_word: true
 
@@ -22777,7 +23205,15 @@ matches:
     replace: "iner"
     right_word: true
 
+  - trigger: "einr"
+    replace: "iner"
+    right_word: true
+
   - trigger: "ienrs"
+    replace: "iners"
+    right_word: true
+
+  - trigger: "einrs"
     replace: "iners"
     right_word: true
 
@@ -22981,6 +23417,10 @@ matches:
     replace: "lizer"
     right_word: true
 
+  - trigger: "leld"
+    replace: "lled"
+    right_word: true
+
   - trigger: "lelr"
     replace: "ller"
     right_word: true
@@ -23137,12 +23577,36 @@ matches:
     replace: "ming"
     right_word: true
 
+  - trigger: "mgin"
+    replace: "ming"
+    right_word: true
+
   - trigger: "migns"
     replace: "mings"
     right_word: true
 
   - trigger: "mnigs"
     replace: "mings"
+    right_word: true
+
+  - trigger: "mgins"
+    replace: "mings"
+    right_word: true
+
+  - trigger: "msie"
+    replace: "mise"
+    right_word: true
+
+  - trigger: "msied"
+    replace: "mised"
+    right_word: true
+
+  - trigger: "msier"
+    replace: "miser"
+    right_word: true
+
+  - trigger: "msies"
+    replace: "mises"
     right_word: true
 
   - trigger: "mzie"
@@ -23406,6 +23870,10 @@ matches:
     right_word: true
 
   - trigger: "raeg"
+    replace: "rage"
+    right_word: true
+
+  - trigger: "rgae"
     replace: "rage"
     right_word: true
 
@@ -23723,6 +24191,10 @@ matches:
 
   - trigger: "STring"
     replace: "String"
+    right_word: true
+
+  - trigger: "tbale"
+    replace: "table"
     right_word: true
 
   - trigger: "taeg"
@@ -24082,6 +24554,10 @@ matches:
     right_word: true
 
   - trigger: "hwere"
+    replace: "where"
+    right_word: true
+
+  - trigger: "wehre"
     replace: "where"
     right_word: true
 

@@ -114,12 +114,6 @@
     {
     }
 
-    ; -mnet word suffix whitelist (do not convert these to -ment)
-    :b0:mnet::
-    :b0:boomnet::
-    {
-    }
-
     ; -nace word suffix whitelist (do not convert these to -ance)
     :b0:nace::
     :b0:furnace::
@@ -182,7 +176,7 @@
 
     ; -roed word suffix whitelist (do not convert these to -ored)
     :b0:roed::
-    :b0:rezored::
+    :b0:rezeroed::
     :b0:zeroed::
     {
     }
@@ -313,13 +307,16 @@
     :b0:aesrs::        ; do not convert this string to -asers
     :b0:aetd::         ; do not convert this string to -ated
     :b0:aetly::        ; do not convert this string to -ately
-    :b0:alble::        ; do not convert this string to -lable
     :b0:aible::        ; do not convert this string to -iable
     :b0:aiend::        ; do not convert this string to -ained
     :b0:airty::        ; do not convert this string to -arity
     :b0:aisn::         ; do not convert this string to -ains
     :b0:aitvely::      ; do not convert this string to -atively
+    :b0:albe::         ; do not convert this string to -able
+    :b0:alble::        ; do not convert this string to -lable
     :b0:alyed::        ; do not convert this string to -layed
+    :b0:alyl::         ; do not convert this string to -ally
+    :b0:amtes::        ; do not convert this string to -mates
     :b0:aotin::        ; do not convert this string to -ation
     :b0:athc::         ; do not convert this string to -atch
     :b0:athces::       ; do not convert this string to -atches
@@ -330,12 +327,13 @@
     :b0:avtes::        ; do not convert this string to -vates
     :b0:awre::         ; do not convert this string to -ware
     :b0:bign::         ; do not convert this string to -bing
-    :b0:bilties::      ; do not convert this string to -bilities
+    :b0:biilties::     ; do not convert this string to -bilities
+    :b0:biilty::       ; do not convert this string to -bility
     :b0:bilites::      ; do not convert this string to -bilities
+    :b0:bilties::      ; do not convert this string to -bilities
+    :b0:bilty::        ; do not convert this string to -bility
     :b0:blites::       ; do not convert this string to -bilities
     :b0:blities::      ; do not convert this string to -bilities
-    :b0:biilties::     ; do not convert this string to -bilities
-    :b0:bilty::        ; do not convert this string to -bility
     :b0:blity::        ; do not convert this string to -bility
     :b0:bnig::         ; do not convert this string to -bing
     :b0:borad::        ; do not convert this string to -board
@@ -351,6 +349,8 @@
     :b0:cktes::        ; do not convert this string to -ckets
     :b0:clty::         ; do not convert this string to -ctly
     :b0:cnig::         ; do not convert this string to -cing
+    :b0:csat::         ; do not convert this string to -cast
+    :b0:ctaing::       ; do not convert this string to -cating
     :b0:dadtion::      ; do not convert this string to -dation
     :b0:daet::         ; do not convert this string to -date
     :b0:denet::        ; do not convert this string to -dent
@@ -371,12 +371,17 @@
     :b0:earting::      ; do not convert this string to -erating
     :b0:eince::        ; do not convert this string to -ience
     :b0:einces::       ; do not convert this string to -iences
+    :b0:einr::         ; do not convert this string to -iner
+    :b0:einrs::        ; do not convert this string to -iners
     :b0:eintly::       ; do not convert this string to -iently
+    :b0:eints::        ; do not convert this string to -ients
     :b0:eitn::         ; do not convert this string to -ient
     :b0:eitns::        ; do not convert this string to -ients
     :b0:emnt::         ; do not convert this string to -ment
     :b0:emnted::       ; do not convert this string to -mented
     :b0:emnts::        ; do not convert this string to -ments
+    :b0:emtn::         ; do not convert this string to -ment
+    :b0:emtns::        ; do not convert this string to -ments
     :b0:enyc::         ; do not convert this string to -ency
     :b0:erla::         ; do not convert this string to -eral
     :b0:erlas::        ; do not convert this string to -erals
@@ -411,6 +416,8 @@
     :b0:ienets::       ; do not convert this string to -ients
     :b0:ienr::         ; do not convert this string to -iner
     :b0:ienrs::        ; do not convert this string to -iners
+    :b0:iesd::         ; do not convert this string to -ised
+    :b0:iesr::         ; do not convert this string to -iser
     :b0:ietn::         ; do not convert this string to -ient
     :b0:ietnly::       ; do not convert this string to -iently
     :b0:ietns::        ; do not convert this string to -ients
@@ -420,6 +427,7 @@
     :b0:igth::         ; do not convert this string to -ight
     :b0:igths::        ; do not convert this string to -ights
     :b0:ihgt::         ; do not convert this string to -ight
+    :b0:ihgts::        ; do not convert this string to -ights
     :b0:iicent::       ; do not convert this string to -icient
     :b0:iicently::     ; do not convert this string to -iciently
     :b0:iifc::         ; do not convert this string to -ific
@@ -452,18 +460,19 @@
     :b0:isdes::        ; do not convert this string to -sides
     :b0:issng::        ; do not convert this string to -ssing
     :b0:itfy::         ; do not convert this string to -tify
-    :b0:ityf::         ; do not convert this string to -tify
     :b0:itme::         ; do not convert this string to -time or -items
     :b0:itmes::        ; do not convert this string to -times or -items
     :b0:itng::         ; do not convert this string to -ting
     :b0:itnoal::       ; do not convert this string to -tional
     :b0:itnoally::     ; do not convert this string to -tionally
+    :b0:itnos::        ; do not convert this string to -tions
     :b0:iton::         ; do not convert this string to -tion
     :b0:itonal::       ; do not convert this string to -tional
     :b0:itonally::     ; do not convert this string to -tionally
     :b0:itons::        ; do not convert this string to -tions
-    :b0:ivley::        ; do not convert this string to -ively
+    :b0:ityf::         ; do not convert this string to -tify
     :b0:iviyt::        ; do not convert this string to -ivity
+    :b0:ivley::        ; do not convert this string to -ively
     :b0:iwng::         ; do not convert this string to -wing
     :b0:kaes::         ; do not convert this string to -akes
     :b0:kced::         ; do not convert this string to -cked
@@ -473,8 +482,8 @@
     :b0:kcets::        ; do not convert this string to -ckets
     :b0:kcing::        ; do not convert this string to -cking
     :b0:kign::         ; do not convert this string to -king
-    :b0:knig::         ; do not convert this string to -king
     :b0:kigns::        ; do not convert this string to -kings
+    :b0:knig::         ; do not convert this string to -king
     :b0:knigs::        ; do not convert this string to -kings
     :b0:kning::        ; do not convert this string to -nking
     :b0:laet::         ; do not convert this string to -late
@@ -482,14 +491,16 @@
     :b0:laized::       ; do not convert this string to -alized
     :b0:laizes::       ; do not convert this string to -alizes
     :b0:laly::         ; do not convert this string to -ally
-    :b0:lelr::         ; do not convert this string to -ller
     :b0:leing::        ; do not convert this string to -eling
+    :b0:leld::         ; do not convert this string to -lled
+    :b0:lelr::         ; do not convert this string to -ller
     :b0:liez::         ; do not convert this string to -lize
     :b0:liity::        ; do not convert this string to -ility
     :b0:litiy::        ; do not convert this string to -lity
     :b0:liyt::         ; do not convert this string to -lity
     :b0:lnie::         ; do not convert this string to -line
     :b0:lnig::         ; do not convert this string to -ling
+    :b0:lnigs::        ; do not convert this string to -lings
     :b0:ltiy::         ; do not convert this string to -lity
     :b0:luar::         ; do not convert this string to -ular
     :b0:lzie::         ; do not convert this string to -lize
@@ -506,12 +517,19 @@
     :b0:menets::       ; do not convert this string to -ments
     :b0:metn::         ; do not convert this string to -ment
     :b0:metns::        ; do not convert this string to -ments
+    :b0:mgin::         ; do not convert this string to -ming
+    :b0:mgins::        ; do not convert this string to -mings
+    :b0:mign::         ; do not convert this string to -ming
+    :b0:migns::        ; do not convert this string to -mings
+    :b0:mnet::         ; do not convert this string to -ment
     :b0:mneted::       ; do not convert this string to -mented
     :b0:mnets::        ; do not convert this string to -ments
-    :b0:mign::         ; do not convert this string to -ming
     :b0:mnig::         ; do not convert this string to -ming
-    :b0:migns::        ; do not convert this string to -mings
     :b0:mnigs::        ; do not convert this string to -mings
+    :b0:msie::         ; do not convert this string to -mise
+    :b0:msied::        ; do not convert this string to -mised
+    :b0:msier::        ; do not convert this string to -miser
+    :b0:msies::        ; do not convert this string to -mises
     :b0:mzie::         ; do not convert this string to -mize
     :b0:mzied::        ; do not convert this string to -mized
     :b0:mzier::        ; do not convert this string to -mizer
@@ -524,60 +542,66 @@
     :b0:netions::      ; do not convert this string to -entions
     :b0:netly::        ; do not convert this string to -ently
     :b0:nicng::        ; do not convert this string to -ncing
+    :b0:nigns::        ; do not convert this string to -nings
     :b0:nnig::         ; do not convert this string to -ning
     :b0:nnigs::        ; do not convert this string to -nings
     :b0:ntaes::        ; do not convert this string to -nates
     :b0:ntiy::         ; do not convert this string to -nity
-    :b0:oiusly::       ; do not convert this string to -iously
     :b0:oekr::         ; do not convert this string to -oker
     :b0:oend::         ; do not convert this string to -oned
-    :b0:oewr::         ; do not convert this string to -ower
-    :b0:oewrs::        ; do not convert this string to -owers
     :b0:oeus::         ; do not convert this string to -eous
     :b0:oeusly::       ; do not convert this string to -eously
+    :b0:oewr::         ; do not convert this string to -ower
+    :b0:oewrs::        ; do not convert this string to -owers
     :b0:oinal::        ; do not convert this string to -ional
     :b0:oinally::      ; do not convert this string to -ionally
+    :b0:oisn::         ; do not convert this string to -sion
+    :b0:oisns::        ; do not convert this string to -sions
     :b0:oitn::         ; do not convert this string to -oint
     :b0:oitns::        ; do not convert this string to -oints
     :b0:oius::         ; do not convert this string to -ious
+    :b0:oiusly::       ; do not convert this string to -iously
     :b0:okcs::         ; do not convert this string to -ocks
     :b0:onit::         ; do not convert this string to -oint
     :b0:onits::        ; do not convert this string to -oints
+    :b0:opse::         ; do not convert this string to -pose
+    :b0:oreis::        ; do not convert this string to -ories
     :b0:otyr::         ; do not convert this string to -tory
+    :b0:oudn::         ; do not convert this string to -ound
+    :b0:oudns::        ; do not convert this string to -ounds
     :b0:ouisly::       ; do not convert this string to -iously
+    :b0:outn::         ; do not convert this string to -ount
+    :b0:outns::        ; do not convert this string to -ounts
     :b0:pepr::         ; do not convert this string to -pper
     :b0:prot::         ; do not convert this string to -port
     :b0:proted::       ; do not convert this string to -ported
     :b0:proter::       ; do not convert this string to -porter
     :b0:proters::      ; do not convert this string to -porters
     :b0:prots::        ; do not convert this string to -ports
-    :b0:riing::        ; do not convert this string to -iring
-    :b0:riyt::         ; do not convert this string to -rity
-    :b0:rnat::         ; do not convert this string to -rant
-    :b0:rtiy::         ; do not convert this string to -rity
-    :b0:oisn::         ; do not convert this string to -sion
-    :b0:oisns::        ; do not convert this string to -sions
-    :b0:opse::         ; do not convert this string to -pose
-    :b0:oreis::        ; do not convert this string to -ories
-    :b0:oudn::         ; do not convert this string to -ound
-    :b0:oudns::        ; do not convert this string to -ounds
-    :b0:outn::         ; do not convert this string to -ount
-    :b0:outns::        ; do not convert this string to -ounts
     :b0:raeg::         ; do not convert this string to -rage
+    :b0:raet::         ; do not convert this string to -rate
     :b0:rekd::         ; do not convert this string to -rked
     :b0:remd::         ; do not convert this string to -rmed
     :b0:retnly::       ; do not convert this string to -rently
+    :b0:rgae::         ; do not convert this string to -rage
+    :b0:riing::        ; do not convert this string to -iring
     :b0:rila::         ; do not convert this string to -rial
     :b0:ritiy::        ; do not convert this string to -rity
+    :b0:riyt::         ; do not convert this string to -rity
+    :b0:rnat::         ; do not convert this string to -rant
+    :b0:rnats::        ; do not convert this string to -rants
+    :b0:rtiy::         ; do not convert this string to -rity
     :b0:rvoe::         ; do not convert this string to -rove
     :b0:rvoed::        ; do not convert this string to -roved
     :b0:rvoes::        ; do not convert this string to -roves
     :b0:saeg::         ; do not convert this string to -sage
     :b0:sehd::         ; do not convert this string to -shed
+    :b0:setd::         ; do not convert this string to -sted
     :b0:shpi::         ; do not convert this string to -ship
     :b0:sisng::        ; do not convert this string to -ssing
     :b0:sitc::         ; do not convert this string to -stic
     :b0:sitcal::       ; do not convert this string to -stical
+    :b0:sitcs::        ; do not convert this string to -stics
     :b0:snig::         ; do not convert this string to -sing
     :b0:snive::        ; do not convert this string to -nsive
     :b0:sntat::        ; do not convert this string to -stant
@@ -591,6 +615,7 @@
     :b0:taed::         ; do not convert this string to -ated
     :b0:taeg::         ; do not convert this string to -tage
     :b0:taion::        ; do not convert this string to -ation
+    :b0:taional::      ; do not convert this string to -ational
     :b0:taions::       ; do not convert this string to -ations
     :b0:taive::        ; do not convert this string to -ative
     :b0:taively::      ; do not convert this string to -atively
@@ -606,7 +631,8 @@
     :b0:tesr::         ; do not convert this string to -ters
     :b0:tetd::         ; do not convert this string to -tted
     :b0:thces::        ; do not convert this string to -tches
-    :b0:taional::      ; do not convert this string to -ational
+    :b0:tiem::         ; do not convert this string to -time
+    :b0:tiems::        ; do not convert this string to -times
     :b0:tien::         ; do not convert this string to -tine
     :b0:tiens::        ; do not convert this string to -tines
     :b0:tign::         ; do not convert this string to -ting
@@ -623,10 +649,10 @@
     :b0:tiosn::        ; do not convert this string to -tions
     :b0:tiyf::         ; do not convert this string to -tify
     :b0:tnat::         ; do not convert this string to -tant
-    :b0:tnatly::       ; do not convert this string to -tantly
-    :b0:tnats::        ; do not convert this string to -tants
     :b0:tnation::      ; do not convert this string to -ntation
     :b0:tnations::     ; do not convert this string to -ntations
+    :b0:tnatly::       ; do not convert this string to -tantly
+    :b0:tnats::        ; do not convert this string to -tants
     :b0:tned::         ; do not convert this string to -nted
     :b0:tnig::         ; do not convert this string to -ting
     :b0:toin::         ; do not convert this string to -tion
@@ -637,6 +663,7 @@
     :b0:tpive::        ; do not convert this string to -ptive
     :b0:tsed::         ; do not convert this string to -sted
     :b0:tsic::         ; do not convert this string to -stic
+    :b0:tsical::       ; do not convert this string to -stical
     :b0:tsics::        ; do not convert this string to -stics
     :b0:tsration::     ; do not convert this string to -stration
     :b0:tsrations::    ; do not convert this string to -strations
@@ -688,6 +715,8 @@
     ::baout::about
     ::abvoe::above
     ::absoltue::absolute
+    ::absoulte::absolute
+    ::aboslute::absolute
     :*:abstarct::abstract           ; abstract/s, abstracted, abstraction/s
     :*:accetp::accept               ; accept/s/ed/ing/able
     :*:acceess::access
@@ -842,6 +871,8 @@
     :*:arrray::array
     :C:ArayList::ArrayList          ; Java resizable array
     ::arays::arrays
+    ::artifcat::artifact
+    ::artifcats::artifacts
     ::artifiical::artificial
     ::artifical::artificial
     ::artificailly::artificially
@@ -966,10 +997,12 @@
     ::behvaior::behavior
     ::behaior::behavior
     ::behaviro::behavior
+    ::beahvior::behavior
     ::behaivors::behaviors
     ::behvaiors::behaviors
     ::behaiors::behaviors
     ::behaviros::behaviors
+    ::beahviors::behaviors
     ::bheind::behind
     ::behidn::behind
     :*:bleong::belong               ; belong/s/ed/ing/ings
@@ -1025,14 +1058,26 @@
     ::bulid::build
     ::biuld::build
     ::ubild::build
+    ::buidl::build
+    ::biudl::build
+    ::bulider::builder
+    ::biulder::builder
+    ::ubilder::builder
+    ::buidler::builder
+    ::biudler::builder
     ::buliding::building
     ::biulding::building
     ::ubilding::building
+    ::buidling::building
+    ::biudling::building
     ::bulids::builds
     ::biulds::builds
     ::ubilds::builds
+    ::buidls::builds
+    ::biudls::builds
     ::biult::built
     ::ubilt::built
+    ::bucnh::bunch
     ::ubndle::bundle
     ::ubndles::bundles
     :C:BUt::But
@@ -1050,7 +1095,6 @@
     ::calenders::calendars
     :C:clal::call
     ::clalback::callback
-    ::caleld::called
     ::claled::called
     ::claling::calling
     ::clals::calls
@@ -1487,6 +1531,7 @@
     ::criitcal::critical
     ::criticial::critical
     ::crossigns::crossings
+    :*:crucnh::crunch               ; crunch/ed/er/es/ing
     :*:crytpo::crypto               ; cryptography, cryptographic/ally
     :C:CTrl::Ctrl                   ; 'Control' keyboard modifier
     ::curent::current
@@ -1538,6 +1583,8 @@
     ::deicsional::decisional
     ::deicsions::decisions
     ::declraed::declared
+    ::decoartor::decorator
+    ::decoartors::decorators
     ::decrase::decrease
     ::decrased::decreased
     ::decrases::decreases
@@ -1668,6 +1715,9 @@
     ::digist::digits
     ::dimensinoal::dimensional
     ::dimensinoality::dimensionality
+    ::diminsih::diminish
+    ::diminsihes::diminishes
+    ::diminsihing::diminishing
     :*:driect::direct               ; direct/s/ed/ly/ive/ion/ory
     :*:dierct::direct
     ::directd::directed
@@ -1748,8 +1798,10 @@
     ::darw::draw
     ::darwing::drawing
     :*:drvie::drive                 ; drive/n/r/rs/s
+    ::due ot::due to
     ::dupm::dump
     ::dupmed::dumped
+    ::dupming::dumping
     ::dupms::dumps
     :*:duplcat::duplicat            ; duplicat/e/ed/es/ing/ion
     :*:dpulicat::duplicat
@@ -1766,6 +1818,7 @@
     :*:dyanm::dynam                 ; dynam/ic/ics/ic_cast/oDB
 
     ::eahc::each
+    ::eralier::earlier
     ::easeir::easier
     ::eaisly::easily
     ::ehco::echo
@@ -1832,6 +1885,7 @@
     :*:encoutner::encounter         ; encounter/s/ed/ing
     :C:ENd::End                     ; common Visual Basic keyword
     :C:enld::endl                   ; C++ newline (endline)
+    ::endores::endorse
     ::engaeg::engage
     ::egnine::engine
     ::engien::engine
@@ -1850,6 +1904,7 @@
     ::enhancments::enhancements
     ::enoguh::enough
     ::enuogh::enough
+    ::enouhg::enough
     ::ensrue::ensure
     ::ensrues::ensures
     ::ensruing::ensuring
@@ -1913,7 +1968,6 @@
     ::everytyhing::everything
     ::everthing::everything
     ::evertyhing::everything
-    ::everywehre::everywhere
     ::everywheer::everywhere
     :*:exatc::exact                 ; exact/s/ed/ly/ing
     ::examien::examine
@@ -2021,12 +2075,14 @@
     ::fialrue::failure
     ::fairue::failure
     ::afilure::failure
+    ::failuer::failure
     ::failrues::failures
     ::fialures::failures
     ::fialrues::failures
     ::fairues::failures
     ::afilures::failures
     ::failuesr::failures
+    ::failuers::failures
     ::fiarly::fairly
     ::fkae::fake
     ::fkaed::faked
@@ -2038,6 +2094,7 @@
     :C:FAlse::False
     :*:fasel;::false;
     ::familar::familiar
+    ::familair::familiar
     ::fatser::faster
     ::fautl::fault
     ::favoriet::favorite
@@ -2079,6 +2136,7 @@
     ::fidns::finds
     ::ifnds::finds
     ::fnids::finds
+    ::finsih::finish
     ::fireofx::firefox
     ::fisrt::first
     ::firsrt::first
@@ -2191,6 +2249,7 @@
     ::geneates::generates
     ::genreates::generates
     ::geneating::generating
+    ::gneeric::generic
     ::geospaital::geospatial
     ::githbu::github
     ::gvie::give
@@ -2251,7 +2310,9 @@
     ::hapening::happening
     ::hapepning::happening
     ::hapens::happens
+    ::ahrd::hard
     ::hadrware::hardware
+    ::ahrdware::hardware
     ::harenss::harness              ; test harness
     :C:hsa::has
     :C:Hsa::Has
@@ -2279,8 +2340,13 @@
     ::heatlh::health
     ::helathy::healthy
     ::heatlhy::healthy
+    ::healhty::healthy
     ::hieght::height
     ::hieghts::heights
+    ::hlep::help
+    ::hleper::helper
+    ::hleping::helping
+    ::hleps::helps
     ::heruistic::heuristic
     ::heruistics::heuristics
     ::hiddne::hidden
@@ -2300,7 +2366,9 @@
     ::hsots::hosts
     :C:horus::hours
     :C:HOw::How
+    ::hwo it::how it
     ::howthe::how the
+    ::hwo the::how the
     ::howto::how to
     :C:how ot::how to
     ::hwo to::how to
@@ -2540,6 +2608,7 @@
     ::iosream::iostream             ; C++ I/O header
     ::iosteam::iostream
     ::isotream::iostream
+    ::iostraem::iostream
     ::is nto::is not
     ::isthe::is the
     ::i sthe::is the
@@ -2778,6 +2847,7 @@
     :*:maange::manage
     :*:manfactur::manufactur        ; manufactur/ed/er/ing
     ::mnay::many
+    ::mapifle::mapfile              ; shell command
     ::maping::mapping
     ::mapings::mappings
     ::marign::margin
@@ -3035,6 +3105,7 @@
     ::ouptut::output
     ::otuputs::outputs
     ::ouptuts::outputs
+    ::outpust::outputs
     :*:overlfow::overflow           ; overflow/s/ed/ing
     ::overhaed::overhead
     ::overiden::overridden
@@ -3055,6 +3126,7 @@
     :*:packge::package
     :*:pakcage::package
     :*:packaeg::package
+    :*:packgae::package
     :C:apge::page
     ::apged::paged
     ::apges::pages
@@ -3304,12 +3376,12 @@
     :*:prgoram::program             ; program/s/med/ming/mable/matic
     :*:porgram::program
     :*:progrma::program
+    :*:progarm::program
     ::programable::programmable
     ::programatic::programmatic
     ::programing::programming
     :*:proejct::project             ; project/s/ed/ing/ion
     :*:prjoect::project
-    ::promsie::promise
     ::pormise::promise
     ::proimse::promise
     ::proofign::proofing
@@ -3333,6 +3405,8 @@
     ::prooved::proved
     ::prooves::proves
     ::proxiimty::proximity
+    ::pruen::prune                  ; git prune
+    :C:purne::prune
     :*:pesudo::pseudo               ; pseudocode, pseudorandom
     :*:psuedo::pseudo
     ::pubilc::public
@@ -3743,8 +3817,11 @@
     ::sicences::sciences
     ::sicneces::sciences
     ::socpe::scope
+    ::scoep::scope
     ::socped::scoped
+    ::scoepd::scoped
     ::socpes::scopes
+    ::scoeps::scopes
     ::scroe::score
     ::scroes::scores
     ::scraepr::scraper
@@ -3981,6 +4058,8 @@
     ::stnad::stand
     ::stnadard::standard
     ::stnadards::standards
+    ::stnading::standing
+    ::stnadup::standup
     ::starrt::start
     ::staretd::started
     ::starrted::started
@@ -3989,6 +4068,7 @@
     :*:staet::state                 ; state/d/s/ful/less/ment
     ::staic::static
     ::sttaic::static
+    ::sttaus::status
     ::styas::stays
     :C*:std:`;::std`:`:             ; C++ standard namespace. Use '`' to escape ':' and ';'
                                     ; Use '*' to match anywhere. needed b/c there is no ending char after 'std::'
@@ -4179,6 +4259,7 @@
     ::tempoarry::temporary
     ::temoprary::temporary
     ::temporayr::temporary
+    ::temporray::temporary
     ::tendancy::tendency
     ::temrinal::terminal
     ::temrinals::terminals
@@ -4270,6 +4351,7 @@
     ::thraeds::threads
     ::thershold::threshold
     ::throuhg::through
+    ::thorugh::through
     ::throuhgput::throughput
     ::throughptu::throughput
     ::thoruhgput::throughput
@@ -4315,6 +4397,7 @@
     ::ot give::to give
     ::ot go::to go
     ::to og::to go
+    ::t ogo::to go
     ::ot have::to have
     ::ot it::to it
     ::ot its::to its
@@ -4428,6 +4511,9 @@
     ::underwheml::underwhelm
     ::undoign::undoing
     ::undonig::undoing
+    ::unhelathy::unhealthy
+    ::unheatlhy::unhealthy
+    ::unhealhty::unhealthy
     ::uniofrmly::uniformly
     ::uniformotuput::uniformoutput  ; MATLAB name/value pair
     ::unimporant::unimportant
@@ -4492,6 +4578,8 @@
     ::avlidated::validated
     ::vlaidates::validates
     ::avlidates::validates
+    ::avlidation::validation
+    ::vlaidation::validation
     ::valueable::valuable
     ::vlaue::value
     ::avlue::value
@@ -4635,7 +4723,6 @@
     ::whenver::whenever
     ::wehnever::whenever
     ::hwenever::whenever
-    ::wehre::where
     :C:WHere::Where
     ::wheer::where
     ::whree::where
@@ -4752,7 +4839,7 @@
 
     ; SUFFIX LIST
     ; Autocorrect words which have these endings.
-    ; Useful suffix dictionary search tool: https://www.litscape.com/word_tools/ends_with.php)
+    ; Useful suffix dictionary search tool: https://www.litscape.com/word_tools/ends_with.php
 
     :C?:albe::able        ; ex: available, mutable, scalable, readable, variable
     :C?:aicng::acing      ; ex: spacing, tracing, replacing, placing, emplacing
@@ -4846,8 +4933,10 @@
     :C?:kcing::cking      ; ex: locking, tracking, networking, blocking, benchmarking, stacking
     :C?:clty::ctly        ; ex: abstractly, correctly, distinctly, perfectly, directly, strictly
     :C?:DAta::Data        ; ex: Data, newData, myData, oldData, prevData
-    :C?:daet::date        ; ex: update, validate, invalidate, mandate, candidate
+    :C?:daet::date        ; ex: update, validate, invalidate, mandate, candidate, predate, accommodate
+    :C?:dtae::date
     :C?:daets::dates
+    :C?:dtaes::dates
     :C?:dadtion::dation   ; ex: recommendation, foundation, validation, invalidation, consolidation
     :C?:denet::dent       ; ex: independent, descendent, dependent, indent, resident, incedent
     :C?:detn::dent
@@ -4950,8 +5039,10 @@
     :C?:liity::ility      ; ex: probability, stability, feasibility, capability, utility
     :C?:iaml::imal        ; ex: decimal, optimal, maximal, minimal, proximal
     :C?:ianl::inal        ; ex: terminal, final, original, ordinal, marginal
-    :C?:ienr::iner        ; ex: container, definer, combiner, chainer, joiner
+    :C?:ienr::iner        ; ex: container, definer, combiner, chainer, joiner, refiner
+    :C?:einr::iner
     :C?:ienrs::iners
+    :C?:einrs::iners
     :C?:oinal::ional      ; ex: conditional, optional, functional, rational, relational, computational
     :C?:ioanl::ional
     :C?:oinally::ionally
@@ -5002,7 +5093,8 @@
     :C?:liez::lize
     :C?:lzied::lized
     :C?:lzier::lizer
-    :C?:lelr::ller        ; ex: seller, caller, smaller, controller, teller
+    :C?:leld::lled        ; ex: called, installed, controlled, polled, filled, killed
+    :C?:lelr::ller        ; ex: caller, smaller, controller, teller, installer, poller, seller
     :C?:laod::load        ; ex: overload, download, upload, workload, offload
     :C?:laoded::loaded
     :C?:laoder::loader
@@ -5041,14 +5133,20 @@
     :C?:mnets::ments
     :C?:mign::ming        ; ex: programming, trimming, framing, zooming, transforming, timing, naming
     :C?:mnig::ming
+    :C?:mgin::ming
     :C?:migns::mings
     :C?:mnigs::mings
-    :C?:mzie::mize        ; ex: customize, minimize, maximize, optimize, randomize
+    :C?:mgins::mings
+    :C?:msie::mise        ; ex: customize, minimize, maximize, optimize, randomize, systemize
+    :C?:msied::mised
+    :C?:msier::miser
+    :C?:msies::mises
+    :C?:mzie::mize        
     :C?:mzied::mized
     :C?:mzier::mizer
     :C?:mzies::mizes
 
-    :C?:ntae::nate        ; ex: concatenate, eliminate, alternate, coordinate, terminate
+    :C?:ntae::nate        ; ex: concatenate, eliminate, alternate, coordinate, terminate, designate
     :C?:naet::nate
     :C?:ntaes::nates
     :C?:naets::nates
@@ -5092,7 +5190,7 @@
     :C?:oewr::ower        ; ex: follower, power, slower, lower, thrower, borrower
     :C?:oewrs::owers
     :C?:paeg::page        ; ex: page, homepage, webpage, stoppage, subpage
-    :C?:pign::ping        ; ex: mapping, scraping, stepping, skipping, wrapping, looping, cloning
+    :C?:pign::ping        ; ex: mapping, scraping, stepping, skipping, wrapping, looping
     :C?:pnig::ping
     :C?:pigns::pings
     :C?:pnigs::pings
@@ -5110,6 +5208,7 @@
     :C?:tpions::ptions
     :C?:tpive::ptive      ; ex: adaptive, descriptive, receptive, disruptive, perceptive
     :C?:raeg::rage        ; ex: coverage, average, storage, leverage, overage
+    :C?:rgae::rage
     :C?:rnat::rant        ; ex: grant, entrant, reentrant, quadrant, tolerant
     :C?:rnats::rants
     :C?:raet::rate        ; ex: enumerate, migrate, integrate, generate, iterate
@@ -5190,6 +5289,7 @@
     :C?:tsrations::strations
     :C?:STring::String    ; ex: String, myString, firstString, oldString, initialString
 
+    :C?:tbale::table      ; ex: table, executable, mutable, computable, selectable, portable
     :C?:taeg::tage        ; ex: advantage, shortage, outage, stage, percentage
     :C?:atlly::tally      ; ex: horizontally, vertically, digitally, totally, incrementally
     :C?:tnat::tant        ; ex: constant, important, instant, distant, inhabitant
@@ -5280,6 +5380,7 @@
     :C?:awre::ware
     :C?:waer::ware
     :C?:hwere::where      ; ex: where, nowhere, somewhere, everywhere, anywhere
+    :C?:wehre::where
     :C?:iwng::wing        ; ex: viewing, reviewing, flowing, drawing, skewing, growing, following, knowing
     :C?:wign::wing
     :C?:wnig::wing

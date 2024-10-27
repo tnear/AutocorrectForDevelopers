@@ -9,7 +9,7 @@ class TestRule(unittest.TestCase):
 
     def test_file(self):
         lines = Rule.cleanFile('AutocorrectForDevelopers.ahk')
-        self.assertTrue(all([line.startswith(':') for line in lines]))
+        self.assertTrue(all(line.startswith(':') for line in lines))
 
     def test_getOptionsText(self):
         opts = Rule.getOptionsText('::abc::def')
@@ -94,16 +94,16 @@ class TestRule(unittest.TestCase):
     def test_printableCharacters(self):
         fileName = Rule.getRelativeFileName('AutocorrectForDevelopers.ahk')
 
-        with open(fileName) as f:
+        with open(fileName, encoding='utf-8') as f:
             lines = [line.strip('\n ') for line in f]
 
         for line in lines:
-            self.assertTrue(all(char in string.printable for char in line)), 'Only printable characters supported'
+            self.assertTrue(all(char in string.printable for char in line), 'Only printable characters supported')
 
     def test_endingChars(self):
         fileName = Rule.getRelativeFileName('AutocorrectForDevelopers.ahk')
 
-        with open(fileName) as f:
+        with open(fileName, encoding='utf-8') as f:
             lines = [line.strip('\n ') for line in f]
 
         lines = [line for line in lines if line.startswith('#Hotstring EndChars')]
@@ -120,7 +120,7 @@ class TestRule(unittest.TestCase):
 
     def test_noMultiLineComments(self):
         file = Rule.getRelativeFileName('AutocorrectForDevelopers.ahk')
-        with open(file) as f:
+        with open(file, encoding='utf-8') as f:
             lines = [line.strip('\n ') for line in f]
 
         # for now, only single line comments (';') are supported
@@ -198,47 +198,32 @@ class TestRule(unittest.TestCase):
             self.assertTrue(colonRule.oldText.startswith(':') and colonRule.newText.startswith(':'))
 
     # ensures that rules are in sorted order. this isn't strictly necessary,
-    # but does allow for additional performance optimizations
+    # but does allow for additional performance optimizations and makes
+    # easy-to-find locations to insert new rules in the script
     def test_sortedRules(self):
-        # there are three alphabetized groupings of rules in the script
-        backspaceRules, nonSuffixRules, suffixRules = partitionRules(self.rules)
-        sortedBackspaceRules, sortedNonSuffixRules, sortedSuffixRules = sortRules(self.rules)
+        # group the non-suffix and suffix rules in the script
+        nonSuffixRules, suffixRules = partitionRules(self.rules)
+        sortedNonSuffixRules, sortedSuffixRules = sortRules(self.rules)
 
-        idx = findFirstDifference(backspaceRules, sortedBackspaceRules)
-        if idx != -1:
-            msg = f'Found unsorted rule: "{backspaceRules[idx].newText}" should be after "{sortedBackspaceRules[idx].newText}"'
-            self.assertTrue(False, msg)
+        for original, sortedItem in zip(nonSuffixRules, sortedNonSuffixRules):
+            msg = f'Found unsorted rule: "{original.newText}" should be after "{sortedItem.newText}"'
+            self.assertEqual(original.newText, sortedItem.newText, msg)
 
-        idx = findFirstDifference(nonSuffixRules, sortedNonSuffixRules)
-        if idx != -1:
-            msg = f'Found unsorted rule: "{nonSuffixRules[idx].newText}" should be after "{sortedNonSuffixRules[idx].newText}"'
-            self.assertTrue(False, msg)
-
-        idx = findFirstDifference(suffixRules, sortedSuffixRules)
-        if idx != -1:
-            msg = f'Found unsorted rule: "{suffixRules[idx].newText}" should be after "{sortedSuffixRules[idx].newText}"'
-            self.assertTrue(False, msg)
+        for original, sortedItem in zip(suffixRules, sortedSuffixRules):
+            msg = f'Found unsorted rule: "{original.newText}" should be after "{sortedItem.newText}"'
+            self.assertEqual(original.newText, sortedItem.newText, msg)
 
 def partitionRules(rules: list):
-    # 1. backspace rules, 2. non-suffix rules, 3. suffix rules
-    backspaceRules = [rule for rule in rules if rule.backspace]
+    # 1. non-suffix rules, 2. suffix rules
     nonSuffixRules = [rule for rule in rules if not rule.backspace and not rule.suffixMatch]
     suffixRules = [rule for rule in rules if rule.suffixMatch]
-    return backspaceRules, nonSuffixRules, suffixRules
+    return nonSuffixRules, suffixRules
 
 def sortRules(rules: list):
-    backspaceRules, nonSuffixRules, suffixRules = partitionRules(rules)
-    backspaceRules.sort(key = lambda rule: rule.newText.lower())
+    nonSuffixRules, suffixRules = partitionRules(rules)
     nonSuffixRules.sort(key = lambda rule: rule.newText.lower())
     suffixRules.sort(key = lambda rule: rule.newText.lower())
-    return backspaceRules, nonSuffixRules, suffixRules
-
-def findFirstDifference(sortedList, unsortedList):
-    assert len(sortedList) == len(unsortedList)
-    for i in range(len(sortedList)):
-        if sortedList[i].newText != unsortedList[i].newText:
-            return i
-    return -1
+    return nonSuffixRules, suffixRules
 
 if __name__ == '__main__':
     unittest.main()
