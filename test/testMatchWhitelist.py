@@ -47,9 +47,12 @@ class TestMatchWhitelist(unittest.TestCase):
         # list of suffixes which have at least one word
         suffixesWithWords = {
             'atro', 'dign', 'dner', 'dners', 'dres', 'eint', 'laize', 'lign', 'ligns', 'nace', 'naces',
-            'nices', 'nign', 'ntae', 'otins', 'otry', 'ouis', 'raes', 'roed', 'rued', 'sign', 'sino', 'sinos',
-            'soed', 'taul', 'tino', 'tinos', 'tued', 'utre', 'utred', 'utres',
+            'nign', 'otry', 'ouis', 'raes', 'roed', 'rued', 'sign', 'sino', 'sinos',
+            'soed', 'tino', 'tinos', 'tued', 'utre',
         }
+
+        # ensure that all suffixesWithWords are whitelisted
+        self.assertTrue(all(item in set(self.whitelistList) for item in suffixesWithWords))
 
         # filter suffixes plus rules which end with them
         def shouldInclude(text):

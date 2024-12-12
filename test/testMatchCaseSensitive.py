@@ -7,15 +7,15 @@ class TestMatchCaseSensitive(unittest.TestCase):
         self.rules = Rule.fileToRuleList('AutocorrectForDevelopers.ahk')
 
         caseSensitiveRules = [rule for rule in self.rules if rule.caseSensitive and not rule.suffixMatch]
-        caseSensitiveNoPrefix = [rule for rule in caseSensitiveRules if not rule.prefixMatch]
+        self.caseSensitiveNoPrefixRules = [rule for rule in caseSensitiveRules if not rule.prefixMatch]
         caseSensitivePrefix = [rule for rule in caseSensitiveRules if rule.prefixMatch]
-        self.caseSensitiveNoPrefixList = [rule.oldText for rule in caseSensitiveNoPrefix]
+        self.caseSensitiveNoPrefixList = [rule.oldText for rule in self.caseSensitiveNoPrefixRules]
         self.caseSensitivePrefixList = [rule.oldText for rule in caseSensitivePrefix]
 
     def test_ruleLength(self):
-        self.assertGreater(len(self.rules), 3400)
-        self.assertGreater(len(self.caseSensitiveNoPrefixList), 100)
-        self.assertGreater(len(self.caseSensitivePrefixList), 4)
+        self.assertGreater(len(self.rules), 5200)
+        self.assertGreater(len(self.caseSensitiveNoPrefixList), 160)
+        self.assertGreater(len(self.caseSensitivePrefixList), 8)
 
     # ex: ":C:itn::int"
     def test_noPrefixMatch(self):
@@ -61,6 +61,14 @@ class TestMatchCaseSensitive(unittest.TestCase):
         self.assertTrue(len(capitalRules) > 64)
         for rule in capitalRules:
             self.assertTrue(rule.caseSensitive, f'The rule "{rule.oldText}" should be made case sensitive')
+
+    # verify that the number if capital letters in a case sensitive rule is
+    # changed by no more than 1. Ex: "NOt::not" would fail this test.
+    def test_two_capital(self):
+        for rule in self.caseSensitiveNoPrefixRules:
+            num_upper_old = len([c for c in rule.oldText if c.isupper()])
+            num_upper_new = len([c for c in rule.newText if c.isupper()])
+            self.assertLessEqual(abs(num_upper_old - num_upper_new), 1)
 
 if __name__ == '__main__':
     unittest.main()

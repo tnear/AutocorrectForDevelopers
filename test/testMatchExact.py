@@ -66,7 +66,7 @@ class TestMatchExact(unittest.TestCase):
         sortedSuffixes = sorted(suffixes.items(), key=lambda item: item[1], reverse=True)
 
         # ignore these whitelisted suffixes
-        whitelist = ['tner', 'ners', 'raed', 'alte', 'ltes', 'dnet', 'nets', ' nto', 'enet']
+        whitelist = ['tner', 'ners', 'raed', 'alte', 'ltes', 'dnet', 'nets', ' nto', 'enet', 'iens',]
         sortedSuffixes = [x for x in sortedSuffixes if x[0] not in whitelist]
 
         # ensure the most common suffix is below some threshold. If this asserts, then
@@ -78,7 +78,7 @@ class TestMatchExact(unittest.TestCase):
 # this section is useful for bug fixes to ensure the behavior does not regress.
 EXPLICIT_TESTS = {
     'apges': 'pages', 'somehting': 'something', 'thraed': 'thread', 'declraed': 'declared', 'piotn': 'point',
-    'piotns': 'points', 'breakpiotn': 'breakpoint',
+    'piotns': 'points', 'breakpiotn': 'breakpoint', 'NOt': 'Not',
 }
 
 if __name__ == '__main__':

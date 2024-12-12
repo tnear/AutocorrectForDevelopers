@@ -31,13 +31,13 @@ class Rule:
 
         # read file (removing trailing whitespace)
         with open(file, encoding='utf-8') as f:
-            lines = [line.strip('\n ') for line in f]
+            lines = [line.strip() for line in f]
 
         # remove empty lines
         lines = [line for line in lines if len(line) > 0]
 
         # remove empty '{' and '}' scope
-        lines = [line for line in lines if line != '{' and line != '}']
+        lines = [line for line in lines if line not in {'{', '}'}]
 
         # remove directives
         lines = [line for line in lines if not line.startswith('#')]
@@ -245,19 +245,19 @@ class Rule:
         yaml += '# https://github.com/tnear/AutocorrectForDevelopers\n'
         yaml += 'matches:\n'
         for rule in rules:
-            yaml += Rule._convertOneRuleToEspanso(rule)
+            yaml += Rule.convertOneRuleToEspanso(rule)
 
         return yaml
 
     @staticmethod
-    def _convertOneRuleToEspanso(rule):
+    def convertOneRuleToEspanso(rule):
         newText = rule.newText
         if '`n' in rule.oldText:
             # ahk newlines in trigger are not supported by espanso, so skip them
             return ''
-    
+
         if rule.backspace:
-            # whitelist a rule by making old text same as new text
+            # whitelist a rule by making new text same as old text
             newText = rule.oldText
 
         oldText = rule.oldText
@@ -274,7 +274,7 @@ class Rule:
         else:
             yaml = yaml + Rule.yamlIndent + 'word: true\n'
 
-        if not rule.caseSensitive and not rule.backspace:
+        if not rule.caseSensitive:
             # autocorrect regardless of case
             yaml = yaml + Rule.yamlIndent + 'propagate_case: true\n'
 

@@ -4,23 +4,23 @@ from Rule import Rule
 # ex:: ":C?:bilty::bility"
 class TestMatchPrefix(unittest.TestCase):
     @classmethod
-    def setUpClass(self):
-        self.rules = Rule.fileToRuleList('AutocorrectForDevelopers.ahk')
+    def setUpClass(cls):
+        cls.rules = Rule.fileToRuleList('AutocorrectForDevelopers.ahk')
 
         # get all suffix rules. note: backspace rules should be ignored because they are whitelisted
-        suffixRules = [rule for rule in self.rules if rule.suffixMatch and not rule.backspace]
-        self.suffixRuleList = [rule.oldText for rule in suffixRules]
-        self.suffixRuleDict = {rule.oldText : rule.newText for rule in suffixRules}
+        suffixRules = [rule for rule in cls.rules if rule.suffixMatch and not rule.backspace]
+        cls.suffixRuleList = [rule.oldText for rule in suffixRules]
+        cls.suffixRuleDict = {rule.oldText : rule.newText for rule in suffixRules}
 
         # get all exact match rules
-        exactMatchRules = [rule for rule in self.rules
+        exactMatchRules = [rule for rule in cls.rules
                            if not rule.prefixMatch and not rule.suffixMatch and not rule.backspace and
                            not rule.caseSensitive and not rule.backspace]
-        self.exactMatchDict = {rule.oldText : rule.newText for rule in exactMatchRules}
+        cls.exactMatchDict = {rule.oldText : rule.newText for rule in exactMatchRules}
 
         # save all whitelist rules in set
-        whitelistRules = [rule for rule in self.rules if rule.backspace and not rule.containsBackspacing]
-        self.whitelistSet = {text.oldText for text in whitelistRules}
+        whitelistRules = [rule for rule in cls.rules if rule.backspace and not rule.containsBackspacing]
+        cls.whitelistSet = {text.oldText for text in whitelistRules}
 
     def test_ruleLength(self):
         self.assertGreater(len(self.rules), 5100)
@@ -58,7 +58,9 @@ class TestMatchPrefix(unittest.TestCase):
         for i, s1 in enumerate(self.suffixRuleList):
             for j, s2 in enumerate(self.suffixRuleList):
                 hasRedundantSuffix = i != j and s1.endswith(s2)
-                self.assertFalse(hasRedundantSuffix, f'Found redundant suffix rule: "{s2}" in "{s1}"')
+                if hasRedundantSuffix:
+                    # due to nested loop, its faster to self.fail than self.assertFalse
+                    self.fail(f'Found redundant suffix rule: "{s2}" in "{s1}"')
 
     def test_explicit(self):
         for inputText, expectedText in EXPLICIT_TESTS.items():
@@ -74,7 +76,7 @@ class TestMatchPrefix(unittest.TestCase):
 
     def test_allSuffixRulesHaveTests(self):
         # every suffix test in ahk script should have an entry in EXPLICIT_TESTS
-        testKeys = list(EXPLICIT_TESTS.keys())
+        testKeys = list(EXPLICIT_TESTS)
         for suffix in self.suffixRuleList:
             testList = [x for x in testKeys if x.endswith(suffix)]
             self.assertGreater(len(testList), 0, f'The suffix "{suffix}" does not have an automated test')
@@ -85,9 +87,10 @@ class TestMatchPrefix(unittest.TestCase):
         for oldText, newText in self.suffixRuleDict.items():
             for oldTextExact, newTextExact in self.exactMatchDict.items():
                 hasRedundancy = oldTextExact.endswith(oldText) and newTextExact.endswith(newText)
-                self.assertFalse(hasRedundancy,
-                                 f'Found redundant exact match rule: "{oldTextExact}" not needed due to "{oldText}"')
-                
+                if hasRedundancy:
+                    # due to nested loop, its faster to self.fail than self.assertFalse
+                    self.fail(f'Found redundant exact match rule: "{oldTextExact}" not needed due to "{oldText}"')
+
     def test_suffixRulesHaveWhitelist(self):
         # every suffix needs a decision on whether it should be whitelisted.
         # ex: typing 'kcet' should not autocorrect to 'cket' even though it is a suffix rule.
@@ -95,6 +98,31 @@ class TestMatchPrefix(unittest.TestCase):
         for inputText in self.suffixRuleList:
             if not inputText in NO_WHITELIST_EXCEPTIONS:
                 self.assertTrue(inputText in self.whitelistSet, f'"{inputText}" does not have a whitelist (or exception).')
+
+    def test_suffixExamplesMatchRule(self):
+        file = Rule.getRelativeFileName('AutocorrectForDevelopers.ahk')
+
+        # trim whitespace from every line in script
+        with open(file, encoding='utf-8') as f:
+            lines = [line.strip() for line in f]
+
+        # get suffix lines with examples
+        lines = [line for line in lines if line.startswith(':C?:') and 'ex: ' in line]
+        self.assertGreater(len(lines), 200)
+
+        for line in lines:
+            # get rhs of rule, ex: get "zing" in ":C?:zign::zing   ex: ..."
+            suffix = line.split('::')[1].split(' ')[0]
+
+            # get examples at the end of the line and split into list
+            _, _, example_substring = line.partition('ex: ')
+            examples = example_substring.split(', ')
+
+            # verify >= 5 examples, uniqueness, and suffix match
+            self.assertGreaterEqual(len(examples), 5, f'The suffix rule "{suffix}" does not have >= 5 examples')
+            self.assertEqual(len(examples), len(set(examples)), f'The suffix "{suffix}" does not contain unique examples')
+            for example in examples:
+                self.assertTrue(example.endswith(suffix), f'"{example}" does not end with "{suffix}"')
 
 # these are suffixes which should not be whitelisted. These should be autocorrected to actual words.
 NO_WHITELIST_EXCEPTIONS = {
@@ -105,15 +133,16 @@ NO_WHITELIST_EXCEPTIONS = {
     'lcoks', 'amrk', 'mrak', 'amrked', 'mraked', 'amrking', 'mraking', 'amrks', 'mraks', 'amte', 'amted', 'naion',
     'naions', 'NOde', 'Ndoe', 'paeg', 'pign', 'pnig', 'pigns', 'pnigs', 'opint', 'opints', 'raets', 'retn', 'irng',
     'rign', 'rnig', 'irngs', 'rigns', 'rnigs', 'shesd', 'hsed', 'sihp', 'hsip', 'hspi', 'sihps', 'shpis', 'hsips',
-    'hspis', 'isze', 'siez', 'szie', 'iszed', 'szied', 'iszes', 'siezs', 'szies', 'srot', 'osrt', 'sapce', 'spcae',
-    'psace', 'sapces', 'spcaes', 'psaces', 'STring', 'tbale', 'atlly', 'itno', 'Vlaue', 'Vluae', 'Valeu', 'Vaule',
+    'hspis', 'srot', 'osrt', 'sapce', 'spcae',
+    'psace', 'sapces', 'spcaes', 'psaces', 'STring', 'tbale', 'itno', 'Vlaue', 'Vluae', 'Valeu', 'Vaule',
     'Vlaues', 'Vluaes', 'Valeus', 'Vaules', 'veyr', 'verey', 'hwere', 'wign', 'wnig', 'iwngs', 'wigns', 'wnigs',
-    'owrk', 'wokr', 'owrking', 'wokring', 'owrks', 'wokrs', 'dtae', 'dtaes', 'wehre',
+    'owrk', 'wokr', 'owrking', 'wokring', 'owrks', 'wokrs', 'dtae', 'dtaes', 'wehre', 'lcoked', 'lokc', 'lokcs',
+    'opsed', 'opses', 'psoes',
 }
 
 # explicit tests for suffix words (usually as part of bug fixes)
 EXPLICIT_TESTS = {
-    'availalbe': 'available', 'languaegs': 'languages', 'mkaes': 'makes', 'automaticallly': 'automatically',
+    'availalbe': 'available', 'languaegs': 'languages', 'automaticallly': 'automatically',
     'simultaenous': 'simultaneous', 'pairty': 'parity', 'emulaetd': 'emulated',
     'applictaion': 'application', 'applictaoin': 'application', 'applictaions': 'applications',
     'applictaoins': 'applications', 'mathc': 'match', 'ntaive': 'native',
@@ -173,7 +202,7 @@ EXPLICIT_TESTS = {
     'ownershpi': 'ownership', 'facotyr': 'factory', 'transfomr': 'transform', 'transfomrs': 'transforms',
     'duplicaet': 'duplicate', 'anyhwere': 'anywhere', 'TreeNOde': 'TreeNode', 'broadcsat': 'broadcast',
     'efficeintly': 'efficiently', 'efficietnly': 'efficiently',
-    'initilaize': 'initialize', 'coroutien': 'coroutine', 'coroutiens': 'coroutines', 'relationshpis': 'relationships',
+    'initilaize': 'initialize', 'relationshpis': 'relationships',
     'investigaion': 'investigation', 'investigaions': 'investigations', 'combinaion': 'combination',
     'combinaions': 'combinations', 'catpion': 'caption', 'catpions': 'captions', 'initilaized': 'initialized',
     'initilaizes': 'initializes', 'csats': 'casts', 'duplicaets': 'duplicates', 'weigths': 'weights',
@@ -189,7 +218,7 @@ EXPLICIT_TESTS = {
     'noityf': 'notify', 'wrapepr': 'wrapper', 'csated': 'casted', 'encoidngs': 'encodings',
     'ofrmed': 'formed', 'fomred': 'formed', 'estiamted': 'estimated', 'generla': 'general', 'priavte': 'private',
     'actiavted': 'activated', 'actiavtes': 'activates', 'activaets': 'activates', 'inofrming': 'informing',
-    'transfomring': 'transforming', 'horizonatlly': 'horizontally', 'dependenices': 'dependencies', 'literlas': 'literals',
+    'transfomring': 'transforming', 'dependenices': 'dependencies', 'literlas': 'literals',
     'remaisn': 'remains', 'lokcing': 'locking', 'boadr': 'board',
     'perforemd': 'performed', 'clokcs': 'clocks', 'smalelr': 'smaller', 'transofmr': 'transform',
     'transofmred': 'transformed', 'transofmring': 'transforming', 'transofmrs': 'transforms', 'deliverey': 'delivery',
@@ -229,7 +258,7 @@ EXPLICIT_TESTS = {
     'myDAta': 'myData', 'mySTring': 'myString', 'folloewr': 'follower', 'folloewrs': 'followers', 'deciaml': 'decimal',
     'commentayr': 'commentary', 'acquriing': 'acquiring', 'roudning': 'rounding', 'reltaional': 'relational',
     'consntat': 'constant', 'consntats': 'constants', 'reisde': 'reside', 'reisdes': 'resides', 'moderaetly': 'moderately',
-    'capacitiy': 'capacity', 'reisze': 'resize', 'reiszed': 'resized', 'reiszes': 'resizes', 'vieiwng': 'viewing',
+    'capacitiy': 'capacity', 'vieiwng': 'viewing',
     'experiecne': 'experience', 'expereince': 'experience', 'baselnie': 'baseline', 'baselnies': 'baselines',
     'benchamrking': 'benchmarking', 'contnetion': 'contention', 'prevoiusly': 'previously', 'prevouisly': 'previously',
     'previosuly': 'previously', 'experiecnes': 'experiences', 'expereinces': 'experiences', 'mnetions': 'mentions',
@@ -240,8 +269,7 @@ EXPLICIT_TESTS = {
     'bookmraks': 'bookmarks', 'likning': 'linking', 'activaet': 'activate', 'producesr': 'producers',
     'concurrnetly': 'concurrently', 'formatetd': 'formatted', 'modluar': 'modular',
     'balacne': 'balance', 'balacned': 'balanced', 'balacnes': 'balances', 'packte': 'packet', 'packtes': 'packets',
-    'parinsg': 'parsing', 'deadlcok': 'deadlock', 'resiez': 'resize', 'reszie': 'resize', 'reszied': 'resized',
-    'resiezs': 'resizes', 'reszies': 'resizes', 'codign': 'coding', 'sampligns': 'samplings', 'declinign': 'declining',
+    'parinsg': 'parsing', 'deadlcok': 'deadlock', 'codign': 'coding', 'sampligns': 'samplings', 'declinign': 'declining',
     'findigns': 'findings', 'openigns': 'openings', 'describign': 'describing',
     'tracign': 'tracing', 'debuggign': 'debugging', 'cachign': 'caching', 'maskign': 'masking',
     'timign': 'timing', 'timigns': 'timings', 'mappign': 'mapping', 'mappigns': 'mappings', 'testign': 'testing',
@@ -256,7 +284,10 @@ EXPLICIT_TESTS = {
     'templaets': 'templates', 'lcoks': 'locks', 'upcomgin': 'upcoming', 'timgins': 'timings', 'executbale': 'executable',
     'validtae': 'validate', 'validtaes': 'validates', 'storgae': 'storage', 'anywehre': 'anywhere', 'contaeinr': 'container',
     'contaeinrs': 'containers', 'caleld': 'called', 'customsie': 'customise', 'customsied': 'customised',
-    'customsier': 'customiser', 'customsies': 'customises',
+    'customsier': 'customiser', 'customsies': 'customises', 'unlcoked': 'unlocked', 'condtiioned': 'conditioned',
+    'comopsed': 'composed', 'unlokc': 'unlock', 'lokcs': 'locks', 'comopses': 'composes', 'compsoed': 'composed',
+    'compsoes': 'composes', 'adjacecny': 'adjacency', 'validaotr': 'validator', 'validaotrs': 'validators',
+    'veriyfing': 'verifying', 'membesr': 'members', 'workaruond': 'workaround', 'workaruonds': 'workarounds',
 }
 
 if __name__ == '__main__':

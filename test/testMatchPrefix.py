@@ -4,11 +4,11 @@ from Rule import Rule
 # ex: ":*:valeu::value" <- the '*' denotes a prefix rule
 class TestMatchPrefix(unittest.TestCase):
     @classmethod
-    def setUpClass(self):
-        self.rules = Rule.fileToRuleList('AutocorrectForDevelopers.ahk')
+    def setUpClass(cls):
+        cls.rules = Rule.fileToRuleList('AutocorrectForDevelopers.ahk')
 
-        prefixRules = [rule for rule in self.rules if rule.prefixMatch]
-        self.prefixRuleList = [rule.oldText for rule in prefixRules]
+        prefixRules = [rule for rule in cls.rules if rule.prefixMatch]
+        cls.prefixRuleList = [rule.oldText for rule in prefixRules]
 
     def test_ruleLength(self):
         self.assertGreater(len(self.rules), 5100)
@@ -41,7 +41,7 @@ class TestMatchPrefix(unittest.TestCase):
 
     def test_allPrefixRulesHaveTests(self):
         # every prefix test in ahk script should have an entry in EXPLICIT_TESTS
-        testKeys = list(EXPLICIT_TESTS.keys())
+        testKeys = list(EXPLICIT_TESTS)
         for prefix in self.prefixRuleList:
             testList = [x for x in testKeys if x.startswith(prefix)]
             self.assertGreater(len(testList), 0, f'The prefix "{prefix}" does not have an automated test')
@@ -159,7 +159,7 @@ EXPLICIT_TESTS = {
     'conitnue': 'continue', 'evaulation': 'evaluation', 'proflier': 'profiler', 'adress': 'address', 'imapct': 'impact',
     'elemtens': 'elements', 'odrered': 'ordered', 'benhcmark': 'benchmark',
     'consturct': 'construct', 'ilsten': 'listen', 'proudcer': 'producer', 'prdoucer': 'producer', 'prodcuer': 'producer',
-    'unlokc': 'unlock', 'condiions': 'conditions', 'bnehcmark': 'benchmark', 'opereats': 'operates',
+    'condiions': 'conditions', 'bnehcmark': 'benchmark', 'opereats': 'operates',
     'benchmakr': 'benchmark', 'bnechmark': 'benchmark', 'ofcus': 'focus', 'attahcment': 'attachment', 'ofrmat': 'format',
     'preceeded': 'preceded', 'infreuqently': 'infrequently', 'infrquently': 'infrequently', 'optmial': 'optimal',
     'asesrt': 'assert', 'inesrtion': 'insertion', 'prvent': 'prevent', 'prevenet': 'prevent', 'acceess': 'access',
@@ -231,7 +231,13 @@ EXPLICIT_TESTS = {
     'appaer': 'appear', 'speicfic': 'specific', 'swtihc': 'switch', 'confiugre': 'configure', 'orgnaise': 'organise',
     'orgnaize': 'organize', 'notiifcation': 'notification', 'shcedule': 'schedule', 'adidtion': 'addition',
     'conidtion': 'condition', 'enhnacement': 'enhancement', 'interpert': 'interpret', 'parmaters': 'parameters',
-    'packgae': 'package', 'crucnh': 'crunch', 'progarms': 'programs',
+    'packgae': 'package', 'crucnh': 'crunch', 'progarms': 'programs', 'eqiuvalent': 'equivalent', 'prinicple': 'principle',
+    'conifgure': 'configure', 'deelte': 'delete', 'collaboarte': 'collaborate', 'decoarte': 'decorate',
+    'emphaisze': 'emphasize', 'emphasiez': 'emphasize', 'emphaszie': 'emphasize', 'reisze': 'resize', 'resiez': 'resize',
+    'reszie': 'resize', 'syntheisze': 'synthesize', 'synthesiez': 'synthesize', 'syntheszie': 'synthesize',
+    'ot hte': 'to the', 'ot teh': 'to the', 'metnion': 'mention', 'subsytem': 'subsystem', 'insepcts': 'inspects',
+    'autoamtic': 'automatic', 'subysstem': 'subsystem', 'sycnhronous': 'synchronous', 'asycnhronous': 'asynchronous',
+    'dirver': 'driver',
 }
 
 if __name__ == '__main__':

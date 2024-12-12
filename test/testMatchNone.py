@@ -3,12 +3,12 @@ from Rule import Rule
 
 class TestMatchNone(unittest.TestCase):
     @classmethod
-    def setUpClass(self):
-        self.rules = Rule.fileToRuleList('AutocorrectForDevelopers.ahk')
+    def setUpClass(cls):
+        cls.rules = Rule.fileToRuleList('AutocorrectForDevelopers.ahk')
 
     def test_ruleLength(self):
-        self.assertGreater(len(self.rules), 3400)
-        self.assertGreater(len(MATCH_NONE_LIST), 60)
+        self.assertGreater(len(self.rules), 5200)
+        self.assertGreater(len(MATCH_NONE_LIST), 90)
 
     def test_replace(self):
         for inputText in MATCH_NONE_LIST:
@@ -28,7 +28,7 @@ MATCH_NONE_LIST = [
     'fro', 'Then', 'Shatner', 'escond', 'halted', 'lien', 'rootin', 'have OT', 'spraed', # spread/spared
     'falte', 'baltes', 'hadnet', 'wordnets', 'yuo', 'Yuo', 'Gorup', 'bahs', 'clas', 'fiel', 'moer', 'rela',
     'saem', 'ture', 'nto', 'allWords', 'Stroe', 'keyforeign', 'beign', 'assigns', 'redesigns', 'foreigns',
-    'moriarty', 'ign', 'bailly', 'motley', # '-tley' requires too many whitelists
+    'moriarty', 'ign', 'bailly', 'motley', # 'tley::tely' requires too many whitelists
 ]
 
 if __name__ == '__main__':

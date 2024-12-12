@@ -95,7 +95,7 @@ class TestRule(unittest.TestCase):
         fileName = Rule.getRelativeFileName('AutocorrectForDevelopers.ahk')
 
         with open(fileName, encoding='utf-8') as f:
-            lines = [line.strip('\n ') for line in f]
+            lines = [line.strip() for line in f]
 
         for line in lines:
             self.assertTrue(all(char in string.printable for char in line), 'Only printable characters supported')
@@ -104,7 +104,7 @@ class TestRule(unittest.TestCase):
         fileName = Rule.getRelativeFileName('AutocorrectForDevelopers.ahk')
 
         with open(fileName, encoding='utf-8') as f:
-            lines = [line.strip('\n ') for line in f]
+            lines = [line.strip() for line in f]
 
         lines = [line for line in lines if line.startswith('#Hotstring EndChars')]
         self.assertEqual(len(lines), 1)
@@ -121,7 +121,7 @@ class TestRule(unittest.TestCase):
     def test_noMultiLineComments(self):
         file = Rule.getRelativeFileName('AutocorrectForDevelopers.ahk')
         with open(file, encoding='utf-8') as f:
-            lines = [line.strip('\n ') for line in f]
+            lines = [line.strip() for line in f]
 
         # for now, only single line comments (';') are supported
         # this is to ensure that every line is self-contained

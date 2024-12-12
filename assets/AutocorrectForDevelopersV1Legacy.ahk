@@ -5139,7 +5139,7 @@
     :C?:msied::mised
     :C?:msier::miser
     :C?:msies::mises
-    :C?:mzie::mize        
+    :C?:mzie::mize
     :C?:mzied::mized
     :C?:mzier::mizer
     :C?:mzies::mizes
