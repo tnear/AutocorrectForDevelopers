@@ -1,5 +1,5 @@
 # AutocorrectForDevelopers
-**_AutocorrectForDevelopers_** is an [AutoHotkey](https://www.autohotkey.com/) (AHK) script which automatically fixes typos using rules tailored for software developers. Its rules contain many corrections for common developer words involving keywords, classes, methods, programming languages, and programming disciplines. This script reduces runtime errors, decreases compilation times, and boosts developer productivity.
+**_AutocorrectForDevelopers_** is a multi-platform script which automatically fixes typos using rules tailored for software developers. *AutocorrectForDevelopers* can be run through [AutoHotkey](https://www.autohotkey.com/) (AHK) or [Espanso](https://github.com/espanso/espanso). The script's rules contain many corrections for common developer words involving keywords, classes, methods, programming languages, and software engineering concepts. This script reduces runtime errors and boosts developer productivity.
 
 ## How does it work?
 Corrections happen automatically as you type:
@@ -9,10 +9,14 @@ Corrections happen automatically as you type:
 By default, *AutocorrectForDevelopers.ahk* runs against all applications (except Microsoft Word), although the script can be customized to enable or disable any application (see the `#HotIf/#If` statement early in the script).
 
 ## Installation
-Download [AutoHotkey](https://www.autohotkey.com/) v2, then run [*AutocorrectForDevelopers.ahk*](AutocorrectForDevelopers.ahk).
+### AutoHotkey users
+Install [AutoHotkey](https://www.autohotkey.com/) v2, then run [*AutocorrectForDevelopers.ahk*](AutocorrectForDevelopers.ahk).
+
+### Espanso users
+Install [Espanso](https://espanso.org/) for your platform, then [load](https://espanso.org/docs/get-started/) the config file [*AutocorrectForDevelopers.yaml*](AutocorrectForDevelopers.yaml).
 
 ## Testing
-All rules are continuously regression tested (see tests [here](https://github.com/tnear/AutocorrectForDevelopers/tree/main/test)). All tests are run before pushing to GitHub, ensuring that new rules do not interfere with any existing rules.
+All [tests](https://github.com/tnear/AutocorrectForDevelopers/tree/main/test) are run before pushing to GitHub, ensuring that new rules do not interfere with any existing rules.
 
 ## FAQ
 ### Does this script support AutoHotkey v1?
@@ -25,9 +29,9 @@ Shown below is a Venn diagram comparing excerpts from the official *AutoCorrect.
 
 ![Venn diagram](assets/VennDiagram.png)
 
-*AutoCorrect.ahk*, shown on the left, contains many rules for rare words which software engineers are unlikely to need. It also introduces many accented characters which are correct but developer unfriendly. Lastly, the official script hasn't seen much active development in the last 15 years and therefore is missing new technology terminology.
+*AutoCorrect.ahk*, shown in yellow, contains many rules for rare words which software engineers are unlikely to need. It also introduces many accented characters which are correct but developer unfriendly. Lastly, the official script hasn't seen much active development in the last 15 years and therefore is missing new technology terminology.
 
-*AutocorrectForDevelopers.ahk*, however, contains many common software engineering terms which are absent from *AutoCorrect.ahk*. Because *AutocorrectForDevelopers.ahk* is developer-centric, it will fix a higher percentage of your typos.
+*AutocorrectForDevelopers.ahk*, shown in purple, contains many common software engineering terms which are absent from *AutoCorrect.ahk*. Because *AutocorrectForDevelopers.ahk* is developer-centric, it will fix a higher percentage of your typos.
 
 ## Common developer typos added for...
 - Languages: AutoHotkey, C, C++, C#, COBOL, CSS, FORTRAN, Go, Java, JavaScript, Julia, Kotlin, MATLAB, Perl, PHP, Python, R, Ruby, Rust, Scala, SQL, Swift, Visual Basic

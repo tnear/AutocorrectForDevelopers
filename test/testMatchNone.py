@@ -29,6 +29,7 @@ MATCH_NONE_LIST = [
     'falte', 'baltes', 'hadnet', 'wordnets', 'yuo', 'Yuo', 'Gorup', 'bahs', 'clas', 'fiel', 'moer', 'rela',
     'saem', 'ture', 'nto', 'allWords', 'Stroe', 'keyforeign', 'beign', 'assigns', 'redesigns', 'foreigns',
     'moriarty', 'ign', 'bailly', 'motley', # 'tley::tely' requires too many whitelists
+    'yoruba', 'konway',
 ]
 
 if __name__ == '__main__':

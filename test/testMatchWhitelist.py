@@ -48,7 +48,7 @@ class TestMatchWhitelist(unittest.TestCase):
         suffixesWithWords = {
             'atro', 'dign', 'dner', 'dners', 'dres', 'eint', 'laize', 'lign', 'ligns', 'nace', 'naces',
             'nign', 'otry', 'ouis', 'raes', 'roed', 'rued', 'sign', 'sino', 'sinos',
-            'soed', 'tino', 'tinos', 'tued', 'utre',
+            'soed', 'tino', 'tinos', 'tued', 'utre', 'abel', 'abels',
         }
 
         # ensure that all suffixesWithWords are whitelisted
@@ -70,7 +70,7 @@ class TestMatchWhitelist(unittest.TestCase):
 WHITELIST = [
     'systemdesign', 'itme', 'assign', 'misalign', 'misaligns', 'variableassign',
     'gardner', 'gardners', 'cupertino', 'snig', 'fomr', # from/form
-    'ligns', 'realigns',
+    'ligns', 'realigns', 'mylabel', 'mylabels',
 ]
 
 if __name__ == '__main__':

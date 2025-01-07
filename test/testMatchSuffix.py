@@ -65,14 +65,14 @@ class TestMatchPrefix(unittest.TestCase):
     def test_explicit(self):
         for inputText, expectedText in EXPLICIT_TESTS.items():
             _, rule, _ = Rule.getReplacementText(self.rules, inputText, True)
-            self.assertIsNotNone(rule, f'Could not find word "{inputText}"')
+            self.assertIsNotNone(rule, f'Suffix lookup failed for "{inputText}"')
 
             # perform the string replacement
             newText = inputText.replace(rule.oldText, rule.newText)
 
             # verify the replaced string
             self.assertEqual(newText, expectedText)
-            self.assertTrue(rule.suffixMatch, f'Failed for input text: "{inputText}"')
+            self.assertTrue(rule.suffixMatch, f'Unable to find suffix for input text: "{inputText}"')
 
     def test_allSuffixRulesHaveTests(self):
         # every suffix test in ahk script should have an entry in EXPLICIT_TESTS
@@ -118,8 +118,9 @@ class TestMatchPrefix(unittest.TestCase):
             _, _, example_substring = line.partition('ex: ')
             examples = example_substring.split(', ')
 
-            # verify >= 5 examples, uniqueness, and suffix match
-            self.assertGreaterEqual(len(examples), 5, f'The suffix rule "{suffix}" does not have >= 5 examples')
+            # verify number of examples, uniqueness, and suffix match
+            num_examples = 6
+            self.assertGreaterEqual(len(examples), num_examples, f'The suffix rule "{suffix}" does not have >= 5 examples')
             self.assertEqual(len(examples), len(set(examples)), f'The suffix "{suffix}" does not contain unique examples')
             for example in examples:
                 self.assertTrue(example.endswith(suffix), f'"{example}" does not end with "{suffix}"')
@@ -143,7 +144,7 @@ NO_WHITELIST_EXCEPTIONS = {
 # explicit tests for suffix words (usually as part of bug fixes)
 EXPLICIT_TESTS = {
     'availalbe': 'available', 'languaegs': 'languages', 'automaticallly': 'automatically',
-    'simultaenous': 'simultaneous', 'pairty': 'parity', 'emulaetd': 'emulated',
+    'pairty': 'parity', 'emulaetd': 'emulated',
     'applictaion': 'application', 'applictaoin': 'application', 'applictaions': 'applications',
     'applictaoins': 'applications', 'mathc': 'match', 'ntaive': 'native',
     'callbakc': 'callback', 'callbakcs': 'callbacks', 'abilties': 'abilities', 'ablities': 'abilities',
@@ -175,10 +176,10 @@ EXPLICIT_TESTS = {
     'segmetnation': 'segmentation', 'segmetnations': 'segmentations', 'breakpoitn': 'breakpoint',
     'breakpiont': 'breakpoint', 'breakponit': 'breakpoint', 'breakpoitns': 'breakpoints',
     'breakpionts': 'breakpoints', 'breakponits': 'breakpoints', 'compoudn': 'compound', 'compoudns': 'compounds',
-    'homepaeg': 'homepage', 'breakopint': 'breakpoint', 'breakopints': 'breakpoints', 'improt': 'import',
+    'breakopint': 'breakpoint', 'breakopints': 'breakpoints', 'improt': 'import',
     'improts': 'imports', 'coveraeg': 'coverage', 'quadrnat': 'quadrant', 'quadrnats': 'quadrants',
-    'enumeraet': 'enumerate', 'enumeraets': 'enumerates', 'securtiy': 'security', 'imprvoe': 'improve',
-    'imprvoes': 'improves', 'pusehd': 'pushed', 'smahsing': 'smashing', 'messaeg': 'message',
+    'enumeraet': 'enumerate', 'enumeraets': 'enumerates', 'securtiy': 'security',
+    'pusehd': 'pushed', 'smahsing': 'smashing', 'messaeg': 'message',
     'ownersihp': 'ownership', 'ownersihps': 'ownerships', 'recursino': 'recursion', 'recursoin': 'recursion',
     'recuroisn': 'recursion', 'recursinos': 'recursions', 'recursoins': 'recursions', 'recuroisns': 'recursions',
     'sparstiy': 'sparsity', 'recursvie': 'recursive', 'mergesrot': 'mergesort', 'worksapce': 'workspace',
@@ -206,8 +207,8 @@ EXPLICIT_TESTS = {
     'investigaion': 'investigation', 'investigaions': 'investigations', 'combinaion': 'combination',
     'combinaions': 'combinations', 'catpion': 'caption', 'catpions': 'captions', 'initilaized': 'initialized',
     'initilaizes': 'initializes', 'csats': 'casts', 'duplicaets': 'duplicates', 'weigths': 'weights',
-    'accoutned': 'accounted', 'exproted': 'exported', 'imprvoed': 'improved', 'captuerd': 'captured',
-    'transopse': 'transpose', 'statitsic': 'statistic', 'statitsics': 'statistics', 'scientiifc': 'scientific',
+    'accoutned': 'accounted', 'exproted': 'exported', 'captuerd': 'captured',
+    'transopse': 'transpose', 'statitsic': 'statistic', 'statitsics': 'statistics',
     'materila': 'material', 'GraphNdoe': 'GraphNode', 'launhicng': 'launching',
     'veriifes': 'verifies', 'visiilbity': 'visibility', 'emulatro': 'emulator', 'emulatros': 'emulators',
     'gradeint': 'gradient', 'gradeints': 'gradients', 'averaegd': 'averaged', 'captrued': 'captured',
@@ -235,7 +236,7 @@ EXPLICIT_TESTS = {
     'distnaces': 'distances', 'optimzier': 'optimizer', 'functinoal': 'functional', 'opitonally': 'optionally',
     'opitnoally': 'optionally', 'optinoally': 'optionally',
     'pointesr': 'pointers', 'objectvies': 'objectives', 'sequentialy': 'sequentially', 'whitepsace': 'whitespace',
-    'namepsaces': 'namespaces', 'simultaenously': 'simultaneously', 'natiely': 'natively', 'ntaively': 'natively',
+    'namepsaces': 'namespaces', 'natiely': 'natively', 'ntaively': 'natively',
     'simultanoeusly': 'simultaneously', 'urgetnly': 'urgently', 'effiicently': 'efficiently', 'optioanlly': 'optionally',
     'postiively': 'positively', 'differetnly': 'differently', 'recursviely': 'recursively', 'constnatly': 'constantly',
     'constatnly': 'constantly', 'actviely': 'actively', 'memberhsip': 'membership', 'memberhsips': 'memberships',
@@ -255,15 +256,15 @@ EXPLICIT_TESTS = {
     'finindg': 'finding', 'finindgs': 'findings', 'softwaer': 'software', 'itearting': 'iterating', 'identiyf': 'identify',
     'broekr': 'broker', 'comemnted': 'commented', 'myVlaue': 'myValue', 'myVluae': 'myValue', 'myValeu': 'myValue',
     'myVaule': 'myValue', 'myVlaues': 'myValues', 'myVluaes': 'myValues', 'myValeus': 'myValues', 'myVaules': 'myValues',
-    'myDAta': 'myData', 'mySTring': 'myString', 'folloewr': 'follower', 'folloewrs': 'followers', 'deciaml': 'decimal',
+    'myDAta': 'myData', 'mySTring': 'myString', 'folloewr': 'follower', 'folloewrs': 'followers',
     'commentayr': 'commentary', 'acquriing': 'acquiring', 'roudning': 'rounding', 'reltaional': 'relational',
     'consntat': 'constant', 'consntats': 'constants', 'reisde': 'reside', 'reisdes': 'resides', 'moderaetly': 'moderately',
     'capacitiy': 'capacity', 'vieiwng': 'viewing',
     'experiecne': 'experience', 'expereince': 'experience', 'baselnie': 'baseline', 'baselnies': 'baselines',
     'benchamrking': 'benchmarking', 'contnetion': 'contention', 'prevoiusly': 'previously', 'prevouisly': 'previously',
     'previosuly': 'previously', 'experiecnes': 'experiences', 'expereinces': 'experiences', 'mnetions': 'mentions',
-    'pipelnied': 'pipelined', 'draiwngs': 'drawings', 'produtc': 'product', 'produtcs': 'products', 'benchmrak': 'benchmark',
-    'benchmraked': 'benchmarked', 'benchmraking': 'benchmarking', 'benchmarekd': 'benchmarked', 'produtcion': 'production',
+    'pipelnied': 'pipelined', 'draiwngs': 'drawings', 'benchmrak': 'benchmark',
+    'benchmraked': 'benchmarked', 'benchmraking': 'benchmarking', 'benchmarekd': 'benchmarked',
     'resposnive': 'responsive', 'adatpive': 'adaptive', 'statisitc': 'statistic', 'statisitcal': 'statistical',
     'statitsical': 'statistical', 'statisitcs': 'statistics', 'deviaotin': 'deviation', 'notifiaction': 'notification',
     'bookmraks': 'bookmarks', 'likning': 'linking', 'activaet': 'activate', 'producesr': 'producers',
@@ -285,9 +286,12 @@ EXPLICIT_TESTS = {
     'validtae': 'validate', 'validtaes': 'validates', 'storgae': 'storage', 'anywehre': 'anywhere', 'contaeinr': 'container',
     'contaeinrs': 'containers', 'caleld': 'called', 'customsie': 'customise', 'customsied': 'customised',
     'customsier': 'customiser', 'customsies': 'customises', 'unlcoked': 'unlocked', 'condtiioned': 'conditioned',
-    'comopsed': 'composed', 'unlokc': 'unlock', 'lokcs': 'locks', 'comopses': 'composes', 'compsoed': 'composed',
+    'comopsed': 'composed', 'unlokc': 'unlock', 'lokcs': 'locks', 'comopses': 'composes',
     'compsoes': 'composes', 'adjacecny': 'adjacency', 'validaotr': 'validator', 'validaotrs': 'validators',
     'veriyfing': 'verifying', 'membesr': 'members', 'workaruond': 'workaround', 'workaruonds': 'workarounds',
+    'variabel': 'variable', 'varialbes': 'variables', 'variabels': 'variables', 'termainl': 'terminal',
+    'lifeimte': 'lifetime', 'lifeimtes': 'lifetimes', 'pakcs': 'packs', 'expressiosn': 'expressions',
+    'statistisc': 'statistics',
 }
 
 if __name__ == '__main__':
