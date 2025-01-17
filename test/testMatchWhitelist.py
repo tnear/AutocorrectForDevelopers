@@ -44,21 +44,11 @@ class TestMatchWhitelist(unittest.TestCase):
             self.assertTrue(rule.backspace)
 
     def test_whitelistSorted(self):
-        # list of suffixes which have at least one word
-        suffixesWithWords = {
-            'atro', 'dign', 'dner', 'dners', 'dres', 'eint', 'laize', 'lign', 'ligns', 'nace', 'naces',
-            'nign', 'otry', 'ouis', 'raes', 'roed', 'rued', 'sign', 'sino', 'sinos',
-            'soed', 'tino', 'tinos', 'tued', 'utre', 'abel', 'abels',
-        }
-
-        # ensure that all suffixesWithWords are whitelisted
-        self.assertTrue(all(item in set(self.whitelistList) for item in suffixesWithWords))
+        # ensure that all SUFFIXES_WITH_WORDS are whitelisted
+        self.assertTrue(all(item in set(self.whitelistList) for item in SUFFIXES_WITH_WORDS))
 
         # filter suffixes plus rules which end with them
-        def shouldInclude(text):
-            return text not in suffixesWithWords and not any(text.endswith(suffix) for suffix in suffixesWithWords)
-
-        originalWhitelist = [text for text in self.whitelistList if shouldInclude(text)]
+        originalWhitelist = get_suffixes_without_words(self.whitelistList)
 
         # sort the whitelist then ensure it matches the order in the script
         sortedWhitelist = sorted(originalWhitelist)
@@ -66,12 +56,34 @@ class TestMatchWhitelist(unittest.TestCase):
         for original, sortedItem in zip(originalWhitelist, sortedWhitelist):
             self.assertEqual(original, sortedItem, f'Found unsorted whitelist rule: "{original}" should be after "{sortedItem}"')
 
+    def test_all_whitelists_have_suffix_rules(self):
+        # exclude whitelist rules which are part of words
+        original_whitelist = get_suffixes_without_words(self.whitelistList)
+
+        # ensure whitelist rules have a suffix rule
+        suffix_rules = {rule.oldText for rule in self.rules if rule.suffixMatch and not rule.backspace}
+        for whitelist_rule in original_whitelist:
+            self.assertTrue(whitelist_rule in suffix_rules, f'Unable to find a suffix rule for "{whitelist_rule}"')
+
+def get_suffixes_without_words(whitelist_list):
+    def shouldInclude(text):
+        return text not in SUFFIXES_WITH_WORDS and not any(text.endswith(suffix) for suffix in SUFFIXES_WITH_WORDS)
+
+    return [text for text in whitelist_list if shouldInclude(text)]
+
 # explicit tests for whitelisted words (usually as part of bug fixes)
 WHITELIST = [
-    'systemdesign', 'itme', 'assign', 'misalign', 'misaligns', 'variableassign',
+    'itme', 'misalign', 'misaligns',
     'gardner', 'gardners', 'cupertino', 'snig', 'fomr', # from/form
     'ligns', 'realigns', 'mylabel', 'mylabels',
 ]
+
+# list of suffixes which have at least one word
+SUFFIXES_WITH_WORDS = {
+    'atro', 'dign', 'dner', 'dners', 'dres', 'eint', 'laize', 'lign', 'ligns', 'nace', 'naces',
+    'nign', 'otry', 'ouis', 'raes', 'roed', 'rued', 'sino', 'sinos',
+    'soed', 'tino', 'tinos', 'tued', 'utre', 'abel', 'abels',
+}
 
 if __name__ == '__main__':
     unittest.main()

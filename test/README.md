@@ -10,9 +10,9 @@ Navigate to the `test` directory then run `python -m unittest`:
 
 ```
 AutocorrectForDevelopers/test> python -m unittest
-.......................................................
+........................................................
 ----------------------------------------------------------------------
-Ran 55 tests in 1.565s
+Ran 56 tests in 1.687s
 
 OK
 ```

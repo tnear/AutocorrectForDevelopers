@@ -138,7 +138,7 @@ NO_WHITELIST_EXCEPTIONS = {
     'psace', 'sapces', 'spcaes', 'psaces', 'STring', 'tbale', 'itno', 'Vlaue', 'Vluae', 'Valeu', 'Vaule',
     'Vlaues', 'Vluaes', 'Valeus', 'Vaules', 'veyr', 'verey', 'hwere', 'wign', 'wnig', 'iwngs', 'wigns', 'wnigs',
     'owrk', 'wokr', 'owrking', 'wokring', 'owrks', 'wokrs', 'dtae', 'dtaes', 'wehre', 'lcoked', 'lokc', 'lokcs',
-    'opsed', 'opses', 'psoes',
+    'opsed', 'opses', 'psoes', 'opitn', 'opitns',
 }
 
 # explicit tests for suffix words (usually as part of bug fixes)
@@ -159,7 +159,7 @@ EXPLICIT_TESTS = {
     'cryptogarphy': 'cryptography', 'cryptograhpy': 'cryptography', 'varinat': 'variant',
     'logicla': 'logical', 'effiicent': 'efficient', 'gradietn': 'gradient',
     'gradienet': 'gradient', 'gradietns': 'gradients', 'gradienets': 'gradients', 'heigth': 'height',
-    'utliity': 'utility', 'fianl': 'final', 'closign': 'closing',
+    'utliity': 'utility', 'fianl': 'final',
     'strnig': 'string', 'strnigs': 'strings', 'strign': 'string', 'strigns': 'strings',
     'optoinal': 'optional', 'optioanl': 'optional', 'prevouis': 'previous',
     'prevoius': 'previous', 'deciison': 'decision', 'deciisons': 'decisions', 'edtiing': 'editing',
@@ -268,7 +268,7 @@ EXPLICIT_TESTS = {
     'resposnive': 'responsive', 'adatpive': 'adaptive', 'statisitc': 'statistic', 'statisitcal': 'statistical',
     'statitsical': 'statistical', 'statisitcs': 'statistics', 'deviaotin': 'deviation', 'notifiaction': 'notification',
     'bookmraks': 'bookmarks', 'likning': 'linking', 'activaet': 'activate', 'producesr': 'producers',
-    'concurrnetly': 'concurrently', 'formatetd': 'formatted', 'modluar': 'modular',
+    'formatetd': 'formatted', 'modluar': 'modular',
     'balacne': 'balance', 'balacned': 'balanced', 'balacnes': 'balances', 'packte': 'packet', 'packtes': 'packets',
     'parinsg': 'parsing', 'deadlcok': 'deadlock', 'codign': 'coding', 'sampligns': 'samplings', 'declinign': 'declining',
     'findigns': 'findings', 'openigns': 'openings', 'describign': 'describing',
@@ -291,7 +291,8 @@ EXPLICIT_TESTS = {
     'veriyfing': 'verifying', 'membesr': 'members', 'workaruond': 'workaround', 'workaruonds': 'workarounds',
     'variabel': 'variable', 'varialbes': 'variables', 'variabels': 'variables', 'termainl': 'terminal',
     'lifeimte': 'lifetime', 'lifeimtes': 'lifetimes', 'pakcs': 'packs', 'expressiosn': 'expressions',
-    'statistisc': 'statistics',
+    'statistisc': 'statistics', 'breakopitn': 'breakpoint', 'breakopitns': 'breakpoints', 'concurrenet': 'concurrent',
+    'concurrenetly': 'concurrently', 'persistenetly': 'persistently', 'toggeld': 'toggled',
 }
 
 if __name__ == '__main__':

@@ -25,7 +25,7 @@ class TestMatchExact(unittest.TestCase):
             inputText = inputText.capitalize()
 
             newText, rule, startIdx = Rule.getReplacementText(self.rules, inputText, hasEndChar, startIdx)
-            self.assertEqual(newText, rule.newText)
+            self.assertEqual(newText, rule.newText, 'No match. Check for common prefixes or suffixes.')
             self.assertFalse(rule.prefixMatch)
             self.assertFalse(rule.suffixMatch)
             self.assertFalse(rule.backspace)
@@ -66,13 +66,15 @@ class TestMatchExact(unittest.TestCase):
         sortedSuffixes = sorted(suffixes.items(), key=lambda item: item[1], reverse=True)
 
         # ignore these whitelisted suffixes
-        whitelist = ['tner', 'ners', 'raed', 'alte', 'ltes', 'dnet', 'nets', ' nto', 'enet', 'iens',]
+        whitelist = ['tner', 'ners', 'raed', 'alte', 'ltes', 'dnet', 'nets', ' nto', 'enet',
+                     'iens','sign',]
         sortedSuffixes = [x for x in sortedSuffixes if x[0] not in whitelist]
 
         # ensure the most common suffix is below some threshold. If this asserts, then
         # there is likely a missing suffix rule
         MAX_CAPACITY = 8
-        self.assertLessEqual(sortedSuffixes[0][1], MAX_CAPACITY, f'Check if suffix "{sortedSuffixes[0][0]}" needs a suffix rule')
+        self.assertLessEqual(sortedSuffixes[0][1], MAX_CAPACITY,
+                             f'Check if suffix "{sortedSuffixes[0][0]}" needs a suffix rule')
 
 # Explicitly test these pairs. Although every rule is iterated over automatically,
 # this section is useful for bug fixes to ensure the behavior does not regress.

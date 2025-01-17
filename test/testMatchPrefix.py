@@ -68,7 +68,7 @@ EXPLICIT_TESTS = {
     'inhertiance': 'inheritance', 'inhreits': 'inherits', 'intiialize': 'initialize',
     'isntance': 'instance', 'inteligence': 'intelligence', 'itnerface': 'interface',
     'lsitener': 'listener', 'manfacturer': 'manufacturer',
-    'mltithreaded': 'multithreaded', 'mjultithreaded': 'multithreaded', 'northwsetern': 'northwestern',
+    'mjultithreaded': 'multithreaded', 'northwsetern': 'northwestern',
     'ojbects': 'objects', 'opeational': 'operational', 'operaetional': 'operational', 'pareamters': 'parameters',
     'paraemters': 'parameters', 'parameers': 'parameters', 'parmaeters': 'parameters', 'aprameters': 'parameters',
     'paramters': 'parameters', 'partitons': 'partitions', 'persitent': 'persistent',
@@ -80,7 +80,7 @@ EXPLICIT_TESTS = {
     'requriement': 'requirement', 'requreiment': 'requirement', 'requiers': 'requires', 'reuslts': 'results',
     'resluts': 'results', 'rigthVarName': 'rightVarName', 'scheudled': 'scheduled',
     'scritped': 'scripted', 'sripting': 'scripting', 'sritped': 'scripted', 'scirpted': 'scripted', 'seraching': 'searching',
-    'seperate': 'separate', 'signlaing': 'signaling', 'std:;string': 'std::string',
+    'signlaing': 'signaling', 'std:;string': 'std::string',
     'sdt::list': 'std::list', 'sdt:;set': 'std::set', 'stD::sort': 'std::sort',
     'sucessful': 'successful', 'sueprclass': 'superclass', 'synchornous': 'synchronous',
     'sytsemic': 'systemic', 'thoguhtful': 'thoughtful', 'trnasformed': 'transformed',
@@ -242,6 +242,8 @@ EXPLICIT_TESTS = {
     'conceputal': 'conceptual', 'addreess': 'address', 'preproceess': 'preprocess', 'paremter': 'parameter',
     'otpino': 'option', 'cuations': 'cautions', 'satuarte': 'saturate', 'misclikc': 'misclick', 'dedutcs': 'deducts',
     'indutcs': 'inducts', 'produtcion': 'production', 'malfucntion': 'malfunction', 'trasnfer': 'transfer',
+    'abbrevaite': 'abbreviate', 'cocnepts': 'concepts', 'seaprate': 'separate',
+    'mltiple': 'multiple',
 }
 
 if __name__ == '__main__':

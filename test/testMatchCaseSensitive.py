@@ -68,7 +68,14 @@ class TestMatchCaseSensitive(unittest.TestCase):
         for rule in self.caseSensitiveNoPrefixRules:
             num_upper_old = len([c for c in rule.oldText if c.isupper()])
             num_upper_new = len([c for c in rule.newText if c.isupper()])
-            self.assertLessEqual(abs(num_upper_old - num_upper_new), 1)
+            self.assertLessEqual(abs(num_upper_old - num_upper_new), 1,
+                f'Rule "{rule.oldText}" has capitalization difference of 2+ letters');
+
+            if rule.oldText[0].isupper():
+                # detect probable issue where the first capital letter is made
+                # lowercase, ex: ':C:Teh::the' (should correct to 'The')
+                self.assertGreaterEqual(num_upper_new, 1,
+                    f'Case sensitive rule "{rule.oldText}" removes all capital letters.')
 
 if __name__ == '__main__':
     unittest.main()
