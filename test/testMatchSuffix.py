@@ -138,7 +138,7 @@ NO_WHITELIST_EXCEPTIONS = {
     'psace', 'sapces', 'spcaes', 'psaces', 'STring', 'tbale', 'itno', 'Vlaue', 'Vluae', 'Valeu', 'Vaule',
     'Vlaues', 'Vluaes', 'Valeus', 'Vaules', 'veyr', 'verey', 'hwere', 'wign', 'wnig', 'iwngs', 'wigns', 'wnigs',
     'owrk', 'wokr', 'owrking', 'wokring', 'owrks', 'wokrs', 'dtae', 'dtaes', 'wehre', 'lcoked', 'lokc', 'lokcs',
-    'opsed', 'opses', 'psoes', 'opitn', 'opitns',
+    'opsed', 'opses', 'psoes', 'opitn', 'opitns', 'wheer', 'pgin', 'pgins', 'iwng', 'wgin', 'wgins', 'wrok',
 }
 
 # explicit tests for suffix words (usually as part of bug fixes)
@@ -292,7 +292,12 @@ EXPLICIT_TESTS = {
     'variabel': 'variable', 'varialbes': 'variables', 'variabels': 'variables', 'termainl': 'terminal',
     'lifeimte': 'lifetime', 'lifeimtes': 'lifetimes', 'pakcs': 'packs', 'expressiosn': 'expressions',
     'statistisc': 'statistics', 'breakopitn': 'breakpoint', 'breakopitns': 'breakpoints', 'concurrenet': 'concurrent',
-    'concurrenetly': 'concurrently', 'persistenetly': 'persistently', 'toggeld': 'toggled',
+    'concurrenetly': 'concurrently', 'persistenetly': 'persistently', 'toggeld': 'toggled', 'everywheer': 'everywhere',
+    'docekr': 'docker', 'docekrs': 'dockers', 'reverisng': 'reversing', 'describgin': 'describing',
+    'advancgin': 'advancing', 'hashgin': 'hashing', 'workgin': 'working', 'samplgin': 'sampling', 'samplgins': 'samplings',
+    'opengin': 'opening', 'opengins': 'openings', 'mappgin': 'mapping', 'mappgins': 'mappings', 'routgin': 'routing',
+    'havgin': 'having', 'drawgin': 'drawing', 'drawgins': 'drawings', 'fixgin': 'fixing', 'copygin': 'copying',
+    'optimizgin': 'optimizing', 'changgin': 'changing', 'finihses': 'finishes', 'framewrok': 'framework',
 }
 
 if __name__ == '__main__':

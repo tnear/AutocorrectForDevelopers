@@ -6,13 +6,13 @@ All tests are written in Python. Testing is supported on all major platforms (al
 
 ## Running tests
 
-Navigate to the `test` directory then run `python -m unittest`:
+Run `python -m unittest discover test` from the repository root.
 
 ```
 AutocorrectForDevelopers/test> python -m unittest
-........................................................
+.........................................................
 ----------------------------------------------------------------------
-Ran 56 tests in 1.687s
+Ran 57 tests in 1.799s
 
 OK
 ```

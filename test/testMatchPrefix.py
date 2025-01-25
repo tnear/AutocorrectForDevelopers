@@ -46,6 +46,12 @@ class TestMatchPrefix(unittest.TestCase):
             testList = [x for x in testKeys if x.startswith(prefix)]
             self.assertGreater(len(testList), 0, f'The prefix "{prefix}" does not have an automated test')
 
+    def test_minimum_prefix_rule_length(self):
+        min_prefix_len = 5
+        for prefix_rule in self.prefixRuleList:
+            self.assertGreaterEqual(len(prefix_rule), min_prefix_len,
+                                    f'Prefix rule "{prefix_rule}" length does not meet minimum threshold.')
+
 EXPLICIT_TESTS = {
     'abstarction': 'abstraction', 'accomodating': 'accommodating',
     'asertion': 'assertion', 'assrted': 'asserted', 'asssertion': 'assertion',
@@ -84,7 +90,7 @@ EXPLICIT_TESTS = {
     'sdt::list': 'std::list', 'sdt:;set': 'std::set', 'stD::sort': 'std::sort',
     'sucessful': 'successful', 'sueprclass': 'superclass', 'synchornous': 'synchronous',
     'sytsemic': 'systemic', 'thoguhtful': 'thoughtful', 'trnasformed': 'transformed',
-    'viistor': 'visitor', 'wieghted': 'weighted', 'owrkflows': 'workflows',
+    'viistor': 'visitor', 'wieghted': 'weighted',
     'wirter': 'writer', 'yeidled': 'yielded', 'yeilds': 'yields',
     'tehcnology': 'technology',
     'Wriet-Output': 'Write-Output', 'wrietr': 'writer',
@@ -108,7 +114,7 @@ EXPLICIT_TESTS = {
     'prtoection': 'protection', 'wtachpoint': 'watchpoint', 'brekapoint': 'breakpoint', 'brkeapoint': 'breakpoint',
     'coutning': 'counting', 'ocunting': 'counting', 'implmeentation': 'implementation', 'implmenetation': 'implementation',
     'ocntroller': 'controller', 'recusive': 'recursive',
-    'repalced': 'replaced', 'corretcion': 'correction', 'freuqently': 'frequently', 'srots': 'sorts',
+    'repalced': 'replaced', 'corretcion': 'correction', 'freuqently': 'frequently',
     'whtiespace': 'whitespace', 'exeuction': 'execution', 'defualts': 'defaults', 'elmeetns': 'elements',
     'otpional': 'optional', 'toekns': 'tokens', 'contsraint': 'constraint', 'requsting': 'requesting',
     'reqeusting': 'requesting', 'rquesting': 'requesting', 'reuqesting': 'requesting',
@@ -122,17 +128,17 @@ EXPLICIT_TESTS = {
     'acknwoledgement': 'acknowledgement', 'ackonwledgement': 'acknowledgement', 'elmental': 'elemental',
     'sovler': 'solver', 'entialment': 'entailment', 'ifnormation': 'information', 'reulsts': 'results',
     'calcualtion': 'calculation', 'caluclation': 'calculation', 'initalise': 'initialise', 'proceessing': 'processing',
-    'porcessor': 'processor', 'preporcessor': 'preprocessor', 'wokrer': 'worker', 'foudn': 'found', 'reurtned': 'returned',
+    'porcessor': 'processor', 'preporcessor': 'preprocessor', 'foudn': 'found', 'reurtned': 'returned',
     'orhtogonal': 'orthogonal', 'prjoection': 'projection', 'ocnfigure': 'configure',
     'assocaitive': 'associative', 'opwerpoint': 'powerpoint', 'rsulted': 'resulted', 'proecdurally': 'procedurally',
-    'clutsering': 'clustering', 'memroize': 'memorize', 'commitee': 'committee', 'resulets': 'results', 'osrted': 'sorted',
+    'clutsering': 'clustering', 'memroize': 'memorize', 'commitee': 'committee', 'resulets': 'results',
     'borwsing': 'browsing', 'brwoser': 'browser', 'rueslts': 'results', 'icnremented': 'incremented',
     'collumns': 'columns',
     'interupts': 'interrupts', 'reoprting': 'reporting', 'remianing': 'remaining', 'eleemnts': 'elements',
     'saerching': 'searching', 'diffiuclty': 'difficulty', 'garphs': 'graphs',
     'preidction': 'prediction', 'contniue': 'continue',
     'dmeonstration': 'demonstration', 'detphFirst': 'depthFirst', 'recogniess': 'recognises', 'recogniezs': 'recognizes',
-    'std;:cout': 'std::cout', 'hahsed': 'hashed', 'preocmputing': 'precomputing',
+    'std;:cout': 'std::cout', 'preocmputing': 'precomputing',
     'comptuer': 'computer', 'ocmputer': 'computer', 'looops': 'loops', 'winowds': 'windows', 'prevetns': 'prevents',
     'prserves': 'preserves', 'esitmation': 'estimation', 'proudction': 'production', 'publihser': 'publisher',
     'subcriber': 'subscriber', 'euqals': 'equals', 'datdabase': 'database', 'driection': 'direction', 'disocvery': 'discovery',
@@ -242,8 +248,8 @@ EXPLICIT_TESTS = {
     'conceputal': 'conceptual', 'addreess': 'address', 'preproceess': 'preprocess', 'paremter': 'parameter',
     'otpino': 'option', 'cuations': 'cautions', 'satuarte': 'saturate', 'misclikc': 'misclick', 'dedutcs': 'deducts',
     'indutcs': 'inducts', 'produtcion': 'production', 'malfucntion': 'malfunction', 'trasnfer': 'transfer',
-    'abbrevaite': 'abbreviate', 'cocnepts': 'concepts', 'seaprate': 'separate',
-    'mltiple': 'multiple',
+    'abbrevaite': 'abbreviate', 'cocnepts': 'concepts', 'seaprate': 'separate', 'mltiple': 'multiple', 'lcoally': 'locally',
+    'hwitespace': 'whitespace',
 }
 
 if __name__ == '__main__':

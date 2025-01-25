@@ -54,7 +54,8 @@ class TestMatchWhitelist(unittest.TestCase):
         sortedWhitelist = sorted(originalWhitelist)
 
         for original, sortedItem in zip(originalWhitelist, sortedWhitelist):
-            self.assertEqual(original, sortedItem, f'Found unsorted whitelist rule: "{original}" should be after "{sortedItem}"')
+            self.assertEqual(original, sortedItem,
+                             f'Found unsorted whitelist rule: "{original}" should be after "{sortedItem}"')
 
     def test_all_whitelists_have_suffix_rules(self):
         # exclude whitelist rules which are part of words
@@ -69,7 +70,9 @@ def get_suffixes_without_words(whitelist_list):
     def shouldInclude(text):
         return text not in SUFFIXES_WITH_WORDS and not any(text.endswith(suffix) for suffix in SUFFIXES_WITH_WORDS)
 
-    return [text for text in whitelist_list if shouldInclude(text)]
+    result = [text for text in whitelist_list if shouldInclude(text)]
+    assert len(result) > 400
+    return result
 
 # explicit tests for whitelisted words (usually as part of bug fixes)
 WHITELIST = [
@@ -82,7 +85,7 @@ WHITELIST = [
 SUFFIXES_WITH_WORDS = {
     'atro', 'dign', 'dner', 'dners', 'dres', 'eint', 'laize', 'lign', 'ligns', 'nace', 'naces',
     'nign', 'otry', 'ouis', 'raes', 'roed', 'rued', 'sino', 'sinos',
-    'soed', 'tino', 'tinos', 'tued', 'utre', 'abel', 'abels',
+    'soed', 'tino', 'tinos', 'tued', 'utre', 'abel', 'abels', 'ggin',
 }
 
 if __name__ == '__main__':
