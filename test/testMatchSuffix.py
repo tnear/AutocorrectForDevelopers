@@ -123,7 +123,7 @@ class TestMatchPrefix(unittest.TestCase):
             self.assertGreaterEqual(len(examples), num_examples, f'The suffix rule "{suffix}" does not have >= 5 examples')
             self.assertEqual(len(examples), len(set(examples)), f'The suffix "{suffix}" does not contain unique examples')
             for example in examples:
-                self.assertTrue(example.endswith(suffix), f'"{example}" does not end with "{suffix}"')
+                self.assertTrue(example.endswith(suffix), f'Suffix example "{example}" does not end with "{suffix}"')
 
 # these are suffixes which should not be whitelisted. These should be autocorrected to actual words.
 NO_WHITELIST_EXCEPTIONS = {
@@ -139,6 +139,7 @@ NO_WHITELIST_EXCEPTIONS = {
     'Vlaues', 'Vluaes', 'Valeus', 'Vaules', 'veyr', 'verey', 'hwere', 'wign', 'wnig', 'iwngs', 'wigns', 'wnigs',
     'owrk', 'wokr', 'owrking', 'wokring', 'owrks', 'wokrs', 'dtae', 'dtaes', 'wehre', 'lcoked', 'lokc', 'lokcs',
     'opsed', 'opses', 'psoes', 'opitn', 'opitns', 'wheer', 'pgin', 'pgins', 'iwng', 'wgin', 'wgins', 'wrok',
+    'srue', 'tihng', 'emntal', 'emtnal', 'metnal', 'mnetal', 'wroks', 'wroking',
 }
 
 # explicit tests for suffix words (usually as part of bug fixes)
@@ -295,9 +296,13 @@ EXPLICIT_TESTS = {
     'concurrenetly': 'concurrently', 'persistenetly': 'persistently', 'toggeld': 'toggled', 'everywheer': 'everywhere',
     'docekr': 'docker', 'docekrs': 'dockers', 'reverisng': 'reversing', 'describgin': 'describing',
     'advancgin': 'advancing', 'hashgin': 'hashing', 'workgin': 'working', 'samplgin': 'sampling', 'samplgins': 'samplings',
-    'opengin': 'opening', 'opengins': 'openings', 'mappgin': 'mapping', 'mappgins': 'mappings', 'routgin': 'routing',
+    'opengins': 'openings', 'mappgin': 'mapping', 'mappgins': 'mappings', 'routgin': 'routing',
     'havgin': 'having', 'drawgin': 'drawing', 'drawgins': 'drawings', 'fixgin': 'fixing', 'copygin': 'copying',
-    'optimizgin': 'optimizing', 'changgin': 'changing', 'finihses': 'finishes', 'framewrok': 'framework',
+    'optimizgin': 'optimizing', 'finihses': 'finishes', 'framewrok': 'framework',
+    'fianlly': 'finally', 'touhces': 'touches', 'searhcable': 'searchable', 'watiign': 'waiting', 'closrue': 'closure',
+    'notihng': 'nothing', 'functinoed': 'functioned', 'experiemntal': 'experimental', 'experiemtnal': 'experimental',
+    'experimetnal': 'experimental', 'experimnetal': 'experimental', 'netwroks': 'networks', 'netwroking': 'networking',
+    'soretd': 'sorted',
 }
 
 if __name__ == '__main__':

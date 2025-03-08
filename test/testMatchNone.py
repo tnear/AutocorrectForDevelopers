@@ -24,12 +24,14 @@ MATCH_NONE_LIST = [
     'OFR', 'Push+Back', 'STD:;', 'SDT::', 'SDT:;', 'STD;:', 'code', 'doesnt', # interferes with "doesnt'"
     'end', 'Pop+Back', 'CAES', 'MAEK_', 'Grammer', 'APGE', 'forsome', 'cant', 'ZEOR', 'AUOT', 'ONDE', 'SendInput',
     'exponentiation', 'ISZE', 'ILNE', 'Fales', 'complier', 'hwo', # ambiguous between 'who' and 'how'
-    'from', 'form', 'Alvie', 'Horus', 'triangle', 'highlighting', 'sightings', 'braek', # break/brake
+    'from', 'form', 'Alvie', 'Horus', 'triangle', 'highlighting', 'sightings',
     'fro', 'Then', 'Shatner', 'escond', 'halted', 'lien', 'rootin', 'have OT', 'spraed', # spread/spared
     'falte', 'baltes', 'hadnet', 'wordnets', 'yuo', 'Yuo', 'Gorup', 'bahs', 'clas', 'fiel', 'moer', 'rela',
     'saem', 'ture', 'nto', 'allWords', 'Stroe', 'keyforeign', 'beign', 'assigns', 'redesigns', 'foreigns',
     'moriarty', 'ign', 'bailly', 'motley', # 'tley::tely' requires too many whitelists
-    'yoruba', 'konway', 'sign', 'design', 'systemdesign', 'assign', 'variableassign',
+    'yoruba', 'konway', 'sign', 'design', 'systemdesign', 'assign', 'variableassign', 'changin', # changin'
+    'neend', 'ehre', 'loggin', # loggin'
+    'netly', # netly -> ently often changes one typo into another typo
 ]
 
 if __name__ == '__main__':

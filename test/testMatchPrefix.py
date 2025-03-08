@@ -52,6 +52,14 @@ class TestMatchPrefix(unittest.TestCase):
             self.assertGreaterEqual(len(prefix_rule), min_prefix_len,
                                     f'Prefix rule "{prefix_rule}" length does not meet minimum threshold.')
 
+    def test_no_dead_start_with_prefix_rules(self):
+        # ex: do not allow both 'uniqe' and 'uniqeu' prefix rules because the
+        # second will never trigger.
+        prefixes = sorted(self.prefixRuleList)
+        for i in range(len(prefixes) - 1):
+            if prefixes[i+1].startswith(prefixes[i]):
+                self.fail(f'The prefix rule "{prefixes[i+1]}" starts with "{prefixes[i]}"')
+
 EXPLICIT_TESTS = {
     'abstarction': 'abstraction', 'accomodating': 'accommodating',
     'asertion': 'assertion', 'assrted': 'asserted', 'asssertion': 'assertion',
@@ -127,7 +135,7 @@ EXPLICIT_TESTS = {
     'acknowlegement': 'acknowledgement', 'recurisvely': 'recursively', 'conssitency': 'consistency',
     'acknwoledgement': 'acknowledgement', 'ackonwledgement': 'acknowledgement', 'elmental': 'elemental',
     'sovler': 'solver', 'entialment': 'entailment', 'ifnormation': 'information', 'reulsts': 'results',
-    'calcualtion': 'calculation', 'caluclation': 'calculation', 'initalise': 'initialise', 'proceessing': 'processing',
+    'calcualtion': 'calculation', 'caluclation': 'calculation', 'proceessing': 'processing',
     'porcessor': 'processor', 'preporcessor': 'preprocessor', 'foudn': 'found', 'reurtned': 'returned',
     'orhtogonal': 'orthogonal', 'prjoection': 'projection', 'ocnfigure': 'configure',
     'assocaitive': 'associative', 'opwerpoint': 'powerpoint', 'rsulted': 'resulted', 'proecdurally': 'procedurally',
@@ -151,7 +159,7 @@ EXPLICIT_TESTS = {
     'peformance': 'performance', 'paritcipant': 'participant', 'unsubcribed': 'unsubscribed', 'rqeuirement': 'requirement',
     'fucnitons': 'functions', 'fucntinos': 'functions', 'fucntoins': 'functions', 'fucniotns': 'functions',
     'porgramming': 'programming', 'igonre': 'ignore', 'funtcions': 'functions', 'prpeares': 'prepares', 'schedluer': 'scheduler',
-    'braek;': 'break;', 'ajdusting': 'adjusting', 'dfeaulted': 'defaulted', 'reminas': 'remains', 'folows': 'follows',
+    'ajdusting': 'adjusting', 'dfeaulted': 'defaulted', 'reminas': 'remains', 'folows': 'follows',
     'reciever': 'receiver', 'replciate': 'replicate', 'winodws': 'windows', 'restircts': 'restricts',
     'excpetion': 'exception', 'cmoputes': 'computes', 'defautls': 'defaults',
     'excetpion': 'exception', 'packaegs': 'packages', 'represneted': 'represented', 'reprsented': 'represented',
@@ -183,7 +191,7 @@ EXPLICIT_TESTS = {
     'otekn': 'token', 'seocnd': 'second', 'secodn': 'second', 'preprae': 'prepare',
     'dierct': 'direct', 'establihs': 'establish', 'estalbish': 'establish', 'reoslve': 'resolve', 'optizmie': 'optimize',
     'frueqen': 'frequen', 'inejct': 'inject', 'reuiqre': 'require', 'suport': 'support', 'assocate': 'associate',
-    'brak;': 'break;', 'confilct': 'conflict', 'speciifc': 'specific', 'genearte': 'generate', 'releation': 'relation',
+    'confilct': 'conflict', 'speciifc': 'specific', 'genearte': 'generate', 'releation': 'relation',
     'reuest': 'request', 'profiel': 'profile', 'qeustion': 'question', 'bleong': 'belong', 'rnaodm': 'random', 'lerna': 'learn',
     'restul': 'result', 'belogn': 'belong', 'equla': 'equal', 'apir<': 'pair<', 'addvance': 'advance', 'follwo': 'follow',
     'altenrate': 'alternate', 'invovle': 'involve', 'resovle': 'resolve', 'reaosn': 'reason', 'fasel;': 'false;',
@@ -214,7 +222,7 @@ EXPLICIT_TESTS = {
     'sturcture': 'structure', 'assert9': 'assert(', 'udner': 'under', 'encoutner': 'encounter',
     'docuemntation': 'documentation', 'whle(': 'while(', 'tiemstamp': 'timestamp', 'itmestamp': 'timestamp',
     'timestmap': 'timestamp', 'tirgger': 'trigger', 'intorduce': 'introduce', 'adjsut': 'adjust', 'traget': 'target',
-    'resltu': 'result', 'inidcate': 'indicate', 'avdance': 'advance', 'vectro<': 'vector<', 'contets': 'contest',
+    'resltu': 'result', 'inidcate': 'indicate', 'avdance': 'advance', 'contets': 'contest',
     'contanier': 'container', 'accetp': 'accept', 'rpoblem': 'problem', 'partenr': 'partner', 'exatc': 'exact',
     'approahc': 'approach', 'cosnistent': 'consistent', 'accumlate': 'accumulate', 'idnicate': 'indicate',
     'inehrit': 'inherit', 'inehrti': 'inherit', 'ansewr': 'answer', 'naswer': 'answer', 'attemtp': 'attempt',
@@ -249,7 +257,14 @@ EXPLICIT_TESTS = {
     'otpino': 'option', 'cuations': 'cautions', 'satuarte': 'saturate', 'misclikc': 'misclick', 'dedutcs': 'deducts',
     'indutcs': 'inducts', 'produtcion': 'production', 'malfucntion': 'malfunction', 'trasnfer': 'transfer',
     'abbrevaite': 'abbreviate', 'cocnepts': 'concepts', 'seaprate': 'separate', 'mltiple': 'multiple', 'lcoally': 'locally',
-    'hwitespace': 'whitespace',
+    'hwitespace': 'whitespace', 'speicifed': 'specified', 'confgiuration': 'configuration', 'qusetion': 'question',
+    'std;;cout': 'std::cout', 'ranges;;sort': 'ranges::sort', 'exepct': 'expect', 'pubilsh': 'publish',
+    'recommned': 'recommend', 'hyperpareamters': 'hyperparameters', 'hyperparaemters': 'hyperparameters',
+    'hyperparmaeters': 'hyperparameters', 'asynchornously': 'asynchronously', 'asychrnously': 'asynchronously',
+    'asyncrhonously': 'asynchronously', 'asynchrnously': 'asynchronously', 'aggreation': 'aggregation',
+    'subsysetms': 'subsystems', 'subsyetms': 'subsystems', 'hyperparameers': 'hyperparameters', 'csontantly': 'constantly',
+    'initailize': 'initialize', 'initliaize': 'initialize', 'corerctly': 'correctly', 'erferences': 'references',
+    'subystems': 'subsystems',
 }
 
 if __name__ == '__main__':

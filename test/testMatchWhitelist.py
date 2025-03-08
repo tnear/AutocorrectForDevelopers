@@ -1,4 +1,5 @@
 import unittest
+import collections
 from Rule import Rule
 
 # ex: ":b0:align::" whitelists 'align'
@@ -14,7 +15,7 @@ class TestMatchWhitelist(unittest.TestCase):
 
     def test_ruleLength(self):
         # assert that many tests are being run
-        self.assertGreater(len(self.rules), 5100)
+        self.assertGreater(len(self.rules), 5600)
         self.assertGreater(len(self.whitelistList), 500)
 
     def test_replace(self):
@@ -66,6 +67,11 @@ class TestMatchWhitelist(unittest.TestCase):
         for whitelist_rule in original_whitelist:
             self.assertTrue(whitelist_rule in suffix_rules, f'Unable to find a suffix rule for "{whitelist_rule}"')
 
+    def test_no_duplicate_whitelist_rules(self):
+        duplicates = [item for item, count in collections.Counter(self.whitelistList).items() if count > 1]
+        if duplicates:
+            self.fail(f'Found duplicate whitelist rule "{duplicates[0]}"')
+
 def get_suffixes_without_words(whitelist_list):
     def shouldInclude(text):
         return text not in SUFFIXES_WITH_WORDS and not any(text.endswith(suffix) for suffix in SUFFIXES_WITH_WORDS)
@@ -85,7 +91,7 @@ WHITELIST = [
 SUFFIXES_WITH_WORDS = {
     'atro', 'dign', 'dner', 'dners', 'dres', 'eint', 'laize', 'lign', 'ligns', 'nace', 'naces',
     'nign', 'otry', 'ouis', 'raes', 'roed', 'rued', 'sino', 'sinos',
-    'soed', 'tino', 'tinos', 'tued', 'utre', 'abel', 'abels', 'ggin',
+    'soed', 'tino', 'tinos', 'tued', 'utre', 'abel', 'abels',
 }
 
 if __name__ == '__main__':

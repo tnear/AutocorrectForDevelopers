@@ -67,7 +67,7 @@ class TestMatchExact(unittest.TestCase):
 
         # ignore these whitelisted suffixes
         whitelist = ['tner', 'ners', 'raed', 'alte', 'ltes', 'dnet', 'nets', ' nto', 'enet',
-                     'iens', 'sign', ' ont']
+                     'iens', 'sign', ' ont', 'etly',]
         sortedSuffixes = [x for x in sortedSuffixes if x[0] not in whitelist]
 
         # ensure the most common suffix is below some threshold. If this asserts, then
