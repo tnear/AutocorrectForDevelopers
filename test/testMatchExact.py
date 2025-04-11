@@ -14,8 +14,8 @@ class TestMatchExact(unittest.TestCase):
         self.exactMatchList = [rule.oldText for rule in self.exactMatchRules]
 
     def test_ruleLength(self):
-        self.assertGreater(len(self.rules), 3600)
-        self.assertGreater(len(self.exactMatchList), 2300)
+        self.assertGreater(len(self.rules), 5700)
+        self.assertGreater(len(self.exactMatchList), 3600)
 
     def test_replace(self):
         hasEndChar = True
@@ -35,7 +35,7 @@ class TestMatchExact(unittest.TestCase):
         startIdx = 0
         for inputText in self.exactMatchList:
             newText, rule, startIdx = Rule.getReplacementText(self.rules, inputText, hasEndChar, startIdx)
-            self.assertEqual(newText, inputText)
+            self.assertEqual(newText, inputText, 'No match. Check for common prefixes or suffixes.')
             self.assertIsNone(rule)
 
     def test_explicit(self):

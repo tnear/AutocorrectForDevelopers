@@ -55,8 +55,10 @@ class TestMatchWhitelist(unittest.TestCase):
         sortedWhitelist = sorted(originalWhitelist)
 
         for original, sortedItem in zip(originalWhitelist, sortedWhitelist):
-            self.assertEqual(original, sortedItem,
-                             f'Found unsorted whitelist rule: "{original}" should be after "{sortedItem}"')
+            self.assertEqual(original, sortedItem, (
+                             f'Found unsorted whitelist rule: "{original}" should be after "{sortedItem}". '
+                             f'Either alphabetize the order, or add "{original}" to SUFFIXES_WITH_WORDS.'
+                             ))
 
     def test_all_whitelists_have_suffix_rules(self):
         # exclude whitelist rules which are part of words
@@ -89,9 +91,9 @@ WHITELIST = [
 
 # list of suffixes which have at least one word
 SUFFIXES_WITH_WORDS = {
-    'atro', 'dign', 'dner', 'dners', 'dres', 'eint', 'laize', 'lign', 'ligns', 'nace', 'naces',
+    'atro', 'dign', 'dner', 'dners', 'eint', 'laize', 'lign', 'ligns', 'nace', 'naces',
     'nign', 'otry', 'ouis', 'raes', 'roed', 'rued', 'sino', 'sinos',
-    'soed', 'tino', 'tinos', 'tued', 'utre', 'abel', 'abels',
+    'soed', 'tino', 'tinos', 'tued', 'utre', 'abel', 'abels', 'tsing', 'ilbe',
 }
 
 if __name__ == '__main__':

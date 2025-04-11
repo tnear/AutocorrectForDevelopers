@@ -60,7 +60,7 @@ class TestMatchCaseSensitive(unittest.TestCase):
         capitalRules = [rule for rule in self.rules if rule.oldTextLower != rule.oldText]
         self.assertTrue(len(capitalRules) > 64)
         for rule in capitalRules:
-            self.assertTrue(rule.caseSensitive, f'The rule "{rule.oldText}" should be made case sensitive')
+            self.assertTrue(rule.caseSensitive, f'The rule "{rule.oldText}" should be case sensitive')
 
     # verify that the number if capital letters in a case sensitive rule is
     # changed by no more than 1. Ex: "NOt::not" would fail this test.

@@ -216,7 +216,7 @@ EXPLICIT_TESTS = {
     'clikced': 'clicked', 'appedned': 'appended', 'appedns': 'appends', 'benchamrk': 'benchmark',
     'benchamrked': 'benchmarked', 'benchamrks': 'benchmarks', 'cloend': 'cloned', 'compsoed': 'composed',
     'trianed': 'trained', 'eraesd': 'erased', 'puhsed': 'pushed', 'cahced': 'cached', 'adatped': 'adapted',
-    'leadres': 'leaders', 'tetsed': 'tested', 'lisetd': 'listed', 'gradeitn': 'gradient', 'gradeitns': 'gradients',
+    'tetsed': 'tested', 'lisetd': 'listed', 'gradeitn': 'gradient', 'gradeitns': 'gradients',
     'noityf': 'notify', 'wrapepr': 'wrapper', 'csated': 'casted', 'encoidngs': 'encodings',
     'ofrmed': 'formed', 'fomred': 'formed', 'estiamted': 'estimated', 'generla': 'general', 'priavte': 'private',
     'actiavted': 'activated', 'actiavtes': 'activates', 'activaets': 'activates', 'inofrming': 'informing',
@@ -254,7 +254,7 @@ EXPLICIT_TESTS = {
     'demontsrations': 'demonstrations', 'finlaly': 'finally', 'substirng': 'substring', 'substirngs': 'substrings',
     'augmeented': 'augmented', 'augmeneted': 'augmented', 'augmneted': 'augmented', 'angualr': 'angular',
     'abiilty': 'ability', 'misisng': 'missing', 'proceissng': 'processing', 'abiilties': 'abilities',
-    'finindg': 'finding', 'finindgs': 'findings', 'softwaer': 'software', 'itearting': 'iterating', 'identiyf': 'identify',
+    'finindg': 'finding', 'finindgs': 'findings', 'softwaer': 'software', 'identiyf': 'identify',
     'broekr': 'broker', 'comemnted': 'commented', 'myVlaue': 'myValue', 'myVluae': 'myValue', 'myValeu': 'myValue',
     'myVaule': 'myValue', 'myVlaues': 'myValues', 'myVluaes': 'myValues', 'myValeus': 'myValues', 'myVaules': 'myValues',
     'myDAta': 'myData', 'mySTring': 'myString', 'folloewr': 'follower', 'folloewrs': 'followers',
@@ -282,7 +282,7 @@ EXPLICIT_TESTS = {
     'functionnig': 'functioning', 'functionnigs': 'functionings', 'mappnig': 'mapping', 'mappnigs': 'mappings',
     'usnig': 'using', 'printnig': 'printing', 'havnig': 'having', 'viewnig': 'viewing', 'viewnigs':'viewings',
     'indexnig': 'indexing', 'copynig': 'copying', 'visualiznig': 'visualizing', 'foldesr': 'folders', 'templaet': 'template',
-    'enumearte': 'enumerate', 'shadwoed': 'shadowed', 'enumearted': 'enumerated', 'enumeartes': 'enumerates',
+    'shadwoed': 'shadowed',
     'templaets': 'templates', 'lcoks': 'locks', 'upcomgin': 'upcoming', 'timgins': 'timings', 'executbale': 'executable',
     'validtae': 'validate', 'validtaes': 'validates', 'storgae': 'storage', 'anywehre': 'anywhere', 'contaeinr': 'container',
     'contaeinrs': 'containers', 'caleld': 'called', 'customsie': 'customise', 'customsied': 'customised',
@@ -302,7 +302,8 @@ EXPLICIT_TESTS = {
     'fianlly': 'finally', 'touhces': 'touches', 'searhcable': 'searchable', 'watiign': 'waiting', 'closrue': 'closure',
     'notihng': 'nothing', 'functinoed': 'functioned', 'experiemntal': 'experimental', 'experiemtnal': 'experimental',
     'experimetnal': 'experimental', 'experimnetal': 'experimental', 'netwroks': 'networks', 'netwroking': 'networking',
-    'soretd': 'sorted',
+    'soretd': 'sorted', 'tetsing': 'testing', 'clikcable': 'clickable', 'probabyl': 'probably', 'convertilbe': 'convertible',
+    'previousyl': 'previously',
 }
 
 if __name__ == '__main__':

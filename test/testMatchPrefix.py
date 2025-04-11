@@ -52,7 +52,7 @@ class TestMatchPrefix(unittest.TestCase):
             self.assertGreaterEqual(len(prefix_rule), min_prefix_len,
                                     f'Prefix rule "{prefix_rule}" length does not meet minimum threshold.')
 
-    def test_no_dead_start_with_prefix_rules(self):
+    def test_no_prefix_rule_starts_with_another(self):
         # ex: do not allow both 'uniqe' and 'uniqeu' prefix rules because the
         # second will never trigger.
         prefixes = sorted(self.prefixRuleList)
@@ -182,7 +182,7 @@ EXPLICIT_TESTS = {
     'ocnnect': 'connect', 'rselut': 'result', 'leran': 'learn', 'laern': 'learn', 'rseuelt': 'result', 'shaodw': 'shadow',
     'fuctnion': 'function', 'rigiht': 'right', 'refrence': 'reference', 'introuce': 'introduce', 'righit': 'right',
     'represnt': 'represent', 'decrment': 'decrement', 'foramt': 'format', 'incrment': 'increment', 'rseulet': 'result',
-    'indistniguishable': 'indistinguishable', 'assesrt': 'assert', 'mtach': 'match', 'amtch': 'match',
+    'assesrt': 'assert', 'mtach': 'match', 'amtch': 'match',
     'progrma': 'program', 'suceed': 'succeed', 'idemoptent': 'idempotent', 'acount': 'account', 'impelement': 'implement',
     'reqiure': 'require', 'staet': 'state', 'reustl': 'result', 'alhpabet': 'alphabet', 'seuence': 'sequence',
     'prdouct': 'product', 'reuire': 'require', 'privelege': 'privilege', 'priviledge': 'privilege', 'queyr': 'query',
@@ -264,7 +264,15 @@ EXPLICIT_TESTS = {
     'asyncrhonously': 'asynchronously', 'asynchrnously': 'asynchronously', 'aggreation': 'aggregation',
     'subsysetms': 'subsystems', 'subsyetms': 'subsystems', 'hyperparameers': 'hyperparameters', 'csontantly': 'constantly',
     'initailize': 'initialize', 'initliaize': 'initialize', 'corerctly': 'correctly', 'erferences': 'references',
-    'subystems': 'subsystems',
+    'subystems': 'subsystems', 'gneeric': 'generic', 'crsahed': 'crashed', 'autoatmic': 'automatic', 'cirlces': 'circles',
+    'introdcued': 'introduced', 'redcued': 'reduced', 'reprodcued': 'reproduced', 'supperssion': 'suppression',
+    'conatins': 'contains', 'intalled': 'installed', 'instsalled': 'installed', 'imrpoves': 'improves',
+    'imprvoes': 'improves', 'renmaes': 'renames', 'intsalls': 'installs', 'bottlenekcs': 'bottlenecks',
+    'instlals': 'installs', 'reintalls': 'reinstalls', 'reinstsalls': 'reinstalls', 'reintsalls': 'reinstalls',
+    'reinstlals': 'reinstalls', 'unintalls': 'uninstalls', 'uninstsalls': 'uninstalls', 'unintsalls': 'uninstalls',
+    'uninstlals': 'uninstalls', 'iniitally': 'initially', 'delcare': 'declare', 'transoprts': 'transports',
+    'intreprets': 'interprets', 'reinterperets': 'reinterprets', 'reinterperts': 'reinterprets',
+    'reintreprets': 'reinterprets',
 }
 
 if __name__ == '__main__':
