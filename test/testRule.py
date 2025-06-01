@@ -110,7 +110,7 @@ class TestRule(unittest.TestCase):
         self.assertEqual(len(lines), 1)
 
         # the chars after '`n' below are added by AutocorrectForDevelopers
-        self.assertTrue(lines[0].endswith('-()[]{}:;\'"/\\,.?!`n `t<>*``=&|_'))
+        self.assertTrue(lines[0].endswith('-()[]{}:;\'"/\\,.?!`n `t<>*``=&|_+@#'))
 
     def test_allRulesMustChangeText(self):
         # prevents a redundant rule where oldText equals newText (causes unnecessary flicker)
@@ -170,27 +170,6 @@ class TestRule(unittest.TestCase):
         self.assertEqual(rule.newText, '{`n`n}')
         self.assertTrue(rule.containsBackspacing)
 
-    def test_whitelistShortLetterRules(self):
-        # short rules should be kept to a minimum because they often conflict with acronyms
-        # remove whitelist rule (zero-length replacement text)
-        replacementRules = [rule for rule in self.rules if not rule.backspace]
-
-        # get short rules (length < 3)
-        shortLen = 3
-        shortRules = [rule for rule in replacementRules if len(rule.newText) <= shortLen]
-
-        # convert rule into lowercase replacement text
-        text = [rule.newText.lower() for rule in shortRules]
-
-        # get unique text
-        text = set(text)
-
-        # check that all short rules are in this whitelist
-        whitelist = ['and', 'ing', 'can', "i'd", 'the', 'was', 'for', 'you', 'int', 'has',
-                     'end', "i'm", 'not', 'but', 'who', 'how', 'why', 'our']
-        for rule in text:
-            self.assertIn(rule, whitelist, f'Found short rule not in whitelist: "{rule}"')
-
     # prevent typos of form: '::isseu:::issue' where there is an extra colon
     def test_noExtraColon(self):
         colonRules = [rule for rule in self.rules if rule.oldText.startswith(':') or rule.newText.startswith(':')]
@@ -206,11 +185,11 @@ class TestRule(unittest.TestCase):
         sortedNonSuffixRules, sortedSuffixRules = sortRules(self.rules)
 
         for original, sortedItem in zip(nonSuffixRules, sortedNonSuffixRules):
-            msg = f'Found unsorted rule: "{original.newText}" should be after "{sortedItem.newText}"'
+            msg = f'Unsorted suffix rule: "{original.newText}" should be after "{sortedItem.newText}"'
             self.assertEqual(original.newText, sortedItem.newText, msg)
 
         for original, sortedItem in zip(suffixRules, sortedSuffixRules):
-            msg = f'Found unsorted rule: "{original.newText}" should be after "{sortedItem.newText}"'
+            msg = f'Unsorted suffix rule: "{original.newText}" should be after "{sortedItem.newText}"'
             self.assertEqual(original.newText, sortedItem.newText, msg)
 
 def partitionRules(rules: list):

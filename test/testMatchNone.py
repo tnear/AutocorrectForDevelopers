@@ -30,7 +30,7 @@ MATCH_NONE_LIST = [
     'saem', 'ture', 'nto', 'allWords', 'Stroe', 'keyforeign', 'beign', 'assigns', 'redesigns', 'foreigns',
     'moriarty', 'ign', 'bailly', 'motley', # 'tley::tely' requires too many whitelists
     'yoruba', 'konway', 'sign', 'design', 'systemdesign', 'assign', 'variableassign', 'changin', # changin'
-    'neend', 'ehre', 'botnet', 'cadres', 'impot', 'impots', 'loggin', # loggin'
+    'ehre', 'botnet', 'cadres', 'impot', 'impots', 'loggin', # loggin'
     'hearte', 'lighthearted', 'netly', # netly -> ently often changes one typo into another typo
 ]
 

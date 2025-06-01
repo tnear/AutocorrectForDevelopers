@@ -15,7 +15,7 @@ class TestMatchWhitelist(unittest.TestCase):
 
     def test_ruleLength(self):
         # assert that many tests are being run
-        self.assertGreater(len(self.rules), 5600)
+        self.assertGreater(len(self.rules), 5800)
         self.assertGreater(len(self.whitelistList), 500)
 
     def test_replace(self):
@@ -45,8 +45,8 @@ class TestMatchWhitelist(unittest.TestCase):
             self.assertTrue(rule.backspace)
 
     def test_whitelistSorted(self):
-        # ensure that all SUFFIXES_WITH_WORDS are whitelisted
-        self.assertTrue(all(item in set(self.whitelistList) for item in SUFFIXES_WITH_WORDS))
+        suffixes_with_words = get_suffixes_with_words(self.whitelistList)
+        self.assertTrue(all(item in set(self.whitelistList) for item in suffixes_with_words))
 
         # filter suffixes plus rules which end with them
         originalWhitelist = get_suffixes_without_words(self.whitelistList)
@@ -55,10 +55,8 @@ class TestMatchWhitelist(unittest.TestCase):
         sortedWhitelist = sorted(originalWhitelist)
 
         for original, sortedItem in zip(originalWhitelist, sortedWhitelist):
-            self.assertEqual(original, sortedItem, (
-                             f'Found unsorted whitelist rule: "{original}" should be after "{sortedItem}". '
-                             f'Either alphabetize the order, or add "{original}" to SUFFIXES_WITH_WORDS.'
-                             ))
+            self.assertEqual(original, sortedItem,
+                             f'Found unsorted whitelist rule: "{original}" should be after "{sortedItem}".')
 
     def test_all_whitelists_have_suffix_rules(self):
         # exclude whitelist rules which are part of words
@@ -67,7 +65,8 @@ class TestMatchWhitelist(unittest.TestCase):
         # ensure whitelist rules have a suffix rule
         suffix_rules = {rule.oldText for rule in self.rules if rule.suffixMatch and not rule.backspace}
         for whitelist_rule in original_whitelist:
-            self.assertTrue(whitelist_rule in suffix_rules, f'Unable to find a suffix rule for "{whitelist_rule}"')
+            self.assertTrue(whitelist_rule in suffix_rules,
+                            f'Unable to find a suffix rule for whitelisted "{whitelist_rule}"')
 
     def test_no_duplicate_whitelist_rules(self):
         duplicates = [item for item, count in collections.Counter(self.whitelistList).items() if count > 1]
@@ -75,26 +74,40 @@ class TestMatchWhitelist(unittest.TestCase):
             self.fail(f'Found duplicate whitelist rule "{duplicates[0]}"')
 
 def get_suffixes_without_words(whitelist_list):
+    suffixes_with_words = get_suffixes_with_words(whitelist_list)
+
     def shouldInclude(text):
-        return text not in SUFFIXES_WITH_WORDS and not any(text.endswith(suffix) for suffix in SUFFIXES_WITH_WORDS)
+        return text not in suffixes_with_words and not any(text.endswith(suffix) for suffix in suffixes_with_words)
 
     result = [text for text in whitelist_list if shouldInclude(text)]
     assert len(result) > 400
+    return result
+
+# ex: return 'abel' in list of ['abel', 'label', 'x']
+# because "label" ends with "abel"
+def get_suffixes_with_words(whitelist_list):
+    result = []
+
+    # sort shorter words first
+    sorted_words = sorted(whitelist_list, key=len)
+
+    for i, potential_suffix in enumerate(sorted_words):
+        # only need to look after this index
+        for word in sorted_words[i+1:]:
+            if word.endswith(potential_suffix):
+                result.append(potential_suffix)
+                # can safely break after one match due to sorting by length
+                break
+
+    assert len(result) > 30
     return result
 
 # explicit tests for whitelisted words (usually as part of bug fixes)
 WHITELIST = [
     'itme', 'misalign', 'misaligns',
     'gardner', 'gardners', 'cupertino', 'snig', 'fomr', # from/form
-    'ligns', 'realigns', 'mylabel', 'mylabels',
+    'ligns', 'realigns', 'mylabel', 'mylabels', 'neend',
 ]
-
-# list of suffixes which have at least one word
-SUFFIXES_WITH_WORDS = {
-    'atro', 'dign', 'dner', 'dners', 'eint', 'laize', 'lign', 'ligns', 'nace', 'naces',
-    'nign', 'otry', 'ouis', 'raes', 'roed', 'rued', 'sino', 'sinos',
-    'soed', 'tino', 'tinos', 'tued', 'utre', 'abel', 'abels', 'tsing', 'ilbe',
-}
 
 if __name__ == '__main__':
     unittest.main()

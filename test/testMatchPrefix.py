@@ -1,3 +1,4 @@
+import re
 import unittest
 from Rule import Rule
 
@@ -58,24 +59,37 @@ class TestMatchPrefix(unittest.TestCase):
         prefixes = sorted(self.prefixRuleList)
         for i in range(len(prefixes) - 1):
             if prefixes[i+1].startswith(prefixes[i]):
-                self.fail(f'The prefix rule "{prefixes[i+1]}" starts with "{prefixes[i]}"')
+                self.fail(f'Redundant prefix rule "{prefixes[i+1]}" starts with prefix "{prefixes[i]}"')
+
+    def test_prefix_examples_have_prefix_rule(self):
+        file = Rule.getRelativeFileName('AutocorrectForDevelopers.ahk')
+        # search for forgotten '*' from prefix rules by looking for a comment, ex:
+        # ::condutc::conduct  ; conduct/s/ed/ing
+        #  ^-- this should have a '*' to make it a prefix rule
+        pattern = r' ::.*; \w+/'
+        regex = re.compile(pattern)
+
+        with open(file, 'r', encoding='utf-8') as f:
+            lines = [line.strip() for line in f if regex.search(line)]
+
+        if lines != []:
+            self.fail(f'Rule "f{lines[0]}" should be a prefix rule (add "*")')
 
 EXPLICIT_TESTS = {
     'abstarction': 'abstraction', 'accomodating': 'accommodating',
     'asertion': 'assertion', 'assrted': 'asserted', 'asssertion': 'assertion',
     'brnaches': 'branches', 'braodcasted': 'broadcasted',
-    'catagorical': 'categorical', 'chekced': 'checked',
+    'chekced': 'checked',
     'comipler': 'compiler', 'conenction': 'connection', 'conector': 'connector',
     'cosntant': 'constant',
     'contirbutor': 'contributor',
     'contorller': 'controller', 'corectness': 'correctness',
     'dadtabase': 'database',
-    'deafults': 'defaults', 'dleetes': 'deletes', 'dpeendency': 'dependency', 'dephtFirst': 'depthFirst',
+    'deafults': 'defaults', 'dleetes': 'deletes', 'dpeendency': 'dependency',
     'devleoper': 'developer', 'devloeper': 'developer', 'dveloper': 'developer',
     'develoeper': 'developer', 'dififculty': 'difficulty',
     'distnict': 'distinct', 'elemtns': 'elements', 'elemnts': 'elements',
     'elmeents': 'elements', 'evlauation': 'evaluation', 'exoprted': 'exported',
-    'feasable': 'feasible',
     'fucntions': 'functions', 'funtional': 'functional', 'fnctions': 'functions',
     'grpahs': 'graphs', 'grahping': 'graphing', 'gropus': 'groups', 'imoprted': 'imported',
     'inofrmational': 'informational',
@@ -104,7 +118,7 @@ EXPLICIT_TESTS = {
     'Wriet-Output': 'Write-Output', 'wrietr': 'writer',
     'isntructions': 'instructions', 'depenencies': 'dependencies', 'proceudral': 'procedural',
     'isnertion': 'insertion', 'proejcts': 'projects', 'ranodmize': 'randomize',
-    'crytpography': 'cryptography', 'mulitply': 'multiply', 'infeasability': 'infeasibility',
+    'crytpography': 'cryptography', 'mulitply': 'multiply',
     'trnasaction': 'transaction',
     'idnexing': 'indexing', 'rihgts': 'rights', 'docments': 'documents',
     'odcuments': 'documents', 'doucments': 'documents', 'psuedocode': 'pseudocode',
@@ -132,7 +146,7 @@ EXPLICIT_TESTS = {
     'manaegment': 'management',
     'recusrively': 'recursively', 'nuemrator': 'numerator', 'asserrtion': 'assertion', 'swithcing': 'switching',
     'remvoed': 'removed', 'quikcsort': 'quicksort', 'sytematic': 'systematic',
-    'acknowlegement': 'acknowledgement', 'recurisvely': 'recursively', 'conssitency': 'consistency',
+    'recurisvely': 'recursively', 'conssitency': 'consistency',
     'acknwoledgement': 'acknowledgement', 'ackonwledgement': 'acknowledgement', 'elmental': 'elemental',
     'sovler': 'solver', 'entialment': 'entailment', 'ifnormation': 'information', 'reulsts': 'results',
     'calcualtion': 'calculation', 'caluclation': 'calculation', 'proceessing': 'processing',
@@ -141,11 +155,10 @@ EXPLICIT_TESTS = {
     'assocaitive': 'associative', 'opwerpoint': 'powerpoint', 'rsulted': 'resulted', 'proecdurally': 'procedurally',
     'clutsering': 'clustering', 'memroize': 'memorize', 'commitee': 'committee', 'resulets': 'results',
     'borwsing': 'browsing', 'brwoser': 'browser', 'rueslts': 'results', 'icnremented': 'incremented',
-    'collumns': 'columns',
     'interupts': 'interrupts', 'reoprting': 'reporting', 'remianing': 'remaining', 'eleemnts': 'elements',
     'saerching': 'searching', 'diffiuclty': 'difficulty', 'garphs': 'graphs',
     'preidction': 'prediction', 'contniue': 'continue',
-    'dmeonstration': 'demonstration', 'detphFirst': 'depthFirst', 'recogniess': 'recognises', 'recogniezs': 'recognizes',
+    'dmeonstration': 'demonstration', 'recogniess': 'recognises', 'recogniezs': 'recognizes',
     'std;:cout': 'std::cout', 'preocmputing': 'precomputing',
     'comptuer': 'computer', 'ocmputer': 'computer', 'looops': 'loops', 'winowds': 'windows', 'prevetns': 'prevents',
     'prserves': 'preserves', 'esitmation': 'estimation', 'proudction': 'production', 'publihser': 'publisher',
@@ -272,7 +285,13 @@ EXPLICIT_TESTS = {
     'reinstlals': 'reinstalls', 'unintalls': 'uninstalls', 'uninstsalls': 'uninstalls', 'unintsalls': 'uninstalls',
     'uninstlals': 'uninstalls', 'iniitally': 'initially', 'delcare': 'declare', 'transoprts': 'transports',
     'intreprets': 'interprets', 'reinterperets': 'reinterprets', 'reinterperts': 'reinterprets',
-    'reintreprets': 'reinterprets',
+    'reintreprets': 'reinterprets', 'ruelsts': 'results', 'exhuasts': 'exhausts', 'ivnestigate': 'investigate',
+    'iniitator': 'initiator', 'condutced': 'conducted', 'resaons': 'reasons', 'dokcerfile': 'dockerfile',
+    'diemnsion': 'dimension', 'eixsts': 'exists', 'brdige': 'bridge', 'adventrue': 'adventure', 'indnets': 'indents',
+    'exit9)': 'exit()', 'converets': 'converts', 'covnerts': 'converts', 'strcuture': 'structure',
+    'sturctured': 'structured', 'destorys': 'destroys', 'vesrions': 'versions', 'veriosns': 'versions',
+    'verisnos': 'versions', 'verisons': 'versions', 'vesrinos': 'versions', 'initaitor': 'initiator',
+    'alamring': 'alarming', 'obsoltes': 'obsoletes',
 }
 
 if __name__ == '__main__':

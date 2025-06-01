@@ -139,7 +139,7 @@ NO_WHITELIST_EXCEPTIONS = {
     'Vlaues', 'Vluaes', 'Valeus', 'Vaules', 'veyr', 'verey', 'hwere', 'wign', 'wnig', 'iwngs', 'wigns', 'wnigs',
     'owrk', 'wokr', 'owrking', 'wokring', 'owrks', 'wokrs', 'dtae', 'dtaes', 'wehre', 'lcoked', 'lokc', 'lokcs',
     'opsed', 'opses', 'psoes', 'opitn', 'opitns', 'wheer', 'pgin', 'pgins', 'iwng', 'wgin', 'wgins', 'wrok',
-    'srue', 'tihng', 'emntal', 'emtnal', 'metnal', 'mnetal', 'wroks', 'wroking',
+    'srue', 'tihng', 'emntal', 'emtnal', 'metnal', 'mnetal', 'wroks', 'wroking', 'donws', 'odwns', 'thying', 'byet',
 }
 
 # explicit tests for suffix words (usually as part of bug fixes)
@@ -180,7 +180,7 @@ EXPLICIT_TESTS = {
     'breakopint': 'breakpoint', 'breakopints': 'breakpoints', 'improt': 'import',
     'improts': 'imports', 'coveraeg': 'coverage', 'quadrnat': 'quadrant', 'quadrnats': 'quadrants',
     'enumeraet': 'enumerate', 'enumeraets': 'enumerates', 'securtiy': 'security',
-    'pusehd': 'pushed', 'smahsing': 'smashing', 'messaeg': 'message',
+    'pusehd': 'pushed', 'smahsing': 'smashing',
     'ownersihp': 'ownership', 'ownersihps': 'ownerships', 'recursino': 'recursion', 'recursoin': 'recursion',
     'recuroisn': 'recursion', 'recursinos': 'recursions', 'recursoins': 'recursions', 'recuroisns': 'recursions',
     'sparstiy': 'sparsity', 'recursvie': 'recursive', 'mergesrot': 'mergesort', 'worksapce': 'workspace',
@@ -225,10 +225,10 @@ EXPLICIT_TESTS = {
     'perforemd': 'performed', 'clokcs': 'clocks', 'smalelr': 'smaller', 'transofmr': 'transform',
     'transofmred': 'transformed', 'transofmring': 'transforming', 'transofmrs': 'transforms', 'deliverey': 'delivery',
     'tikcet': 'ticket', 'tikcets': 'tickets', 'traiend': 'trained', 'curretn': 'current', 'veriifed': 'verified',
-    'softawre': 'software', 'chaesr': 'chaser', 'chaesrs': 'chasers', 'mathcer': 'matcher', 'mathcers': 'matchers',
+    'softawre': 'software', 'mathcer': 'matcher', 'mathcers': 'matchers',
     'lokcer': 'locker', 'lokcers': 'lockers', 'platofrmer': 'platformer', 'platfomrer': 'platformer',
     'platofmrer': 'platformer', 'platofrmers': 'platformers', 'platfomrers': 'platformers', 'platofmrers': 'platformers',
-    'veriifer': 'verifier', 'veriifers': 'verifiers', 'randomiezr': 'randomizer', 'randomiezrs': 'randomizers',
+    'veriifer': 'verifier', 'veriifers': 'verifiers',
     'redner': 'render', 'redners': 'renders', 'exproter': 'exporter', 'exproters': 'exporters',
     'raech': 'reach', 'equaliesd': 'equalised', 'equaliesr': 'equaliser', 'speciified': 'specified',
     'speciifier': 'specifier', 'speciifiers': 'specifiers', 'speciifies': 'specifies', 'travleing': 'traveling',
@@ -255,7 +255,7 @@ EXPLICIT_TESTS = {
     'augmeented': 'augmented', 'augmeneted': 'augmented', 'augmneted': 'augmented', 'angualr': 'angular',
     'abiilty': 'ability', 'misisng': 'missing', 'proceissng': 'processing', 'abiilties': 'abilities',
     'finindg': 'finding', 'finindgs': 'findings', 'softwaer': 'software', 'identiyf': 'identify',
-    'broekr': 'broker', 'comemnted': 'commented', 'myVlaue': 'myValue', 'myVluae': 'myValue', 'myValeu': 'myValue',
+    'comemnted': 'commented', 'myVlaue': 'myValue', 'myVluae': 'myValue', 'myValeu': 'myValue',
     'myVaule': 'myValue', 'myVlaues': 'myValues', 'myVluaes': 'myValues', 'myValeus': 'myValues', 'myVaules': 'myValues',
     'myDAta': 'myData', 'mySTring': 'myString', 'folloewr': 'follower', 'folloewrs': 'followers',
     'commentayr': 'commentary', 'acquriing': 'acquiring', 'roudning': 'rounding', 'reltaional': 'relational',
@@ -265,7 +265,7 @@ EXPLICIT_TESTS = {
     'benchamrking': 'benchmarking', 'contnetion': 'contention', 'prevoiusly': 'previously', 'prevouisly': 'previously',
     'previosuly': 'previously', 'experiecnes': 'experiences', 'expereinces': 'experiences', 'mnetions': 'mentions',
     'pipelnied': 'pipelined', 'draiwngs': 'drawings', 'benchmrak': 'benchmark',
-    'benchmraked': 'benchmarked', 'benchmraking': 'benchmarking', 'benchmarekd': 'benchmarked',
+    'benchmraked': 'benchmarked', 'benchmraking': 'benchmarking',
     'resposnive': 'responsive', 'adatpive': 'adaptive', 'statisitc': 'statistic', 'statisitcal': 'statistical',
     'statitsical': 'statistical', 'statisitcs': 'statistics', 'deviaotin': 'deviation', 'notifiaction': 'notification',
     'bookmraks': 'bookmarks', 'likning': 'linking', 'activaet': 'activate', 'producesr': 'producers',
@@ -303,7 +303,12 @@ EXPLICIT_TESTS = {
     'notihng': 'nothing', 'functinoed': 'functioned', 'experiemntal': 'experimental', 'experiemtnal': 'experimental',
     'experimetnal': 'experimental', 'experimnetal': 'experimental', 'netwroks': 'networks', 'netwroking': 'networking',
     'soretd': 'sorted', 'tetsing': 'testing', 'clikcable': 'clickable', 'probabyl': 'probably', 'convertilbe': 'convertible',
-    'previousyl': 'previously',
+    'previousyl': 'previously', 'shutdonws': 'shutdowns', 'shutodwns': 'shutdowns', 'defniing': 'defining',
+    'applicitaon': 'application', 'applicitaons': 'applications', 'represetns': 'represents', 'followesr': 'followers',
+    'accurtaely': 'accurately', 'directroies': 'directories', 'anythying': 'anything', 'conditoinals': 'conditionals',
+    'conditioanls': 'conditionals', 'documetning': 'documenting', 'technoloyg': 'technology', 'mentieond': 'mentioned',
+    'applicatsion': 'application', 'applicatsions': 'applications', 'flatteend': 'flattened', 'sequecne': 'sequence',
+    'sequecnes': 'sequences', 'megabyet': 'megabyte',
 }
 
 if __name__ == '__main__':

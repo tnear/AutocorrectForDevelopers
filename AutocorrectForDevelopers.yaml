@@ -117,6 +117,16 @@ matches:
     word: true
     propagate_case: true
 
+  - trigger: "eend"
+    replace: "eend"
+    word: true
+    propagate_case: true
+
+  - trigger: "neend"
+    replace: "neend"
+    word: true
+    propagate_case: true
+
   - trigger: "eint"
     replace: "eint"
     word: true
@@ -492,6 +502,16 @@ matches:
     word: true
     propagate_case: true
 
+  - trigger: "tning"
+    replace: "tning"
+    word: true
+    propagate_case: true
+
+  - trigger: "lightning"
+    replace: "lightning"
+    word: true
+    propagate_case: true
+
   - trigger: "tsing"
     replace: "tsing"
     word: true
@@ -522,16 +542,6 @@ matches:
     word: true
     propagate_case: true
 
-  - trigger: "utre"
-    replace: "utre"
-    word: true
-    propagate_case: true
-
-  - trigger: "accoutre"
-    replace: "accoutre"
-    word: true
-    propagate_case: true
-
   - trigger: "abyl"
     replace: "abyl"
     word: true
@@ -559,16 +569,6 @@ matches:
 
   - trigger: "aesd"
     replace: "aesd"
-    word: true
-    propagate_case: true
-
-  - trigger: "aesr"
-    replace: "aesr"
-    word: true
-    propagate_case: true
-
-  - trigger: "aesrs"
-    replace: "aesrs"
     word: true
     propagate_case: true
 
@@ -797,6 +797,16 @@ matches:
     word: true
     propagate_case: true
 
+  - trigger: "catsion"
+    replace: "catsion"
+    word: true
+    propagate_case: true
+
+  - trigger: "catsions"
+    replace: "catsions"
+    word: true
+    propagate_case: true
+
   - trigger: "cekr"
     replace: "cekr"
     word: true
@@ -882,11 +892,6 @@ matches:
     word: true
     propagate_case: true
 
-  - trigger: "detns"
-    replace: "detns"
-    word: true
-    propagate_case: true
-
   - trigger: "dned"
     replace: "dned"
     word: true
@@ -904,6 +909,16 @@ matches:
 
   - trigger: "dning"
     replace: "dning"
+    word: true
+    propagate_case: true
+
+  - trigger: "ecne"
+    replace: "ecne"
+    word: true
+    propagate_case: true
+
+  - trigger: "ecnes"
+    replace: "ecnes"
     word: true
     propagate_case: true
 
@@ -982,6 +997,11 @@ matches:
     word: true
     propagate_case: true
 
+  - trigger: "eond"
+    replace: "eond"
+    word: true
+    propagate_case: true
+
   - trigger: "erla"
     replace: "erla"
     word: true
@@ -989,6 +1009,11 @@ matches:
 
   - trigger: "erlas"
     replace: "erlas"
+    word: true
+    propagate_case: true
+
+  - trigger: "etns"
+    replace: "etns"
     word: true
     propagate_case: true
 
@@ -1132,16 +1157,6 @@ matches:
     word: true
     propagate_case: true
 
-  - trigger: "iecne"
-    replace: "iecne"
-    word: true
-    propagate_case: true
-
-  - trigger: "iecnes"
-    replace: "iecnes"
-    word: true
-    propagate_case: true
-
   - trigger: "ienet"
     replace: "ienet"
     word: true
@@ -1182,23 +1197,8 @@ matches:
     word: true
     propagate_case: true
 
-  - trigger: "ietns"
-    replace: "ietns"
-    word: true
-    propagate_case: true
-
   - trigger: "iezd"
     replace: "iezd"
-    word: true
-    propagate_case: true
-
-  - trigger: "iezr"
-    replace: "iezr"
-    word: true
-    propagate_case: true
-
-  - trigger: "iezrs"
-    replace: "iezrs"
     word: true
     propagate_case: true
 
@@ -1332,6 +1332,11 @@ matches:
     word: true
     propagate_case: true
 
+  - trigger: "ioanls"
+    replace: "ioanls"
+    word: true
+    propagate_case: true
+
   - trigger: "iont"
     replace: "iont"
     word: true
@@ -1384,6 +1389,16 @@ matches:
 
   - trigger: "issng"
     replace: "issng"
+    word: true
+    propagate_case: true
+
+  - trigger: "itaon"
+    replace: "itaon"
+    word: true
+    propagate_case: true
+
+  - trigger: "itaons"
+    replace: "itaons"
     word: true
     propagate_case: true
 
@@ -1597,6 +1612,11 @@ matches:
     word: true
     propagate_case: true
 
+  - trigger: "loyg"
+    replace: "loyg"
+    word: true
+    propagate_case: true
+
   - trigger: "ltiy"
     replace: "ltiy"
     word: true
@@ -1664,11 +1684,6 @@ matches:
 
   - trigger: "metn"
     replace: "metn"
-    word: true
-    propagate_case: true
-
-  - trigger: "metns"
-    replace: "metns"
     word: true
     propagate_case: true
 
@@ -1802,6 +1817,11 @@ matches:
     word: true
     propagate_case: true
 
+  - trigger: "niing"
+    replace: "niing"
+    word: true
+    propagate_case: true
+
   - trigger: "nnig"
     replace: "nnig"
     word: true
@@ -1829,11 +1849,6 @@ matches:
 
   - trigger: "ntiy"
     replace: "ntiy"
-    word: true
-    propagate_case: true
-
-  - trigger: "oekr"
-    replace: "oekr"
     word: true
     propagate_case: true
 
@@ -1869,6 +1884,11 @@ matches:
 
   - trigger: "oinally"
     replace: "oinally"
+    word: true
+    propagate_case: true
+
+  - trigger: "oinals"
+    replace: "oinals"
     word: true
     propagate_case: true
 
@@ -2007,11 +2027,6 @@ matches:
     word: true
     propagate_case: true
 
-  - trigger: "rekd"
-    replace: "rekd"
-    word: true
-    propagate_case: true
-
   - trigger: "remd"
     replace: "remd"
     word: true
@@ -2072,13 +2087,13 @@ matches:
     word: true
     propagate_case: true
 
-  - trigger: "rtiy"
-    replace: "rtiy"
+  - trigger: "roies"
+    replace: "roies"
     word: true
     propagate_case: true
 
-  - trigger: "saeg"
-    replace: "saeg"
+  - trigger: "rtiy"
+    replace: "rtiy"
     word: true
     propagate_case: true
 
@@ -2169,6 +2184,11 @@ matches:
 
   - trigger: "taeg"
     replace: "taeg"
+    word: true
+    propagate_case: true
+
+  - trigger: "taely"
+    replace: "taely"
     word: true
     propagate_case: true
 
@@ -2517,6 +2537,11 @@ matches:
     word: true
     propagate_case: true
 
+  - trigger: "utre"
+    replace: "utre"
+    word: true
+    propagate_case: true
+
   - trigger: "utred"
     replace: "utred"
     word: true
@@ -2564,6 +2589,11 @@ matches:
 
   - trigger: "waer"
     replace: "waer"
+    word: true
+    propagate_case: true
+
+  - trigger: "wesr"
+    replace: "wesr"
     word: true
     propagate_case: true
 
@@ -2740,7 +2770,17 @@ matches:
     word: true
     propagate_case: true
 
+  - trigger: "accesible"
+    replace: "accessible"
+    word: true
+    propagate_case: true
+
   - trigger: "accessign"
+    replace: "accessing"
+    word: true
+    propagate_case: true
+
+  - trigger: "accesing"
     replace: "accessing"
     word: true
     propagate_case: true
@@ -2797,11 +2837,6 @@ matches:
 
   - trigger: "ahciev"
     replace: "achiev"
-    left_word: true
-    propagate_case: true
-
-  - trigger: "acknowlege"
-    replace: "acknowledge"
     left_word: true
     propagate_case: true
 
@@ -2985,6 +3020,11 @@ matches:
     word: true
     propagate_case: true
 
+  - trigger: "adventru"
+    replace: "adventur"
+    left_word: true
+    propagate_case: true
+
   - trigger: "advisign"
     replace: "advising"
     word: true
@@ -3024,11 +3064,6 @@ matches:
     word: true
     propagate_case: true
 
-  - trigger: "agetns"
-    replace: "agents"
-    word: true
-    propagate_case: true
-
   - trigger: "agnets"
     replace: "agents"
     word: true
@@ -3051,12 +3086,7 @@ matches:
 
   - trigger: "alamr"
     replace: "alarm"
-    word: true
-    propagate_case: true
-
-  - trigger: "alamrs"
-    replace: "alarms"
-    word: true
+    left_word: true
     propagate_case: true
 
   - trigger: "algoirthm"
@@ -3170,6 +3200,11 @@ matches:
     propagate_case: true
 
   - trigger: "aliasign"
+    replace: "aliasing"
+    word: true
+    propagate_case: true
+
+  - trigger: "alaising"
     replace: "aliasing"
     word: true
     propagate_case: true
@@ -3326,6 +3361,11 @@ matches:
   - trigger: "naswer"
     replace: "answer"
     left_word: true
+    propagate_case: true
+
+  - trigger: "anyoen"
+    replace: "anyone"
+    word: true
     propagate_case: true
 
   - trigger: "anhyting"
@@ -3498,11 +3538,6 @@ matches:
     word: true
     propagate_case: true
 
-  - trigger: "arhitecture"
-    replace: "architecture"
-    word: true
-    propagate_case: true
-
   - trigger: "archtiecture"
     replace: "architecture"
     word: true
@@ -3528,6 +3563,10 @@ matches:
     word: true
     propagate_case: true
 
+  - trigger: "ARe"
+    replace: "Are"
+    word: true
+
   - trigger: "are nto"
     replace: "are not"
     word: true
@@ -3549,6 +3588,11 @@ matches:
     propagate_case: true
 
   - trigger: "arn'et"
+    replace: "aren't"
+    word: true
+    propagate_case: true
+
+  - trigger: "are'nt"
     replace: "aren't"
     word: true
     propagate_case: true
@@ -3695,10 +3739,6 @@ matches:
     replace: "assert"
     left_word: true
     propagate_case: true
-
-  - trigger: "asserT"
-    replace: "assert"
-    word: true
 
   - trigger: "asesrt"
     replace: "assert"
@@ -4294,11 +4334,6 @@ matches:
     word: true
     propagate_case: true
 
-  - trigger: "behaior"
-    replace: "behavior"
-    word: true
-    propagate_case: true
-
   - trigger: "behaviro"
     replace: "behavior"
     word: true
@@ -4315,11 +4350,6 @@ matches:
     propagate_case: true
 
   - trigger: "behvaiors"
-    replace: "behaviors"
-    word: true
-    propagate_case: true
-
-  - trigger: "behaiors"
     replace: "behaviors"
     word: true
     propagate_case: true
@@ -4389,6 +4419,11 @@ matches:
     left_word: true
     propagate_case: true
 
+  - trigger: "benchmarekd"
+    replace: "benchmarked"
+    word: true
+    propagate_case: true
+
   - trigger: "benefist"
     replace: "benefits"
     word: true
@@ -4441,6 +4476,11 @@ matches:
 
   - trigger: "lbocks"
     replace: "blocks"
+    word: true
+    propagate_case: true
+
+  - trigger: "bookmarekd"
+    replace: "bookmarked"
     word: true
     propagate_case: true
 
@@ -4502,6 +4542,11 @@ matches:
     left_word: true
     propagate_case: true
 
+  - trigger: "branhc"
+    replace: "branch"
+    word: true
+    propagate_case: true
+
   - trigger: "breka"
     replace: "break"
     left_word: true
@@ -4533,6 +4578,11 @@ matches:
   - trigger: "breakthrouhg"
     replace: "breakthrough"
     word: true
+    propagate_case: true
+
+  - trigger: "brdig"
+    replace: "bridg"
+    left_word: true
     propagate_case: true
 
   - trigger: "braodcast"
@@ -4570,12 +4620,22 @@ matches:
     word: true
     propagate_case: true
 
+  - trigger: "broekr"
+    replace: "broker"
+    word: true
+    propagate_case: true
+
   - trigger: "borkers"
     replace: "brokers"
     word: true
     propagate_case: true
 
   - trigger: "brokres"
+    replace: "brokers"
+    word: true
+    propagate_case: true
+
+  - trigger: "broekrs"
     replace: "brokers"
     word: true
     propagate_case: true
@@ -4974,11 +5034,6 @@ matches:
     replace: "case"
     word: true
 
-  - trigger: "catagor"
-    replace: "categor"
-    left_word: true
-    propagate_case: true
-
   - trigger: "catgeor"
     replace: "categor"
     left_word: true
@@ -5089,6 +5144,11 @@ matches:
     word: true
     propagate_case: true
 
+  - trigger: "cgropus"
+    replace: "cgroups"
+    word: true
+    propagate_case: true
+
   - trigger: "cahining"
     replace: "chaining"
     word: true
@@ -5096,6 +5156,16 @@ matches:
 
   - trigger: "chaingn"
     replace: "chaining"
+    word: true
+    propagate_case: true
+
+  - trigger: "chianing"
+    replace: "chaining"
+    word: true
+    propagate_case: true
+
+  - trigger: "chians"
+    replace: "chains"
     word: true
     propagate_case: true
 
@@ -5124,6 +5194,16 @@ matches:
     word: true
     propagate_case: true
 
+  - trigger: "chnage"
+    replace: "change"
+    word: true
+    propagate_case: true
+
+  - trigger: "chaneg"
+    replace: "change"
+    word: true
+    propagate_case: true
+
   - trigger: "chagned"
     replace: "changed"
     word: true
@@ -5135,6 +5215,16 @@ matches:
     propagate_case: true
 
   - trigger: "chagend"
+    replace: "changed"
+    word: true
+    propagate_case: true
+
+  - trigger: "chnaged"
+    replace: "changed"
+    word: true
+    propagate_case: true
+
+  - trigger: "chanegd"
     replace: "changed"
     word: true
     propagate_case: true
@@ -5154,12 +5244,27 @@ matches:
     word: true
     propagate_case: true
 
+  - trigger: "chnages"
+    replace: "changes"
+    word: true
+    propagate_case: true
+
+  - trigger: "chanegs"
+    replace: "changes"
+    word: true
+    propagate_case: true
+
   - trigger: "chagning"
     replace: "changing"
     word: true
     propagate_case: true
 
   - trigger: "cahnging"
+    replace: "changing"
+    word: true
+    propagate_case: true
+
+  - trigger: "chnaging"
     replace: "changing"
     word: true
     propagate_case: true
@@ -5267,6 +5372,11 @@ matches:
     word: true
     propagate_case: true
 
+  - trigger: "chasr"
+    replace: "chars"
+    word: true
+    propagate_case: true
+
   - trigger: "chasign"
     replace: "chasing"
     word: true
@@ -5290,6 +5400,16 @@ matches:
   - trigger: "cehck"
     replace: "check"
     left_word: true
+    propagate_case: true
+
+  - trigger: "checkpiotn"
+    replace: "checkpoint"
+    word: true
+    propagate_case: true
+
+  - trigger: "checkpiotns"
+    replace: "checkpoints"
+    word: true
     propagate_case: true
 
   - trigger: "chidl"
@@ -5715,11 +5835,6 @@ matches:
     left_word: true
     propagate_case: true
 
-  - trigger: "collumn"
-    replace: "column"
-    left_word: true
-    propagate_case: true
-
   - trigger: "ocmbin"
     replace: "combin"
     left_word: true
@@ -5955,6 +6070,16 @@ matches:
     word: true
     propagate_case: true
 
+  - trigger: "comaprison"
+    replace: "comparison"
+    word: true
+    propagate_case: true
+
+  - trigger: "comparson"
+    replace: "comparison"
+    word: true
+    propagate_case: true
+
   - trigger: "comparisions"
     replace: "comparisons"
     word: true
@@ -5971,6 +6096,16 @@ matches:
     propagate_case: true
 
   - trigger: "compairsons"
+    replace: "comparisons"
+    word: true
+    propagate_case: true
+
+  - trigger: "comaprisons"
+    replace: "comparisons"
+    word: true
+    propagate_case: true
+
+  - trigger: "comparsons"
     replace: "comparisons"
     word: true
     propagate_case: true
@@ -6292,7 +6427,7 @@ matches:
 
   - trigger: "condutc"
     replace: "conduct"
-    word: true
+    left_word: true
     propagate_case: true
 
   - trigger: "ocnfig"
@@ -6345,6 +6480,11 @@ matches:
     left_word: true
     propagate_case: true
 
+  - trigger: "connectsion"
+    replace: "connections"
+    word: true
+    propagate_case: true
+
   - trigger: "conseuctive"
     replace: "consecutive"
     word: true
@@ -6352,11 +6492,6 @@ matches:
 
   - trigger: "consectuive"
     replace: "consecutive"
-    word: true
-    propagate_case: true
-
-  - trigger: "concensus"
-    replace: "consensus"
     word: true
     propagate_case: true
 
@@ -6805,24 +6940,14 @@ matches:
     left_word: true
     propagate_case: true
 
-  - trigger: "convet"
-    replace: "convert"
-    word: true
-    propagate_case: true
-
   - trigger: "converet"
     replace: "convert"
-    word: true
+    left_word: true
     propagate_case: true
 
-  - trigger: "convets"
-    replace: "converts"
-    word: true
-    propagate_case: true
-
-  - trigger: "converets"
-    replace: "converts"
-    word: true
+  - trigger: "covnert"
+    replace: "convert"
+    left_word: true
     propagate_case: true
 
   - trigger: "convertes"
@@ -7489,11 +7614,6 @@ matches:
     left_word: true
     propagate_case: true
 
-  - trigger: "decremetning"
-    replace: "decrementing"
-    word: true
-    propagate_case: true
-
   - trigger: "dedutc"
     replace: "deduct"
     left_word: true
@@ -7574,6 +7694,11 @@ matches:
     word: true
     propagate_case: true
 
+  - trigger: "dleeting"
+    replace: "deleting"
+    word: true
+    propagate_case: true
+
   - trigger: "dleetion"
     replace: "deletion"
     word: true
@@ -7641,12 +7766,12 @@ matches:
 
   - trigger: "depht"
     replace: "depth"
-    left_word: true
+    word: true
     propagate_case: true
 
   - trigger: "detph"
     replace: "depth"
-    left_word: true
+    word: true
     propagate_case: true
 
   - trigger: "derefernce"
@@ -7836,7 +7961,7 @@ matches:
 
   - trigger: "destory"
     replace: "destroy"
-    word: true
+    left_word: true
     propagate_case: true
 
   - trigger: "desturct"
@@ -8139,6 +8264,11 @@ matches:
     word: true
     propagate_case: true
 
+  - trigger: "diemnsion"
+    replace: "dimension"
+    left_word: true
+    propagate_case: true
+
   - trigger: "dimensinoal"
     replace: "dimensional"
     word: true
@@ -8274,6 +8404,11 @@ matches:
     word: true
     propagate_case: true
 
+  - trigger: "idsk"
+    replace: "disk"
+    word: true
+    propagate_case: true
+
   - trigger: "dispaly"
     replace: "display"
     word: true
@@ -8382,6 +8517,11 @@ matches:
   - trigger: "dokc"
     replace: "dock"
     word: true
+    propagate_case: true
+
+  - trigger: "dokcer"
+    replace: "docker"
+    left_word: true
     propagate_case: true
 
   - trigger: "docment"
@@ -9393,11 +9533,6 @@ matches:
     left_word: true
     propagate_case: true
 
-  - trigger: "euation"
-    replace: "equation"
-    word: true
-    propagate_case: true
-
   - trigger: "eqeuation"
     replace: "equation"
     word: true
@@ -9405,16 +9540,6 @@ matches:
 
   - trigger: "equateion"
     replace: "equation"
-    word: true
-    propagate_case: true
-
-  - trigger: "euations"
-    replace: "equations"
-    word: true
-    propagate_case: true
-
-  - trigger: "eqeuations"
-    replace: "equations"
     word: true
     propagate_case: true
 
@@ -9445,6 +9570,16 @@ matches:
 
   - trigger: "eraes"
     replace: "erase"
+    word: true
+    propagate_case: true
+
+  - trigger: "eraesr"
+    replace: "eraser"
+    word: true
+    propagate_case: true
+
+  - trigger: "eraesrs"
+    replace: "erasers"
     word: true
     propagate_case: true
 
@@ -9577,12 +9712,12 @@ matches:
     word: true
     propagate_case: true
 
-  - trigger: "evvery"
-    replace: "every"
+  - trigger: "eveyrone"
+    replace: "everyone"
     word: true
     propagate_case: true
 
-  - trigger: "eveyrone"
+  - trigger: "everyoen"
     replace: "everyone"
     word: true
     propagate_case: true
@@ -9812,6 +9947,16 @@ matches:
     word: true
     propagate_case: true
 
+  - trigger: "exhuast"
+    replace: "exhaust"
+    left_word: true
+    propagate_case: true
+
+  - trigger: "eixst"
+    replace: "exist"
+    left_word: true
+    propagate_case: true
+
   - trigger: "exti"
     replace: "exit"
     word: true
@@ -9819,6 +9964,11 @@ matches:
   - trigger: "eixt"
     replace: "exit"
     word: true
+    propagate_case: true
+
+  - trigger: "exit9)"
+    replace: "exit()"
+    left_word: true
     propagate_case: true
 
   - trigger: "extied"
@@ -10131,8 +10281,8 @@ matches:
     word: true
     propagate_case: true
 
-  - trigger: "extrapoalte"
-    replace: "extrapolate"
+  - trigger: "extrapoalt"
+    replace: "extrapolat"
     left_word: true
     propagate_case: true
 
@@ -10147,6 +10297,11 @@ matches:
     propagate_case: true
 
   - trigger: "fialed"
+    replace: "failed"
+    word: true
+    propagate_case: true
+
+  - trigger: "falied"
     replace: "failed"
     word: true
     propagate_case: true
@@ -10349,11 +10504,6 @@ matches:
     word: true
     propagate_case: true
 
-  - trigger: "feasab"
-    replace: "feasib"
-    left_word: true
-    propagate_case: true
-
   - trigger: "faeture"
     replace: "feature"
     left_word: true
@@ -10384,6 +10534,11 @@ matches:
     word: true
     propagate_case: true
 
+  - trigger: "fecthing"
+    replace: "fetching"
+    word: true
+    propagate_case: true
+
   - trigger: "fideilty"
     replace: "fidelity"
     word: true
@@ -10401,6 +10556,11 @@ matches:
 
   - trigger: "ifle"
     replace: "file"
+    word: true
+    propagate_case: true
+
+  - trigger: "fielname"
+    replace: "filename"
     word: true
     propagate_case: true
 
@@ -10545,6 +10705,10 @@ matches:
     replace: "first"
     word: true
     propagate_case: true
+
+  - trigger: "firts"
+    replace: "first"
+    word: true
 
   - trigger: "falg"
     replace: "flag"
@@ -10804,11 +10968,6 @@ matches:
 
   - trigger: "founation"
     replace: "foundation"
-    word: true
-    propagate_case: true
-
-  - trigger: "fpritnf"
-    replace: "fprintf"
     word: true
     propagate_case: true
 
@@ -11442,11 +11601,6 @@ matches:
     word: true
     propagate_case: true
 
-  - trigger: "happeend"
-    replace: "happened"
-    word: true
-    propagate_case: true
-
   - trigger: "hapening"
     replace: "happening"
     word: true
@@ -11548,6 +11702,11 @@ matches:
     word: true
     propagate_case: true
 
+  - trigger: "hashmpa"
+    replace: "hashmap"
+    word: true
+    propagate_case: true
+
   - trigger: "hahstable"
     replace: "hashtable"
     word: true
@@ -11564,6 +11723,11 @@ matches:
     propagate_case: true
 
   - trigger: "hans't"
+    replace: "hasn't"
+    word: true
+    propagate_case: true
+
+  - trigger: "hastn'"
     replace: "hasn't"
     word: true
     propagate_case: true
@@ -11672,6 +11836,11 @@ matches:
     propagate_case: true
 
   - trigger: "healhtier"
+    replace: "healthier"
+    word: true
+    propagate_case: true
+
+  - trigger: "healtheir"
     replace: "healthier"
     word: true
     propagate_case: true
@@ -11870,6 +12039,10 @@ matches:
     replace: "how it"
     word: true
     propagate_case: true
+
+  - trigger: "how ti"
+    replace: "how it"
+    word: true
 
   - trigger: "howthe"
     replace: "how the"
@@ -12251,11 +12424,6 @@ matches:
     word: true
     propagate_case: true
 
-  - trigger: "implemetning"
-    replace: "implementing"
-    word: true
-    propagate_case: true
-
   - trigger: "implciit"
     replace: "implicit"
     word: true
@@ -12298,11 +12466,6 @@ matches:
 
   - trigger: "imporant"
     replace: "important"
-    word: true
-    propagate_case: true
-
-  - trigger: "imposign"
-    replace: "imposing"
     word: true
     propagate_case: true
 
@@ -12361,13 +12524,17 @@ matches:
     word: true
     propagate_case: true
 
-  - trigger: "incednet"
-    replace: "incedent"
+  - trigger: "ni the"
+    replace: "in the"
+    word: true
+
+  - trigger: "incidnet"
+    replace: "incident"
     word: true
     propagate_case: true
 
-  - trigger: "incednets"
-    replace: "incedents"
+  - trigger: "incidnets"
+    replace: "incidents"
     word: true
     propagate_case: true
 
@@ -12501,19 +12668,9 @@ matches:
     word: true
     propagate_case: true
 
-  - trigger: "incremetning"
-    replace: "incrementing"
-    word: true
-    propagate_case: true
-
   - trigger: "indnet"
     replace: "indent"
-    word: true
-    propagate_case: true
-
-  - trigger: "indnets"
-    replace: "indents"
-    word: true
+    left_word: true
     propagate_case: true
 
   - trigger: "indpeendent"
@@ -12579,11 +12736,6 @@ matches:
   - trigger: "ineequality"
     replace: "inequality"
     word: true
-    propagate_case: true
-
-  - trigger: "infeasab"
-    replace: "infeasib"
-    left_word: true
     propagate_case: true
 
   - trigger: "inifnity"
@@ -12669,19 +12821,14 @@ matches:
     left_word: true
     propagate_case: true
 
-  - trigger: "initaite"
-    replace: "initiate"
-    word: true
+  - trigger: "iniitat"
+    replace: "initiat"
+    left_word: true
     propagate_case: true
 
-  - trigger: "initaited"
-    replace: "initiated"
-    word: true
-    propagate_case: true
-
-  - trigger: "initaites"
-    replace: "initiates"
-    word: true
+  - trigger: "initait"
+    replace: "initiat"
+    left_word: true
     propagate_case: true
 
   - trigger: "inejct"
@@ -12906,11 +13053,6 @@ matches:
   - trigger: "integerat"
     replace: "integrat"
     left_word: true
-    propagate_case: true
-
-  - trigger: "integriy"
-    replace: "integrity"
-    word: true
     propagate_case: true
 
   - trigger: "integirty"
@@ -13191,6 +13333,16 @@ matches:
     word: true
     propagate_case: true
 
+  - trigger: "ivnest"
+    replace: "invest"
+    left_word: true
+    propagate_case: true
+
+  - trigger: "invoekr"
+    replace: "invoker"
+    word: true
+    propagate_case: true
+
   - trigger: "invovl"
     replace: "involv"
     left_word: true
@@ -13221,6 +13373,10 @@ matches:
     word: true
     propagate_case: true
 
+  - trigger: "si it"
+    replace: "is it"
+    word: true
+
   - trigger: "is nto"
     replace: "is not"
     word: true
@@ -13247,6 +13403,10 @@ matches:
 
   - trigger: "si the"
     replace: "is the"
+    word: true
+
+  - trigger: "si this"
+    replace: "is this"
     word: true
 
   - trigger: "is ot"
@@ -13298,6 +13458,11 @@ matches:
     propagate_case: true
 
   - trigger: "isseus"
+    replace: "issues"
+    word: true
+    propagate_case: true
+
+  - trigger: "issuse"
     replace: "issues"
     word: true
     propagate_case: true
@@ -13983,7 +14148,15 @@ matches:
     word: true
     propagate_case: true
 
+  - trigger: "LEt"
+    replace: "Let"
+    word: true
+
   - trigger: "let mtu"
+    replace: "let mut"
+    word: true
+
+  - trigger: "elt mut"
     replace: "let mut"
     word: true
 
@@ -14014,21 +14187,6 @@ matches:
 
   - trigger: "levles"
     replace: "levels"
-    word: true
-    propagate_case: true
-
-  - trigger: "liaiason"
-    replace: "liaison"
-    word: true
-    propagate_case: true
-
-  - trigger: "laison"
-    replace: "liaison"
-    word: true
-    propagate_case: true
-
-  - trigger: "laiason"
-    replace: "liaison"
     word: true
     propagate_case: true
 
@@ -14283,11 +14441,6 @@ matches:
     left_word: true
     propagate_case: true
 
-  - trigger: "listeend"
-    replace: "listened"
-    word: true
-    propagate_case: true
-
   - trigger: "listenr"
     replace: "listener"
     word: true
@@ -14360,6 +14513,16 @@ matches:
 
   - trigger: "loign"
     replace: "login"
+    word: true
+    propagate_case: true
+
+  - trigger: "logpiotn"
+    replace: "logpoint"
+    word: true
+    propagate_case: true
+
+  - trigger: "logpiotns"
+    replace: "logpoints"
     word: true
     propagate_case: true
 
@@ -14498,6 +14661,11 @@ matches:
     word: true
     propagate_case: true
 
+  - trigger: "mjaorly"
+    replace: "majorly"
+    word: true
+    propagate_case: true
+
   - trigger: "mkae"
     replace: "make"
     word: true
@@ -14612,6 +14780,11 @@ matches:
     word: true
     propagate_case: true
 
+  - trigger: "marekd"
+    replace: "marked"
+    word: true
+    propagate_case: true
+
   - trigger: "matser"
     replace: "master"
     word: true
@@ -14632,18 +14805,8 @@ matches:
     word: true
     propagate_case: true
 
-  - trigger: "mathamatical"
-    replace: "mathematical"
-    word: true
-    propagate_case: true
-
   - trigger: "mathmatical"
     replace: "mathematical"
-    word: true
-    propagate_case: true
-
-  - trigger: "mathamatics"
-    replace: "mathematics"
     word: true
     propagate_case: true
 
@@ -14847,12 +15010,22 @@ matches:
     word: true
     propagate_case: true
 
+  - trigger: "messaeg"
+    replace: "message"
+    word: true
+    propagate_case: true
+
   - trigger: "messgaed"
     replace: "messaged"
     word: true
     propagate_case: true
 
   - trigger: "mesages"
+    replace: "messages"
+    word: true
+    propagate_case: true
+
+  - trigger: "messagse"
     replace: "messages"
     word: true
     propagate_case: true
@@ -14904,6 +15077,11 @@ matches:
 
   - trigger: "microsfot"
     replace: "microsoft"
+    word: true
+    propagate_case: true
+
+  - trigger: "midpiotn"
+    replace: "midpoint"
     word: true
     propagate_case: true
 
@@ -15061,6 +15239,11 @@ matches:
     word: true
     propagate_case: true
 
+  - trigger: "modiyf"
+    replace: "modify"
+    word: true
+    propagate_case: true
+
   - trigger: "omdular"
     replace: "modular"
     word: true
@@ -15133,11 +15316,6 @@ matches:
 
   - trigger: "motoining"
     replace: "motioning"
-    word: true
-    propagate_case: true
-
-  - trigger: "moutning"
-    replace: "mounting"
     word: true
     propagate_case: true
 
@@ -15311,6 +15489,11 @@ matches:
     word: true
     propagate_case: true
 
+  - trigger: "namse"
+    replace: "names"
+    word: true
+    propagate_case: true
+
   - trigger: "namespce"
     replace: "namespace"
     word: true
@@ -15477,6 +15660,10 @@ matches:
     replace: "Not"
     word: true
 
+  - trigger: "nto the"
+    replace: "not the"
+    word: true
+
   - trigger: "not ot"
     replace: "not to"
     word: true
@@ -15566,6 +15753,11 @@ matches:
     left_word: true
     propagate_case: true
 
+  - trigger: "numerosu"
+    replace: "numerous"
+    word: true
+    propagate_case: true
+
   - trigger: "nmve"
     replace: "nvme"
     word: true
@@ -15583,6 +15775,11 @@ matches:
 
   - trigger: "obesrv"
     replace: "observ"
+    left_word: true
+    propagate_case: true
+
+  - trigger: "obsolte"
+    replace: "obsolete"
     left_word: true
     propagate_case: true
 
@@ -15731,6 +15928,11 @@ matches:
     word: true
     propagate_case: true
 
+  - trigger: "o nthe"
+    replace: "on the"
+    word: true
+    propagate_case: true
+
   - trigger: "oens"
     replace: "ones"
     word: true
@@ -15750,8 +15952,8 @@ matches:
     word: true
     propagate_case: true
 
-  - trigger: "opeend"
-    replace: "opened"
+  - trigger: "onlly"
+    replace: "only"
     word: true
     propagate_case: true
 
@@ -16402,11 +16604,6 @@ matches:
     word: true
     propagate_case: true
 
-  - trigger: "paretns"
-    replace: "parents"
-    word: true
-    propagate_case: true
-
   - trigger: "parofr"
     replace: "parfor"
     word: true
@@ -16492,6 +16689,11 @@ matches:
     left_word: true
     propagate_case: true
 
+  - trigger: "passaeg"
+    replace: "passage"
+    word: true
+    propagate_case: true
+
   - trigger: "passsed"
     replace: "passed"
     word: true
@@ -16544,6 +16746,16 @@ matches:
 
   - trigger: "passowrds"
     replace: "passwords"
+    word: true
+    propagate_case: true
+
+  - trigger: "patse"
+    replace: "paste"
+    word: true
+    propagate_case: true
+
+  - trigger: "patses"
+    replace: "pastes"
     word: true
     propagate_case: true
 
@@ -16792,6 +17004,11 @@ matches:
     word: true
     propagate_case: true
 
+  - trigger: "pgrpe"
+    replace: "pgrep"
+    word: true
+    propagate_case: true
+
   - trigger: "phoen"
     replace: "phone"
     word: true
@@ -16872,12 +17089,26 @@ matches:
     word: true
     propagate_case: true
 
+  - trigger: "plna"
+    replace: "plan"
+    word: true
+
   - trigger: "palne"
     replace: "plane"
     word: true
     propagate_case: true
 
+  - trigger: "plnae"
+    replace: "plane"
+    word: true
+    propagate_case: true
+
   - trigger: "palnes"
+    replace: "planes"
+    word: true
+    propagate_case: true
+
+  - trigger: "plnaes"
     replace: "planes"
     word: true
     propagate_case: true
@@ -16902,6 +17133,10 @@ matches:
     word: true
     propagate_case: true
 
+  - trigger: "plnas"
+    replace: "plans"
+    word: true
+
   - trigger: "platfom"
     replace: "platform"
     word: true
@@ -16924,11 +17159,6 @@ matches:
 
   - trigger: "playesr"
     replace: "players"
-    word: true
-    propagate_case: true
-
-  - trigger: "pleae"
-    replace: "please"
     word: true
     propagate_case: true
 
@@ -17027,16 +17257,6 @@ matches:
     word: true
     propagate_case: true
 
-  - trigger: "polynomail"
-    replace: "polynomial"
-    word: true
-    propagate_case: true
-
-  - trigger: "polynomails"
-    replace: "polynomials"
-    word: true
-    propagate_case: true
-
   - trigger: "populiarty"
     replace: "popularity"
     word: true
@@ -17095,6 +17315,11 @@ matches:
   - trigger: "opwer"
     replace: "power"
     left_word: true
+    propagate_case: true
+
+  - trigger: "powerpiotn"
+    replace: "powerpoint"
+    word: true
     propagate_case: true
 
   - trigger: "ppritn"
@@ -17282,11 +17507,6 @@ matches:
     word: true
     propagate_case: true
 
-  - trigger: "prevelant"
-    replace: "prevalent"
-    word: true
-    propagate_case: true
-
   - trigger: "prevetn"
     replace: "prevent"
     left_word: true
@@ -17382,11 +17602,6 @@ matches:
     word: true
     propagate_case: true
 
-  - trigger: "pritning"
-    replace: "printing"
-    word: true
-    propagate_case: true
-
   - trigger: "pirnting"
     replace: "printing"
     word: true
@@ -17438,11 +17653,6 @@ matches:
     propagate_case: true
 
   - trigger: "probablistic"
-    replace: "probabilistic"
-    word: true
-    propagate_case: true
-
-  - trigger: "probabalistic"
     replace: "probabilistic"
     word: true
     propagate_case: true
@@ -17752,28 +17962,13 @@ matches:
     word: true
     propagate_case: true
 
-  - trigger: "proove"
-    replace: "prove"
-    word: true
-    propagate_case: true
-
   - trigger: "prvoe"
     replace: "prove"
     word: true
     propagate_case: true
 
-  - trigger: "prooved"
-    replace: "proved"
-    word: true
-    propagate_case: true
-
   - trigger: "prvoed"
     replace: "proved"
-    word: true
-    propagate_case: true
-
-  - trigger: "prooves"
-    replace: "proves"
     word: true
     propagate_case: true
 
@@ -17881,6 +18076,16 @@ matches:
     word: true
     propagate_case: true
 
+  - trigger: "purchaesr"
+    replace: "purchaser"
+    word: true
+    propagate_case: true
+
+  - trigger: "purchaesrs"
+    replace: "purchasers"
+    word: true
+    propagate_case: true
+
   - trigger: "puhs"
     replace: "push"
     word: true
@@ -17889,16 +18094,6 @@ matches:
   - trigger: "upsh"
     replace: "push"
     word: true
-
-  - trigger: "puhs_back"
-    replace: "push_back"
-    word: true
-    propagate_case: true
-
-  - trigger: "upsh_back"
-    replace: "push_back"
-    word: true
-    propagate_case: true
 
   - trigger: "pytets"
     replace: "pytest"
@@ -17940,6 +18135,11 @@ matches:
     propagate_case: true
 
   - trigger: "pytyhon"
+    replace: "python"
+    word: true
+    propagate_case: true
+
+  - trigger: "pytyon"
     replace: "python"
     word: true
     propagate_case: true
@@ -18044,17 +18244,17 @@ matches:
     left_word: true
     propagate_case: true
 
+  - trigger: "quets"
+    replace: "quest"
+    left_word: true
+    propagate_case: true
+
   - trigger: "qustion"
     replace: "question"
     left_word: true
     propagate_case: true
 
   - trigger: "quetion"
-    replace: "question"
-    left_word: true
-    propagate_case: true
-
-  - trigger: "quetsion"
     replace: "question"
     left_word: true
     propagate_case: true
@@ -18229,6 +18429,11 @@ matches:
     left_word: true
     propagate_case: true
 
+  - trigger: "randomiezr"
+    replace: "randomizer"
+    word: true
+    propagate_case: true
+
   - trigger: "rnage"
     replace: "range"
     word: true
@@ -18295,6 +18500,11 @@ matches:
     propagate_case: true
 
   - trigger: "reaosn"
+    replace: "reason"
+    left_word: true
+    propagate_case: true
+
+  - trigger: "resaon"
     replace: "reason"
     left_word: true
     propagate_case: true
@@ -18754,6 +18964,16 @@ matches:
     word: true
     propagate_case: true
 
+  - trigger: "releaesr"
+    replace: "releaser"
+    word: true
+    propagate_case: true
+
+  - trigger: "releaesrs"
+    replace: "releasers"
+    word: true
+    propagate_case: true
+
   - trigger: "releaess"
     replace: "releases"
     word: true
@@ -18959,27 +19179,12 @@ matches:
     left_word: true
     propagate_case: true
 
-  - trigger: "repostiroies"
-    replace: "repositories"
-    word: true
-    propagate_case: true
-
-  - trigger: "repositoroies"
-    replace: "repositories"
-    word: true
-    propagate_case: true
-
   - trigger: "reposistories"
     replace: "repositories"
     word: true
     propagate_case: true
 
   - trigger: "reopsitories"
-    replace: "repositories"
-    word: true
-    propagate_case: true
-
-  - trigger: "repositroies"
     replace: "repositories"
     word: true
     propagate_case: true
@@ -19005,6 +19210,11 @@ matches:
     propagate_case: true
 
   - trigger: "repsotiries"
+    replace: "repositories"
+    word: true
+    propagate_case: true
+
+  - trigger: "respositories"
     replace: "repositories"
     word: true
     propagate_case: true
@@ -19035,6 +19245,11 @@ matches:
     propagate_case: true
 
   - trigger: "repostiory"
+    replace: "repository"
+    word: true
+    propagate_case: true
+
+  - trigger: "respository"
     replace: "repository"
     word: true
     propagate_case: true
@@ -19589,6 +19804,11 @@ matches:
     left_word: true
     propagate_case: true
 
+  - trigger: "ruelst"
+    replace: "result"
+    left_word: true
+    propagate_case: true
+
   - trigger: "REsult"
     replace: "Result"
     word: true
@@ -19747,6 +19967,11 @@ matches:
     word: true
     propagate_case: true
 
+  - trigger: "revesres"
+    replace: "reverses"
+    word: true
+    propagate_case: true
+
   - trigger: "reversign"
     replace: "reversing"
     word: true
@@ -19830,6 +20055,11 @@ matches:
   - trigger: "righit"
     replace: "right"
     left_word: true
+    propagate_case: true
+
+  - trigger: "rigorosu"
+    replace: "rigorous"
+    word: true
     propagate_case: true
 
   - trigger: "risign"
@@ -19925,6 +20155,10 @@ matches:
     replace: "running"
     word: true
     propagate_case: true
+
+  - trigger: "rusn"
+    replace: "runs"
+    word: true
 
   - trigger: "RUst"
     replace: "Rust"
@@ -20069,12 +20303,27 @@ matches:
     word: true
     propagate_case: true
 
+  - trigger: "sclaing"
+    replace: "scaling"
+    word: true
+    propagate_case: true
+
   - trigger: "scneario"
     replace: "scenario"
     word: true
     propagate_case: true
 
+  - trigger: "scneairo"
+    replace: "scenario"
+    word: true
+    propagate_case: true
+
   - trigger: "scnearios"
+    replace: "scenarios"
+    word: true
+    propagate_case: true
+
+  - trigger: "scneairos"
     replace: "scenarios"
     word: true
     propagate_case: true
@@ -20314,11 +20563,6 @@ matches:
     word: true
     propagate_case: true
 
-  - trigger: "select 8 from"
-    replace: "select * from"
-    word: true
-    propagate_case: true
-
   - trigger: "selectes"
     replace: "selects"
     word: true
@@ -20327,7 +20571,6 @@ matches:
   - trigger: "slef"
     replace: "self"
     word: true
-    propagate_case: true
 
   - trigger: "eslf"
     replace: "self"
@@ -20484,6 +20727,11 @@ matches:
 
   - trigger: "serliazed"
     replace: "serialized"
+    word: true
+    propagate_case: true
+
+  - trigger: "serialiezr"
+    replace: "serializer"
     word: true
     propagate_case: true
 
@@ -20846,6 +21094,11 @@ matches:
     word: true
     propagate_case: true
 
+  - trigger: "shwo"
+    replace: "show"
+    word: true
+    propagate_case: true
+
   - trigger: "SHow"
     replace: "Show"
     word: true
@@ -20860,7 +21113,17 @@ matches:
     word: true
     propagate_case: true
 
+  - trigger: "shwoing"
+    replace: "showing"
+    word: true
+    propagate_case: true
+
   - trigger: "hsows"
+    replace: "shows"
+    word: true
+    propagate_case: true
+
+  - trigger: "shwos"
     replace: "shows"
     word: true
     propagate_case: true
@@ -21183,6 +21446,11 @@ matches:
     replace: "Some"
     word: true
 
+  - trigger: "soemhow"
+    replace: "somehow"
+    word: true
+    propagate_case: true
+
   - trigger: "soemone"
     replace: "someone"
     word: true
@@ -21352,6 +21620,11 @@ matches:
     word: true
     propagate_case: true
 
+  - trigger: "speciyf"
+    replace: "specify"
+    word: true
+    propagate_case: true
+
   - trigger: "spetn"
     replace: "spent"
     word: true
@@ -21517,22 +21790,12 @@ matches:
     word: true
     propagate_case: true
 
-  - trigger: "starrt"
-    replace: "start"
-    word: true
-    propagate_case: true
-
-  - trigger: "starrted"
-    replace: "started"
-    word: true
-    propagate_case: true
-
-  - trigger: "starrts"
-    replace: "starts"
-    word: true
-    propagate_case: true
-
   - trigger: "stahs"
+    replace: "stash"
+    word: true
+    propagate_case: true
+
+  - trigger: "stsah"
     replace: "stash"
     word: true
     propagate_case: true
@@ -21723,12 +21986,22 @@ matches:
     word: true
     propagate_case: true
 
+  - trigger: "steram"
+    replace: "stream"
+    word: true
+    propagate_case: true
+
   - trigger: "stremaed"
     replace: "streamed"
     word: true
     propagate_case: true
 
   - trigger: "straemed"
+    replace: "streamed"
+    word: true
+    propagate_case: true
+
+  - trigger: "steramed"
     replace: "streamed"
     word: true
     propagate_case: true
@@ -21743,12 +22016,22 @@ matches:
     word: true
     propagate_case: true
 
+  - trigger: "steraming"
+    replace: "streaming"
+    word: true
+    propagate_case: true
+
   - trigger: "stremas"
     replace: "streams"
     word: true
     propagate_case: true
 
   - trigger: "straems"
+    replace: "streams"
+    word: true
+    propagate_case: true
+
+  - trigger: "sterams"
     replace: "streams"
     word: true
     propagate_case: true
@@ -21815,12 +22098,12 @@ matches:
 
   - trigger: "strcut"
     replace: "struct"
-    word: true
+    left_word: true
     propagate_case: true
 
   - trigger: "sturct"
     replace: "struct"
-    word: true
+    left_word: true
     propagate_case: true
 
   - trigger: "strutur"
@@ -21846,11 +22129,6 @@ matches:
   - trigger: "structre"
     replace: "structure"
     word: true
-    propagate_case: true
-
-  - trigger: "sturcture"
-    replace: "structure"
-    left_word: true
     propagate_case: true
 
   - trigger: "stukc"
@@ -22172,6 +22450,11 @@ matches:
     word: true
     propagate_case: true
 
+  - trigger: "suc has"
+    replace: "such as"
+    word: true
+    propagate_case: true
+
   - trigger: "suod"
     replace: "sudo"
     word: true
@@ -22477,6 +22760,11 @@ matches:
     word: true
     propagate_case: true
 
+  - trigger: "tcpdupm"
+    replace: "tcpdump"
+    word: true
+    propagate_case: true
+
   - trigger: "tehcn"
     replace: "techn"
     left_word: true
@@ -22744,6 +23032,11 @@ matches:
     word: true
     propagate_case: true
 
+  - trigger: "tha tthe"
+    replace: "that the"
+    word: true
+    propagate_case: true
+
   - trigger: "hte"
     replace: "the"
     word: true
@@ -22765,10 +23058,6 @@ matches:
     replace: "the"
     word: true
     propagate_case: true
-
-  - trigger: "tthe"
-    replace: "the"
-    word: true
 
   - trigger: "THe"
     replace: "The"
@@ -22830,6 +23119,11 @@ matches:
 
   - trigger: "thne"
     replace: "then"
+    word: true
+    propagate_case: true
+
+  - trigger: "the nthe"
+    replace: "then the"
     word: true
     propagate_case: true
 
@@ -23068,6 +23362,11 @@ matches:
     word: true
     propagate_case: true
 
+  - trigger: "htoes"
+    replace: "those"
+    word: true
+    propagate_case: true
+
   - trigger: "thoguh"
     replace: "though"
     word: true
@@ -23140,6 +23439,16 @@ matches:
 
   - trigger: "thoruhg"
     replace: "through"
+    word: true
+    propagate_case: true
+
+  - trigger: "throuhgout"
+    replace: "throughout"
+    word: true
+    propagate_case: true
+
+  - trigger: "thorughout"
+    replace: "throughout"
     word: true
     propagate_case: true
 
@@ -23533,6 +23842,11 @@ matches:
     word: true
     propagate_case: true
 
+  - trigger: "to yuo"
+    replace: "to you"
+    word: true
+    propagate_case: true
+
   - trigger: "ot your"
     replace: "to your"
     word: true
@@ -23782,6 +24096,11 @@ matches:
     word: true
     propagate_case: true
 
+  - trigger: "trie sto"
+    replace: "tries to"
+    word: true
+    propagate_case: true
+
   - trigger: "tirgger"
     replace: "trigger"
     left_word: true
@@ -23910,6 +24229,11 @@ matches:
     word: true
     propagate_case: true
 
+  - trigger: "typse"
+    replace: "types"
+    word: true
+    propagate_case: true
+
   - trigger: "tpyical"
     replace: "typical"
     word: true
@@ -23927,6 +24251,11 @@ matches:
 
   - trigger: "typcially"
     replace: "typically"
+    word: true
+    propagate_case: true
+
+  - trigger: "unchagned"
+    replace: "unchanged"
     word: true
     propagate_case: true
 
@@ -24100,23 +24429,8 @@ matches:
     word: true
     propagate_case: true
 
-  - trigger: "unorderd_map"
-    replace: "unordered_map"
-    word: true
-    propagate_case: true
-
-  - trigger: "unordrerd_map"
-    replace: "unordered_map"
-    word: true
-    propagate_case: true
-
-  - trigger: "unorderd_set"
-    replace: "unordered_set"
-    word: true
-    propagate_case: true
-
-  - trigger: "unordrerd_set"
-    replace: "unordered_set"
+  - trigger: "unpakc"
+    replace: "unpack"
     word: true
     propagate_case: true
 
@@ -24222,6 +24536,16 @@ matches:
 
   - trigger: "upsream"
     replace: "upstream"
+    word: true
+    propagate_case: true
+
+  - trigger: "usgae"
+    replace: "usage"
+    word: true
+    propagate_case: true
+
+  - trigger: "usaeg"
+    replace: "usage"
     word: true
     propagate_case: true
 
@@ -24331,6 +24655,11 @@ matches:
     propagate_case: true
 
   - trigger: "avlidated"
+    replace: "validated"
+    word: true
+    propagate_case: true
+
+  - trigger: "validted"
     replace: "validated"
     word: true
     propagate_case: true
@@ -24609,11 +24938,6 @@ matches:
     word: true
     propagate_case: true
 
-  - trigger: "verificatsion"
-    replace: "verification"
-    word: true
-    propagate_case: true
-
   - trigger: "verificastion"
     replace: "verification"
     word: true
@@ -24644,64 +24968,34 @@ matches:
     word: true
     propagate_case: true
 
+  - trigger: "vieryf"
+    replace: "verify"
+    word: true
+    propagate_case: true
+
   - trigger: "vesrion"
     replace: "version"
-    word: true
+    left_word: true
     propagate_case: true
 
   - trigger: "veriosn"
     replace: "version"
-    word: true
+    left_word: true
     propagate_case: true
 
   - trigger: "verisno"
     replace: "version"
-    word: true
+    left_word: true
     propagate_case: true
 
   - trigger: "verison"
     replace: "version"
-    word: true
+    left_word: true
     propagate_case: true
 
-  - trigger: "vesrioning"
-    replace: "versioning"
-    word: true
-    propagate_case: true
-
-  - trigger: "veriosning"
-    replace: "versioning"
-    word: true
-    propagate_case: true
-
-  - trigger: "verisnoing"
-    replace: "versioning"
-    word: true
-    propagate_case: true
-
-  - trigger: "verisoning"
-    replace: "versioning"
-    word: true
-    propagate_case: true
-
-  - trigger: "vesrions"
-    replace: "versions"
-    word: true
-    propagate_case: true
-
-  - trigger: "veriosns"
-    replace: "versions"
-    word: true
-    propagate_case: true
-
-  - trigger: "verisnos"
-    replace: "versions"
-    word: true
-    propagate_case: true
-
-  - trigger: "verisons"
-    replace: "versions"
-    word: true
+  - trigger: "vesrino"
+    replace: "version"
+    left_word: true
     propagate_case: true
 
   - trigger: "vetex"
@@ -24740,6 +25034,11 @@ matches:
     propagate_case: true
 
   - trigger: "ivdeos"
+    replace: "videos"
+    word: true
+    propagate_case: true
+
+  - trigger: "videso"
     replace: "videos"
     word: true
     propagate_case: true
@@ -24935,11 +25234,6 @@ matches:
     word: true
     propagate_case: true
 
-  - trigger: "watning"
-    replace: "wanting"
-    word: true
-    propagate_case: true
-
   - trigger: "watns"
     replace: "wants"
     word: true
@@ -24951,6 +25245,11 @@ matches:
     propagate_case: true
 
   - trigger: "wanring"
+    replace: "warning"
+    word: true
+    propagate_case: true
+
+  - trigger: "wraning"
     replace: "warning"
     word: true
     propagate_case: true
@@ -25001,6 +25300,21 @@ matches:
   - trigger: "awtch"
     replace: "watch"
     left_word: true
+    propagate_case: true
+
+  - trigger: "watchpiotn"
+    replace: "watchpoint"
+    word: true
+    propagate_case: true
+
+  - trigger: "watchpiotns"
+    replace: "watchpoints"
+    word: true
+    propagate_case: true
+
+  - trigger: "way ot"
+    replace: "way to"
+    word: true
     propagate_case: true
 
   - trigger: "wyas"
@@ -25119,6 +25433,11 @@ matches:
     word: true
     propagate_case: true
 
+  - trigger: "when ot"
+    replace: "when to"
+    word: true
+    propagate_case: true
+
   - trigger: "whenver"
     replace: "whenever"
     word: true
@@ -25159,6 +25478,11 @@ matches:
 
   - trigger: "wher ethe"
     replace: "where the"
+    word: true
+    propagate_case: true
+
+  - trigger: "where ot"
+    replace: "where to"
     word: true
     propagate_case: true
 
@@ -25216,8 +25540,18 @@ matches:
     word: true
     propagate_case: true
 
+  - trigger: "hiwhc"
+    replace: "which"
+    word: true
+    propagate_case: true
+
   - trigger: "whicht he"
     replace: "which the"
+    word: true
+    propagate_case: true
+
+  - trigger: "which ot"
+    replace: "which to"
     word: true
     propagate_case: true
 
@@ -25314,6 +25648,10 @@ matches:
     word: true
     propagate_case: true
 
+  - trigger: "WHose"
+    replace: "Whose"
+    word: true
+
   - trigger: "WHy"
     replace: "Why"
     word: true
@@ -25398,6 +25736,11 @@ matches:
     word: true
     propagate_case: true
 
+  - trigger: "widlye"
+    replace: "widely"
+    word: true
+    propagate_case: true
+
   - trigger: "iwdth"
     replace: "width"
     word: true
@@ -25420,6 +25763,11 @@ matches:
 
   - trigger: "iwll"
     replace: "will"
+    word: true
+    propagate_case: true
+
+  - trigger: "wil lbe"
+    replace: "will be"
     word: true
     propagate_case: true
 
@@ -25474,6 +25822,11 @@ matches:
   - trigger: "iwht"
     replace: "with"
     word: true
+
+  - trigger: "wit ha"
+    replace: "with a"
+    word: true
+    propagate_case: true
 
   - trigger: "witht he"
     replace: "with the"
@@ -25617,6 +25970,11 @@ matches:
     word: true
     propagate_case: true
 
+  - trigger: "worekd"
+    replace: "worked"
+    word: true
+    propagate_case: true
+
   - trigger: "wroker"
     replace: "worker"
     word: true
@@ -25709,6 +26067,26 @@ matches:
 
   - trigger: "worknigs"
     replace: "workings"
+    word: true
+    propagate_case: true
+
+  - trigger: "wokrspace"
+    replace: "workspace"
+    word: true
+    propagate_case: true
+
+  - trigger: "owrkspace"
+    replace: "workspace"
+    word: true
+    propagate_case: true
+
+  - trigger: "wokrspaces"
+    replace: "workspaces"
+    word: true
+    propagate_case: true
+
+  - trigger: "owrkspaces"
+    replace: "workspaces"
     word: true
     propagate_case: true
 
@@ -26017,14 +26395,6 @@ matches:
     replace: "ased"
     right_word: true
 
-  - trigger: "aesr"
-    replace: "aser"
-    right_word: true
-
-  - trigger: "aesrs"
-    replace: "asers"
-    right_word: true
-
   - trigger: "athc"
     replace: "atch"
     right_word: true
@@ -26041,6 +26411,10 @@ matches:
     replace: "ately"
     right_word: true
 
+  - trigger: "taely"
+    replace: "ately"
+    right_word: true
+
   - trigger: "taion"
     replace: "ation"
     right_word: true
@@ -26053,6 +26427,10 @@ matches:
     replace: "ation"
     right_word: true
 
+  - trigger: "itaon"
+    replace: "ation"
+    right_word: true
+
   - trigger: "taional"
     replace: "ational"
     right_word: true
@@ -26062,6 +26440,10 @@ matches:
     right_word: true
 
   - trigger: "taoins"
+    replace: "ations"
+    right_word: true
+
+  - trigger: "itaons"
     replace: "ations"
     right_word: true
 
@@ -26173,6 +26555,10 @@ matches:
     replace: "boards"
     right_word: true
 
+  - trigger: "byet"
+    replace: "byte"
+    right_word: true
+
   - trigger: "csat"
     replace: "cast"
     right_word: true
@@ -26205,11 +26591,19 @@ matches:
     replace: "cation"
     right_word: true
 
+  - trigger: "catsion"
+    replace: "cation"
+    right_word: true
+
   - trigger: "cactions"
     replace: "cations"
     right_word: true
 
   - trigger: "caions"
+    replace: "cations"
+    right_word: true
+
+  - trigger: "catsions"
     replace: "cations"
     right_word: true
 
@@ -26353,10 +26747,6 @@ matches:
     replace: "dents"
     right_word: true
 
-  - trigger: "detns"
-    replace: "dents"
-    right_word: true
-
   - trigger: "desr"
     replace: "ders"
     right_word: true
@@ -26401,12 +26791,28 @@ matches:
     replace: "down"
     right_word: true
 
+  - trigger: "donws"
+    replace: "downs"
+    right_word: true
+
+  - trigger: "odwns"
+    replace: "downs"
+    right_word: true
+
   - trigger: "aech"
     replace: "each"
     right_word: true
 
   - trigger: "leing"
     replace: "eling"
+    right_word: true
+
+  - trigger: "ecne"
+    replace: "ence"
+    right_word: true
+
+  - trigger: "ecnes"
+    replace: "ences"
     right_word: true
 
   - trigger: "necy"
@@ -26425,12 +26831,20 @@ matches:
     replace: "ends"
     right_word: true
 
+  - trigger: "eend"
+    replace: "ened"
+    right_word: true
+
   - trigger: "netion"
     replace: "ention"
     right_word: true
 
   - trigger: "netions"
     replace: "entions"
+    right_word: true
+
+  - trigger: "etns"
+    replace: "ents"
     right_word: true
 
   - trigger: "oeus"
@@ -26605,16 +27019,8 @@ matches:
     replace: "iciently"
     right_word: true
 
-  - trigger: "iecne"
-    replace: "ience"
-    right_word: true
-
   - trigger: "eince"
     replace: "ience"
-    right_word: true
-
-  - trigger: "iecnes"
-    replace: "iences"
     right_word: true
 
   - trigger: "einces"
@@ -26643,10 +27049,6 @@ matches:
 
   - trigger: "ietnly"
     replace: "iently"
-    right_word: true
-
-  - trigger: "ietns"
-    replace: "ients"
     right_word: true
 
   - trigger: "ienets"
@@ -26737,6 +27139,10 @@ matches:
     replace: "iners"
     right_word: true
 
+  - trigger: "niing"
+    replace: "ining"
+    right_word: true
+
   - trigger: "oinal"
     replace: "ional"
     right_word: true
@@ -26747,6 +27153,14 @@ matches:
 
   - trigger: "oinally"
     replace: "ionally"
+    right_word: true
+
+  - trigger: "oinals"
+    replace: "ionals"
+    right_word: true
+
+  - trigger: "ioanls"
+    replace: "ionals"
     right_word: true
 
   - trigger: "iosn"
@@ -26855,14 +27269,6 @@ matches:
 
   - trigger: "iezd"
     replace: "ized"
-    right_word: true
-
-  - trigger: "iezr"
-    replace: "izer"
-    right_word: true
-
-  - trigger: "iezrs"
-    replace: "izers"
     right_word: true
 
   - trigger: "kign"
@@ -27001,6 +27407,10 @@ matches:
     replace: "locks"
     right_word: true
 
+  - trigger: "loyg"
+    replace: "logy"
+    right_word: true
+
   - trigger: "amrk"
     replace: "mark"
     right_word: true
@@ -27114,10 +27524,6 @@ matches:
     right_word: true
 
   - trigger: "emtns"
-    replace: "ments"
-    right_word: true
-
-  - trigger: "metns"
     replace: "ments"
     right_word: true
 
@@ -27293,6 +27699,10 @@ matches:
     replace: "nted"
     right_word: true
 
+  - trigger: "tning"
+    replace: "nting"
+    right_word: true
+
   - trigger: "okcs"
     replace: "ocks"
     right_word: true
@@ -27321,10 +27731,6 @@ matches:
     replace: "oints"
     right_word: true
 
-  - trigger: "oekr"
-    replace: "oker"
-    right_word: true
-
   - trigger: "oend"
     replace: "oned"
     right_word: true
@@ -27333,11 +27739,19 @@ matches:
     replace: "oned"
     right_word: true
 
+  - trigger: "eond"
+    replace: "oned"
+    right_word: true
+
   - trigger: "roed"
     replace: "ored"
     right_word: true
 
   - trigger: "oreis"
+    replace: "ories"
+    right_word: true
+
+  - trigger: "roies"
     replace: "ories"
     right_word: true
 
@@ -27561,20 +27975,12 @@ matches:
     replace: "rity"
     right_word: true
 
-  - trigger: "rekd"
-    replace: "rked"
-    right_word: true
-
   - trigger: "remd"
     replace: "rmed"
     right_word: true
 
   - trigger: "retd"
     replace: "rted"
-    right_word: true
-
-  - trigger: "saeg"
-    replace: "sage"
     right_word: true
 
   - trigger: "sehd"
@@ -27838,6 +28244,10 @@ matches:
     right_word: true
 
   - trigger: "tihng"
+    replace: "thing"
+    right_word: true
+
+  - trigger: "thying"
     replace: "thing"
     right_word: true
 
@@ -28147,6 +28557,10 @@ matches:
 
   - trigger: "waer"
     replace: "ware"
+    right_word: true
+
+  - trigger: "wesr"
+    replace: "wers"
     right_word: true
 
   - trigger: "hwere"
