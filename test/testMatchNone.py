@@ -7,8 +7,8 @@ class TestMatchNone(unittest.TestCase):
         cls.rules = Rule.fileToRuleList('AutocorrectForDevelopers.ahk')
 
     def test_ruleLength(self):
-        self.assertGreater(len(self.rules), 5200)
-        self.assertGreater(len(MATCH_NONE_LIST), 90)
+        self.assertGreater(len(self.rules), 5900)
+        self.assertGreater(len(MATCH_NONE_LIST), 110)
 
     def test_replace(self):
         for inputText in MATCH_NONE_LIST:
@@ -32,6 +32,7 @@ MATCH_NONE_LIST = [
     'yoruba', 'konway', 'sign', 'design', 'systemdesign', 'assign', 'variableassign', 'changin', # changin'
     'ehre', 'botnet', 'cadres', 'impot', 'impots', 'loggin', # loggin'
     'hearte', 'lighthearted', 'netly', # netly -> ently often changes one typo into another typo
+    'compliers', 'expor',
 ]
 
 if __name__ == '__main__':

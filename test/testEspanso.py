@@ -90,9 +90,8 @@ class TestEspanso(unittest.TestCase):
 
     def test_skipNewline(self):
         # ahk newlines in trigger are not supported by espanso, so skip them
-        firstNewlineRule = [rule for rule in self.rules if '`n' in rule.oldText][0]
-        espansoRule = Rule.convertOneRuleToEspanso(firstNewlineRule)
-        self.assertEqual(espansoRule, '')
+        newline_rules = [rule for rule in self.rules if '`n' in rule.oldText]
+        assert not newline_rules
 
     def test_whitelist_as_suffix(self):
         # certain whitelist rules, such as 'assign' and 'design', also have a suffix rule

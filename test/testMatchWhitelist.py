@@ -10,7 +10,7 @@ class TestMatchWhitelist(unittest.TestCase):
         self.rules = Rule.fileToRuleList('AutocorrectForDevelopers.ahk')
 
         # get whitelist rules
-        whitelistRules = [rule for rule in self.rules if rule.backspace and not rule.containsBackspacing]
+        whitelistRules = [rule for rule in self.rules if rule.backspace]
         self.whitelistList = [text.oldText for text in whitelistRules]
 
     def test_ruleLength(self):

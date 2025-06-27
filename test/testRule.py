@@ -39,21 +39,21 @@ class TestRule(unittest.TestCase):
         self.assertEqual(oldText, 'std:;')
 
     def test_getNewText(self):
-        newText, _ = Rule.getNewText('::abc::def')
+        newText = Rule.getNewText('::abc::def')
         self.assertEqual(newText, 'def')
 
-        newText, _ = Rule.getNewText(':b0:ABC::')
+        newText = Rule.getNewText(':b0:ABC::')
         self.assertEqual(newText, '')
 
-        newText, _ = Rule.getNewText(':C*:yz::123')
+        newText = Rule.getNewText(':C*:yz::123')
         self.assertEqual(newText, '123')
 
         # should remove escape char, `
-        newText, _ = Rule.getNewText(':C*:std:`;::std`:`:')
+        newText = Rule.getNewText(':C*:std:`;::std`:`:')
         self.assertEqual(newText, 'std::')
 
         # should delimit on first unescaped '::'
-        newText, _ = Rule.getNewText(':C*:sdt`:`:::std`:`:')
+        newText = Rule.getNewText(':C*:sdt`:`:::std`:`:')
         self.assertEqual(newText, 'std::')
 
     def test_lineToRule(self):
@@ -165,11 +165,6 @@ class TestRule(unittest.TestCase):
         rule = Rule.lineToRule(':*:retur n::return `')
         self.assertEqual(rule.newText, 'return ')
 
-    def test_backspacing(self):
-        rule = Rule.lineToRule(':*b0:{`n`n]::{bs 1}{}}')
-        self.assertEqual(rule.newText, '{`n`n}')
-        self.assertTrue(rule.containsBackspacing)
-
     # prevent typos of form: '::isseu:::issue' where there is an extra colon
     def test_noExtraColon(self):
         colonRules = [rule for rule in self.rules if rule.oldText.startswith(':') or rule.newText.startswith(':')]
@@ -191,6 +186,21 @@ class TestRule(unittest.TestCase):
         for original, sortedItem in zip(suffixRules, sortedSuffixRules):
             msg = f'Unsorted suffix rule: "{original.newText}" should be after "{sortedItem.newText}"'
             self.assertEqual(original.newText, sortedItem.newText, msg)
+
+    def test_all_short_rules_are_case_sensitive(self):
+        # to minimize chance of false positives, short rules should be case sensitive
+        replacement_rules = [rule for rule in self.rules if not rule.backspace]
+
+        # get short rules
+        min_len = 3
+        short_rules = [rule for rule in replacement_rules if len(rule.oldText) <= min_len]
+        assert len(short_rules) > 1
+
+        whitelist = ["i'd", "i'm"]
+
+        for rule in short_rules:
+            if rule.newText not in whitelist:
+                self.assertTrue(rule.caseSensitive, f'Short rule "{rule.newText}" should be case sensitive')
 
 def partitionRules(rules: list):
     # 1. non-suffix rules, 2. suffix rules

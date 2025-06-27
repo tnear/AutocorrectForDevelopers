@@ -13,7 +13,7 @@ class Rule:
 
         self.oldText = Rule.getOldText(line)
         self.oldTextLower = self.oldText.lower() # lower() is slow to call in a loop, so do it once here
-        self.newText, self.containsBackspacing = Rule.getNewText(line)
+        self.newText = Rule.getNewText(line)
 
     # loads AHK file and returns list of Rules
     @staticmethod
@@ -123,8 +123,7 @@ class Rule:
         newText = line[len(oldText) + len(optsText) + len(splitter) :]
 
         newText = Rule.unescapeText(newText)
-        newText, containsBackspacing = Rule.applyBackspacing(oldText, newText)
-        return newText, containsBackspacing
+        return newText
 
     # this is a naive function which doesn't check the context of the
     # usage of the special characters which it replaces
@@ -140,26 +139,6 @@ class Rule:
         # a char between '{' and '}' is escaped, ex: convert '{{}' to '{'
         newText = re.sub(r'{(.)}', r'\1', newText)
         return newText
-
-    @staticmethod
-    def applyBackspacing(oldText: str, newText: str):
-        # check if this rule has a backspace pattern, ex: '{bs 3}' will backspace 3 times
-        result = re.search(r'{bs (\d+)}', newText)
-        if result is None:
-            return newText, False
-
-        # get num of backspaces, ex: '{bs 3}' -> 3
-        numBackspaces = int(result.group(1))
-
-        # apply this number to the old text
-        backspacedNewText = oldText[:-numBackspaces]
-
-        # replace '{bs #}' with backspaced new text, ex:
-        # newText = '{`n`n]'
-        # oldText = '{bs 1}}'
-        # => updatedText = '{`n`n}'
-        updatedText = re.sub(r'{bs \d+}', backspacedNewText, newText)
-        return updatedText, True
 
     # ex: inputText = 'Wriet-Output'
     # oldText = 'wriet'
@@ -207,11 +186,6 @@ class Rule:
             if lhs == rhs:
                 # exact match
                 if rule.backspace:
-                    # found whitelist match
-                    if rule.containsBackspacing:
-                        # contains '{bs #}', return new text with backspace applied
-                        return rule.newText, rule, idx
-
                     # otherwise, return text unchanged
                     return inputText, rule, idx
 

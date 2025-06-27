@@ -15,7 +15,7 @@ Install [AutoHotkey](https://www.autohotkey.com/) v2, then run [*AutocorrectForD
 ### Espanso users
 Install [Espanso](https://espanso.org/) for your platform, then [load](https://espanso.org/docs/get-started/) the match file [*AutocorrectForDevelopers.yaml*](AutocorrectForDevelopers.yaml).
 
-To match the behavior of the AutoHotkey script, update your Espanso [settings](https://espanso.org/docs/configuration/options/) to set `undo_backspace` to `false`, and append these `word_separators` to the default list: ``"-", "`", "&", "|", "_", "/", "\", "*", "+", "@", "#"``.
+To match the behavior of the AutoHotkey script, update your Espanso [settings](https://espanso.org/docs/configuration/options/) to set `undo_backspace` to `false`, and append these `word_separators` to Espanso's default list: ``"-", "`", "&", "|", "_", "/", "\", "*", "+", "@", "#", "="``.
 
 ## Testing
 All [tests](https://github.com/tnear/AutocorrectForDevelopers/tree/main/test) are run as part of GitHub [Actions](https://github.com/tnear/AutocorrectForDevelopers/actions), ensuring that any new rules and updates do not regress existing behavior.

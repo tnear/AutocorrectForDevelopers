@@ -12,8 +12,8 @@ class TestMatchPrefix(unittest.TestCase):
         cls.prefixRuleList = [rule.oldText for rule in prefixRules]
 
     def test_ruleLength(self):
-        self.assertGreater(len(self.rules), 5100)
-        self.assertGreater(len(self.prefixRuleList), 700)
+        self.assertGreater(len(self.rules), 5900)
+        self.assertGreater(len(self.prefixRuleList), 800)
 
     def test_replace(self):
         # prefix rules (":*:") match regardless of end char
@@ -142,7 +142,7 @@ EXPLICIT_TESTS = {
     'reqeusting': 'requesting', 'rquesting': 'requesting', 'reuqesting': 'requesting',
     'retur ntrue': 'return true', 'rqeusting': 'requesting', 'ocnstant': 'constant',
     'reawrding': 'rewarding', 'consitsently': 'consistently', 'resutled': 'resulted',
-    'difficutly': 'difficulty', 'atachment': 'attachment', 'brachned': 'branched', 'lauchning': 'launching',
+    'difficutly': 'difficulty', 'brachned': 'branched', 'lauchning': 'launching',
     'manaegment': 'management',
     'recusrively': 'recursively', 'nuemrator': 'numerator', 'asserrtion': 'assertion', 'swithcing': 'switching',
     'remvoed': 'removed', 'quikcsort': 'quicksort', 'sytematic': 'systematic',
@@ -198,7 +198,7 @@ EXPLICIT_TESTS = {
     'assesrt': 'assert', 'mtach': 'match', 'amtch': 'match',
     'progrma': 'program', 'suceed': 'succeed', 'idemoptent': 'idempotent', 'acount': 'account', 'impelement': 'implement',
     'reqiure': 'require', 'staet': 'state', 'reustl': 'result', 'alhpabet': 'alphabet', 'seuence': 'sequence',
-    'prdouct': 'product', 'reuire': 'require', 'privelege': 'privilege', 'priviledge': 'privilege', 'queyr': 'query',
+    'prdouct': 'product', 'reuire': 'require', 'queyr': 'query',
     'qeury': 'query', 'unsroted': 'unsorted', 'unosrted': 'unsorted', 'inerst': 'insert',
     'ranges:;': 'ranges::', 'rangeS::': 'ranges::', 'ranges;:': 'ranges::', 'reeturn': 'return',
     'otekn': 'token', 'seocnd': 'second', 'secodn': 'second', 'preprae': 'prepare',
@@ -210,7 +210,7 @@ EXPLICIT_TESTS = {
     'altenrate': 'alternate', 'invovle': 'involve', 'resovle': 'resolve', 'reaosn': 'reason', 'fasel;': 'false;',
     'relaitve': 'relative', 'replya': 'replay', 'retuern': 'return', 'reomve': 'remove', 'rmoeve': 'remove', 'fo r(': 'for (',
     'expalin': 'explain', 'distirbute': 'distribute', 'contian': 'contain', 'contina': 'contain', 'ocntain': 'contain',
-    'porblem': 'problem', 'whitelsit': 'whitelist', 'permtue': 'permute', 'pemrute': 'permute', '{`n`n]': '{`n`n}',
+    'porblem': 'problem', 'whitelsit': 'whitelist', 'permtue': 'permute', 'pemrute': 'permute',
     'configrue': 'configure', 'aproach': 'approach', 'rpelica': 'replica', 'rewtach': 'rewatch', 'brnahc': 'branch',
     'reigster': 'register', 'lisetn': 'listen', 'repilca': 'replica', 'excepet': 'except',
     'cralw': 'crawl', 'carwl': 'crawl', 'awtch': 'watch', 'differnt': 'different', 'repaly': 'replay',
@@ -291,7 +291,20 @@ EXPLICIT_TESTS = {
     'exit9)': 'exit()', 'converets': 'converts', 'covnerts': 'converts', 'strcuture': 'structure',
     'sturctured': 'structured', 'destorys': 'destroys', 'vesrions': 'versions', 'veriosns': 'versions',
     'verisnos': 'versions', 'verisons': 'versions', 'vesrinos': 'versions', 'initaitor': 'initiator',
-    'alamring': 'alarming', 'obsoltes': 'obsoletes',
+    'alamring': 'alarming', 'obsoltes': 'obsoletes', 'respnose': 'response', 'spritns': 'sprints',
+    'algoirthms': 'algorithms', 'algorihtms': 'algorithms', 'algoirhtms': 'algorithms', 'algroithms': 'algorithms',
+    'algortihms': 'algorithms', 'algorhtms': 'algorithms', 'algorihms': 'algorithms', 'algorthms': 'algorithms',
+    'algorithims': 'algorithms', 'atributes': 'attributes', 'attirbutes': 'attributes', 'attirubtes': 'attributes',
+    'attriubtes': 'attributes', 'attribtues': 'attributes', 'behaivoral': 'behavioral', 'behvaioral': 'behavioral',
+    'behaviroal': 'behavioral', 'beahvioral': 'behavioral', 'stragihten': 'straighten', 'lbocks': 'blocks',
+    'unlbocks': 'unblocks', 'fielsystems': 'filesystems', 'iflesystems': 'filesystems', 'filesytems': 'filesystems',
+    'filesytsems': 'filesystems', 'filesysetms': 'filesystems', 'filessytems': 'filesystems', 'subssytems': 'subsystems',
+    'normlas': 'normals', 'mehtods': 'methods', 'overflwos': 'overflows', 'speciifics': 'specifics', 'dleivers': 'delivers',
+    'dlievers': 'delivers', 'percenetile': 'percentile', 'dentoes': 'denotes', 'unregistsers': 'unregisters',
+    'unreigsters': 'unregisters', 'rewrads': 'rewards', 'archvier': 'archiver', 'funcitoning': 'functioning',
+    'transofmration': 'transformation', 'prealocates': 'preallocates', 'preallcoates': 'preallocates',
+    'redesings': 'redesigns', 'finsihed': 'finished', 'transaltion': 'translation', 'wihtelist': 'whitelist',
+    'understnading': 'understanding', 'virutalize': 'virtualize', 'virtulaize': 'virtualize',
 }
 
 if __name__ == '__main__':

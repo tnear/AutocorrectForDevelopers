@@ -19,7 +19,7 @@ class TestMatchPrefix(unittest.TestCase):
         cls.exactMatchDict = {rule.oldText : rule.newText for rule in exactMatchRules}
 
         # save all whitelist rules in set
-        whitelistRules = [rule for rule in cls.rules if rule.backspace and not rule.containsBackspacing]
+        whitelistRules = [rule for rule in cls.rules if rule.backspace]
         cls.whitelistSet = {text.oldText for text in whitelistRules}
 
     def test_ruleLength(self):
@@ -128,7 +128,7 @@ class TestMatchPrefix(unittest.TestCase):
 # these are suffixes which should not be whitelisted. These should be autocorrected to actual words.
 NO_WHITELIST_EXCEPTIONS = {
     'aicng', 'aegs', 'allly', 'bakc', 'bakcs', 'baord', 'boadr', 'baords', 'borads', 'csated', 'csats', 'ctiy', 'ciyt',
-    'citiy', 'DAta', 'daets', 'digns', 'donw', 'odwn', 'aech', 'edns', 'ofrm', 'ofmr', 'ofrmed', 'formed', 'fomred',
+    'citiy', 'DAta', 'daets', 'digns', 'donw', 'odwn', 'edns', 'ofrm', 'ofmr', 'ofrmed', 'formed', 'fomred',
     'ofmred', 'ofrmer', 'fomrer', 'ofmrer', 'ofrmers', 'fomrers', 'ofmrers', 'ofrming', 'fomring', 'ofmring', 'ofrms',
     'fomrs', 'ofmrs', 'getnly', 'grahpy', 'lnied', 'lnies', 'laod', 'laoded', 'laoder', 'laoding', 'laods', 'lcok',
     'lcoks', 'amrk', 'mrak', 'amrked', 'mraked', 'amrking', 'mraking', 'amrks', 'mraks', 'amte', 'amted', 'naion',
@@ -140,6 +140,7 @@ NO_WHITELIST_EXCEPTIONS = {
     'owrk', 'wokr', 'owrking', 'wokring', 'owrks', 'wokrs', 'dtae', 'dtaes', 'wehre', 'lcoked', 'lokc', 'lokcs',
     'opsed', 'opses', 'psoes', 'opitn', 'opitns', 'wheer', 'pgin', 'pgins', 'iwng', 'wgin', 'wgins', 'wrok',
     'srue', 'tihng', 'emntal', 'emtnal', 'metnal', 'mnetal', 'wroks', 'wroking', 'donws', 'odwns', 'thying', 'byet',
+    'byets', 'csating',
 }
 
 # explicit tests for suffix words (usually as part of bug fixes)
@@ -160,7 +161,7 @@ EXPLICIT_TESTS = {
     'cryptogarphy': 'cryptography', 'cryptograhpy': 'cryptography', 'varinat': 'variant',
     'logicla': 'logical', 'effiicent': 'efficient', 'gradietn': 'gradient',
     'gradienet': 'gradient', 'gradietns': 'gradients', 'gradienets': 'gradients', 'heigth': 'height',
-    'utliity': 'utility', 'fianl': 'final',
+    'utliity': 'utility',
     'strnig': 'string', 'strnigs': 'strings', 'strign': 'string', 'strigns': 'strings',
     'optoinal': 'optional', 'optioanl': 'optional', 'prevouis': 'previous',
     'prevoius': 'previous', 'deciison': 'decision', 'deciisons': 'decisions', 'edtiing': 'editing',
@@ -188,9 +189,9 @@ EXPLICIT_TESTS = {
     'constnat': 'constant', 'constatn': 'constant', 'constnats': 'constants', 'constatns': 'constants',
     'cathces': 'catches', 'persistenet': 'persistent', 'anotehr': 'another',
     'lifeitme': 'lifetime', 'lifetiem': 'lifetime', 'lifeitmes': 'lifetimes', 'lifetiems': 'lifetimes',
-    'tesitng': 'testing', 'funciton': 'function', 'functino': 'function', 'functoin': 'function',
-    'funciotn': 'function', 'funcitons': 'functions', 'functinos': 'functions', 'functoins': 'functions',
-    'funciotns': 'functions', 'functiosn': 'functions', 'funcitonal': 'functional', 'actvie': 'active',
+    'tesitng': 'testing', 'transaciton': 'transaction', 'functino': 'function', 'functoin': 'function',
+    'funciotn': 'function', 'transacitons': 'transactions', 'functinos': 'functions', 'functoins': 'functions',
+    'funciotns': 'functions', 'functiosn': 'functions', 'transacitonal': 'transactional', 'actvie': 'active',
     'featuer': 'feature', 'featuers': 'features', 'fautls': 'faults', 'exectued': 'executed',
     'exectuion': 'execution', 'exectuions': 'executions', 'discoveyr': 'discovery',
     'activtiy': 'activity', 'softwrae': 'software', 'frameowrk': 'framework', 'framewokr': 'framework',
@@ -210,27 +211,27 @@ EXPLICIT_TESTS = {
     'initilaizes': 'initializes', 'csats': 'casts', 'duplicaets': 'duplicates', 'weigths': 'weights',
     'accoutned': 'accounted', 'exproted': 'exported', 'captuerd': 'captured',
     'transopse': 'transpose', 'statitsic': 'statistic', 'statitsics': 'statistics',
-    'materila': 'material', 'GraphNdoe': 'GraphNode', 'launhicng': 'launching',
+    'GraphNdoe': 'GraphNode', 'launhicng': 'launching',
     'veriifes': 'verifies', 'visiilbity': 'visibility', 'emulatro': 'emulator', 'emulatros': 'emulators',
     'gradeint': 'gradient', 'gradeints': 'gradients', 'averaegd': 'averaged', 'captrued': 'captured',
     'clikced': 'clicked', 'appedned': 'appended', 'appedns': 'appends', 'benchamrk': 'benchmark',
     'benchamrked': 'benchmarked', 'benchamrks': 'benchmarks', 'cloend': 'cloned', 'compsoed': 'composed',
     'trianed': 'trained', 'eraesd': 'erased', 'puhsed': 'pushed', 'cahced': 'cached', 'adatped': 'adapted',
     'tetsed': 'tested', 'lisetd': 'listed', 'gradeitn': 'gradient', 'gradeitns': 'gradients',
-    'noityf': 'notify', 'wrapepr': 'wrapper', 'csated': 'casted', 'encoidngs': 'encodings',
+    'noityf': 'notify', 'csated': 'casted', 'encoidngs': 'encodings',
     'ofrmed': 'formed', 'fomred': 'formed', 'estiamted': 'estimated', 'generla': 'general', 'priavte': 'private',
     'actiavted': 'activated', 'actiavtes': 'activates', 'activaets': 'activates', 'inofrming': 'informing',
     'transfomring': 'transforming', 'dependenices': 'dependencies', 'literlas': 'literals',
     'remaisn': 'remains', 'lokcing': 'locking', 'boadr': 'board',
-    'perforemd': 'performed', 'clokcs': 'clocks', 'smalelr': 'smaller', 'transofmr': 'transform',
-    'transofmred': 'transformed', 'transofmring': 'transforming', 'transofmrs': 'transforms', 'deliverey': 'delivery',
+    'perforemd': 'performed', 'clokcs': 'clocks', 'smalelr': 'smaller', 'perofmr': 'perform',
+    'perofmred': 'performed', 'perofmring': 'performing', 'perofmrs': 'performs', 'deliverey': 'delivery',
     'tikcet': 'ticket', 'tikcets': 'tickets', 'traiend': 'trained', 'curretn': 'current', 'veriifed': 'verified',
     'softawre': 'software', 'mathcer': 'matcher', 'mathcers': 'matchers',
     'lokcer': 'locker', 'lokcers': 'lockers', 'platofrmer': 'platformer', 'platfomrer': 'platformer',
     'platofmrer': 'platformer', 'platofrmers': 'platformers', 'platfomrers': 'platformers', 'platofmrers': 'platformers',
     'veriifer': 'verifier', 'veriifers': 'verifiers',
     'redner': 'render', 'redners': 'renders', 'exproter': 'exporter', 'exproters': 'exporters',
-    'raech': 'reach', 'equaliesd': 'equalised', 'equaliesr': 'equaliser', 'speciified': 'specified',
+    'equaliesd': 'equalised', 'equaliesr': 'equaliser', 'speciified': 'specified',
     'speciifier': 'specifier', 'speciifiers': 'specifiers', 'speciifies': 'specifies', 'travleing': 'traveling',
     'compraes': 'compares', 'visualzie': 'visualize', 'representaitno': 'representation',
     'representaitnos': 'representations', 'direcitnoal': 'directional', 'distnace': 'distance',
@@ -290,10 +291,10 @@ EXPLICIT_TESTS = {
     'comopsed': 'composed', 'unlokc': 'unlock', 'lokcs': 'locks', 'comopses': 'composes',
     'compsoes': 'composes', 'adjacecny': 'adjacency', 'validaotr': 'validator', 'validaotrs': 'validators',
     'veriyfing': 'verifying', 'membesr': 'members', 'workaruond': 'workaround', 'workaruonds': 'workarounds',
-    'variabel': 'variable', 'varialbes': 'variables', 'variabels': 'variables', 'termainl': 'terminal',
+    'variabel': 'variable', 'varialbes': 'variables', 'variabels': 'variables',
     'lifeimte': 'lifetime', 'lifeimtes': 'lifetimes', 'pakcs': 'packs', 'expressiosn': 'expressions',
     'statistisc': 'statistics', 'breakopitn': 'breakpoint', 'breakopitns': 'breakpoints', 'concurrenet': 'concurrent',
-    'concurrenetly': 'concurrently', 'persistenetly': 'persistently', 'toggeld': 'toggled', 'everywheer': 'everywhere',
+    'concurrenetly': 'concurrently', 'persistenetly': 'persistently', 'everywheer': 'everywhere',
     'docekr': 'docker', 'docekrs': 'dockers', 'reverisng': 'reversing', 'describgin': 'describing',
     'advancgin': 'advancing', 'hashgin': 'hashing', 'workgin': 'working', 'samplgin': 'sampling', 'samplgins': 'samplings',
     'opengins': 'openings', 'mappgin': 'mapping', 'mappgins': 'mappings', 'routgin': 'routing',
@@ -308,7 +309,11 @@ EXPLICIT_TESTS = {
     'accurtaely': 'accurately', 'directroies': 'directories', 'anythying': 'anything', 'conditoinals': 'conditionals',
     'conditioanls': 'conditionals', 'documetning': 'documenting', 'technoloyg': 'technology', 'mentieond': 'mentioned',
     'applicatsion': 'application', 'applicatsions': 'applications', 'flatteend': 'flattened', 'sequecne': 'sequence',
-    'sequecnes': 'sequences', 'megabyet': 'megabyte',
+    'sequecnes': 'sequences', 'megabyet': 'megabyte', 'kilobyets': 'kilobytes', 'meausre': 'measure',
+    'assrues': 'assures', 'meausres': 'measures', 'colletcor': 'collector', 'colletcors': 'collectors',
+    'measuerd': 'measured', 'cycilng': 'cycling', 'fililngs': 'fillings', 'improting': 'importing',
+    'broadcsating': 'broadcasting', 'experimeneting': 'experimenting', 'experiemnting': 'experimenting',
+    'experimeenting': 'experimenting', 'experimneting': 'experimenting', 'simplifeid': 'simplified',
 }
 
 if __name__ == '__main__':
