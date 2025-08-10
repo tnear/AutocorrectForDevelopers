@@ -26,13 +26,13 @@ MATCH_NONE_LIST = [
     'exponentiation', 'ISZE', 'ILNE', 'Fales', 'complier', 'hwo', # ambiguous between 'who' and 'how'
     'from', 'form', 'Alvie', 'Horus', 'triangle', 'highlighting', 'sightings',
     'fro', 'Then', 'Shatner', 'escond', 'halted', 'lien', 'rootin', 'have OT', 'spraed', # spread/spared
-    'falte', 'baltes', 'hadnet', 'wordnets', 'yuo', 'Yuo', 'Gorup', 'bahs', 'clas', 'fiel', 'moer', 'rela',
+    'falte', 'baltes', 'hadnet', 'wordnets', 'yuo', 'Yuo', 'Gorup', 'clas', 'fiel', 'moer', 'rela',
     'saem', 'ture', 'nto', 'allWords', 'Stroe', 'keyforeign', 'beign', 'assigns', 'redesigns', 'foreigns',
     'moriarty', 'ign', 'bailly', 'motley', # 'tley::tely' requires too many whitelists
     'yoruba', 'konway', 'sign', 'design', 'systemdesign', 'assign', 'variableassign', 'changin', # changin'
     'ehre', 'botnet', 'cadres', 'impot', 'impots', 'loggin', # loggin'
     'hearte', 'lighthearted', 'netly', # netly -> ently often changes one typo into another typo
-    'compliers', 'expor',
+    'compliers', 'expor', 'recusing', 'vetor',
 ]
 
 if __name__ == '__main__':

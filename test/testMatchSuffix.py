@@ -88,8 +88,8 @@ class TestMatchPrefix(unittest.TestCase):
             for oldTextExact, newTextExact in self.exactMatchDict.items():
                 hasRedundancy = oldTextExact.endswith(oldText) and newTextExact.endswith(newText)
                 if hasRedundancy:
-                    # due to nested loop, its faster to self.fail than self.assertFalse
-                    self.fail(f'Found redundant exact match rule: "{oldTextExact}" not needed due to "{oldText}"')
+                    # due to nested loop, it's faster to self.fail than self.assertFalse
+                    self.fail(f'Redundant exact match: "{oldTextExact}" not needed due to suffix "-{oldText}"')
 
     def test_suffixRulesHaveWhitelist(self):
         # every suffix needs a decision on whether it should be whitelisted.
@@ -140,7 +140,7 @@ NO_WHITELIST_EXCEPTIONS = {
     'owrk', 'wokr', 'owrking', 'wokring', 'owrks', 'wokrs', 'dtae', 'dtaes', 'wehre', 'lcoked', 'lokc', 'lokcs',
     'opsed', 'opses', 'psoes', 'opitn', 'opitns', 'wheer', 'pgin', 'pgins', 'iwng', 'wgin', 'wgins', 'wrok',
     'srue', 'tihng', 'emntal', 'emtnal', 'metnal', 'mnetal', 'wroks', 'wroking', 'donws', 'odwns', 'thying', 'byet',
-    'byets', 'csating',
+    'byets', 'csating', 'baording', 'borading', 'boadring',
 }
 
 # explicit tests for suffix words (usually as part of bug fixes)
@@ -314,6 +314,11 @@ EXPLICIT_TESTS = {
     'measuerd': 'measured', 'cycilng': 'cycling', 'fililngs': 'fillings', 'improting': 'importing',
     'broadcsating': 'broadcasting', 'experimeneting': 'experimenting', 'experiemnting': 'experimenting',
     'experimeenting': 'experimenting', 'experimneting': 'experimenting', 'simplifeid': 'simplified',
+    'onbaording': 'onboarding', 'onborading': 'onboarding', 'onboadring': 'onboarding', 'balnacer': 'balancer',
+    'balacner': 'balancer', 'verfiies': 'verifies', 'connetcion': 'connection', 'connetcions': 'connections',
+    'formatetr': 'formatter', 'formatetrs': 'formatters', 'forwrad': 'forward', 'forwrads': 'forwards',
+    'forwraded': 'forwarded', 'wrapeprs': 'wrappers', 'develoeprs': 'developers', 'longeivty': 'longevity',
+    'longeviyt': 'longevity', 'aspetc': 'aspect', 'registratn': 'registrant', 'registratns': 'registrants',
 }
 
 if __name__ == '__main__':
