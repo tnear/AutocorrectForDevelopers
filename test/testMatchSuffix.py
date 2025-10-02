@@ -319,6 +319,8 @@ EXPLICIT_TESTS = {
     'formatetr': 'formatter', 'formatetrs': 'formatters', 'forwrad': 'forward', 'forwrads': 'forwards',
     'forwraded': 'forwarded', 'wrapeprs': 'wrappers', 'develoeprs': 'developers', 'longeivty': 'longevity',
     'longeviyt': 'longevity', 'aspetc': 'aspect', 'registratn': 'registrant', 'registratns': 'registrants',
+    'cryptograhpic': 'cryptographic', 'represetn': 'represent', 'accurateyl': 'accurately', 'depednable': 'dependable',
+    'brihgter': 'brighter', 'adjacetn': 'adjacent', 'advisign': 'advising',
 }
 
 if __name__ == '__main__':

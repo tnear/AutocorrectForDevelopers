@@ -32,7 +32,7 @@ MATCH_NONE_LIST = [
     'yoruba', 'konway', 'sign', 'design', 'systemdesign', 'assign', 'variableassign', 'changin', # changin'
     'ehre', 'botnet', 'cadres', 'impot', 'impots', 'loggin', # loggin'
     'hearte', 'lighthearted', 'netly', # netly -> ently often changes one typo into another typo
-    'compliers', 'expor', 'recusing', 'vetor',
+    'compliers', 'expor', 'recusing', 'vetor', 'aCounter',
 ]
 
 if __name__ == '__main__':

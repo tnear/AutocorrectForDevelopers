@@ -25,16 +25,11 @@ All [tests](https://github.com/tnear/AutocorrectForDevelopers/tree/main/test) ar
 ### How does *AutocorrectForDevelopers.ahk* compare to AutoHotkey's official *AutoCorrect.ahk* script?
 AutoHotkey's official autocorrect [script](https://www.autohotkey.com/download/AutoCorrect.ahk) is based in Wikipedia's [common misspellings](https://en.wikipedia.org/wiki/Wikipedia:Lists_of_common_misspellings/For_machines) list from [2005](https://en.wikipedia.org/w/index.php?title=Wikipedia:Lists_of_common_misspellings/For_machines&oldid=11834258). Jim Biancolo [ported](https://www.biancolo.com/blog/autocorrect/) Wikipedia's list to an AutoHotkey script in 2006 and it has been hosted on AutoHotkey.com since 2007. The original script is widely influential and has been used successfully by many people for years.
 
-Shown below is a Venn diagram comparing excerpts from the official *AutoCorrect.ahk* with *AutocorrectForDevelopers.ahk*:
-
 ![Venn diagram](assets/VennDiagram.png)
 
-*AutoCorrect.ahk*, shown in yellow, contains many rules for rare words which software engineers are unlikely to need. It also introduces many accented characters which are correct but developer unfriendly. Lastly, the official script hasn't seen much active development in the last 15 years and therefore is missing new technology terminology.
+*AutoCorrect.ahk*, shown in yellow, contains many rules for rare words which software engineers are unlikely to need. Also, the official script hasn't seen active development in 15 years and therefore is missing new technology terminology.
 
 *AutocorrectForDevelopers.ahk*, shown in purple, contains many common software engineering terms which are absent from *AutoCorrect.ahk*. Because *AutocorrectForDevelopers.ahk* is developer-centric, it will fix a higher percentage of your typos.
-
-### Does this support [Espanso](https://github.com/espanso/espanso)?
-Yes! Espanso is a cross-platform (Windows, macOS, Linux) text expander while AutoHotkey is scoped to Microsoft Windows. Load the generated file [*AutocorrectForDevelopers.yaml*](AutocorrectForDevelopers.yaml) in Espanso if you need non-Windows support.
 
 ### What programming subjects does this script contain?
 - Languages: AutoHotkey, C, C++, C#, COBOL, CSS, FORTRAN, Go, Java, JavaScript, Julia, Kotlin, Lua, MATLAB, Perl, PHP, Python, R, Ruby, Rust, Scala, SQL, Swift, Visual Basic

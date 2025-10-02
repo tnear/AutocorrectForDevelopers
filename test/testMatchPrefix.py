@@ -207,7 +207,7 @@ EXPLICIT_TESTS = {
     'confilct': 'conflict', 'speciifc': 'specific', 'genearte': 'generate', 'releation': 'relation',
     'reuest': 'request', 'profiel': 'profile', 'qeustion': 'question', 'bleong': 'belong', 'rnaodm': 'random', 'lerna': 'learn',
     'restul': 'result', 'belogn': 'belong', 'equla': 'equal', 'apir<': 'pair<', 'addvance': 'advance', 'follwo': 'follow',
-    'altenrate': 'alternate', 'invovle': 'involve', 'resovle': 'resolve', 'reaosn': 'reason', 'fasel;': 'false;',
+    'altenrate': 'alternate', 'invovle': 'involve', 'resovle': 'resolve', 'reaosn': 'reason',
     'relaitve': 'relative', 'replya': 'replay', 'retuern': 'return', 'reomve': 'remove', 'rmoeve': 'remove', 'fo r(': 'for (',
     'expalin': 'explain', 'distirbute': 'distribute', 'contian': 'contain', 'contina': 'contain', 'ocntain': 'contain',
     'porblem': 'problem', 'whitelsit': 'whitelist', 'permtue': 'permute', 'pemrute': 'permute',
@@ -314,6 +314,14 @@ EXPLICIT_TESTS = {
     'expoentnials': 'exponentials', 'expoentials': 'exponentials', 'expoenntials': 'exponentials',
     'expoenentials': 'exponentials', 'exponenetials': 'exponentials', 'instantaites': 'instantiates',
     'instnatiates': 'instantiates', 'renaems': 'renames', 'expailns': 'explains', 'demonstarting': 'demonstrating',
+    'refreences': 'references', 'disucssion': 'discussion', 'ubndled': 'bundled', 'overhaets': 'overheats',
+    'bootstarps': 'bootstraps', 'injetced': 'injected', 'rqeuests': 'requests', 'hihglights': 'highlights',
+    'idsconnection': 'disconnection', 'reloaction': 'relocation', 'lcoates': 'locates', 'multithraeded': 'multithreaded',
+    'mltithreaded': 'multithreaded', 'relcoate': 'relocate', 'misconifgure': 'misconfigure', 'reconifgure': 'reconfigure',
+    'unconifgured': 'unconfigured', 'hyeprvisor': 'hypervisor', 'encapuslate': 'encapsulate', 'daedlocks': 'deadlocks',
+    'reginos': 'regions', 'rquiers': 'requires', 'stnadardize': 'standardize', 'standrads': 'standards',
+    'gourping': 'grouping', 'itnelligence': 'intelligence', 'esrialize': 'serialize', 'disocnnection': 'disconnection',
+    'percnetile': 'percentile', 'gruops': 'groups',
 }
 
 if __name__ == '__main__':
