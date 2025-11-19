@@ -32,7 +32,7 @@ AutoHotkey's official autocorrect [script](https://www.autohotkey.com/download/A
 *AutocorrectForDevelopers.ahk*, shown in purple, contains many common software engineering terms which are absent from *AutoCorrect.ahk*. Because *AutocorrectForDevelopers.ahk* is developer-centric, it will fix a higher percentage of your typos.
 
 ### What programming subjects does this script contain?
-- Languages: AutoHotkey, C, C++, C#, COBOL, CSS, FORTRAN, Go, Java, JavaScript, Julia, Kotlin, Lua, MATLAB, Perl, PHP, Python, R, Ruby, Rust, Scala, SQL, Swift, Visual Basic
-- Programs: GDB, Git, PowerShell, UNIX CLI
+- Languages: C, C++, C#, COBOL, CSS, FORTRAN, Go, Java, JavaScript, Julia, Kotlin, Lua, Perl, PHP, Python, R, Ruby, Rust, Scala, SQL, Swift, Terraform, Visual Basic, Zig
+- Programs: AutoHotkey, GDB, Git, MATLAB, PowerShell, UNIX CLI
 - Subjects: algorithms, artificial intelligence, cloud computing, compilers, concurrency, cryptography, databases, distributed systems, linear algebra, machine learning, networking, operating systems, security, statistics, system design
 - (more to come!)

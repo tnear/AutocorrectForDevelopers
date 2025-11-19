@@ -106,7 +106,7 @@ def get_suffixes_with_words(whitelist_list):
 WHITELIST = [
     'itme', 'misalign', 'misaligns',
     'gardner', 'gardners', 'cupertino', 'snig', 'fomr', # from/form
-    'ligns', 'realigns', 'mylabel', 'mylabels', 'neend',
+    'ligns', 'realigns', 'mylabels', 'neend',
 ]
 
 if __name__ == '__main__':

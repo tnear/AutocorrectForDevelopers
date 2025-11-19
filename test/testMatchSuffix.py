@@ -140,7 +140,7 @@ NO_WHITELIST_EXCEPTIONS = {
     'owrk', 'wokr', 'owrking', 'wokring', 'owrks', 'wokrs', 'dtae', 'dtaes', 'wehre', 'lcoked', 'lokc', 'lokcs',
     'opsed', 'opses', 'psoes', 'opitn', 'opitns', 'wheer', 'pgin', 'pgins', 'iwng', 'wgin', 'wgins', 'wrok',
     'srue', 'tihng', 'emntal', 'emtnal', 'metnal', 'mnetal', 'wroks', 'wroking', 'donws', 'odwns', 'thying', 'byet',
-    'byets', 'csating', 'baording', 'borading', 'boadring',
+    'byets', 'csating', 'baording', 'borading', 'boadring', 'owkr', 'owkrs', 'owkring',
 }
 
 # explicit tests for suffix words (usually as part of bug fixes)
@@ -291,7 +291,7 @@ EXPLICIT_TESTS = {
     'comopsed': 'composed', 'unlokc': 'unlock', 'lokcs': 'locks', 'comopses': 'composes',
     'compsoes': 'composes', 'adjacecny': 'adjacency', 'validaotr': 'validator', 'validaotrs': 'validators',
     'veriyfing': 'verifying', 'membesr': 'members', 'workaruond': 'workaround', 'workaruonds': 'workarounds',
-    'variabel': 'variable', 'varialbes': 'variables', 'variabels': 'variables',
+    'varialbes': 'variables', 'variabels': 'variables',
     'lifeimte': 'lifetime', 'lifeimtes': 'lifetimes', 'pakcs': 'packs', 'expressiosn': 'expressions',
     'statistisc': 'statistics', 'breakopitn': 'breakpoint', 'breakopitns': 'breakpoints', 'concurrenet': 'concurrent',
     'concurrenetly': 'concurrently', 'persistenetly': 'persistently', 'everywheer': 'everywhere',
@@ -320,7 +320,12 @@ EXPLICIT_TESTS = {
     'forwraded': 'forwarded', 'wrapeprs': 'wrappers', 'develoeprs': 'developers', 'longeivty': 'longevity',
     'longeviyt': 'longevity', 'aspetc': 'aspect', 'registratn': 'registrant', 'registratns': 'registrants',
     'cryptograhpic': 'cryptographic', 'represetn': 'represent', 'accurateyl': 'accurately', 'depednable': 'dependable',
-    'brihgter': 'brighter', 'adjacetn': 'adjacent', 'advisign': 'advising',
+    'brihgter': 'brighter', 'adjacetn': 'adjacent', 'advisign': 'advising', 'apponited': 'appointed',
+    'appionted': 'appointed', 'seriailze': 'serialize', 'seriailzed': 'serialized', 'seriailzer': 'serializer',
+    'construcotr': 'constructor', 'construcotrs': 'constructors', 'thouhg': 'though', 'thoguh': 'though',
+    'thuogh': 'though', 'backawrd': 'backward', 'forwrading': 'forwarding', 'forawrding': 'forwarding',
+    'forawrded': 'forwarded', 'forawrds': 'forwards', 'netowkr': 'network', 'netowkrs': 'networks',
+    'netowkring': 'networking',
 }
 
 if __name__ == '__main__':
