@@ -1,5 +1,5 @@
 # AutocorrectForDevelopers
-**_AutocorrectForDevelopers_** is a multi-platform script which automatically fixes typos using rules tailored for software developers. *AutocorrectForDevelopers* can be run through [AutoHotkey](https://www.autohotkey.com/) (AHK) or [Espanso](https://github.com/espanso/espanso). The script's rules contain many corrections for common developer words involving keywords, classes, methods, programming languages, and software engineering concepts. This script reduces runtime errors and boosts developer productivity.
+**_AutocorrectForDevelopers_** is a multi-platform script which automatically fixes typos using rules tailored for software developers. *AutocorrectForDevelopers* supports [AutoHotkey](https://www.autohotkey.com/) (AHK) and [Espanso](https://github.com/espanso/espanso). The script's rules contain many corrections for common developer words involving keywords, classes, methods, programming languages, and software engineering concepts. This script reduces runtime errors and boosts developer productivity.
 
 ## How does it work?
 Corrections happen automatically as you type:
@@ -8,7 +8,9 @@ Corrections happen automatically as you type:
 
 By default, *AutocorrectForDevelopers.ahk* runs against all applications (except Microsoft Word), although the script can be customized to enable or disable any application (see the `#HotIf/#If` statement early in the script).
 
-## Installation
+## Script installation
+Run the script from either AutoHotkey *or* Espanso. AutoHotkey is recommended for Windows users.
+
 ### AutoHotkey users
 Install [AutoHotkey](https://www.autohotkey.com/) v2, then run [*AutocorrectForDevelopers.ahk*](AutocorrectForDevelopers.ahk).
 
@@ -27,7 +29,7 @@ AutoHotkey's official autocorrect [script](https://www.autohotkey.com/download/A
 
 ![Venn diagram](assets/VennDiagram.png)
 
-*AutoCorrect.ahk*, shown in yellow, contains many rules for rare words which software engineers are unlikely to need. Also, the official script hasn't seen active development in 15 years and therefore is missing new technology terminology.
+*AutoCorrect.ahk*, shown in yellow, contains many rules for rare words which software engineers are unlikely to need. Also, the official script hasn't seen active development in 15+ years and therefore is missing newer technology terminology.
 
 *AutocorrectForDevelopers.ahk*, shown in purple, contains many common software engineering terms which are absent from *AutoCorrect.ahk*. Because *AutocorrectForDevelopers.ahk* is developer-centric, it will fix a higher percentage of your typos.
 

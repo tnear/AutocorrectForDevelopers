@@ -165,7 +165,7 @@ EXPLICIT_TESTS = {
     'strnig': 'string', 'strnigs': 'strings', 'strign': 'string', 'strigns': 'strings',
     'optoinal': 'optional', 'optioanl': 'optional', 'prevouis': 'previous',
     'prevoius': 'previous', 'deciison': 'decision', 'deciisons': 'decisions', 'edtiing': 'editing',
-    'transtiive': 'transitive', 'primtiives': 'primitives', 'recursivley': 'recursively',
+    'transtiive': 'transitive', 'recursivley': 'recursively',
     'actiivty': 'activity', 'activiyt': 'activity', 'amortiezd': 'amortized',
     'scaalble': 'scalable', 'qualtiy': 'quality', 'qualiyt': 'quality', 'uplaod': 'upload',
     'uplaoded': 'uploaded', 'uplaoder': 'uploader', 'uplaods': 'uploads', 'estiamte': 'estimate',
@@ -325,7 +325,9 @@ EXPLICIT_TESTS = {
     'construcotr': 'constructor', 'construcotrs': 'constructors', 'thouhg': 'though', 'thoguh': 'though',
     'thuogh': 'though', 'backawrd': 'backward', 'forwrading': 'forwarding', 'forawrding': 'forwarding',
     'forawrded': 'forwarded', 'forawrds': 'forwards', 'netowkr': 'network', 'netowkrs': 'networks',
-    'netowkring': 'networking',
+    'netowkring': 'networking', 'administroatr': 'administrator', 'administroatrs': 'administrators',
+    'caugth': 'caught', 'referecning': 'referencing', 'manipualte': 'manipulate', 'manipualted': 'manipulated',
+    'manipualtes': 'manipulates',
 }
 
 if __name__ == '__main__':

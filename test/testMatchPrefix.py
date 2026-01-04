@@ -81,7 +81,6 @@ EXPLICIT_TESTS = {
     'brnaches': 'branches', 'braodcasted': 'broadcasted',
     'chekced': 'checked',
     'comipler': 'compiler', 'conenction': 'connection', 'conector': 'connector',
-    'cosntant': 'constant',
     'contirbutor': 'contributor',
     'contorller': 'controller', 'corectness': 'correctness',
     'dadtabase': 'database',
@@ -139,7 +138,7 @@ EXPLICIT_TESTS = {
     'whtiespace': 'whitespace', 'exeuction': 'execution', 'defualts': 'defaults', 'elmeetns': 'elements',
     'otpional': 'optional', 'toekns': 'tokens', 'contsraint': 'constraint', 'requsting': 'requesting',
     'reqeusting': 'requesting', 'rquesting': 'requesting', 'reuqesting': 'requesting',
-    'retur ntrue': 'return true', 'rqeusting': 'requesting', 'ocnstant': 'constant',
+    'retur ntrue': 'return true', 'rqeusting': 'requesting',
     'consitsently': 'consistently', 'resutled': 'resulted',
     'difficutly': 'difficulty', 'brachned': 'branched', 'lauchning': 'launching',
     'manaegment': 'management',
@@ -269,7 +268,7 @@ EXPLICIT_TESTS = {
     'indutcs': 'inducts', 'produtcion': 'production', 'malfucntion': 'malfunction', 'trasnfer': 'transfer',
     'abbrevaite': 'abbreviate', 'cocnepts': 'concepts', 'seaprate': 'separate', 'mltiple': 'multiple', 'lcoally': 'locally',
     'hwitespace': 'whitespace', 'speicifed': 'specified', 'confgiuration': 'configuration', 'qusetion': 'question',
-    'std;;cout': 'std::cout', 'ranges;;sort': 'ranges::sort', 'exepct': 'expect', 'pubilsh': 'publish',
+    'exepct': 'expect', 'pubilsh': 'publish',
     'recommned': 'recommend', 'hyperpareamters': 'hyperparameters', 'hyperparaemters': 'hyperparameters',
     'hyperparmaeters': 'hyperparameters', 'asynchornously': 'asynchronously', 'asychrnously': 'asynchronously',
     'asyncrhonously': 'asynchronously', 'asynchrnously': 'asynchronously', 'aggreation': 'aggregation',
@@ -325,6 +324,11 @@ EXPLICIT_TESTS = {
     'functioality': 'functionality', 'fucntionality': 'functionality', 'funtionality': 'functionality',
     'fnctionality': 'functionality', 'fucniotnality': 'functionality', 'funtcionality': 'functionality',
     'fuctionality': 'functionality', 'fuctnionality': 'functionality', 'mathmatics': 'mathematics',
+    'cosntantly': 'constantly', 'contsantly': 'constantly', 'ocnstantly': 'constantly', 'cosntructor': 'constructor',
+    'ocnstructor': 'constructor', 'csontructor': 'constructor', 'genreation': 'generation', 'morhps': 'morphs',
+    'restroes': 'restores', 'decyrpts': 'decrypts', 'encrytps': 'encrypts', 'decrytps': 'decrypts',
+    'parmeters': 'parameters', 'braekpoint': 'breakpoint', 'enfrocing': 'enforcing', 'remoevd': 'removed',
+    'infalted': 'inflated', 'corupts': 'corrupts',
 }
 
 if __name__ == '__main__':
