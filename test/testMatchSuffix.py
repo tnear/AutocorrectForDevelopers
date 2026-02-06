@@ -128,7 +128,7 @@ class TestMatchPrefix(unittest.TestCase):
 # these are suffixes which should not be whitelisted. These should be autocorrected to actual words.
 NO_WHITELIST_EXCEPTIONS = {
     'aicng', 'aegs', 'allly', 'bakc', 'bakcs', 'baord', 'boadr', 'baords', 'borads', 'csated', 'csats', 'ctiy', 'ciyt',
-    'citiy', 'DAta', 'daets', 'digns', 'donw', 'odwn', 'edns', 'ofrm', 'ofmr', 'ofrmed', 'formed', 'fomred',
+    'citiy', 'DAta', 'daets', 'digns', 'donw', 'odwn', 'edns', 'ofrm', 'ofmr', 'ofrmed', 'fomred',
     'ofmred', 'ofrmer', 'fomrer', 'ofmrer', 'ofrmers', 'fomrers', 'ofmrers', 'ofrming', 'fomring', 'ofmring', 'ofrms',
     'fomrs', 'ofmrs', 'getnly', 'grahpy', 'lnied', 'lnies', 'laod', 'laoded', 'laoder', 'laoding', 'laods', 'lcok',
     'lcoks', 'amrk', 'mrak', 'amrked', 'mraked', 'amrking', 'mraking', 'amrks', 'mraks', 'amte', 'amted', 'naion',
@@ -141,6 +141,7 @@ NO_WHITELIST_EXCEPTIONS = {
     'opsed', 'opses', 'psoes', 'opitn', 'opitns', 'wheer', 'pgin', 'pgins', 'iwng', 'wgin', 'wgins', 'wrok',
     'srue', 'tihng', 'emntal', 'emtnal', 'metnal', 'mnetal', 'wroks', 'wroking', 'donws', 'odwns', 'thying', 'byet',
     'byets', 'csating', 'baording', 'borading', 'boadring', 'owkr', 'owkrs', 'owkring',
+    'baorded', 'boraded', 'boadred',
 }
 
 # explicit tests for suffix words (usually as part of bug fixes)
@@ -327,7 +328,9 @@ EXPLICIT_TESTS = {
     'forawrded': 'forwarded', 'forawrds': 'forwards', 'netowkr': 'network', 'netowkrs': 'networks',
     'netowkring': 'networking', 'administroatr': 'administrator', 'administroatrs': 'administrators',
     'caugth': 'caught', 'referecning': 'referencing', 'manipualte': 'manipulate', 'manipualted': 'manipulated',
-    'manipualtes': 'manipulates',
+    'manipualtes': 'manipulates', 'capabliities': 'capabilities', 'workigns': 'workings', 'worknigs': 'workings',
+    'workgins': 'workings', 'accoutnable': 'accountable', 'refuesd': 'refused', 'expetcs': 'expects',
+    'onbaorded': 'onboarded', 'onboraded': 'onboarded', 'onboadred': 'onboarded',
 }
 
 if __name__ == '__main__':

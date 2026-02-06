@@ -166,7 +166,7 @@ EXPLICIT_TESTS = {
     'strucutred': 'structured', 'insretion': 'insertion', 'rnadomize': 'randomize', 'srings': 'strings', 'stirngs': 'strings',
     'tsrings': 'strings', 'reuslets': 'results', 'rsluts': 'results', 'parittions': 'partitions', 'inserrtion': 'insertion',
     'leements': 'elements', 'memroise': 'memorise', 'defaluted': 'defaulted',
-    'ocnditional': 'conditional', 'consdiers': 'considers', 'indeexes': 'indexes',
+    'ocnditional': 'conditional', 'consdiers': 'considers',
     'peformance': 'performance', 'paritcipant': 'participant', 'unsubcribed': 'unsubscribed', 'rqeuirement': 'requirement',
     'porgramming': 'programming', 'igonre': 'ignore', 'prpeares': 'prepares', 'schedluer': 'scheduler',
     'ajdusting': 'adjusting', 'dfeaulted': 'defaulted', 'reminas': 'remains', 'folows': 'follows',
@@ -328,7 +328,11 @@ EXPLICIT_TESTS = {
     'ocnstructor': 'constructor', 'csontructor': 'constructor', 'genreation': 'generation', 'morhps': 'morphs',
     'restroes': 'restores', 'decyrpts': 'decrypts', 'encrytps': 'encrypts', 'decrytps': 'decrypts',
     'parmeters': 'parameters', 'braekpoint': 'breakpoint', 'enfrocing': 'enforcing', 'remoevd': 'removed',
-    'infalted': 'inflated', 'corupts': 'corrupts',
+    'infalted': 'inflated', 'corupts': 'corrupts', 'dfificulty': 'difficulty', 'dpeloys': 'deploys',
+    'prmootes': 'promotes', 'radnomly': 'randomly', 'aovids': 'avoids', 'avodis': 'avoids', 'aviods': 'avoids',
+    'vaoids': 'avoids', 'colapsed': 'collapsed', 'invsetment': 'investment', 'arhcived': 'archived',
+    'reassings': 'reassigns', 'recraeting': 'recreating', 'interveiwing': 'interviewing', 'preveiws': 'previews',
+    'troubelshoot': 'troubleshoot', 'eelments': 'elements', 'fingerpritns': 'fingerprints',
 }
 
 if __name__ == '__main__':

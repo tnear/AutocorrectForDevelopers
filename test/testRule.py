@@ -110,7 +110,7 @@ class TestRule(unittest.TestCase):
         self.assertEqual(len(lines), 1)
 
         # the chars after '`n' below are added by AutocorrectForDevelopers
-        self.assertTrue(lines[0].endswith('-()[]{}:;\'"/\\,.?!`n `t<>*``=&|_+@#'))
+        self.assertTrue(lines[0].endswith('-()[]{}:;\'"/\\,.?!`n <>*``=&|_+@#'))
 
     def test_allRulesMustChangeText(self):
         # prevents a redundant rule where oldText equals newText (causes unnecessary flicker)

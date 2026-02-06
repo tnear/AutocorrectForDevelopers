@@ -76,7 +76,7 @@ class TestEspanso(unittest.TestCase):
             f.write(yaml)
 
     def test_escapeQuote(self):
-        firstQuoteRule = [rule for rule in self.rules if not rule.backspace and not rule.caseSensitive and '"' in rule.oldText][0]
+        firstQuoteRule = [rule for rule in self.rules if not rule.backspace and '"' in rule.oldText][0]
         self.assertTrue('"' in firstQuoteRule.oldText)
         espansoRule = Rule.convertOneRuleToEspanso(firstQuoteRule)
 
@@ -84,8 +84,7 @@ class TestEspanso(unittest.TestCase):
         expOldText = firstQuoteRule.oldText.replace('"', '\\"')
         expected = f'  - trigger: "{expOldText}"\n'
         expected += Rule.yamlIndent + f'replace: "{firstQuoteRule.newText}"\n'
-        expected += Rule.yamlIndent + 'word: true\n'
-        expected += Rule.yamlIndent + 'propagate_case: true\n\n'
+        expected += Rule.yamlIndent + 'word: true\n\n'
         self.assertEqual(espansoRule, expected)
 
     def test_skipNewline(self):
