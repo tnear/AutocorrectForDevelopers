@@ -7,7 +7,7 @@ class TestMatchNone(unittest.TestCase):
         cls.rules = Rule.fileToRuleList('AutocorrectForDevelopers.ahk')
 
     def test_ruleLength(self):
-        self.assertGreater(len(self.rules), 5900)
+        self.assertGreater(len(self.rules), 6600)
         self.assertGreater(len(MATCH_NONE_LIST), 110)
 
     def test_replace(self):
@@ -27,12 +27,13 @@ MATCH_NONE_LIST = [
     'from', 'form', 'Alvie', 'Horus', 'triangle', 'highlighting', 'sightings',
     'fro', 'Then', 'Shatner', 'escond', 'halted', 'lien', 'rootin', 'have OT', 'spraed', # spread/spared
     'falte', 'baltes', 'hadnet', 'wordnets', 'yuo', 'Yuo', 'Gorup', 'clas', 'fiel', 'moer', 'rela',
-    'saem', 'ture', 'nto', 'allWords', 'Stroe', 'keyforeign', 'beign', 'assigns', 'redesigns', 'foreigns',
+    'saem', 'ture', 'nto', 'allWords', 'Stroe', 'keyforeign', 'beign', # begin/being
+    'assigns', 'redesigns', 'foreigns',
     'moriarty', 'ign', 'bailly', 'motley', # 'tley::tely' requires too many whitelists
     'yoruba', 'konway', 'sign', 'design', 'systemdesign', 'assign', 'variableassign', 'changin', # changin'
     'ehre', 'botnet', 'cadres', 'impot', 'impots', 'loggin', # loggin'
     'hearte', 'lighthearted', 'netly', # netly -> ently often changes one typo into another typo
-    'compliers', 'expor', 'recusing', 'vetor', 'aCounter', 'mylabel', 'vrabel',
+    'compliers', 'expor', 'recusing', 'vetor', 'aCounter', 'mylabel', 'vrabel', 'feint', 'reint',
 ]
 
 if __name__ == '__main__':

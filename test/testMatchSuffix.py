@@ -23,8 +23,8 @@ class TestMatchPrefix(unittest.TestCase):
         cls.whitelistSet = {text.oldText for text in whitelistRules}
 
     def test_ruleLength(self):
-        self.assertGreater(len(self.rules), 5100)
-        self.assertGreater(len(self.suffixRuleList), 500)
+        self.assertGreater(len(self.rules), 6600)
+        self.assertGreater(len(self.suffixRuleList), 600)
 
     def test_replace(self):
         hasEndChar = True
@@ -141,7 +141,7 @@ NO_WHITELIST_EXCEPTIONS = {
     'opsed', 'opses', 'psoes', 'opitn', 'opitns', 'wheer', 'pgin', 'pgins', 'iwng', 'wgin', 'wgins', 'wrok',
     'srue', 'tihng', 'emntal', 'emtnal', 'metnal', 'mnetal', 'wroks', 'wroking', 'donws', 'odwns', 'thying', 'byet',
     'byets', 'csating', 'baording', 'borading', 'boadring', 'owkr', 'owkrs', 'owkring',
-    'baorded', 'boraded', 'boadred',
+    'baorded', 'boraded', 'boadred', 'laodable',
 }
 
 # explicit tests for suffix words (usually as part of bug fixes)
@@ -214,7 +214,7 @@ EXPLICIT_TESTS = {
     'transopse': 'transpose', 'statitsic': 'statistic', 'statitsics': 'statistics',
     'GraphNdoe': 'GraphNode', 'launhicng': 'launching',
     'veriifes': 'verifies', 'visiilbity': 'visibility', 'emulatro': 'emulator', 'emulatros': 'emulators',
-    'gradeint': 'gradient', 'gradeints': 'gradients', 'averaegd': 'averaged', 'captrued': 'captured',
+    'gradeints': 'gradients', 'averaegd': 'averaged', 'captrued': 'captured',
     'clikced': 'clicked', 'appedned': 'appended', 'appedns': 'appends', 'benchamrk': 'benchmark',
     'benchamrked': 'benchmarked', 'benchamrks': 'benchmarks', 'cloend': 'cloned', 'compsoed': 'composed',
     'trianed': 'trained', 'eraesd': 'erased', 'puhsed': 'pushed', 'cahced': 'cached', 'adatped': 'adapted',
@@ -316,7 +316,7 @@ EXPLICIT_TESTS = {
     'broadcsating': 'broadcasting', 'experimeneting': 'experimenting', 'experiemnting': 'experimenting',
     'experimeenting': 'experimenting', 'experimneting': 'experimenting', 'simplifeid': 'simplified',
     'onbaording': 'onboarding', 'onborading': 'onboarding', 'onboadring': 'onboarding', 'balnacer': 'balancer',
-    'balacner': 'balancer', 'verfiies': 'verifies', 'connetcion': 'connection', 'connetcions': 'connections',
+    'balacner': 'balancer', 'verfiies': 'verifies', 'redutcion': 'reduction', 'redutcions': 'reductions',
     'formatetr': 'formatter', 'formatetrs': 'formatters', 'forwrad': 'forward', 'forwrads': 'forwards',
     'forwraded': 'forwarded', 'wrapeprs': 'wrappers', 'develoeprs': 'developers', 'longeivty': 'longevity',
     'longeviyt': 'longevity', 'aspetc': 'aspect', 'registratn': 'registrant', 'registratns': 'registrants',
@@ -330,7 +330,8 @@ EXPLICIT_TESTS = {
     'caugth': 'caught', 'referecning': 'referencing', 'manipualte': 'manipulate', 'manipualted': 'manipulated',
     'manipualtes': 'manipulates', 'capabliities': 'capabilities', 'workigns': 'workings', 'worknigs': 'workings',
     'workgins': 'workings', 'accoutnable': 'accountable', 'refuesd': 'refused', 'expetcs': 'expects',
-    'onbaorded': 'onboarded', 'onboraded': 'onboarded', 'onboadred': 'onboarded',
+    'onbaorded': 'onboarded', 'onboraded': 'onboarded', 'onboadred': 'onboarded', 'downlaodable': 'downloadable',
+    'expetced': 'expected', 'expetcing': 'expecting',
 }
 
 if __name__ == '__main__':

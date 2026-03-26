@@ -1,5 +1,6 @@
 import pathlib
 import re
+from functools import lru_cache
 
 class Rule:
     yamlIndent = '    '
@@ -17,6 +18,7 @@ class Rule:
 
     # loads AHK file and returns list of Rules
     @staticmethod
+    @lru_cache(maxsize=None)
     def fileToRuleList(file):
         lines = Rule.cleanFile(file)
 
@@ -26,6 +28,7 @@ class Rule:
     # Converts AHK file into a list of rules
     # Removes leading/trailing whitespace, comments, directives, and more.
     @staticmethod
+    @lru_cache(maxsize=None)
     def cleanFile(file):
         file = Rule.getRelativeFileName(file)
 
@@ -174,6 +177,7 @@ class Rule:
         # e.g., no unordered explicit tests
 
         inputTextLower = inputText.lower() # lower() is slow to call in a loop, so do it once here
+        next_start_idx = 0
         for idx in range(startIdx, len(rules)):
             rule = rules[idx]
             if rule.caseSensitive:
@@ -193,6 +197,9 @@ class Rule:
                     # found match
                     return rule.newText, rule, idx
 
+                # for sorted inputs, can start here for next call
+                next_start_idx = idx
+
             if rule.prefixMatch:
                 # prefix rules, :*:, only need to start with text
                 # (ending char does not matter)
@@ -211,7 +218,7 @@ class Rule:
                     return rule.newText, rule, idx
 
         # no match found, return input text
-        return inputText, None, 0
+        return inputText, None, next_start_idx
 
     @staticmethod
     def convertToEspanso(rules):

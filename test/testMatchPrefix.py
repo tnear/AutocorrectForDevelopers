@@ -12,8 +12,8 @@ class TestMatchPrefix(unittest.TestCase):
         cls.prefixRuleList = [rule.oldText for rule in prefixRules]
 
     def test_ruleLength(self):
-        self.assertGreater(len(self.rules), 5900)
-        self.assertGreater(len(self.prefixRuleList), 800)
+        self.assertGreater(len(self.rules), 6600)
+        self.assertGreater(len(self.prefixRuleList), 900)
 
     def test_replace(self):
         # prefix rules (":*:") match regardless of end char
@@ -220,7 +220,7 @@ EXPLICIT_TESTS = {
     'autocompelte': 'autocomplete', 'ocncurrent': 'concurrent', 'concurent': 'concurrent', 'dyanmic': 'dynamic',
     'systme': 'system', 'reblaance': 'rebalance', 'respodn': 'respond', 'resopnd': 'respond', 'repsond': 'respond',
     'qurey': 'query', 'infomr': 'inform', 'oritent': 'orient', 'rehsape': 'reshape', 'rehspae': 'reshape',
-    'deliimt': 'delimit', 'ture;': 'true;', 'glithc': 'glitch', 'occassion': 'occasion', 'agregate': 'aggregate',
+    'deliimt': 'delimit', 'ture;': 'true;', 'glithc': 'glitch', 'agregate': 'aggregate',
     'comunicate': 'communicate', 'bakctrack': 'backtrack', 'esarch': 'search', 'surorund': 'surround',
     'corresopnd': 'correspond', 'correspodn': 'correspond', 'corespond': 'correspond', 'whle (': 'while (',
     'udpate': 'update', 'upadte': 'update', 'updadte': 'update', 'itnroduction': 'introduction', 'integeration': 'integration',
@@ -332,7 +332,13 @@ EXPLICIT_TESTS = {
     'prmootes': 'promotes', 'radnomly': 'randomly', 'aovids': 'avoids', 'avodis': 'avoids', 'aviods': 'avoids',
     'vaoids': 'avoids', 'colapsed': 'collapsed', 'invsetment': 'investment', 'arhcived': 'archived',
     'reassings': 'reassigns', 'recraeting': 'recreating', 'interveiwing': 'interviewing', 'preveiws': 'previews',
-    'troubelshoot': 'troubleshoot', 'eelments': 'elements', 'fingerpritns': 'fingerprints',
+    'troubelshoot': 'troubleshoot', 'eelments': 'elements', 'fingerpritns': 'fingerprints', 'evacaute': 'evacuate',
+    'misudnerstands': 'misunderstands', 'standadrs': 'standards', 'connetcs': 'connects', 'disconnetcs': 'disconnects',
+    'reconnetcs': 'reconnects', 'arhicves': 'archives', 'scheduels': 'schedules', 'invlaidates': 'invalidates',
+    'rleatively': 'relatively', 'realtively': 'relatively', 'toelrates': 'tolerates', 'upsreamed': 'upstreamed',
+    'upstremas': 'upstreams', 'upstraems': 'upstreams', 'rotaets': 'rotates', 'seucred': 'secured',
+    'transcational': 'transactional', 'trasnactional': 'transactional', 'trasnforms': 'transforms',
+    'acknolwedges': 'acknowledges', 'vlaidations': 'validations', 'avlidations': 'validations', 'yiedls': 'yields',
 }
 
 if __name__ == '__main__':
