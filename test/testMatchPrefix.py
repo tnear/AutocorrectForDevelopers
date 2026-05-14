@@ -217,7 +217,7 @@ EXPLICIT_TESTS = {
     'compelte': 'complete', 'accumualte': 'accumulate', 'extrapoalte': 'extrapolate', 'formualte': 'formulate',
     'popualte': 'populate', 'regualte': 'regulate', 'simualte': 'simulate', 'transalte': 'translate', 'euqla': 'equal',
     'concatneate': 'concatenate', 'condtion': 'condition', 'donwlaod': 'download', 'iwndow': 'window',
-    'autocompelte': 'autocomplete', 'ocncurrent': 'concurrent', 'concurent': 'concurrent', 'dyanmic': 'dynamic',
+    'autocompelte': 'autocomplete', 'ocncurrent': 'concurrent', 'concurent': 'concurrent',
     'systme': 'system', 'reblaance': 'rebalance', 'respodn': 'respond', 'resopnd': 'respond', 'repsond': 'respond',
     'qurey': 'query', 'infomr': 'inform', 'oritent': 'orient', 'rehsape': 'reshape', 'rehspae': 'reshape',
     'deliimt': 'delimit', 'ture;': 'true;', 'glithc': 'glitch', 'agregate': 'aggregate',
@@ -274,7 +274,7 @@ EXPLICIT_TESTS = {
     'asyncrhonously': 'asynchronously', 'asynchrnously': 'asynchronously', 'aggreation': 'aggregation',
     'subsysetms': 'subsystems', 'subsyetms': 'subsystems', 'hyperparameers': 'hyperparameters', 'csontantly': 'constantly',
     'initailize': 'initialize', 'initliaize': 'initialize', 'corerctly': 'correctly', 'erferences': 'references',
-    'subystems': 'subsystems', 'gneeric': 'generic', 'crsahed': 'crashed', 'autoatmic': 'automatic', 'cirlces': 'circles',
+    'subystems': 'subsystems', 'gneerate': 'generate', 'crsahed': 'crashed', 'autoatmic': 'automatic', 'cirlces': 'circles',
     'introdcued': 'introduced', 'redcued': 'reduced', 'reprodcued': 'reproduced', 'supperssion': 'suppression',
     'conatins': 'contains', 'intalled': 'installed', 'instsalled': 'installed', 'imrpoves': 'improves',
     'imprvoes': 'improves', 'renmaes': 'renames', 'intsalls': 'installs', 'bottlenekcs': 'bottlenecks',
@@ -339,6 +339,14 @@ EXPLICIT_TESTS = {
     'upstremas': 'upstreams', 'upstraems': 'upstreams', 'rotaets': 'rotates', 'seucred': 'secured',
     'transcational': 'transactional', 'trasnactional': 'transactional', 'trasnforms': 'transforms',
     'acknolwedges': 'acknowledges', 'vlaidations': 'validations', 'avlidations': 'validations', 'yiedls': 'yields',
+    'geenrate': 'generate', 'accidnets': 'accidents', 'guaratneed': 'guaranteed', 'perfromance': 'performance',
+    'acheives': 'achieves', 'succeessful': 'successful', 'rejioned': 'rejoined', 'exaplins': 'explains',
+    'favoriets': 'favorites', 'favoirtes': 'favorites', 'favorties': 'favorites', 'faovirtes': 'favorites',
+    'faovrites': 'favorites', 'pirntenv': 'printenv', 'pritnenv': 'printenv', 'initiiator': 'initiator',
+    'braoder': 'broader', 'envionrment': 'environment', 'regoins': 'regions', 'toolchians': 'toolchains',
+    'fignerprints': 'fingerprints', 'rebuliding': 'rebuilding', 'rebiulding': 'rebuilding',
+    'rebuidling': 'rebuilding', 'watermakrs': 'watermarks', 'lifeliens': 'lifelines', 'partiicpant': 'participant',
+    'downgarded': 'downgraded', 'upgarded': 'upgraded', 'misinterperted': 'misinterpreted', 'objetcs': 'objects',
 }
 
 if __name__ == '__main__':

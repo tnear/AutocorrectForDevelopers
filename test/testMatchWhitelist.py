@@ -107,6 +107,7 @@ WHITELIST = [
     'itme', 'misalign', 'misaligns',
     'gardner', 'gardners', 'cupertino', 'snig', 'fomr', # from/form
     'ligns', 'realigns', 'mylabels', 'neend', 'hamnet', 'netns', 'feints',
+    'vrabel',
 ]
 
 if __name__ == '__main__':

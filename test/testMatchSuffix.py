@@ -331,7 +331,8 @@ EXPLICIT_TESTS = {
     'manipualtes': 'manipulates', 'capabliities': 'capabilities', 'workigns': 'workings', 'worknigs': 'workings',
     'workgins': 'workings', 'accoutnable': 'accountable', 'refuesd': 'refused', 'expetcs': 'expects',
     'onbaorded': 'onboarded', 'onboraded': 'onboarded', 'onboadred': 'onboarded', 'downlaodable': 'downloadable',
-    'expetced': 'expected', 'expetcing': 'expecting',
+    'expetced': 'expected', 'expetcing': 'expecting', 'assignabel': 'assignable', 'durabel': 'durable',
+    'increasnigly': 'increasingly', 'shoewd': 'showed', 'thouhgt': 'thought',
 }
 
 if __name__ == '__main__':
