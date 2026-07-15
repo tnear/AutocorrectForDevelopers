@@ -9,7 +9,7 @@ Corrections happen automatically as you type:
 By default, *AutocorrectForDevelopers.ahk* runs against all applications (except Microsoft Word), although the script can be customized to enable or disable any application (see the `#HotIf/#If` statement early in the script).
 
 ## Script installation
-Run the script from either AutoHotkey *or* Espanso. AutoHotkey is recommended for Windows users.
+AutoHotkey is recommended for Windows users, while Espanso is required for Linux and macOS users.
 
 ### AutoHotkey users
 Install [AutoHotkey](https://www.autohotkey.com/) v2, then run [*AutocorrectForDevelopers.ahk*](AutocorrectForDevelopers.ahk).
@@ -17,7 +17,7 @@ Install [AutoHotkey](https://www.autohotkey.com/) v2, then run [*AutocorrectForD
 ### Espanso users
 Install [Espanso](https://espanso.org/) for your platform, then [load](https://espanso.org/docs/get-started/) the match file [*AutocorrectForDevelopers.yaml*](AutocorrectForDevelopers.yaml).
 
-To match the behavior of the AutoHotkey script, update your Espanso [settings](https://espanso.org/docs/configuration/options/) to set `undo_backspace` to `false`, and append these `word_separators` to Espanso's default list: ``"-", "`", "&", "|", "_", "/", "\", "*", "+", "@", "#", "="``.
+Next, update Espanso's [settings](https://espanso.org/docs/configuration/options/) to set `undo_backspace` to `false`, then append these `word_separators` to Espanso's default list: ``"-", "`", "&", "|", "_", "/", "\", "*", "+", "@", "#", "="``.
 
 ## Testing
 All [tests](https://github.com/tnear/AutocorrectForDevelopers/tree/main/test) are run as part of GitHub [Actions](https://github.com/tnear/AutocorrectForDevelopers/actions), ensuring that any new rules and updates do not regress existing behavior.

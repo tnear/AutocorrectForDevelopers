@@ -332,7 +332,9 @@ EXPLICIT_TESTS = {
     'workgins': 'workings', 'accoutnable': 'accountable', 'refuesd': 'refused', 'expetcs': 'expects',
     'onbaorded': 'onboarded', 'onboraded': 'onboarded', 'onboadred': 'onboarded', 'downlaodable': 'downloadable',
     'expetced': 'expected', 'expetcing': 'expecting', 'assignabel': 'assignable', 'durabel': 'durable',
-    'increasnigly': 'increasingly', 'shoewd': 'showed', 'thouhgt': 'thought',
+    'increasnigly': 'increasingly', 'shoewd': 'showed', 'thouhgt': 'thought', 'reachabel': 'reachable',
+    'duplictae': 'duplicate', 'duplictaes': 'duplicates', 'accidetnal': 'accidental', 'accidetnally': 'accidentally',
+    'mentoined': 'mentioned',
 }
 
 if __name__ == '__main__':

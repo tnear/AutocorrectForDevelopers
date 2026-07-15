@@ -347,6 +347,11 @@ EXPLICIT_TESTS = {
     'fignerprints': 'fingerprints', 'rebuliding': 'rebuilding', 'rebiulding': 'rebuilding',
     'rebuidling': 'rebuilding', 'watermakrs': 'watermarks', 'lifeliens': 'lifelines', 'partiicpant': 'participant',
     'downgarded': 'downgraded', 'upgarded': 'upgraded', 'misinterperted': 'misinterpreted', 'objetcs': 'objects',
+    'cuopled': 'coupled', 'hostnaems': 'hostnames', 'hostnmaes': 'hostnames', 'recliams': 'reclaims',
+    'quaratnines': 'quarantines', 'quarantiens': 'quarantines', 'refelcts': 'reflects', 'reocvery': 'recovery',
+    'proprotional': 'proportional', 'auhtenticate': 'authenticate', 'auhtors': 'authors',
+    'fingerpirnts': 'fingerprints', 'regeneartes': 'regenerates', 'sideliens': 'sidelines', 'rpefixing': 'prefixing',
+    'preifxing': 'prefixing', 'speicalty': 'specialty',
 }
 
 if __name__ == '__main__':
