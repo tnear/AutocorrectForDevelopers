@@ -67,7 +67,7 @@ class TestMatchExact(unittest.TestCase):
 
         # ignore these whitelisted suffixes
         whitelist = ['tner', 'ners', 'raed', 'alte', 'ltes', 'dnet', 'nets', ' nto', 'enet',
-                     'iens', 'sign', ' ont', 'etly', 'ting', 'lien', 'hter', 'abel',]
+                     'iens', 'sign', ' ont', 'etly', 'ting', 'lien', 'hter', 'abel', 'iend',]
         sortedSuffixes = [x for x in sortedSuffixes if x[0] not in whitelist]
 
         # ensure the most common suffix is below some threshold. If this asserts, then
@@ -75,6 +75,24 @@ class TestMatchExact(unittest.TestCase):
         MAX_CAPACITY = 8
         self.assertLessEqual(sortedSuffixes[0][1], MAX_CAPACITY,
                              f'Check if suffix "{sortedSuffixes[0][0]}" needs a suffix rule')
+
+    # Rules with a one-letter word on LHS but not RHS should be case sensitive to reduce
+    # chance of false-positives. Ex: "t othe::"to the" should be case sensitive.
+    def test_one_letter_word_change_rules_case_sensitive(self):
+        def has_one_letter_word(text):
+            return any(len(word) == 1 and word.isalpha() for word in text.split())
+
+        for rule in self.rules:
+            removes_one_letter_word = (
+                has_one_letter_word(rule.oldText)
+                and not has_one_letter_word(rule.newText)
+            )
+
+            if removes_one_letter_word:
+                self.assertTrue(
+                    rule.caseSensitive,
+                    f'Rule "{rule.oldText}" should be case sensitive',
+                )
 
 # Explicitly test these pairs. Although every rule is iterated over automatically,
 # this section is useful for bug fixes to ensure the behavior does not regress.

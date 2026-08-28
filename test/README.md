@@ -8,11 +8,11 @@ Tests are written in Python. Testing is supported on all major platforms.
 
 Run `python -m unittest discover test` from the repository root.
 
-```
+```bash
 AutocorrectForDevelopers> python -m unittest discover test
-...........................................................
+.............................................................
 ----------------------------------------------------------------------
-Ran 59 tests in 1.858s
+Ran 61 tests in 4.675s
 
 OK
 ```

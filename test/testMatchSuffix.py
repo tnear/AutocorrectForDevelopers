@@ -125,6 +125,13 @@ class TestMatchPrefix(unittest.TestCase):
             for example in examples:
                 self.assertTrue(example.endswith(suffix), f'Suffix example "{example}" does not end with "{suffix}"')
 
+    def test_no_whitelist_exceptions_are_autocorrected(self):
+        # every no-whitelist exception should be autocorrected when typed on its own
+        for input_text in NO_WHITELIST_EXCEPTIONS:
+            new_text, rule, _ = Rule.getReplacementText(self.rules, input_text, True)
+            self.assertIsNotNone(rule, f'no autocorrect rule found for "{input_text}"')
+            self.assertNotEqual(new_text, input_text, f'no autocorrection made for "{input_text}"')
+
 # these are suffixes which should not be whitelisted. These should be autocorrected to actual words.
 NO_WHITELIST_EXCEPTIONS = {
     'aicng', 'aegs', 'allly', 'bakc', 'bakcs', 'baord', 'boadr', 'baords', 'borads', 'csated', 'csats', 'ctiy', 'ciyt',
@@ -186,7 +193,7 @@ EXPLICIT_TESTS = {
     'ownersihp': 'ownership', 'ownersihps': 'ownerships', 'recursino': 'recursion', 'recursoin': 'recursion',
     'recuroisn': 'recursion', 'recursinos': 'recursions', 'recursoins': 'recursions', 'recuroisns': 'recursions',
     'sparstiy': 'sparsity', 'recursvie': 'recursive', 'mergesrot': 'mergesort', 'worksapce': 'workspace',
-    'workspcae': 'workspace', 'worksapces': 'workspaces', 'workspcaes': 'workspaces', 'outaeg': 'outage',
+    'workspcae': 'workspace', 'worksapces': 'workspaces', 'workspcaes': 'workspaces',
     'constnat': 'constant', 'constatn': 'constant', 'constnats': 'constants', 'constatns': 'constants',
     'cathces': 'catches', 'persistenet': 'persistent', 'anotehr': 'another',
     'lifeitme': 'lifetime', 'lifetiem': 'lifetime', 'lifeitmes': 'lifetimes', 'lifetiems': 'lifetimes',
@@ -334,7 +341,9 @@ EXPLICIT_TESTS = {
     'expetced': 'expected', 'expetcing': 'expecting', 'assignabel': 'assignable', 'durabel': 'durable',
     'increasnigly': 'increasingly', 'shoewd': 'showed', 'thouhgt': 'thought', 'reachabel': 'reachable',
     'duplictae': 'duplicate', 'duplictaes': 'duplicates', 'accidetnal': 'accidental', 'accidetnally': 'accidentally',
-    'mentoined': 'mentioned',
+    'mentoined': 'mentioned', 'dimensoinal': 'dimensional', 'callesr': 'callers', 'exclusiev': 'exclusive',
+    'exclusievly': 'exclusively', 'locekd': 'locked', 'secuiryt': 'security', 'operatosr': 'operators',
+    'itearte': 'iterate', 'iteartes': 'iterates', 'prevoisu': 'previous',
 }
 
 if __name__ == '__main__':

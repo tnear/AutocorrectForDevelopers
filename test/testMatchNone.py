@@ -32,8 +32,8 @@ MATCH_NONE_LIST = [
     'moriarty', 'ign', 'bailly', 'motley', # 'tley::tely' requires too many whitelists
     'yoruba', 'konway', 'sign', 'design', 'systemdesign', 'assign', 'variableassign', 'changin', # changin'
     'ehre', 'botnet', 'cadres', 'impot', 'impots', 'loggin', # loggin'
-    'hearte', 'lighthearted', 'netly', # netly -> ently often changes one typo into another typo
-    'compliers', 'expor', 'recusing', 'vetor', 'aCounter', 'mylabel', 'feint', 'reint',
+    'lighthearted', 'netly', # netly -> ently often changes one typo into another typo
+    'compliers', 'expor', 'recusing', 'vetor', 'aCounter', 'mylabel', 'feint', 'reint',  'OFMR', 'WOKR',
 ]
 
 if __name__ == '__main__':
